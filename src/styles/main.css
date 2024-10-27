@@ -1,0 +1,246 @@
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/SourceSans3-VariableFont_wght.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/fonts/SourceSans3-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+:root {
+  --clr-neutral-200: #e0e0e0;
+  --clr-neutral-300: #b3b3b3;
+  --clr-neutral-500: #3c3c3c;
+  --clr-neutral-700: #2a2a2a;
+  --clr-neutral-900: #1c1c1c;
+
+  --clr-accent: #00b4b8;
+
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--clr-accent) 0%,
+    var(--clr-neutral-700) 100%
+  );
+  --gradient-secondary: linear-gradient(
+    90deg,
+    var(--clr-neutral-500) 0%,
+    var(--clr-neutral-700) 100%
+  );
+
+  --bg-primary: var(--clr-neutral-900);
+  --bg-secondary: var(--clr-neutral-700);
+  --text-primary: var(--clr-neutral-200);
+  --text-secondary: var(--clr-neutral-300);
+  --border-color: var(--clr-neutral-500);
+
+  --ff-primary: "Source Sans 3", sans-serif;
+
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+
+  --fw-bold: 700;
+  --fw-semi: 600;
+  --fw-normal: 400;
+
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+}
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+/**
+ * @link https://piccalil.li/blog/a-more-modern-css-reset/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+.button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.75em 1.125em;
+  color: var(--text-primary);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  line-height: 1.1;
+  text-decoration: none;
+
+  &:active {
+    scale: 0.95;
+  }
+}
+
+.search-field {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  gap: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0.75em 1.125em;
+}
+
+.search-field > input {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  gap: 0.25em;
+  color: var(--text-primary);
+  text-decoration: none;
+
+  & > span {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+  }
+}
+
+/*------------------------------------*\
+  #UTILS
+\*------------------------------------*/
+/* Layout */
+.container {
+  max-width: 80rem;
+  width: 100%;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  margin-inline: auto;
+}
+
+/* Text */
+.main-title {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.text-highlight {
+  background-image: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-image: var(--gradient-primary);
+  border: none;
+}
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+.header {
+  padding-block: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
+.heading {
+  display: grid;
+  gap: 0.5em;
+  padding-block: 2rem;
+  text-align: center;
+}
