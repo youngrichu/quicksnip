@@ -1,9 +1,10 @@
-function App() {
-  return (
-    <div>
-      <h1>App Loaded</h1>
-    </div>
-  );
-}
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles/main.css";
+import App from "./App";
 
-export default App;
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);

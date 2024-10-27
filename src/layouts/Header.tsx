@@ -1,7 +1,7 @@
-import Button from "../ui/Button";
-import { GitHubIcon } from "../ui/Icons";
-import Logo from "../ui/Logo";
-import SearchInput from "../ui/SearchInput";
+import Button from "../components/Button";
+import { GitHubIcon } from "../components/Icons";
+import Logo from "../components/Logo";
+import SearchInput from "../components/SearchInput";
 
 const Header = () => {
   return (
