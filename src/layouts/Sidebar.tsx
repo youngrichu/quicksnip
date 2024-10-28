@@ -3,7 +3,7 @@ import LanguageSwitch from "../components/LanguageSwitch";
 
 const Sidebar = () => {
   return (
-    <aside>
+    <aside className="sidebar flow">
       <LanguageSwitch />
       <CategoryList />
     </aside>

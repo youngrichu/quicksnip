@@ -92,14 +92,14 @@ export const GitHubIcon = ({ fillColor = DEFAULT_ICON_COLOR }) => (
 
 export const SwitchIcon = ({ fillColor = DEFAULT_ICON_COLOR }) => (
   <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="22"
+    height="22"
+    viewBox="0 0 22 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3 9.5H21L15 3.5M21.3995 14.5H3.3995L9.3995 20.5"
+      d="M2.75 8.70833H19.25L13.75 3.20833M19.6162 13.2917H3.11621L8.61621 18.7917"
       stroke={fillColor}
       strokeWidth="2"
       strokeLinecap="round"

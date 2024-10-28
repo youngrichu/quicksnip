@@ -5,7 +5,7 @@ import SnippetList from "./layouts/SnippetList";
 
 const App = () => {
   return (
-    <div className="container">
+    <div className="container flow" data-flow-space="lg">
       <Header />
       <div className="heading">
         <h1 className="main-title">
@@ -16,7 +16,7 @@ const App = () => {
           search and copy!
         </p>
       </div>
-      <main>
+      <main className="main">
         <Sidebar />
         <SnippetList />
       </main>

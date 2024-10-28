@@ -1,14 +1,13 @@
-import slugify from "../utils/slugify";
+import { SwitchIcon } from "./Icons";
 
 const LanguageSwitch = () => {
-  const sampleData = ["JavaScript", "Python", "Java"];
+  // const sampleData = ["JavaScript", "Python", "Java"];
 
   return (
-    <select id="languages">
-      {sampleData.map((lan) => (
-        <option value={slugify(lan)}>{lan}</option>
-      ))}
-    </select>
+    <div className="language-switcher">
+      <h2 className="section-title">JavaScript</h2>
+      <SwitchIcon />
+    </div>
   );
 };
 

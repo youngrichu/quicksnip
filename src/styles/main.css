@@ -135,6 +135,7 @@ ul:where([role="list"]),
 ol:where([role="list"]) {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 /*------------------------------------*\
@@ -142,10 +143,24 @@ ol:where([role="list"]) {
 \*------------------------------------*/
 /* Layout */
 .container {
-  max-width: 80rem;
+  max-width: 90rem;
   width: 100%;
   padding-inline: clamp(1rem, 4vw, 3rem);
   margin-inline: auto;
+}
+
+.flow {
+  --_flow-space: 1em;
+  display: grid;
+  gap: var(--_flow-space);
+
+  &[data-flow-space="sm"] {
+    --_flow-space: 0.5em;
+  }
+
+  &[data-flow-space="lg"] {
+    --_flow-space: 2em;
+  }
 }
 
 /* Text */
@@ -258,17 +273,78 @@ ol:where([role="list"]) {
 .heading {
   display: grid;
   gap: 0.5em;
-  padding-block: 2rem;
+  padding-bottom: 1rem;
   text-align: center;
+}
+
+.main {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+
+  @media (width > 50em) {
+    grid-template-columns: 2fr 5fr;
+  }
+}
+
+/*------------------------------------*\
+  #SIDEBAR
+\*------------------------------------*/
+.language-switcher {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.language-switcher option {
+  font-size: var(--fs-400);
+}
+
+.categories {
+  display: grid;
+  background-color: var(--bg-secondary);
+  padding: 1.25rem;
+  padding-bottom: 2rem;
+  border-radius: var(--br-lg);
+}
+
+.category {
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--br-md);
+}
+
+.category.active {
+  background-image: var(--gradient-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.category__link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 0.75em 1em;
+  width: 100%;
+
+  &:is(:hover, :focus) {
+    color: var(--text-primary);
+  }
 }
 
 /*------------------------------------*\
   #SNIPPET
 \*------------------------------------*/
+.snippets {
+  --_gap: 1.5rem;
+  display: grid;
+  gap: var(--_gap);
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
 .snippet {
   display: grid;
   gap: 0.5em;
-  width: 300px;
+  width: 100%;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--br-lg);
@@ -296,4 +372,26 @@ ol:where([role="list"]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+.footer {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.footer a {
+  color: var(--text-secondary);
+
+  &:is(:hover, :focus) {
+    color: var(--text-primary);
+  }
+}
+
+.footer__content {
+  width: 60ch;
 }

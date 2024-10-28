@@ -9,12 +9,21 @@ const SnippetList = () => {
     {
       title: "POST Request",
     },
+    {
+      title: "fetch() Request",
+    },
+    {
+      title: "Async/Await",
+    },
+    {
+      title: "Fetching with Axios",
+    },
   ];
 
   return (
-    <section>
-      <h2>API Requests</h2>
-      <ul role="list">
+    <section className="flow">
+      <h2 className="section-title">API Requests</h2>
+      <ul role="list" className="snippets">
         {sampleData.map((snippet) => (
           <SnippetCard {...snippet} />
         ))}

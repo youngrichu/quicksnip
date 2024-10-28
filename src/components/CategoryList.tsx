@@ -21,7 +21,7 @@ const CategoryList = () => {
   ];
 
   return (
-    <ul role="list">
+    <ul role="list" className="categories">
       {sampleData.map((category) => (
         <Category {...category} />
       ))}
