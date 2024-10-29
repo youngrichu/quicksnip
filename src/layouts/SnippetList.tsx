@@ -25,7 +25,7 @@ const SnippetList = () => {
       <h2 className="section-title">API Requests</h2>
       <ul role="list" className="snippets">
         {sampleData.map((snippet) => (
-          <SnippetCard {...snippet} />
+          <SnippetCard key={snippet.title} {...snippet} />
         ))}
       </ul>
     </section>

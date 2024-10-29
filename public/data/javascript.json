@@ -1,39 +1,33 @@
-{
-  "language": "JavaScript",
-  "categories": [
-    {
-      "categoryName": "DOM Manipulation",
-      "snippets": [
-        {
-          "title": "Add a class to an element",
-          "description": "Add a CSS class to a DOM element.",
-          "code": "document.getElementById('myElement').classList.add('myClass');",
-          "tags": ["dom", "class", "javascript"],
-          "author": "@technoph1le",
-          "dateAdded": "2024-10-23"
-        },
-        {
-          "title": "Remove a class from an element",
-          "description": "Remove a CSS class from a DOM element.",
-          "code": "document.getElementById('myElement').classList.remove('myClass');",
-          "tags": ["dom", "class", "javascript"],
-          "author": "@technoph1le",
-          "dateAdded": "2024-10-22"
-        }
-      ]
-    },
-    {
-      "categoryName": "API Requests",
-      "snippets": [
-        {
-          "title": "Fetch data from API",
-          "description": "Use the Fetch API to retrieve data.",
-          "code": "fetch('https://api.example.com/data').then(response => response.json()).then(data => console.log(data));",
-          "tags": ["api", "fetch", "javascript"],
-          "author": "@technoph1le",
-          "dateAdded": "2024-10-23"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "categoryName": "DOM Manipulation",
+    "snippets": [
+      {
+        "title": "Add a class to an element",
+        "description": "Add a CSS class to a DOM element.",
+        "code": "document.getElementById('myElement').classList.add('myClass');",
+        "tags": ["dom", "class", "javascript"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Remove a class from an element",
+        "description": "Remove a CSS class from a DOM element.",
+        "code": "document.getElementById('myElement').classList.remove('myClass');",
+        "tags": ["dom", "class", "javascript"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "API Requests",
+    "snippets": [
+      {
+        "title": "Fetch data from API",
+        "description": "Use the Fetch API to retrieve data.",
+        "code": "fetch('https://api.example.com/data').then(response => response.json()).then(data => console.log(data));",
+        "tags": ["api", "fetch", "javascript"],
+        "author": "@technoph1le"
+      }
+    ]
+  }
+]
