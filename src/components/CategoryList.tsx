@@ -1,35 +1,21 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { CategoryProps } from "../types";
 import Category from "./Category";
 
 const CategoryList = () => {
   const { language } = useParams();
-  // const data = useLoaderData();
+  const categories = useLoaderData() as string[];
 
-  const sampleData: CategoryProps[] = [
-    {
-      title: "DOM Manipulation",
-    },
-    {
-      title: "API Requests",
-    },
-    {
-      title: "Local Storage",
-    },
-    {
-      title: "Performance Optimization",
-    },
-    {
-      title: "Date and Time",
-    },
-  ];
+  console.log(categories);
+
+  if (!categories) {
+    return <div>empty</div>;
+  }
 
   return (
     <>
-      <p>{language}</p>
       <ul role="list" className="categories">
-        {sampleData.map((category) => (
-          <Category key={category.title} {...category} />
+        {categories.map((category) => (
+          <Category key={category} title={category} language={language || ""} />
         ))}
       </ul>
     </>

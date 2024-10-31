@@ -283,7 +283,7 @@ ol:where([role="list"]) {
   align-items: start;
 
   @media (width > 50em) {
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 2fr 6fr;
   }
 }
 
@@ -291,9 +291,11 @@ ol:where([role="list"]) {
   #SIDEBAR
 \*------------------------------------*/
 .language-switcher {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  /* padding-block: 0.5em; */
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
 }
 
 .language-switcher option {
@@ -316,6 +318,8 @@ ol:where([role="list"]) {
 .category.active {
   background-image: var(--gradient-secondary);
   border: 1px solid var(--border-color);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
 }
 
 .category__link {
@@ -324,6 +328,7 @@ ol:where([role="list"]) {
   display: inline-block;
   padding: 0.75em 1em;
   width: 100%;
+  font-size: var(--fs-500);
 
   &:is(:hover, :focus) {
     color: var(--text-primary);
@@ -372,6 +377,10 @@ ol:where([role="list"]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.snippet__title {
+  color: var(--text-primary);
 }
 
 /*------------------------------------*\

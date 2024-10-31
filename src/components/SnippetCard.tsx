@@ -11,7 +11,7 @@ const SnippetCard = ({ title }: SnippetCardProps) => {
         </IconButton>
       </div>
       <div className="snippet__content">
-        <h3>{title}</h3>
+        <h3 className="snippet__title">{title}</h3>
         <IconButton>
           <ExpandIcon />
         </IconButton>

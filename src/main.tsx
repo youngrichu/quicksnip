@@ -6,32 +6,27 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CategoryList from "./components/CategoryList";
 import SnippetList from "./layouts/SnippetList";
 import SnippetModal from "./components/SnippetModal";
-import { fetchCategories, fetchLanguages, fetchSnippets } from "./services/api";
+import { fetchCategories, fetchSnippets } from "./services/api";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: fetchLanguages,
     children: [
       {
         path: ":language",
         element: <CategoryList />,
-        loader: fetchCategories,
-        children: [
-          {
-            path: ":category",
-            element: <SnippetList />,
-            loader: fetchSnippets,
-            children: [
-              {
-                path: ":snippet",
-                element: <SnippetModal />,
-                loader: fetchSnippets,
-              },
-            ],
-          },
-        ],
+        loader: ({ params }) => fetchCategories(params),
+      },
+      {
+        path: ":language/:category",
+        element: <SnippetList />,
+        loader: ({ params }) => fetchSnippets(params),
+      },
+      {
+        path: ":language/:category/:snippet",
+        element: <SnippetModal />,
+        loader: ({ params }) => fetchSnippets(params),
       },
     ],
   },

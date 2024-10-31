@@ -1,11 +1,16 @@
+import { Link } from "react-router-dom";
 import { CategoryProps } from "../types";
+import slugify from "../utils/slugify";
 
-const Category = ({ title }: CategoryProps) => {
+const Category = ({ title, language }: CategoryProps) => {
   return (
-    <li className={`category ${title === "API Requests" ? "active" : null}`}>
-      <a className="category__link" href="#">
+    <li className="category">
+      <Link
+        to={`/${slugify(language || "")}/${slugify(title)}`}
+        className="category__link"
+      >
         {title}
-      </a>
+      </Link>
     </li>
   );
 };

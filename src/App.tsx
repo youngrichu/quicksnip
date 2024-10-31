@@ -1,7 +1,9 @@
+import { Outlet } from "react-router-dom";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 import Sidebar from "./layouts/Sidebar";
 import SnippetList from "./layouts/SnippetList";
+import LanguageSwitch from "./components/LanguageSwitch";
 
 const App = () => {
   return (
@@ -17,7 +19,10 @@ const App = () => {
         </p>
       </div>
       <main className="main">
-        <Sidebar />
+        <aside className="sidebar flow">
+          <LanguageSwitch />
+          <Outlet />
+        </aside>
         <SnippetList />
       </main>
       <hr className="divider" />

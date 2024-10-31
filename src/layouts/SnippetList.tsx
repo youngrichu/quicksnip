@@ -1,31 +1,24 @@
+import { useLoaderData, useParams } from "react-router-dom";
 import SnippetCard from "../components/SnippetCard";
-import { SnippetCardProps } from "../types";
+import { SnippetCardProps, SnippetType } from "../types";
 
 const SnippetList = () => {
-  const sampleData: SnippetCardProps[] = [
-    {
-      title: "GET Request",
-    },
-    {
-      title: "POST Request",
-    },
-    {
-      title: "fetch() Request",
-    },
-    {
-      title: "Async/Await",
-    },
-    {
-      title: "Fetching with Axios",
-    },
-  ];
+  const { language, category } = useParams();
+  const snippets = useLoaderData() as SnippetType[];
+
+  if (!snippets) return <div>empty</div>;
 
   return (
     <section className="flow">
-      <h2 className="section-title">API Requests</h2>
+      <h2 className="section-title">{category}</h2>
       <ul role="list" className="snippets">
-        {sampleData.map((snippet) => (
-          <SnippetCard key={snippet.title} {...snippet} />
+        {snippets.map((snippet) => (
+          <SnippetCard
+            key={snippet.title}
+            language={language}
+            category={category}
+            {...snippet}
+          />
         ))}
       </ul>
     </section>
