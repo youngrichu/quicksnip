@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import { LogoIcon } from "./Icons";
 
 const Logo = () => {
   return (
-    <a className="logo" href="/">
+    <Link to={"/"} className="logo">
       <LogoIcon />
       <span>QuickSnip</span>
-    </a>
+    </Link>
   );
 };
 

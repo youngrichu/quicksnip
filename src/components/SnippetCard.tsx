@@ -1,20 +1,24 @@
+import { Link } from "react-router-dom";
 import { SnippetCardProps } from "../types";
-import { IconButton } from "./Button";
 import { CopyIcon, ExpandIcon } from "./Icons";
+import slugify from "../utils/slugify";
+import Button from "./Button";
 
-const SnippetCard = ({ title }: SnippetCardProps) => {
+const SnippetCard = ({ title, language, category }: SnippetCardProps) => {
   return (
     <li className="snippet">
       <div className="snippet__preview">
-        <IconButton className="snippet__copy">
+        <Button isIcon={true} className="snippet__copy">
           <CopyIcon />
-        </IconButton>
+        </Button>
       </div>
       <div className="snippet__content">
         <h3 className="snippet__title">{title}</h3>
-        <IconButton>
+        <Link
+          to={`/${slugify(language)}/${slugify(category)}/${slugify(title)}`}
+        >
           <ExpandIcon />
-        </IconButton>
+        </Link>
       </div>
     </li>
   );

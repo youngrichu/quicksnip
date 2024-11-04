@@ -2,7 +2,12 @@ import CategoryList from "../components/CategoryList";
 import LanguageSwitch from "../components/LanguageSwitch";
 
 const Sidebar = () => {
-  return <h1>H</h1>;
+  return (
+    <aside className="sidebar flow">
+      <LanguageSwitch />
+      <CategoryList />
+    </aside>
+  );
 };
 
 export default Sidebar;

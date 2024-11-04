@@ -1,21 +1,41 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Category from "./Category";
+import { useEffect, useState } from "react";
+import { LanguageData } from "../types";
+import { getCategoryNames } from "../utils/filters";
 
 const CategoryList = () => {
   const { language } = useParams();
-  const categories = useLoaderData() as string[];
+  const [categoryNames, setCategoryNames] = useState<string[]>([]);
 
-  console.log(categories);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await fetch(`/data/${language}.json`);
+        if (!res.ok) {
+          throw new Error("Failed to fetch languages in CategoryList.tsx");
+        }
+        const data: LanguageData = await res.json();
+        const filteredCategoryNames = getCategoryNames(data);
 
-  if (!categories) {
+        setCategoryNames(filteredCategoryNames);
+      } catch (error) {
+        console.error("Error occured with CategoryList.tsx", error);
+      }
+    };
+
+    fetchCategories();
+  }, [language]);
+
+  if (!categoryNames) {
     return <div>empty</div>;
   }
 
   return (
     <>
       <ul role="list" className="categories">
-        {categories.map((category) => (
-          <Category key={category} title={category} language={language || ""} />
+        {categoryNames.map((name) => (
+          <Category key={name} title={name} language={language || ""} />
         ))}
       </ul>
     </>

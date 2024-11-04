@@ -15,6 +15,13 @@
         "code": "document.getElementById('myElement').classList.remove('myClass');",
         "tags": ["dom", "class", "javascript"],
         "author": "@technoph1le"
+      },
+      {
+        "title": "Something else",
+        "description": "Remove a CSS class from a DOM element.",
+        "code": "document.getElementById('myElement').classList.remove('myClass');",
+        "tags": ["dom", "class", "javascript"],
+        "author": "@technoph1le"
       }
     ]
   },

@@ -4,17 +4,8 @@ export type SnippetCardProps = {
   code: string;
   tags: string[];
   author: string;
-  language?: string;
-  category?: string;
-};
-
-export type CategoryProps = {
-  title: string;
   language: string;
-};
-
-export type LanguageTypes = {
-  languages: string[];
+  category: string;
 };
 
 export type SnippetType = {
@@ -25,9 +16,14 @@ export type SnippetType = {
   author: string;
 };
 
-export type CategoriesType = {
+export type CategoryType = {
   categoryName: string;
   snippets: SnippetType[];
 };
 
-export type FileType = CategoriesType[];
+export type LanguageData = CategoryType[];
+
+export type CategoryProps = {
+  title: string;
+  language: string;
+};

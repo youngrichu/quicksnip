@@ -6,7 +6,7 @@ const Category = ({ title, language }: CategoryProps) => {
   return (
     <li className="category">
       <Link
-        to={`/${slugify(language || "")}/${slugify(title)}`}
+        to={`/${slugify(language)}/${slugify(title)}`}
         className="category__link"
       >
         {title}
