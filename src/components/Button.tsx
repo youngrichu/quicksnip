@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 type ButtonProps = {
   as?: "button" | "link";
   href?: string;
   className?: string;
   isIcon?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
 };
 
@@ -14,11 +15,13 @@ const Button = ({
   className,
   children,
   isIcon,
+  onClick,
   ...props
 }: ButtonProps) => {
   return as === "button" ? (
     <button
-      className={`button ${isIcon ?? "button--icon"} ${className}`}
+      className={`button ${isIcon ? "button--icon" : ""} ${className}`}
+      onClick={onClick}
       {...props}
     >
       {children}

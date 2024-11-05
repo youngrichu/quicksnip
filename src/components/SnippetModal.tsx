@@ -3,16 +3,16 @@ import ReactDOM from "react-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import { LanguageData, SnippetType } from "../types";
 import { getSnippetByTitleAndCategory } from "../utils/filters";
+import { CloseIcon } from "./Icons";
+import Button from "./Button";
 
 const SnippetModal = () => {
-  console.log("hello modal");
   const modalRoot = document.getElementById("modal-root");
   if (!modalRoot) return null;
 
   const { language, category, snippet_title } = useParams();
   const [snippet, setSnippet] = useState<SnippetType | null>(null);
   const navigate = useNavigate();
-  console.log(language, category, snippet_title);
 
   useEffect(() => {
     const fetchSnippets = async () => {
@@ -37,15 +37,36 @@ const SnippetModal = () => {
     };
 
     fetchSnippets();
-  }, []);
+  }, [snippet_title]);
 
   if (!snippet) return null;
 
   return ReactDOM.createPortal(
     <div className="modal-overlay">
-      <div className="modal-content">
-        {snippet.title}
-        <button onClick={() => navigate(-1)}>Close</button>
+      <div className="modal | flow" data-flow-space="lg">
+        <div className="modal__header">
+          <h2 className="section-title">{snippet.title}</h2>
+          <Button isIcon={true} onClick={() => navigate(-1)}>
+            <CloseIcon />
+          </Button>
+        </div>
+        <div className="code-preview">
+          <pre>{snippet.code}</pre>
+        </div>
+        <p>
+          <b>Description: </b>
+          {snippet.description}
+        </p>
+        <p>
+          Contributed by <b>{snippet.author}</b>
+        </p>
+        <ul role="list" className="modal__tags">
+          {snippet.tags.map((tag) => (
+            <li key={tag} className="modal__tag">
+              {tag}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>,
     modalRoot

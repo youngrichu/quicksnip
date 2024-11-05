@@ -40,6 +40,7 @@
   --border-color: var(--clr-neutral-500);
 
   --ff-primary: "Source Sans 3", sans-serif;
+  --ff-mono: monospace;
 
   --fs-400: 1rem;
   --fs-500: 1.125rem;
@@ -143,7 +144,7 @@ ol:where([role="list"]) {
 \*------------------------------------*/
 /* Layout */
 .container {
-  max-width: 90rem;
+  max-width: 100rem;
   width: 100%;
   padding-inline: clamp(1rem, 4vw, 3rem);
   margin-inline: auto;
@@ -153,14 +154,18 @@ ol:where([role="list"]) {
   --_flow-space: 1em;
   display: grid;
   gap: var(--_flow-space);
+}
 
-  &[data-flow-space="sm"] {
-    --_flow-space: 0.5em;
-  }
+.flow[data-flow-space="sm"] {
+  --_flow-space: 0.5em;
+}
 
-  &[data-flow-space="lg"] {
-    --_flow-space: 2em;
-  }
+.flow[data-flow-space="lg"] {
+  --_flow-space: 1.5em;
+}
+
+.flow[data-flow-space="xl"] {
+  --_flow-space: 2em;
 }
 
 /* Text */
@@ -342,7 +347,6 @@ ol:where([role="list"]) {
   --_gap: 1.5rem;
   display: grid;
   gap: var(--_gap);
-  align-content: start;
   grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
 }
 
@@ -400,18 +404,42 @@ ol:where([role="list"]) {
   z-index: 1000;
 }
 
-.modal-content {
-  background-color: #2e2e2e;
-  color: #ffffff;
+.modal {
+  background-color: var(--bg-secondary);
   padding: 2rem;
   width: 80%;
   max-width: 600px;
-  border-radius: 8px;
+  border-radius: var(--br-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: relative;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.code-preview {
+  background-color: var(--bg-primary);
+  padding: 0.5em 1em;
+  border-radius: var(--br-md);
+}
+
+.modal__tags {
+  display: flex;
+  gap: 1em;
+}
+
+.modal__tag {
+  padding: 0.5em 1em;
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-md);
+  text-transform: lowercase;
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-bold);
 }
 
 /*------------------------------------*\
