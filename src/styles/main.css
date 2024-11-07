@@ -253,6 +253,14 @@ ol:where([role="list"]) {
   }
 }
 
+.code-preview {
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-md);
+  width: 100%;
+  overflow-x: auto;
+  height: 100%;
+}
+
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
@@ -362,11 +370,15 @@ ol:where([role="list"]) {
 
 .snippet__preview {
   width: 100%;
+  overflow: hidden;
   aspect-ratio: 16 / 9;
   background-image: var(--gradient-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--br-md);
   position: relative;
+  padding-inline: 1em;
+  display: grid;
+  place-items: center;
 }
 
 .snippet__copy {
@@ -407,8 +419,8 @@ ol:where([role="list"]) {
 .modal {
   background-color: var(--bg-secondary);
   padding: 2rem;
-  width: 80%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 800px;
   border-radius: var(--br-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -420,12 +432,6 @@ ol:where([role="list"]) {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-}
-
-.code-preview {
-  background-color: var(--bg-primary);
-  padding: 0.5em 1em;
-  border-radius: var(--br-md);
 }
 
 .modal__tags {

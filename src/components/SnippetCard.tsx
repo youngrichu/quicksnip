@@ -4,7 +4,7 @@ import { CopyIcon, ExpandIcon } from "./Icons";
 import slugify from "../utils/slugify";
 import Button from "./Button";
 
-const SnippetCard = ({ title, language, category }: SnippetCardProps) => {
+const SnippetCard = ({ title, language, category, icon }: SnippetCardProps) => {
   return (
     <li className="snippet">
       <div className="snippet__preview">
@@ -12,11 +12,10 @@ const SnippetCard = ({ title, language, category }: SnippetCardProps) => {
           <CopyIcon />
         </Button>
       </div>
+
       <div className="snippet__content">
         <h3 className="snippet__title">{title}</h3>
-        <Link
-          to={`/${slugify(language)}/${slugify(category)}/${slugify(title)}`}
-        >
+        <Link to={`/${language}/${category}/${slugify(title)}`}>
           <ExpandIcon />
         </Link>
       </div>

@@ -5,6 +5,7 @@ import { LanguageData, SnippetType } from "../types";
 import { getSnippetByTitleAndCategory } from "../utils/filters";
 import { CloseIcon } from "./Icons";
 import Button from "./Button";
+import CodePreview from "./CodePreview";
 
 const SnippetModal = () => {
   const modalRoot = document.getElementById("modal-root");
@@ -51,7 +52,7 @@ const SnippetModal = () => {
           </Button>
         </div>
         <div className="code-preview">
-          <pre>{snippet.code}</pre>
+          <CodePreview language={language}>{snippet.code}</CodePreview>
         </div>
         <p>
           <b>Description: </b>
