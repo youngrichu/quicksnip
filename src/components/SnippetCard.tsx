@@ -4,7 +4,7 @@ import { CopyIcon, ExpandIcon } from "./Icons";
 import slugify from "../utils/slugify";
 import Button from "./Button";
 
-const SnippetCard = ({ title, language, category, icon }: SnippetCardProps) => {
+const SnippetCard = ({ title, language, category }: SnippetCardProps) => {
   return (
     <li className="snippet">
       <div className="snippet__preview">
