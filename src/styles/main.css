@@ -253,14 +253,6 @@ ol:where([role="list"]) {
   }
 }
 
-.code-preview {
-  border: 1px solid var(--border-color);
-  border-radius: var(--br-md);
-  width: 100%;
-  overflow-x: auto;
-  height: 100%;
-}
-
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
@@ -371,7 +363,7 @@ ol:where([role="list"]) {
 .snippet__preview {
   width: 100%;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 10 / 3;
   background-image: var(--gradient-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--br-md);
@@ -432,6 +424,23 @@ ol:where([role="list"]) {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.code-preview {
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-md);
+  width: 100%;
+  overflow-x: auto;
+  height: 100%;
+  position: relative;
+}
+
+.modal__copy {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  z-index: 10;
+  isolation: isolate;
 }
 
 .modal__tags {

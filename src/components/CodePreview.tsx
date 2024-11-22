@@ -16,7 +16,7 @@ const CodePreview = ({ language, children }: CodePreviewProps) => {
       language={language}
       style={oneDark}
       wrapLines={true}
-      customStyle={{ background: "transparent" }}
+      customStyle={{ margin: "0" }}
     >
       {children}
     </SyntaxHighlighter>

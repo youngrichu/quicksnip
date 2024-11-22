@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import { LanguageData, SnippetType } from "../types";
 import { getSnippetByTitleAndCategory } from "../utils/filters";
-import { CloseIcon } from "./Icons";
+import { CloseIcon, CopyIcon } from "./Icons";
 import Button from "./Button";
 import CodePreview from "./CodePreview";
 
@@ -52,6 +52,9 @@ const SnippetModal = () => {
           </Button>
         </div>
         <div className="code-preview">
+          <Button isIcon={true} className="modal__copy">
+            <CopyIcon />
+          </Button>
           <CodePreview language={language}>{snippet.code}</CodePreview>
         </div>
         <p>

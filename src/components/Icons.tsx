@@ -1,5 +1,5 @@
 const DEFAULT_ICON_COLOR = "var(--clr-neutral-200)";
-const DEFAULT_GRADIENT_COLORS = ["var(--clr-accent)", "var(--clr-neutral-700)"];
+const ACCENT_ICON_COLOR = "var(--clr-accent)";
 
 export const LogoIcon = () => (
   <svg
@@ -141,10 +141,7 @@ export const CloseIcon = ({ fillColor = DEFAULT_ICON_COLOR }) => (
   </svg>
 );
 
-export const CopyIcon = ({
-  gradient_1 = DEFAULT_GRADIENT_COLORS[0],
-  gradient_2 = DEFAULT_GRADIENT_COLORS[1],
-}) => (
+export const CopyIcon = ({ fillColor = ACCENT_ICON_COLOR }) => (
   <svg
     width="20"
     height="20"
@@ -154,35 +151,11 @@ export const CopyIcon = ({
   >
     <path
       d="M12.7 1.66667H9.455C7.985 1.66667 6.82 1.66667 5.90917 1.79C4.97083 1.91667 4.21167 2.18333 3.61333 2.78417C3.01417 3.385 2.74833 4.1475 2.6225 5.08917C2.5 6.00417 2.5 7.17333 2.5 8.64917V13.5142C2.5 14.7708 3.26667 15.8475 4.35583 16.2992C4.3 15.5408 4.3 14.4783 4.3 13.5933V9.41833C4.3 8.35083 4.3 7.43 4.39833 6.69333C4.50417 5.90333 4.7425 5.14667 5.35417 4.5325C5.96583 3.91833 6.72 3.67917 7.50667 3.5725C8.24 3.47417 9.15667 3.47417 10.2208 3.47417H12.7792C13.8425 3.47417 14.7575 3.47417 15.4917 3.5725C15.2718 3.01108 14.8878 2.52895 14.3898 2.18899C13.8918 1.84902 13.303 1.66701 12.7 1.66667Z"
-      fill="url(#paint0_linear_34_108)"
+      fill={fillColor}
     />
     <path
-      d="M5.5 9.4975C5.5 7.22583 5.5 6.09 6.20333 5.38417C6.90583 4.67833 8.03667 4.67833 10.3 4.67833H12.7C14.9625 4.67833 16.0942 4.67833 16.7975 5.38417C17.5008 6.09 17.5 7.22583 17.5 9.4975V13.5142C17.5 15.7858 17.5 16.9217 16.7975 17.6275C16.0942 18.3333 14.9625 18.3333 12.7 18.3333H10.3C8.0375 18.3333 6.90583 18.3333 6.20333 17.6275C5.5 16.9217 5.5 15.7858 5.5 13.5142V9.4975Z"
-      fill="url(#paint1_linear_34_108)"
+      d="M5.5 9.4975C5.5 7.22583 5.5 6.09 6.20333 5.38416C6.90583 4.67833 8.03667 4.67833 10.3 4.67833H12.7C14.9625 4.67833 16.0942 4.67833 16.7975 5.38416C17.5008 6.09 17.5 7.22583 17.5 9.4975V13.5142C17.5 15.7858 17.5 16.9217 16.7975 17.6275C16.0942 18.3333 14.9625 18.3333 12.7 18.3333H10.3C8.0375 18.3333 6.90583 18.3333 6.20333 17.6275C5.5 16.9217 5.5 15.7858 5.5 13.5142V9.4975Z"
+      fill={fillColor}
     />
-    <defs>
-      <linearGradient
-        id="paint0_linear_34_108"
-        x1="2.5"
-        y1="8.81277"
-        x2="15.4917"
-        y2="8.81277"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor={gradient_1} />
-        <stop offset="1" stopColor={gradient_2} />
-      </linearGradient>
-      <linearGradient
-        id="paint1_linear_34_108"
-        x1="5.5"
-        y1="11.3471"
-        x2="17.5"
-        y2="11.3471"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor={gradient_1} />
-        <stop offset="1" stopColor={gradient_2} />
-      </linearGradient>
-    </defs>
   </svg>
 );

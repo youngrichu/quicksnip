@@ -1,0 +1,35 @@
+[
+  {
+    "categoryName": "Typography",
+    "snippets": [
+      {
+        "title": "Line Clamp Mixin",
+        "description": "A Sass mixin to clamp text to a specific number of lines.",
+        "code": "@mixin line-clamp($number) {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: $number;\n  overflow: hidden;\n}",
+        "tags": ["sass", "mixin", "typography", "css"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Text Overflow Ellipsis",
+        "description": "Ensures long text is truncated with an ellipsis.",
+        "code": "@mixin text-ellipsis {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}",
+        "tags": ["sass", "mixin", "text", "css"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Font Import Helper",
+        "description": "Simplifies importing custom fonts in Sass.",
+        "code": "@mixin import-font($family, $weight: 400, $style: normal) {\n  @font-face {\n    font-family: #{$family};\n    font-weight: #{$weight};\n    font-style: #{$style};\n    src: url('/fonts/#{$family}-#{$weight}.woff2') format('woff2'),\n         url('/fonts/#{$family}-#{$weight}.woff') format('woff');\n  }\n}",
+        "tags": ["sass", "mixin", "fonts", "css"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Text Gradient",
+        "description": "Adds a gradient color effect to text.",
+        "code": "@mixin text-gradient($from, $to) {\n  background: linear-gradient(to right, $from, $to);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}",
+        "tags": ["sass", "mixin", "gradient", "text", "css"],
+        "author": "@technoph1le"
+      }
+    ]
+  }
+]
