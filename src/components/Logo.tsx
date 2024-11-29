@@ -3,10 +3,10 @@ import { LogoIcon } from "./Icons";
 
 const Logo = () => {
   return (
-    <Link to={"/"} className="logo">
+    <a href="/" className="logo">
       <LogoIcon />
       <span>QuickSnip</span>
-    </Link>
+    </a>
   );
 };
 

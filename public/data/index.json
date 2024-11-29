@@ -1,3 +1,10 @@
-{
-  "languages": ["JavaScript", "Sass"]
-}
+[
+  {
+    "language": "Sass",
+    "icon": "/icons/sass.svg"
+  },
+  {
+    "language": "CSS",
+    "icon": "/icons/css.svg"
+  }
+]

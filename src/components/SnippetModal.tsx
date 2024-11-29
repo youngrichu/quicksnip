@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { useNavigate, useParams } from "react-router-dom";
 import { LanguageData, SnippetType } from "../types";
 import { getSnippetByTitleAndCategory } from "../utils/filters";
 import { CloseIcon, CopyIcon } from "./Icons";
@@ -10,37 +9,6 @@ import CodePreview from "./CodePreview";
 const SnippetModal = () => {
   const modalRoot = document.getElementById("modal-root");
   if (!modalRoot) return null;
-
-  const { language, category, snippet_title } = useParams();
-  const [snippet, setSnippet] = useState<SnippetType | null>(null);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchSnippets = async () => {
-      try {
-        const res = await fetch(`/data/${language}.json`);
-        if (!res.ok) {
-          throw new Error("Failed to fetch languages in SnippetModal.tsx");
-        }
-        const data: LanguageData = await res.json();
-
-        // TODO: instead of "", use default category as fallback
-        const filteredSnippet = getSnippetByTitleAndCategory(
-          data,
-          category || "",
-          snippet_title || ""
-        );
-
-        setSnippet(filteredSnippet);
-      } catch (error) {
-        console.error("Error occured with SnippetModal.tsx: ", error);
-      }
-    };
-
-    fetchSnippets();
-  }, [snippet_title]);
-
-  if (!snippet) return null;
 
   return ReactDOM.createPortal(
     <div className="modal-overlay">
