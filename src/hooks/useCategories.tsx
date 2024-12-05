@@ -1,29 +1,20 @@
-import { useEffect, useState } from "react";
-import { LanguageData } from "../types";
+import { useFetch } from "./useFetch";
+import { useAppContext } from "../contexts/AppContext";
+import { SnippetType } from "../types";
+import slugify from "../utils/slugify";
 
-export const useCategories = (language: string) => {
-  const [fetchedCategories, setFetchedCategories] = useState<string[]>([]);
+type CategoryData = {
+  categoryName: string;
+  snippets: SnippetType[];
+};
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const res = await fetch(`/data/${language}.json`);
-        if (!res.ok) {
-          throw new Error("Failed to fetch languages in CategoryList.tsx");
-        }
-        const data: LanguageData = await res.json();
-        const filteredCategoryNames = data.map(
-          (category) => category.categoryName
-        );
+export const useCategories = () => {
+  const { language } = useAppContext();
+  const { data, loading, error } = useFetch<CategoryData[]>(
+    `/data/${slugify(language.lang)}.json`
+  );
 
-        setFetchedCategories(filteredCategoryNames);
-      } catch (error) {
-        console.error("Error occured with CategoryList.tsx", error);
-      }
-    };
+  const fetchedCategories = data ? data.map((item) => item.categoryName) : [];
 
-    fetchCategories();
-  }, [language]);
-
-  return { fetchedCategories };
+  return { fetchedCategories, loading, error };
 };

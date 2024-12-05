@@ -1,10 +1,10 @@
 [
   {
-    "language": "Sass",
+    "lang": "SCSS",
     "icon": "/icons/sass.svg"
   },
   {
-    "language": "CSS",
+    "lang": "CSS",
     "icon": "/icons/css.svg"
   }
 ]

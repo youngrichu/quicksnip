@@ -1,41 +1,22 @@
-import { useState, useEffect } from "react";
-import { LanguageData } from "../types";
 import slugify from "../utils/slugify";
+import { useFetch } from "./useFetch";
+import { useAppContext } from "../contexts/AppContext";
+import { SnippetType } from "../types";
 
-type SnippetType = {
-  title: string;
-  description: string;
-  code: string;
-  tags: string[];
-  author: string;
+type CategoryData = {
+  categoryName: string;
+  snippets: SnippetType[];
 };
 
-export const useSnippets = (language: string, category: string) => {
-  const [fetchedSnippets, setFetchedSnippets] = useState<SnippetType[]>([]);
+export const useSnippets = () => {
+  const { language, category } = useAppContext();
+  const { data, loading, error } = useFetch<CategoryData[]>(
+    `/data/${slugify(language.lang)}.json`
+  );
 
-  useEffect(() => {
-    const fetchSnippets = async () => {
-      try {
-        const res = await fetch(`/data/${slugify(language)}.json`);
-        if (!res.ok) {
-          throw new Error("Failed to fetch language data");
-        }
+  const fetchedSnippets = data
+    ? data.find((item) => item.categoryName === category)?.snippets
+    : [];
 
-        const data: LanguageData = await res.json();
-
-        const fetchedCategory = data.find(
-          (item) => slugify(item.categoryName) === slugify(category)
-        );
-        const snippets = fetchedCategory ? fetchedCategory.snippets : [];
-
-        setFetchedSnippets(snippets);
-      } catch (error) {
-        throw new Error("Something went wrong!" + error);
-      }
-    };
-
-    fetchSnippets();
-  }, [language, category]);
-
-  return { fetchedSnippets };
+  return { fetchedSnippets, loading, error };
 };

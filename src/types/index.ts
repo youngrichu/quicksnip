@@ -1,11 +1,6 @@
-export type SnippetCardProps = {
-  title: string;
-  description: string;
-  code: string;
-  tags: string[];
-  author: string;
-  language: string;
-  category: string;
+export type LanguageType = {
+  lang: string;
+  icon: string;
 };
 
 export type SnippetType = {
@@ -21,9 +16,11 @@ export type CategoryType = {
   snippets: SnippetType[];
 };
 
-export type LanguageData = CategoryType[];
-
-export type CategoryProps = {
-  title: string;
-  language: string;
+export type AppState = {
+  language: LanguageType;
+  setLanguage: React.Dispatch<React.SetStateAction<LanguageType>>;
+  category: string;
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
+  snippet?: SnippetType;
+  setSnippet: React.Dispatch<React.SetStateAction<SnippetType | undefined>>;
 };
