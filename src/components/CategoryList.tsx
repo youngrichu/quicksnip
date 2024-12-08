@@ -7,8 +7,8 @@ const CategoryList = () => {
 
   return (
     <ul role="list" className="categories">
-      {fetchedCategories.map((name) => (
-        <li className="category">
+      {fetchedCategories.map((name, idx) => (
+        <li key={idx} className="category">
           <button
             className={`category__btn ${
               name === category ? "category__btn--active" : ""

@@ -14,6 +14,7 @@ const defaultState: AppState = {
   setLanguage: () => {},
   category: defaultCategory,
   setCategory: () => {},
+  snippet: null,
   setSnippet: () => {},
 };
 
@@ -26,7 +27,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [language, setLanguage] = useState<LanguageType>(defaultLanguage);
   const [category, setCategory] = useState<string>(defaultCategory);
-  const [snippet, setSnippet] = useState<SnippetType>();
+  const [snippet, setSnippet] = useState<SnippetType | null>(null);
 
   return (
     <AppContext.Provider

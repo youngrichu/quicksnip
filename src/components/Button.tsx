@@ -20,14 +20,14 @@ const Button = ({
 }: ButtonProps) => {
   return as === "button" ? (
     <button
-      className={`button ${isIcon ? "button--icon" : ""} ${className}`}
+      className={`button ${isIcon ? "button--icon" : ""} ${className || ""}`}
       onClick={onClick}
       {...props}
     >
       {children}
     </button>
   ) : (
-    <a className={`button ${className}`} href={href} {...props}>
+    <a className={`button ${className || ""}`} href={href} {...props}>
       {children}
     </a>
   );

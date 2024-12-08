@@ -21,6 +21,6 @@ export type AppState = {
   setLanguage: React.Dispatch<React.SetStateAction<LanguageType>>;
   category: string;
   setCategory: React.Dispatch<React.SetStateAction<string>>;
-  snippet?: SnippetType;
-  setSnippet: React.Dispatch<React.SetStateAction<SnippetType | undefined>>;
+  snippet: SnippetType | null;
+  setSnippet: React.Dispatch<React.SetStateAction<SnippetType | null>>;
 };
