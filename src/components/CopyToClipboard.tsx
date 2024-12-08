@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { useAppContext } from "../contexts/AppContext";
 import Button from "./Button";
 import { CopyIcon } from "./Icons";
 
-const CopyToClipboard = ({ ...props }) => {
-  const { snippet } = useAppContext();
+type Props = {
+  text: string;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+const CopyToClipboard = ({ text, ...props }: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
-  const snippetCode = snippet ? snippet.code : "";
-
-  const copySnippetCode = () => {
+  const copyText = () => {
     navigator.clipboard
-      .writeText(snippetCode)
+      .writeText(text)
       .then(() => {
         setIsCopied(true);
         setTimeout(() => setIsCopied(false), 2000);
@@ -20,7 +20,7 @@ const CopyToClipboard = ({ ...props }) => {
   };
 
   return (
-    <Button isIcon={true} onClick={copySnippetCode} {...props}>
+    <Button isIcon={true} onClick={copyText} {...props}>
       {isCopied ? "Copied!" : <CopyIcon />}
     </Button>
   );

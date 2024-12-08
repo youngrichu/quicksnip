@@ -1,5 +1,7 @@
 import { MouseEventHandler, ReactNode } from "react";
 
+// TODO: separate LinkButton from Button for clarity
+
 type ButtonProps = {
   as?: "button" | "link";
   href?: string;

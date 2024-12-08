@@ -25,20 +25,18 @@ const LanguageSelector = () => {
   }
 
   return (
-    <>
-      <select
-        id="languages"
-        className="language-selector"
-        onChange={handleLanguageChange}
-        defaultValue="CSS"
-      >
-        {fetchedLanguages.map((language, idx) => (
-          <option key={idx} value={language.lang}>
-            {language.lang}
-          </option>
-        ))}
-      </select>
-    </>
+    <select
+      id="languages"
+      className="language-selector"
+      onChange={handleLanguageChange}
+      defaultValue="CSS"
+    >
+      {fetchedLanguages.map((language, idx) => (
+        <option key={idx} value={language.lang}>
+          {language.lang}
+        </option>
+      ))}
+    </select>
   );
 };
 

@@ -9,6 +9,7 @@ const defaultLanguage: LanguageType = {
 
 const defaultCategory: string = "DOM Manipulation";
 
+// TODO: add custom loading and error handling
 const defaultState: AppState = {
   language: defaultLanguage,
   setLanguage: () => {},

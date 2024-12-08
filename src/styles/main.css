@@ -376,14 +376,6 @@ ol:where([role="list"]) {
   filter: grayscale(100%);
 }
 
-.snippet__copy {
-  position: absolute;
-  z-index: 2;
-  isolation: isolate;
-  top: 0.25em;
-  right: 0.25em;
-}
-
 .snippet__content {
   display: flex;
   justify-content: space-between;

@@ -1,16 +1,12 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-type CodePreviewProps = {
-  language?: string;
+type Props = {
+  language: string;
   children: string;
 };
 
-const CodePreview = ({ language, children }: CodePreviewProps) => {
-  if (!language) {
-    language = "markdown"; // for fallback
-  }
-
+const CodePreview = ({ language = "markdown", children }: Props) => {
   return (
     <SyntaxHighlighter
       language={language}

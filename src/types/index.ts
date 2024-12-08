@@ -3,17 +3,17 @@ export type LanguageType = {
   icon: string;
 };
 
+export type CategoryType = {
+  categoryName: string;
+  snippets: SnippetType[];
+};
+
 export type SnippetType = {
   title: string;
   description: string;
   code: string;
   tags: string[];
   author: string;
-};
-
-export type CategoryType = {
-  categoryName: string;
-  snippets: SnippetType[];
 };
 
 export type AppState = {

@@ -9,7 +9,7 @@ const Header = () => {
       <Logo />
       <nav className="primary-nav">
         <SearchInput />
-        <Button as="link" href="https://google.com">
+        <Button as="link" href="https://github.com/dostonnabotov/quicksnip/">
           <GitHubIcon />
           <span>Add your snippet</span>
         </Button>
