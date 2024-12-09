@@ -2,8 +2,8 @@ import { useAppContext } from "../contexts/AppContext";
 import { useLanguages } from "../hooks/useLanguages";
 
 const LanguageSelector = () => {
+  const { language, setLanguage, setCategory } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
-  const { setLanguage } = useAppContext();
 
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -13,6 +13,7 @@ const LanguageSelector = () => {
     );
     if (selectedLanguage) {
       setLanguage(selectedLanguage);
+      setCategory("");
     }
   };
 
@@ -29,7 +30,7 @@ const LanguageSelector = () => {
       id="languages"
       className="language-selector"
       onChange={handleLanguageChange}
-      defaultValue="CSS"
+      value={language?.lang || "CSS"}
     >
       {fetchedLanguages.map((language, idx) => (
         <option key={idx} value={language.lang}>

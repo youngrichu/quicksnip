@@ -11,13 +11,15 @@ const App = () => {
   const { category } = useAppContext();
 
   return (
-    <div className="container flow" data-flow-space="xl">
+    <div className="container flow">
       <Header />
       <Banner />
       <main className="main">
         <Sidebar />
         <section className="flow">
-          <h2 className="section-title">{category}</h2>
+          <h2 className="section-title">
+            {category ? category : "Select a category"}
+          </h2>
           <SnippetList />
         </section>
       </main>

@@ -3,7 +3,11 @@ import { useCategories } from "../hooks/useCategories";
 
 const CategoryList = () => {
   const { category, setCategory } = useAppContext();
-  const { fetchedCategories } = useCategories();
+  const { fetchedCategories, loading, error } = useCategories();
+
+  if (loading) return <div>Loading...</div>;
+
+  if (error) return <div>Error occured: {error}</div>;
 
   return (
     <ul role="list" className="categories">

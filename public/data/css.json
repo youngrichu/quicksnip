@@ -1,38 +1,76 @@
 [
   {
-    "categoryName": "DOM Manipulation",
+    "categoryName": "Typography",
     "snippets": [
       {
-        "title": "Add a class to an element",
-        "description": "Add a CSS class to a DOM element.",
-        "code": "document.getElementById('myElement').classList.add('myClass');",
-        "tags": ["dom", "class", "javascript"],
+        "title": "Responsive Font Sizing",
+        "description": "Adjusts font size based on viewport width.",
+        "code": "h1 {\n  font-size: calc(1.5rem + 2vw);\n}",
+        "tags": ["css", "font", "responsive", "typography"],
         "author": "@technoph1le"
       },
       {
-        "title": "Remove a class from an element",
-        "description": "Remove a CSS class from a DOM element.",
-        "code": "document.getElementById('myElement').classList.remove('myClass');",
-        "tags": ["dom", "class", "javascript"],
-        "author": "@technoph1le"
-      },
-      {
-        "title": "Something else",
-        "description": "Remove a CSS class from a DOM element.",
-        "code": "document.getElementById('myElement').classList.remove('myClass');",
-        "tags": ["dom", "class", "javascript"],
+        "title": "Letter Spacing",
+        "description": "Adds space between letters for better readability.",
+        "code": "p {\n  letter-spacing: 0.05em;\n}",
+        "tags": ["css", "typography", "spacing"],
         "author": "@technoph1le"
       }
     ]
   },
   {
-    "categoryName": "API Requests",
+    "categoryName": "Layouts",
     "snippets": [
       {
-        "title": "Fetch data from API",
-        "description": "Use the Fetch API to retrieve data.",
-        "code": "fetch('https://api.example.com/data').then(response => response.json()).then(data => console.log(data));",
-        "tags": ["api", "fetch", "javascript"],
+        "title": "Sticky Footer",
+        "description": "Ensures the footer always stays at the bottom of the page.",
+        "code": "body {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\n\nfooter {\n  margin-top: auto;\n}",
+        "tags": ["css", "layout", "footer", "sticky"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Equal-Width Columns",
+        "description": "Creates columns with equal widths using flexbox.",
+        "code": ".columns {\n  display: flex;\n  justify-content: space-between;\n}\n\n.column {\n  flex: 1;\n  margin: 0 10px;\n}",
+        "tags": ["css", "flexbox", "columns", "layout"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "Buttons",
+    "snippets": [
+      {
+        "title": "Button Hover Effect",
+        "description": "Creates a hover effect with a color transition.",
+        "code": ".button {\n  background-color: #007bff;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.button:hover {\n  background-color: #0056b3;\n}",
+        "tags": ["css", "button", "hover", "transition"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "3D Button Effect",
+        "description": "Adds a 3D effect to a button when clicked.",
+        "code": ".button {\n  background-color: #28a745;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n  transition: transform 0.1s;\n}\n\n.button:active {\n  transform: translateY(2px);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);\n}",
+        "tags": ["css", "button", "3D", "effect"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "Effects",
+    "snippets": [
+      {
+        "title": "Blur Background",
+        "description": "Applies a blur effect to the background of an element.",
+        "code": ".blur-background {\n  backdrop-filter: blur(10px);\n  background: rgba(255, 255, 255, 0.5);\n}",
+        "tags": ["css", "blur", "background", "effects"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Hover Glow Effect",
+        "description": "Adds a glowing effect on hover.",
+        "code": ".glow {\n  background-color: #f39c12;\n  padding: 10px 20px;\n  border-radius: 5px;\n  transition: box-shadow 0.3s ease;\n}\n\n.glow:hover {\n  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);\n}",
+        "tags": ["css", "hover", "glow", "effects"],
         "author": "@technoph1le"
       }
     ]

@@ -1,0 +1,97 @@
+[
+  {
+    "categoryName": "Array Manipulation",
+    "snippets": [
+      {
+        "title": "Remove Duplicates",
+        "description": "Removes duplicate values from an array.",
+        "code": "const removeDuplicates = (arr) => [...new Set(arr)];\n\n// Usage:\nconst numbers = [1, 2, 2, 3, 4, 4, 5];\nconsole.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]",
+        "tags": ["javascript", "array", "deduplicate", "utility"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Flatten Array",
+        "description": "Flattens a multi-dimensional array.",
+        "code": "const flattenArray = (arr) => arr.flat(Infinity);\n\n// Usage:\nconst nestedArray = [1, [2, [3, [4]]]];\nconsole.log(flattenArray(nestedArray)); // Output: [1, 2, 3, 4]",
+        "tags": ["javascript", "array", "flatten", "utility"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "String Manipulation",
+    "snippets": [
+      {
+        "title": "Capitalize String",
+        "description": "Capitalizes the first letter of a string.",
+        "code": "const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);\n\n// Usage:\nconsole.log(capitalize('hello')); // Output: 'Hello'",
+        "tags": ["javascript", "string", "capitalize", "utility"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Reverse String",
+        "description": "Reverses the characters in a string.",
+        "code": "const reverseString = (str) => str.split('').reverse().join('');\n\n// Usage:\nconsole.log(reverseString('hello')); // Output: 'olleh'",
+        "tags": ["javascript", "string", "reverse", "utility"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "Date and Time",
+    "snippets": [
+      {
+        "title": "Format Date",
+        "description": "Formats a date in 'YYYY-MM-DD' format.",
+        "code": "const formatDate = (date) => date.toISOString().split('T')[0];\n\n// Usage:\nconsole.log(formatDate(new Date())); // Output: '2024-12-10'",
+        "tags": ["javascript", "date", "format", "utility"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Get Time Difference",
+        "description": "Calculates the time difference in days between two dates.",
+        "code": "const getTimeDifference = (date1, date2) => {\n  const diff = Math.abs(date2 - date1);\n  return Math.ceil(diff / (1000 * 60 * 60 * 24));\n};\n\n// Usage:\nconst date1 = new Date('2024-01-01');\nconst date2 = new Date('2024-12-31');\nconsole.log(getTimeDifference(date1, date2)); // Output: 365",
+        "tags": ["javascript", "date", "time-difference", "utility"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "Utilities",
+    "snippets": [
+      {
+        "title": "Debounce Function",
+        "description": "Delays a function execution until after a specified time.",
+        "code": "const debounce = (func, delay) => {\n  let timeout;\n  return (...args) => {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => func(...args), delay);\n  };\n};\n\n// Usage:\nwindow.addEventListener('resize', debounce(() => console.log('Resized!'), 500));",
+        "tags": ["javascript", "utility", "debounce", "performance"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Throttle Function",
+        "description": "Limits a function execution to once every specified time interval.",
+        "code": "const throttle = (func, limit) => {\n  let lastFunc;\n  let lastRan;\n  return (...args) => {\n    const context = this;\n    if (!lastRan) {\n      func.apply(context, args);\n      lastRan = Date.now();\n    } else {\n      clearTimeout(lastFunc);\n      lastFunc = setTimeout(() => {\n        if (Date.now() - lastRan >= limit) {\n          func.apply(context, args);\n          lastRan = Date.now();\n        }\n      }, limit - (Date.now() - lastRan));\n    }\n  };\n};\n\n// Usage:\ndocument.addEventListener('scroll', throttle(() => console.log('Scrolled!'), 1000));",
+        "tags": ["javascript", "utility", "throttle", "performance"],
+        "author": "@technoph1le"
+      }
+    ]
+  },
+  {
+    "categoryName": "DOM Manipulation",
+    "snippets": [
+      {
+        "title": "Toggle Class",
+        "description": "Toggles a class on an element.",
+        "code": "const toggleClass = (element, className) => {\n  element.classList.toggle(className);\n};\n\n// Usage:\nconst element = document.querySelector('.my-element');\ntoggleClass(element, 'active');",
+        "tags": ["javascript", "dom", "class", "utility"],
+        "author": "@technoph1le"
+      },
+      {
+        "title": "Smooth Scroll to Element",
+        "description": "Scrolls smoothly to a specified element.",
+        "code": "const smoothScroll = (element) => {\n  element.scrollIntoView({ behavior: 'smooth' });\n};\n\n// Usage:\nconst target = document.querySelector('#target');\nsmoothScroll(target);",
+        "tags": ["javascript", "dom", "scroll", "ui"],
+        "author": "@technoph1le"
+      }
+    ]
+  }
+]

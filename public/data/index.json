@@ -1,10 +1,18 @@
 [
   {
-    "lang": "SCSS",
-    "icon": "/icons/sass.svg"
+    "lang": "JavaScript",
+    "icon": "/icons/javascript.svg"
   },
   {
     "lang": "CSS",
     "icon": "/icons/css.svg"
+  },
+  {
+    "lang": "Python",
+    "icon": "/icons/python.svg"
+  },
+  {
+    "lang": "SCSS",
+    "icon": "/icons/sass.svg"
   }
 ]

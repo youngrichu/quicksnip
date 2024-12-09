@@ -147,21 +147,21 @@ ol:where([role="list"]) {
 }
 
 .flow {
-  --_flow-space: 1em;
+  --_flow-space: 1rem;
   display: grid;
   gap: var(--_flow-space);
 }
 
 .flow[data-flow-space="sm"] {
-  --_flow-space: 0.5em;
+  --_flow-space: 0.5rem;
 }
 
 .flow[data-flow-space="lg"] {
-  --_flow-space: 1.5em;
+  --_flow-space: 1.5rem;
 }
 
 .flow[data-flow-space="xl"] {
-  --_flow-space: 2em;
+  --_flow-space: 2rem;
 }
 
 /* Text */
@@ -254,7 +254,7 @@ ol:where([role="list"]) {
   #HEADER
 \*------------------------------------*/
 .header {
-  padding-block: 2rem;
+  padding-block: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -283,6 +283,7 @@ ol:where([role="list"]) {
   display: grid;
   gap: 2rem;
   align-items: start;
+  min-height: 60vh;
 
   @media (width > 50em) {
     grid-template-columns: 2fr 6fr;
@@ -349,7 +350,7 @@ ol:where([role="list"]) {
   --_gap: 1.5rem;
   display: grid;
   gap: var(--_gap);
-  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
 }
 
 .snippet {

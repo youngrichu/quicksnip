@@ -5,14 +5,19 @@ import { useSnippets } from "../hooks/useSnippets";
 
 import Button from "./Button";
 import SnippetModal from "./SnippetModal";
-import { ExpandIcon } from "./Icons";
+import { ExpandIcon, LeftAngleArrowIcon } from "./Icons";
 
 const SnippetList = () => {
   const { language, setSnippet } = useAppContext();
   const { fetchedSnippets } = useSnippets();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  if (!fetchedSnippets) return <p>Empty List</p>;
+  if (!fetchedSnippets)
+    return (
+      <div>
+        <LeftAngleArrowIcon />
+      </div>
+    );
 
   const handleOpenModal = (activeSnippet: SnippetType) => {
     setIsModalOpen(true);
