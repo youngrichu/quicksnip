@@ -14,27 +14,72 @@ const Footer = () => {
             different programming languages.
           </p>
           <p>
-            Built by <a href="#">Technophile</a>, and powered by awesome{" "}
-            <a href="#">community</a>.
+            Built by{" "}
+            <a
+              href="https://github.com/dostonnabotov"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="styled-link"
+            >
+              Technophile
+            </a>
+            , and powered by awesome{" "}
+            <a
+              href="https://github.com/dostonnabotov/quicksnip"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="styled-link"
+            >
+              community
+            </a>
+            .
           </p>
         </div>
-        <nav>
+        <nav className="footer__nav">
           <ul className="flow" data-flow-space="sm">
             <li>
-              <a href="#">Add your own snippet</a>
+              <a
+                href="https://github.com/dostonnabotov/quicksnip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="styled-link"
+              >
+                Add your own snippet
+              </a>
             </li>
             <li>
-              <a href="#">Edit this page on GitHub</a>
+              <a
+                href="https://github.com/dostonnabotov/quicksnip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="styled-link"
+              >
+                Edit this page on GitHub
+              </a>
             </li>
           </ul>
         </nav>
-        <nav>
+        <nav className="footer__nav">
           <ul className="flow" data-flow-space="sm">
             <li>
-              <a href="#">See the community</a>
+              <a
+                href="https://github.com/dostonnabotov/quicksnip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="styled-link"
+              >
+                See the community
+              </a>
             </li>
             <li>
-              <a href="#">Support this project</a>
+              <a
+                href="https://github.com/dostonnabotov/quicksnip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="styled-link"
+              >
+                Support this project
+              </a>
             </li>
           </ul>
         </nav>

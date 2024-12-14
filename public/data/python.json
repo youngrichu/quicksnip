@@ -7,14 +7,14 @@
         "description": "Reverses the characters in a string.",
         "code": "def reverse_string(s):\n    return s[::-1]\n\n# Usage:\nprint(reverse_string('hello'))  # Output: 'olleh'",
         "tags": ["python", "string", "reverse", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Palindrome",
         "description": "Checks if a string is a palindrome.",
         "code": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\n# Usage:\nprint(is_palindrome('A man a plan a canal Panama'))  # Output: True",
         "tags": ["python", "string", "palindrome", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -26,14 +26,14 @@
         "description": "Flattens a multi-dimensional list into a single list.",
         "code": "def flatten_list(lst):\n    return [item for sublist in lst for item in sublist]\n\n# Usage:\nnested_list = [[1, 2], [3, 4], [5]]\nprint(flatten_list(nested_list))  # Output: [1, 2, 3, 4, 5]",
         "tags": ["python", "list", "flatten", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Remove Duplicates",
         "description": "Removes duplicate elements from a list while maintaining order.",
         "code": "def remove_duplicates(lst):\n    return list(dict.fromkeys(lst))\n\n# Usage:\nprint(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]",
         "tags": ["python", "list", "duplicates", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -45,14 +45,14 @@
         "description": "Reads all lines from a file and returns them as a list.",
         "code": "def read_file_lines(filepath):\n    with open(filepath, 'r') as file:\n        return file.readlines()\n\n# Usage:\nlines = read_file_lines('example.txt')\nprint(lines)",
         "tags": ["python", "file", "read", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Write to File",
         "description": "Writes content to a file.",
         "code": "def write_to_file(filepath, content):\n    with open(filepath, 'w') as file:\n        file.write(content)\n\n# Usage:\nwrite_to_file('example.txt', 'Hello, World!')",
         "tags": ["python", "file", "write", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -64,14 +64,14 @@
         "description": "Calculates the factorial of a number.",
         "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n\n# Usage:\nprint(factorial(5))  # Output: 120",
         "tags": ["python", "math", "factorial", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Prime Number",
         "description": "Checks if a number is a prime number.",
         "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Usage:\nprint(is_prime(17))  # Output: True",
         "tags": ["python", "math", "prime", "check"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -83,14 +83,14 @@
         "description": "Measures the execution time of a code block.",
         "code": "import time\n\ndef measure_time(func, *args):\n    start = time.time()\n    result = func(*args)\n    end = time.time()\n    print(f'Execution time: {end - start:.6f} seconds')\n    return result\n\n# Usage:\ndef slow_function():\n    time.sleep(2)\n\nmeasure_time(slow_function)",
         "tags": ["python", "time", "execution", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Generate Random String",
         "description": "Generates a random alphanumeric string.",
         "code": "import random\nimport string\n\ndef random_string(length):\n    letters_and_digits = string.ascii_letters + string.digits\n    return ''.join(random.choice(letters_and_digits) for _ in range(length))\n\n# Usage:\nprint(random_string(10))  # Output: Random 10-character string",
         "tags": ["python", "random", "string", "utility"],
-        "author": "@technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   }

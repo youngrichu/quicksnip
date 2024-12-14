@@ -3,12 +3,11 @@ import { SnippetType } from "../types";
 import { useAppContext } from "../contexts/AppContext";
 import { useSnippets } from "../hooks/useSnippets";
 
-import Button from "./Button";
 import SnippetModal from "./SnippetModal";
-import { ExpandIcon, LeftAngleArrowIcon } from "./Icons";
+import { LeftAngleArrowIcon } from "./Icons";
 
 const SnippetList = () => {
-  const { language, setSnippet } = useAppContext();
+  const { language, snippet, setSnippet } = useAppContext();
   const { fetchedSnippets } = useSnippets();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -30,29 +29,33 @@ const SnippetList = () => {
   };
 
   return (
-    <ul role="list" className="snippets">
-      {fetchedSnippets.map((snippet, idx) => (
-        <li key={idx} className="snippet">
-          <div className="snippet__preview">
-            <img src={language.icon} alt={language.lang} />
-          </div>
+    <>
+      <ul role="list" className="snippets">
+        {fetchedSnippets.map((snippet, idx) => (
+          <li key={idx}>
+            <button
+              className="snippet | flow"
+              data-flow-space="sm"
+              onClick={() => handleOpenModal(snippet)}
+            >
+              <div className="snippet__preview">
+                <img src={language.icon} alt={language.lang} />
+              </div>
 
-          <div className="snippet__content">
-            <h3 className="snippet__title">{snippet.title}</h3>
-            <Button isIcon={true} onClick={() => handleOpenModal(snippet)}>
-              <ExpandIcon />
-            </Button>
-          </div>
-          {isModalOpen && (
-            <SnippetModal
-              snippet={snippet}
-              handleCloseModal={handleCloseModal}
-              language={language.lang}
-            />
-          )}
-        </li>
-      ))}
-    </ul>
+              <h3 className="snippet__title">{snippet.title}</h3>
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      {isModalOpen && snippet && (
+        <SnippetModal
+          snippet={snippet}
+          handleCloseModal={handleCloseModal}
+          language={language.lang}
+        />
+      )}
+    </>
   );
 };
 

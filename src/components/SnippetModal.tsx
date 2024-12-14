@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Button from "./Button";
 import { CloseIcon } from "./Icons";
-import CopyToClipboard from "./CopyToClipboard";
 import CodePreview from "./CodePreview";
 import { SnippetType } from "../types";
 import slugify from "../utils/slugify";
@@ -30,16 +29,21 @@ const SnippetModal: React.FC<Props> = ({
             <CloseIcon />
           </Button>
         </div>
-        <div className="code-preview">
-          <CopyToClipboard text={snippet.code} className="modal__copy" />
-          <CodePreview language={slugify(language)}>{snippet.code}</CodePreview>
-        </div>
+        <CodePreview language={slugify(language)}>{snippet.code}</CodePreview>
         <p>
           <b>Description: </b>
           {snippet.description}
         </p>
         <p>
-          Contributed by <b>{snippet.author}</b>
+          Contributed by{" "}
+          <a
+            href={`https://github.com/${snippet.author}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="styled-link"
+          >
+            @{snippet.author}
+          </a>
         </p>
         <ul role="list" className="modal__tags">
           {snippet.tags.map((tag) => (

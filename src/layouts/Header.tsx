@@ -1,5 +1,5 @@
-import Button from "../components/Button";
 import { GitHubIcon } from "../components/Icons";
+import LinkButton from "../components/LinkButton";
 import Logo from "../components/Logo";
 import SearchInput from "../components/SearchInput";
 
@@ -9,10 +9,14 @@ const Header = () => {
       <Logo />
       <nav className="primary-nav">
         <SearchInput />
-        <Button as="link" href="https://github.com/dostonnabotov/quicksnip/">
+        <LinkButton
+          href="https://github.com/dostonnabotov/quicksnip/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GitHubIcon />
           <span>Add your snippet</span>
-        </Button>
+        </LinkButton>
       </nav>
     </header>
   );

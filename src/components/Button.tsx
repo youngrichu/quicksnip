@@ -1,37 +1,27 @@
-import { MouseEventHandler, ReactNode } from "react";
-
-// TODO: separate LinkButton from Button for clarity
+import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
 type ButtonProps = {
-  as?: "button" | "link";
-  href?: string;
-  className?: string;
   isIcon?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
-};
+  className?: string;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
-  as = "button",
-  href,
-  className,
-  children,
-  isIcon,
+  isIcon = false,
+  className = "",
   onClick,
+  children,
   ...props
 }: ButtonProps) => {
-  return as === "button" ? (
+  return (
     <button
-      className={`button ${isIcon ? "button--icon" : ""} ${className || ""}`}
+      className={`button ${isIcon ? "button--icon" : ""} ${className}`}
       onClick={onClick}
       {...props}
     >
       {children}
     </button>
-  ) : (
-    <a className={`button ${className || ""}`} href={href} {...props}>
-      {children}
-    </a>
   );
 };
 
