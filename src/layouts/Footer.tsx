@@ -1,5 +1,3 @@
-import Logo from "../components/Logo";
-
 const Footer = () => {
   return (
     <>
@@ -7,11 +5,13 @@ const Footer = () => {
 
       <footer className="footer">
         <div className="footer__content flow" data-flow-space="sm">
-          <Logo />
           <p>
-            <b>QuickSnip</b> is your go-to collection of handy code snippets,
-            making repetitive tasks easier and faster for developers across
-            different programming languages.
+            <a href="/" className="styled-link">
+              QuickSnip
+            </a>{" "}
+            is your go-to collection of handy code snippets, making repetitive
+            tasks easier and faster for developers across different programming
+            languages.
           </p>
           <p>
             Built by{" "}
