@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# QuickSnip
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An open-source project that categorizes handy code snippets across various programming languages. Built with love and powered by an awesome community. 🚀
 
-Currently, two official plugins are available:
+## How to contribute
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Want to help make QuickSnip even better? You can contribute by:
 
-## Expanding the ESLint configuration
+- **Improving the Code**: Fix bugs, suggest new features, or optimize the project.
+- **Adding New Snippets**: Share your favorite snippets to grow the database.
+Be sure to check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file for detailed guidelines.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Improving the code
 
-- Configure the top-level `parserOptions` property like this:
+Got a feature idea or bug fix? Here's how you can contribute:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Open an issue](https://github.com/dostonnabotov/sass-template/issues) to share your ideas or report a bug.
+- [Send a pull request](https://github.com/dostonnabotov/sass-template/pulls) with your changes.
+
+### Adding a Snippet
+
+The snippets database is located in the `/public/data` folder.
+
+If you’d like to add a snippet for an **existing language** and **category**, use the following format:
+
+```json
+{
+  "title": "Name of the snippet",
+  "description": "A brief description of what it does",
+  "code": "code goes here",
+  "tags": ["tag1", "tag2", "tag3"],
+  "author": "your_github_username"
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+For details about adding new categories or programming languages, check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Guidelines for Contributions
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+To keep things smooth and consistent, please:
+
+- Use proper JSON formatting.
+- Include all mandatory fields in the snippet.
+- Test your snippet to ensure it works as expected.
+
+Following these guidelines helps me (and everyone else) review and merge your contributions faster.
+
+## License
+
+QuickSnip is licensed under the [MIT License](/LICENSE). Feel free to use and share it as you like.
