@@ -5,14 +5,27 @@
       {
         "title": "Reverse String",
         "description": "Reverses the characters in a string.",
-        "code": "def reverse_string(s):\n    return s[::-1]\n\n# Usage:\nprint(reverse_string('hello'))  # Output: 'olleh'",
+        "code": [
+          "def reverse_string(s):",
+          "    return s[::-1]",
+          "",
+          "# Usage:",
+          "print(reverse_string('hello'))  # Output: 'olleh'"
+        ],
         "tags": ["python", "string", "reverse", "utility"],
         "author": "dostonnabotov"
       },
       {
         "title": "Check Palindrome",
         "description": "Checks if a string is a palindrome.",
-        "code": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\n# Usage:\nprint(is_palindrome('A man a plan a canal Panama'))  # Output: True",
+        "code": [
+          "def is_palindrome(s):",
+          "    s = s.lower().replace(' ', '')",
+          "    return s == s[::-1]",
+          "",
+          "# Usage:",
+          "print(is_palindrome('A man a plan a canal Panama'))  # Output: True"
+        ],
         "tags": ["python", "string", "palindrome", "utility"],
         "author": "dostonnabotov"
       }
@@ -24,14 +37,27 @@
       {
         "title": "Flatten Nested List",
         "description": "Flattens a multi-dimensional list into a single list.",
-        "code": "def flatten_list(lst):\n    return [item for sublist in lst for item in sublist]\n\n# Usage:\nnested_list = [[1, 2], [3, 4], [5]]\nprint(flatten_list(nested_list))  # Output: [1, 2, 3, 4, 5]",
+        "code": [
+          "def flatten_list(lst):",
+          "    return [item for sublist in lst for item in sublist]",
+          "",
+          "# Usage:",
+          "nested_list = [[1, 2], [3, 4], [5]]",
+          "print(flatten_list(nested_list))  # Output: [1, 2, 3, 4, 5]"
+        ],
         "tags": ["python", "list", "flatten", "utility"],
         "author": "dostonnabotov"
       },
       {
         "title": "Remove Duplicates",
         "description": "Removes duplicate elements from a list while maintaining order.",
-        "code": "def remove_duplicates(lst):\n    return list(dict.fromkeys(lst))\n\n# Usage:\nprint(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]",
+        "code": [
+          "def remove_duplicates(lst):",
+          "    return list(dict.fromkeys(lst))",
+          "",
+          "# Usage:",
+          "print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]"
+        ],
         "tags": ["python", "list", "duplicates", "utility"],
         "author": "dostonnabotov"
       }
@@ -43,14 +69,29 @@
       {
         "title": "Read File Lines",
         "description": "Reads all lines from a file and returns them as a list.",
-        "code": "def read_file_lines(filepath):\n    with open(filepath, 'r') as file:\n        return file.readlines()\n\n# Usage:\nlines = read_file_lines('example.txt')\nprint(lines)",
+        "code": [
+          "def read_file_lines(filepath):",
+          "    with open(filepath, 'r') as file:",
+          "        return file.readlines()",
+          "",
+          "# Usage:",
+          "lines = read_file_lines('example.txt')",
+          "print(lines)"
+        ],
         "tags": ["python", "file", "read", "utility"],
         "author": "dostonnabotov"
       },
       {
         "title": "Write to File",
         "description": "Writes content to a file.",
-        "code": "def write_to_file(filepath, content):\n    with open(filepath, 'w') as file:\n        file.write(content)\n\n# Usage:\nwrite_to_file('example.txt', 'Hello, World!')",
+        "code": [
+          "def write_to_file(filepath, content):",
+          "    with open(filepath, 'w') as file:",
+          "        file.write(content)",
+          "",
+          "# Usage:",
+          "write_to_file('example.txt', 'Hello, World!')"
+        ],
         "tags": ["python", "file", "write", "utility"],
         "author": "dostonnabotov"
       }
@@ -62,14 +103,33 @@
       {
         "title": "Find Factorial",
         "description": "Calculates the factorial of a number.",
-        "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n\n# Usage:\nprint(factorial(5))  # Output: 120",
+        "code": [
+          "def factorial(n):",
+          "    if n == 0:",
+          "        return 1",
+          "    return n * factorial(n - 1)",
+          "",
+          "# Usage:",
+          "print(factorial(5))  # Output: 120"
+        ],
         "tags": ["python", "math", "factorial", "utility"],
         "author": "dostonnabotov"
       },
       {
         "title": "Check Prime Number",
         "description": "Checks if a number is a prime number.",
-        "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Usage:\nprint(is_prime(17))  # Output: True",
+        "code": [
+          "def is_prime(n):",
+          "    if n <= 1:",
+          "        return False",
+          "    for i in range(2, int(n**0.5) + 1):",
+          "        if n % i == 0:",
+          "            return False",
+          "    return True",
+          "",
+          "# Usage:",
+          "print(is_prime(17))  # Output: True"
+        ],
         "tags": ["python", "math", "prime", "check"],
         "author": "dostonnabotov"
       }
@@ -81,14 +141,39 @@
       {
         "title": "Measure Execution Time",
         "description": "Measures the execution time of a code block.",
-        "code": "import time\n\ndef measure_time(func, *args):\n    start = time.time()\n    result = func(*args)\n    end = time.time()\n    print(f'Execution time: {end - start:.6f} seconds')\n    return result\n\n# Usage:\ndef slow_function():\n    time.sleep(2)\n\nmeasure_time(slow_function)",
+        "code": [
+          "import time",
+          "",
+          "def measure_time(func, *args):",
+          "    start = time.time()",
+          "    result = func(*args)",
+          "    end = time.time()",
+          "    print(f'Execution time: {end - start:.6f} seconds')",
+          "    return result",
+          "",
+          "# Usage:",
+          "def slow_function():",
+          "    time.sleep(2)",
+          "",
+          "measure_time(slow_function)"
+        ],
         "tags": ["python", "time", "execution", "utility"],
         "author": "dostonnabotov"
       },
       {
         "title": "Generate Random String",
         "description": "Generates a random alphanumeric string.",
-        "code": "import random\nimport string\n\ndef random_string(length):\n    letters_and_digits = string.ascii_letters + string.digits\n    return ''.join(random.choice(letters_and_digits) for _ in range(length))\n\n# Usage:\nprint(random_string(10))  # Output: Random 10-character string",
+        "code": [
+          "import random",
+          "import string",
+          "",
+          "def random_string(length):",
+          "    letters_and_digits = string.ascii_letters + string.digits",
+          "    return ''.join(random.choice(letters_and_digits) for _ in range(length))",
+          "",
+          "# Usage:",
+          "print(random_string(10))  # Output: Random 10-character string"
+        ],
         "tags": ["python", "random", "string", "utility"],
         "author": "dostonnabotov"
       }

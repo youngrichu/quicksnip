@@ -26,8 +26,11 @@ If you’d like to add a snippet for an **existing language** and **category**, 
 ```json
 {
   "title": "Name of the snippet",
-  "description": "A brief description of what it does",
-  "code": "code goes here",
+  "description": "A short explanation of what the snippet does",
+  "code": [
+    "your code goes here",
+    "  this is a newline with a space"
+  ],
   "tags": ["tag1", "tag2", "tag3"],
   "author": "your_github_username"
 }

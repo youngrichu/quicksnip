@@ -5,14 +5,14 @@
       {
         "title": "Responsive Font Sizing",
         "description": "Adjusts font size based on viewport width.",
-        "code": "h1 {\n  font-size: calc(1.5rem + 2vw);\n}",
+        "code": ["h1 {", "  font-size: calc(1.5rem + 2vw);", "}"],
         "tags": ["css", "font", "responsive", "typography"],
         "author": "dostonnabotov"
       },
       {
         "title": "Letter Spacing",
         "description": "Adds space between letters for better readability.",
-        "code": "p {\n  letter-spacing: 0.05em;\n}",
+        "code": ["p {", "  letter-spacing: 0.05em;", "}"],
         "tags": ["css", "typography", "spacing"],
         "author": "dostonnabotov"
       }
@@ -24,14 +24,34 @@
       {
         "title": "Sticky Footer",
         "description": "Ensures the footer always stays at the bottom of the page.",
-        "code": "body {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\n\nfooter {\n  margin-top: auto;\n}",
+        "code": [
+          "body {",
+          "  display: flex;",
+          "  flex-direction: column;",
+          "  min-height: 100vh;",
+          "}",
+          "",
+          "footer {",
+          "  margin-top: auto;",
+          "}"
+        ],
         "tags": ["css", "layout", "footer", "sticky"],
         "author": "dostonnabotov"
       },
       {
         "title": "Equal-Width Columns",
         "description": "Creates columns with equal widths using flexbox.",
-        "code": ".columns {\n  display: flex;\n  justify-content: space-between;\n}\n\n.column {\n  flex: 1;\n  margin: 0 10px;\n}",
+        "code": [
+          ".columns {",
+          "  display: flex;",
+          "  justify-content: space-between;",
+          "}",
+          "",
+          ".column {",
+          "  flex: 1;",
+          "  margin: 0 10px;",
+          "}"
+        ],
         "tags": ["css", "flexbox", "columns", "layout"],
         "author": "dostonnabotov"
       }
@@ -43,14 +63,43 @@
       {
         "title": "Button Hover Effect",
         "description": "Creates a hover effect with a color transition.",
-        "code": ".button {\n  background-color: #007bff;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.button:hover {\n  background-color: #0056b3;\n}",
+        "code": [
+          ".button {",
+          "  background-color: #007bff;",
+          "  color: white;",
+          "  padding: 10px 20px;",
+          "  border: none;",
+          "  border-radius: 5px;",
+          "  cursor: pointer;",
+          "  transition: background-color 0.3s ease;",
+          "}",
+          "",
+          ".button:hover {",
+          "  background-color: #0056b3;",
+          "}"
+        ],
         "tags": ["css", "button", "hover", "transition"],
         "author": "dostonnabotov"
       },
       {
         "title": "3D Button Effect",
         "description": "Adds a 3D effect to a button when clicked.",
-        "code": ".button {\n  background-color: #28a745;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);\n  transition: transform 0.1s;\n}\n\n.button:active {\n  transform: translateY(2px);\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);\n}",
+        "code": [
+          ".button {",
+          "  background-color: #28a745;",
+          "  color: white;",
+          "  padding: 10px 20px;",
+          "  border: none;",
+          "  border-radius: 5px;",
+          "  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);",
+          "  transition: transform 0.1s;",
+          "}",
+          "",
+          ".button:active {",
+          "  transform: translateY(2px);",
+          "  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);",
+          "}"
+        ],
         "tags": ["css", "button", "3D", "effect"],
         "author": "dostonnabotov"
       }
@@ -62,14 +111,30 @@
       {
         "title": "Blur Background",
         "description": "Applies a blur effect to the background of an element.",
-        "code": ".blur-background {\n  backdrop-filter: blur(10px);\n  background: rgba(255, 255, 255, 0.5);\n}",
+        "code": [
+          ".blur-background {",
+          "  backdrop-filter: blur(10px);",
+          "  background: rgba(255, 255, 255, 0.5);",
+          "}"
+        ],
         "tags": ["css", "blur", "background", "effects"],
         "author": "dostonnabotov"
       },
       {
         "title": "Hover Glow Effect",
         "description": "Adds a glowing effect on hover.",
-        "code": ".glow {\n  background-color: #f39c12;\n  padding: 10px 20px;\n  border-radius: 5px;\n  transition: box-shadow 0.3s ease;\n}\n\n.glow:hover {\n  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);\n}",
+        "code": [
+          ".glow {",
+          "  background-color: #f39c12;",
+          "  padding: 10px 20px;",
+          "  border-radius: 5px;",
+          "  transition: box-shadow 0.3s ease;",
+          "}",
+          "",
+          ".glow:hover {",
+          "  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);",
+          "}"
+        ],
         "tags": ["css", "hover", "glow", "effects"],
         "author": "dostonnabotov"
       }

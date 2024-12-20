@@ -36,7 +36,10 @@ Look for the categoryName where your snippet belongs.
 {
   "title": "Name of the snippet",
   "description": "A short explanation of what the snippet does",
-  "code": "your code goes here",
+  "code": [
+    "your code goes here",
+    "  this is a newline with a space"
+  ],
   "tags": ["tag1", "tag2", "tag3"],
   "author": "your_github_username"
 }
@@ -53,7 +56,12 @@ Here’s an example for JavaScript:
       {
         "title": "Format Date",
         "description": "Formats a date in 'YYYY-MM-DD' format.",
-        "code": "const formatDate = (date) => date.toISOString().split('T')[0];\n\n// Usage:\nconsole.log(formatDate(new Date())); // Output: '2024-12-10'",
+        "code": [
+          "const formatDate = (date) => date.toISOString().split('T')[0];",
+          "",
+          "// Usage:",
+          "console.log(formatDate(new Date())); // Output: '2024-12-10'"
+        ],
         "tags": ["javascript", "date", "format"],
         "author": "technoph1le"
       }
@@ -76,7 +84,10 @@ Use this format:
       {
         "title": "Name of the snippet",
         "description": "A short explanation of what it does",
-        "code": "your code goes here",
+        "code": [
+          "your code goes here",
+          "  this is a newline with a space"
+        ],
         "tags": ["tag1", "tag2", "tag3"],
         "author": "your_github_username"
       }

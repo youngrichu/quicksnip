@@ -2,6 +2,7 @@ import { useFetch } from "./useFetch";
 import { useAppContext } from "../contexts/AppContext";
 import { SnippetType } from "../types";
 import slugify from "../utils/slugify";
+import { useMemo } from "react";
 
 type CategoryData = {
   categoryName: string;
@@ -14,7 +15,9 @@ export const useCategories = () => {
     `/data/${slugify(language.lang)}.json`
   );
 
-  const fetchedCategories = data ? data.map((item) => item.categoryName) : [];
+  const fetchedCategories = useMemo(() => {
+    return data ? data.map((item) => item.categoryName) : [];
+  }, [data]);
 
   return { fetchedCategories, loading, error };
 };
