@@ -4,11 +4,11 @@ import CopyToClipboard from "./CopyToClipboard";
 
 type Props = {
   language: string;
-  children: string[];
+  code: string[];
 };
 
-const CodePreview = ({ language = "markdown", children }: Props) => {
-  const codeString = children.join("\n");
+const CodePreview = ({ language = "markdown", code }: Props) => {
+  const codeString = code.join("\n");
 
   return (
     <div className="code-preview">

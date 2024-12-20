@@ -29,7 +29,7 @@ const SnippetModal: React.FC<Props> = ({
             <CloseIcon />
           </Button>
         </div>
-        <CodePreview language={slugify(language)}>{snippet.code}</CodePreview>
+        <CodePreview language={slugify(language)} code={snippet.code} />
         <p>
           <b>Description: </b>
           {snippet.description}
