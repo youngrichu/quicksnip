@@ -136,6 +136,11 @@ ol:where([role="list"]) {
   margin: 0;
 }
 
+abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
 /*------------------------------------*\
   #UTILS
 \*------------------------------------*/
@@ -195,6 +200,7 @@ ol:where([role="list"]) {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+/* button */
 .button {
   display: inline-flex;
   min-height: 3rem;
@@ -208,6 +214,11 @@ ol:where([role="list"]) {
   cursor: pointer;
   line-height: 1.1;
   text-decoration: none;
+  transition: transform 200ms ease;
+}
+
+.button:is(:hover, :focus-visible) {
+  border-color: var(--clr-accent);
 }
 
 .button--icon {
@@ -220,6 +231,7 @@ ol:where([role="list"]) {
   padding: 0.5em;
 }
 
+/* search field */
 .search-field {
   display: inline-flex;
   align-items: center;
@@ -228,6 +240,10 @@ ol:where([role="list"]) {
   border: 1px solid var(--border-color);
   border-radius: var(--br-md);
   padding: 0.75em 1.125em;
+
+  &:is(:hover, :focus-within) {
+    border-color: var(--clr-accent);
+  }
 }
 
 .search-field > input {
@@ -237,6 +253,112 @@ ol:where([role="list"]) {
   &:focus {
     outline: none;
   }
+}
+
+/* custom selector */
+.selector {
+  position: relative;
+  width: 100%;
+}
+
+.selector__button {
+  width: 100%;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  padding: 0.5em 1em;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-md);
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.selector__value {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.selector__value img {
+  width: 30px;
+}
+
+.selector__arrow {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--text-primary);
+  transition: transform 100ms ease;
+}
+
+.selector--open .selector__arrow {
+  transform: rotate(180deg);
+}
+
+.selector__dropdown {
+  display: grid;
+  gap: 0.25rem;
+
+  position: absolute;
+  width: 100%;
+  max-height: 15rem;
+  overflow-y: auto;
+
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-md);
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: var(--fs-400);
+  list-style: none;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.selector__dropdown:focus-within {
+  border-color: var(--clr-accent);
+}
+
+.selector__item {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-radius: var(--br-md);
+}
+
+.selector__item label {
+  width: 100%;
+  padding: 0.25em 0.75em;
+  cursor: pointer;
+  border-radius: var(--br-md);
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: var(--text-primary);
+}
+
+.selector__item label img {
+  width: 35px;
+}
+
+.selector__item:hover {
+  background-image: var(--gradient-secondary);
+}
+
+.selector__item.selected label {
+  background-color: var(--clr-accent);
+  color: var(--text-dark);
+  font-weight: var(--fw-bold);
+}
+
+.selector__item input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
 }
 
 .logo {
@@ -294,18 +416,20 @@ ol:where([role="list"]) {
 /*------------------------------------*\
   #SIDEBAR
 \*------------------------------------*/
-.language-selector {
+/* .language-selector {
   background-color: transparent;
   cursor: pointer;
-  border: 0;
-  /* padding-block: 0.5em; */
+  border: 1px solid transparent;
+  padding-block: 0.5em;
   font-weight: var(--fw-bold);
   font-size: var(--fs-600);
-}
+  border-radius: var(--br-md);
+  appearance: none; /* Removes default arrow */
 
-.language-selector option {
-  font-size: var(--fs-400);
-}
+/* &:focus-within {
+    border-color: var(--clr-accent);
+  } 
+} */
 
 .categories {
   display: grid;

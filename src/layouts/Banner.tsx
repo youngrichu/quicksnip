@@ -5,8 +5,11 @@ const Banner = () => {
         Made to save your <span className="text-highlight">time.</span>
       </h1>
       <p>
-        Find the necessary snippet in seconds, across multiple languages. Just
-        search and copy!
+        Find code snippets in seconds, across multiple languages. Just{" "}
+        <s>
+          <abbr title="Under construction :)">search</abbr>
+        </s>{" "}
+        and copy!
       </p>
     </div>
   );

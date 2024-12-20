@@ -9,30 +9,20 @@ const Footer = () => {
             <a href="/" className="styled-link">
               QuickSnip
             </a>{" "}
-            is your go-to collection of handy code snippets, making repetitive
-            tasks easier and faster for developers across different programming
-            languages.
+            is an open-source project that categorizes handy code snippets
+            across various programming languages.
           </p>
           <p>
-            Built by{" "}
-            <a
-              href="https://github.com/dostonnabotov"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="styled-link"
-            >
-              Technophile
-            </a>
-            , and powered by awesome{" "}
+            Built with love and powered by an{" "}
             <a
               href="https://github.com/dostonnabotov/quicksnip"
               target="_blank"
               rel="noopener noreferrer"
               className="styled-link"
             >
-              community
+              awesome community
             </a>
-            .
+            . 🚀
           </p>
         </div>
         <nav className="footer__nav">

@@ -1,19 +1,39 @@
+import React, { useState, useRef } from "react";
 import { useAppContext } from "../contexts/AppContext";
 import { useLanguages } from "../hooks/useLanguages";
+import { LanguageType } from "../types";
+
+// Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
 
 const LanguageSelector = () => {
-  const { language, setLanguage, setCategory } = useAppContext();
+  const { language, setLanguage } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
 
-  const handleLanguageChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    const selectedLanguage = fetchedLanguages.find(
-      (language) => language.lang === event.target.value
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<LanguageType>(language);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleLanguageChange = (langObj: LanguageType) => {
+    const selected = fetchedLanguages.find(
+      (item) => item.lang === langObj.lang
     );
-    if (selectedLanguage) {
-      setLanguage(selectedLanguage);
-      setCategory("");
+    if (selected) {
+      setSelectedLanguage(selected);
+      setLanguage(selected);
+      setIsDropdownOpen(false);
+    }
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent, lang: LanguageType) => {
+    if (event.key === "Enter") {
+      handleLanguageChange(lang);
+    } else if (event.key === "Escape") {
+      setIsDropdownOpen(false);
     }
   };
 
@@ -26,18 +46,53 @@ const LanguageSelector = () => {
   }
 
   return (
-    <select
-      id="languages"
-      className="language-selector"
-      onChange={handleLanguageChange}
-      value={language?.lang || "CSS"}
+    <div
+      className={`selector ${isDropdownOpen ? "selector--open" : ""}`}
+      ref={dropdownRef}
     >
-      {fetchedLanguages.map((language, idx) => (
-        <option key={idx} value={language.lang}>
-          {language.lang}
-        </option>
-      ))}
-    </select>
+      <button
+        className="selector__button"
+        aria-label="select button"
+        aria-haspopup="listbox"
+        aria-expanded={isDropdownOpen}
+        onClick={toggleDropdown}
+      >
+        <div className="selector__value">
+          <img src={selectedLanguage.icon} alt="" />
+          <span>{selectedLanguage.lang || "Select a language"}</span>
+        </div>
+        <span className="selector__arrow"></span>
+      </button>
+      {isDropdownOpen && (
+        <ul className="selector__dropdown" role="listbox">
+          {fetchedLanguages.map((lang) => (
+            <li
+              key={lang.lang}
+              role="option"
+              tabIndex={0}
+              onClick={() => handleLanguageChange(lang)}
+              onKeyDown={(e) => handleKeyDown(e, lang)}
+              className={`selector__item ${
+                selectedLanguage.lang === lang.lang ? "selected" : ""
+              }`}
+            >
+              <input
+                type="radio"
+                id={`selector-for-${lang.lang}`}
+                name="language"
+                value={lang.lang}
+                checked={selectedLanguage === lang}
+                readOnly
+              />
+              <label htmlFor={`selector-for-${lang.lang}`}>
+                <img src={lang.icon} alt="" />
+                <span>{lang.lang}</span>
+              </label>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 

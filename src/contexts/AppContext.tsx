@@ -3,8 +3,8 @@ import { AppState, LanguageType, SnippetType } from "../types";
 
 // tokens
 const defaultLanguage: LanguageType = {
-  lang: "CSS",
-  icon: "/icons/css.svg",
+  lang: "JavaScript",
+  icon: "/icons/javascript.svg",
 };
 
 // TODO: add custom loading and error handling
