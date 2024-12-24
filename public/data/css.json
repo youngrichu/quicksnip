@@ -7,14 +7,14 @@
         "description": "Adjusts font size based on viewport width.",
         "code": ["h1 {", "  font-size: calc(1.5rem + 2vw);", "}"],
         "tags": ["css", "font", "responsive", "typography"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Letter Spacing",
         "description": "Adds space between letters for better readability.",
         "code": ["p {", "  letter-spacing: 0.05em;", "}"],
         "tags": ["css", "typography", "spacing"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -36,7 +36,7 @@
           "}"
         ],
         "tags": ["css", "layout", "footer", "sticky"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Equal-Width Columns",
@@ -53,7 +53,7 @@
           "}"
         ],
         "tags": ["css", "flexbox", "columns", "layout"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -79,7 +79,7 @@
           "}"
         ],
         "tags": ["css", "button", "hover", "transition"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "3D Button Effect",
@@ -101,7 +101,7 @@
           "}"
         ],
         "tags": ["css", "button", "3D", "effect"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -118,7 +118,7 @@
           "}"
         ],
         "tags": ["css", "blur", "background", "effects"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Hover Glow Effect",
@@ -136,7 +136,7 @@
           "}"
         ],
         "tags": ["css", "hover", "glow", "effects"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   }

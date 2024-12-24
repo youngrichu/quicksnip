@@ -24,7 +24,7 @@
           "console.log(slugify(title, \"_\")); // Output: 'hello_world_this_is_a_test'"
         ],
         "tags": ["javascript", "string", "slug", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Remove Duplicates",
@@ -37,7 +37,7 @@
           "console.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]"
         ],
         "tags": ["javascript", "array", "deduplicate", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Flatten Array",
@@ -50,7 +50,7 @@
           "console.log(flattenArray(nestedArray)); // Output: [1, 2, 3, 4]"
         ],
         "tags": ["javascript", "array", "flatten", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -67,7 +67,7 @@
           "console.log(capitalize('hello')); // Output: 'Hello'"
         ],
         "tags": ["javascript", "string", "capitalize", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Reverse String",
@@ -79,7 +79,7 @@
           "console.log(reverseString('hello')); // Output: 'olleh'"
         ],
         "tags": ["javascript", "string", "reverse", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -96,7 +96,7 @@
           "console.log(formatDate(new Date())); // Output: '2024-12-10'"
         ],
         "tags": ["javascript", "date", "format", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Get Time Difference",
@@ -113,7 +113,7 @@
           "console.log(getTimeDifference(date1, date2)); // Output: 365"
         ],
         "tags": ["javascript", "date", "time-difference", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -135,7 +135,7 @@
           "times(randomFunction, 3); // Logs 'Function called!' three times"
         ],
         "tags": ["javascript", "function", "repeat", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Debounce Function",
@@ -153,7 +153,7 @@
           "window.addEventListener('resize', debounce(() => console.log('Resized!'), 500));"
         ],
         "tags": ["javascript", "utility", "debounce", "performance"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Throttle Function",
@@ -183,7 +183,7 @@
           "document.addEventListener('scroll', throttle(() => console.log('Scrolled!'), 1000));"
         ],
         "tags": ["javascript", "utility", "throttle", "performance"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -203,7 +203,7 @@
           "toggleClass(element, 'active');"
         ],
         "tags": ["javascript", "dom", "class", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Smooth Scroll to Element",
@@ -218,7 +218,7 @@
           "smoothScroll(target);"
         ],
         "tags": ["javascript", "dom", "scroll", "ui"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   },
@@ -237,7 +237,7 @@
           "addToLocalStorage('user', { name: 'John', age: 30 });"
         ],
         "tags": ["javascript", "localStorage", "storage", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Retrieve Item from localStorage",
@@ -253,7 +253,7 @@
           "console.log(user); // Output: { name: 'John', age: 30 }"
         ],
         "tags": ["javascript", "localStorage", "storage", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       },
       {
         "title": "Clear All localStorage",
@@ -267,7 +267,7 @@
           "clearLocalStorage(); // Removes all items from localStorage"
         ],
         "tags": ["javascript", "localStorage", "storage", "utility"],
-        "author": "dostonnabotov"
+        "author": "technoph1le"
       }
     ]
   }
