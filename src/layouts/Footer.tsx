@@ -29,7 +29,7 @@ const Footer = () => {
           <ul className="flow" data-flow-space="sm">
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip"
+                href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
@@ -63,7 +63,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip"
+                href="https://ko-fi.com/technoph1le"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
