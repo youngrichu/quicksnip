@@ -54,6 +54,19 @@
         ],
         "tags": ["css", "flexbox", "columns", "layout"],
         "author": "technoph1le"
+      },
+      {
+        "title": "CSS Reset",
+        "description": "Resets some default browser styles, ensuring consistency across browsers.",
+        "code": [
+          "* {",
+          "  margin: 0;",
+          "  padding: 0;",
+          "  box-sizing: border-box",
+          "}"
+        ],
+        "tags": ["css", "reset", "browser", "layout"],
+        "author": "AmeerMoustafa"
       }
     ]
   },
