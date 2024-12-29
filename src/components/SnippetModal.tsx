@@ -24,9 +24,9 @@ const SnippetModal: React.FC<Props> = ({
 
   return ReactDOM.createPortal(
     <div className="modal-overlay">
-    <div className="modal | flow" data-flow-space="lg">
-      <div className="modal__header">
-        <h2 className="section-title">{snippet.title}</h2>
+      <div className="modal | flow" data-flow-space="lg">
+        <div className="modal__header">
+          <h2 className="section-title">{snippet.title}</h2>
           <Button isIcon={true} onClick={handleCloseModal}>
             <CloseIcon />
           </Button>
