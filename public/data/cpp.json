@@ -21,15 +21,13 @@
         "code": [
           "std::vector<std::string> split_string(std::string str, std::string delim) {",
           "    std::vector<std::string> splits;",
-          "    int i = 0;",
-          "    int j = str.find(delim);",
+          "    int i = 0, j;",
           "    int inc = delim.length();",
           "    while (j != std::string::npos) {",
+          "        j = str.find(delim, i);",
           "        splits.push_back(str.substr(i, j - i));",
           "        i = j + inc;",
-          "        j = str.find(delim, i);",
           "    }",
-          "    splits.push_back(str.substr(i));",
           "    return splits;",
           "}"
         ],
