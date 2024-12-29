@@ -25,7 +25,9 @@ jobs:
           echo "[" > public/consolidated/all_snippets.json
           find public/data -name "*.json" ! -name "_index.json" -exec sh -c '
             for file; do
-              jq -c ".[]" "$file" | sed "s/^/{\"language\": \"$(basename "$file" .json)\", /" | sed "s/}/},/" >> public/consolidated/all_snippets.json
+              jq -c ".[]" "$file" | \
+              sed "s/^/{\"language\": \"$(basename "$file" .json)\", /" | \
+              sed "s/}$/}/" >> public/consolidated/all_snippets.json
             done
           ' _ {} +
           sed -i '$ s/,$//' public/consolidated/all_snippets.json
