@@ -14,5 +14,9 @@
   {
     "lang": "SCSS",
     "icon": "/icons/sass.svg"
+  },
+  {
+    "lang": "CPP",
+    "icon": "/icons/cpp.svg"
   }
 ]

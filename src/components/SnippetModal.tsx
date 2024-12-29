@@ -5,6 +5,7 @@ import { CloseIcon } from "./Icons";
 import CodePreview from "./CodePreview";
 import { SnippetType } from "../types";
 import slugify from "../utils/slugify";
+import useEscapeKey from "../hooks/useEscapeKey";
 
 type Props = {
   snippet: SnippetType;
@@ -19,6 +20,7 @@ const SnippetModal: React.FC<Props> = ({
 }) => {
   const modalRoot = document.getElementById("modal-root");
   if (!modalRoot) return null;
+  useEscapeKey(handleCloseModal);
 
   return ReactDOM.createPortal(
     <div className="modal-overlay">

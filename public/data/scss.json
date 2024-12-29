@@ -92,7 +92,7 @@
       },
       {
         "title": "Aspect Ratio",
-        "description": "Ensures that elements maintain a specific aspect ratio.",
+        "description": "Ensures elements maintain a specific aspect ratio.",
         "code": [
           "@mixin aspect-ratio($width, $height) {",
           "  position: relative;",
