@@ -67,7 +67,14 @@
           "flattened = list(flatten(nested_list))",
           "print(flattened)  # Output: [1, 2, 3, 4, 5]"
         ],
-        "tags": ["python", "list", "flattening", "nested-lists", "depth", "utilities"],
+        "tags": [
+          "python",
+          "list",
+          "flattening",
+          "nested-lists",
+          "depth",
+          "utilities"
+        ],
         "author": "agilarasu"
       },
       {

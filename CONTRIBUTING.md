@@ -26,7 +26,7 @@ If you have a feature request or want to fix a bug, feel free to:
 
 Head over to the `/public/data` folder and locate the language file you need, like javascript.json or python.json
 
-2. **Find the category:** 
+2. **Find the category:**
 
 Look for the categoryName where your snippet belongs.
 
@@ -36,10 +36,7 @@ Look for the categoryName where your snippet belongs.
 {
   "title": "Name of the snippet",
   "description": "A short explanation of what the snippet does",
-  "code": [
-    "your code goes here",
-    "  this is a newline with a space"
-  ],
+  "code": ["your code goes here", "  this is a newline with a space"],
   "tags": ["tag1", "tag2", "tag3"],
   "author": "your_github_username"
 }
@@ -84,10 +81,7 @@ Use this format:
       {
         "title": "Name of the snippet",
         "description": "A short explanation of what it does",
-        "code": [
-          "your code goes here",
-          "  this is a newline with a space"
-        ],
+        "code": ["your code goes here", "  this is a newline with a space"],
         "tags": ["tag1", "tag2", "tag3"],
         "author": "your_github_username"
       }
@@ -127,7 +121,7 @@ Upload a logo for your language into the `/public/icons` folder. Make sure the f
 
 5. **Double-check your work:**
 
-Test on your side and confirm if it works properly. 
+Test on your side and confirm if it works properly.
 
 ---
 

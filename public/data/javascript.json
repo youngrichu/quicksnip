@@ -147,7 +147,15 @@
           "console.log(timeAgoOrAhead(new Date())); // just now",
           "console.log(timeAgoOrAhead(futureDate)); // in x years"
         ],
-        "tags": ["javascript", "date", "time", "relative", "future", "past", "utility"],
+        "tags": [
+          "javascript",
+          "date",
+          "time",
+          "relative",
+          "future",
+          "past",
+          "utility"
+        ],
         "author": "Yugveer06"
       }
     ]
