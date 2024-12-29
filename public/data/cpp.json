@@ -14,6 +14,27 @@
         ],
         "tags": ["cpp", "array", "reverse", "utility"],
         "author": "Vaibhav-kesarwani"
+      },
+      {
+        "title": "Split String",
+        "description": "Splits a string by a delimiter",
+        "code": [
+          "std::vector<std::string> split_string(std::string str, std::string delim) {",
+          "    std::vector<std::string> splits;",
+          "    int i = 0;",
+          "    int j = str.find(delim);",
+          "    int inc = delim.length();",
+          "    while (j != std::string::npos) {",
+          "        splits.push_back(str.substr(i, j - i));",
+          "        i = j + inc;",
+          "        j = str.find(delim, i);",
+          "    }",
+          "    splits.push_back(str.substr(i));",
+          "    return splits;",
+          "}"
+        ],
+        "tags": ["cpp", "string", "split", "utility"],
+        "author": "saminjay"
       }
     ]
   }
