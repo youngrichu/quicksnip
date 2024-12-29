@@ -16,22 +16,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install jq (for JSON manipulation)
-        run: sudo apt-get install -y jq
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: |
+          npm install
 
       - name: Consolidate JSON files
         run: |
-          mkdir -p public/consolidated
-          echo "[" > public/consolidated/all_snippets.json
-          find public/data -name "*.json" ! -name "_index.json" -exec sh -c '
-            for file; do
-              jq -c ".[]" "$file" | \
-              sed "s/^/{\"language\": \"$(basename "$file" .json)\", /" | \
-              sed "s/}$/}/" >> public/consolidated/all_snippets.json
-            done
-          ' _ {} +
-          sed -i '$ s/,$//' public/consolidated/all_snippets.json
-          echo "]" >> public/consolidated/all_snippets.json
+          node utils/consolidate.js  # Run the script located in the utils/ folder
 
       - name: Commit and push changes
         run: |
