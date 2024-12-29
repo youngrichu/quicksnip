@@ -17,7 +17,7 @@ const CodePreview = ({ language = "markdown", code }: Props) => {
         language={language}
         style={oneDark}
         wrapLines={true}
-        customStyle={{ margin: "0" }}
+        customStyle={{ margin: "0", maxHeight: "20rem" }}
       >
         {codeString}
       </SyntaxHighlighter>
