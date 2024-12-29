@@ -18,5 +18,9 @@
   {
     "lang": "CPP",
     "icon": "/icons/cpp.svg"
+  },
+  {
+    "lang": "Rust",
+    "icon": "/icons/rust.svg"
   }
 ]
