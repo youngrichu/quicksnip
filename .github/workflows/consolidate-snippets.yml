@@ -20,7 +20,7 @@ jobs:
         run: |
           mkdir -p public/consolidated
           echo "[" > public/consolidated/all_snippets.json
-          find public/data -name "*.json" -exec sh -c 'jq -c ".[]" {} | sed "s/^/{\"language\": \"$(basename {} .json)\", /" | sed "s/}/},/" >> public/consolidated/all_snippets.json' \;
+          find public/data -name "*.json" ! -name "_index.json" -exec sh -c 'jq -c ".[]" {} | sed "s/^/{\"language\": \"$(basename {} .json)\", /" | sed "s/}/},/" >> public/consolidated/all_snippets.json' \;
           sed -i '$ s/,$//' public/consolidated/all_snippets.json
           echo "]" >> public/consolidated/all_snippets.json
 
