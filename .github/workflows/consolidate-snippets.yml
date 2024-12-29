@@ -1,10 +1,12 @@
 name: Consolidate JSON Files
 
 on:
-  # Trigger the workflow on any push to the `data` folder
   push:
     paths:
-      - "data/**"
+      - "public/data/**"
+
+permissions:
+  contents: write
 
 jobs:
   consolidate:
