@@ -1,5 +1,19 @@
 [
   {
+    "categoryName": "Terminal Output",
+    "snippets": [
+      {
+        "title": "Hello, World!",
+        "description": "Prints Hello, World! to the terminal.",
+        "code": [
+          "console.log(\"Hello, World!\"); // Prints Hello, World! to the console"
+        ],
+        "tags": ["javascript", "printing", "hello-world", "utility"],
+        "author": "James-Beans"
+      }
+    ]
+  },   
+  {
     "categoryName": "Array Manipulation",
     "snippets": [
       {
