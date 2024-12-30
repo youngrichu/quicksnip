@@ -19,6 +19,11 @@
   --clr-neutral-500: #3c3c3c;
   --clr-neutral-700: #2a2a2a;
   --clr-neutral-900: #1c1c1c;
+  --clr-neutral-200-light: #1c1c1c;
+  --clr-neutral-300-light: #2a2a2a;
+  --clr-neutral-500-light: #b3b3b3;
+  --clr-neutral-700-light: #e0e0e0;
+  --clr-neutral-900-light: #ffffff;
 
   --clr-accent: #00b4b8;
 
@@ -55,6 +60,19 @@
 
   --br-md: 0.5rem;
   --br-lg: 0.75rem;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+[data-theme="light"] {
+  --bg-primary: var(--clr-neutral-900-light);
+  --bg-secondary: var(--clr-neutral-700-light);
+  --text-primary: var(--clr-neutral-200-light);
+  --text-secondary: var(--clr-neutral-300-light);
+  --text-dark: var(--clr-neutral-900-light);
+  --border-color: var(--clr-neutral-500-light);
 }
 
 /*------------------------------------*\
