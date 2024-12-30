@@ -19,6 +19,9 @@
         "title": "Split String",
         "description": "Splits a string by a delimiter",
         "code": [
+          "#include <string>",
+          "#include <vector>",
+          "",
           "std::vector<std::string> split_string(std::string str, std::string delim) {",
           "    std::vector<std::string> splits;",
           "    int i = 0, j;",
