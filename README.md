@@ -2,15 +2,9 @@
 
 An open-source project that categorizes handy code snippets across various programming languages. Built with love and powered by an awesome community. 🚀
 
-<div style="display: flex">
 <a href="https://youtu.be/BhRi7fJzPgk?si=z1sVXU7uRS0bkSEt" target="_blank" style="text-decoration: none;">
   <img src="https://img.shields.io/static/v1?label=&message=Watch%20on%20YouTube&labelColor=FFFFFF&color=FF0000&style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Watch on YouTube" style="margin-right: 20px">
 </a>
-
-<a href="https://ko-fi.com/D1D217QALD" target="_blank" style="text-decoration: none;">
-  <img src="https://img.shields.io/static/v1?label=&message=Support%20this%20project&labelColor=FFFFFF&color=FF5E5B&style=for-the-badge&logo=ko-fi&logoColor=FF5E5B" alt="Support this project">
-</a>
-</div>
 
 <br>
 
@@ -65,3 +59,7 @@ Following these guidelines helps me (and everyone else) review and merge your co
 ## License
 
 QuickSnip is licensed under the [MIT License](/LICENSE). Feel free to use and share it as you like.
+
+<a href="https://www.producthunt.com/products/quicksnip" target="_blank" style="text-decoration: none;">
+  <img src="https://img.shields.io/static/v1?label=&message=Leave%20a%20Review&labelColor=FFFFFF&color=DA552F&style=for-the-badge&logo=product-hunt&logoColor=DA552F" alt="Leave a Review">
+</a>
