@@ -9,7 +9,7 @@ const CategoryList = () => {
 
   useEffect(() => {
     setCategory(fetchedCategories[0]);
-  }, [fetchedCategories]);
+  }, [setCategory, fetchedCategories]);
 
   if (loading) return <div>Loading...</div>;
 
