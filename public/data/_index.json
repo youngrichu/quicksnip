@@ -8,6 +8,10 @@
     "icon": "/icons/css.svg"
   },
   {
+    "lang": "HTML",
+    "icon": "/icons/html5.svg"
+  },
+  {
     "lang": "Python",
     "icon": "/icons/python.svg"
   },
