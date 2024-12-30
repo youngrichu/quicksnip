@@ -41,7 +41,10 @@ If you’d like to add a snippet for an **existing language** and **category**, 
 {
   "title": "Name of the snippet",
   "description": "A short explanation of what the snippet does",
-  "code": ["your code goes here", "  this is a newline with a space"],
+  "code": [
+    "your code goes here", 
+    "  this is a newline with a space"
+  ],
   "tags": ["tag1", "tag2", "tag3"],
   "author": "your_github_username"
 }
