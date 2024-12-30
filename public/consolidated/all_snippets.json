@@ -7,9 +7,12 @@
         "title": "Reverse String",
         "description": "Reverses the characters in a string.",
         "code": [
-          "string reverseString(const string& input) {",
-          "    string reversed = input;",
-          "    reverse(reversed.begin(), reversed.end()); // Using STL's reverse function",
+          "#include <string>",
+          "#include <algorithm>",
+          "",
+          "std::string reverseString(const std::string& input) {",
+          "    std::string reversed = input;",
+          "    std::reverse(reversed.begin(), reversed.end());",
           "    return reversed;",
           "}"
         ],
@@ -20,6 +23,33 @@
           "utility"
         ],
         "author": "Vaibhav-kesarwani"
+      },
+      {
+        "title": "Split String",
+        "description": "Splits a string by a delimiter",
+        "code": [
+          "#include <string>",
+          "#include <vector>",
+          "",
+          "std::vector<std::string> split_string(std::string str, std::string delim) {",
+          "    std::vector<std::string> splits;",
+          "    int i = 0, j;",
+          "    int inc = delim.length();",
+          "    while (j != std::string::npos) {",
+          "        j = str.find(delim, i);",
+          "        splits.push_back(str.substr(i, j - i));",
+          "        i = j + inc;",
+          "    }",
+          "    return splits;",
+          "}"
+        ],
+        "tags": [
+          "cpp",
+          "string",
+          "split",
+          "utility"
+        ],
+        "author": "saminjay"
       }
     ]
   },
@@ -41,7 +71,7 @@
           "responsive",
           "typography"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Letter Spacing",
@@ -56,7 +86,7 @@
           "typography",
           "spacing"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -84,7 +114,7 @@
           "footer",
           "sticky"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Equal-Width Columns",
@@ -106,7 +136,7 @@
           "columns",
           "layout"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "CSS Reset",
@@ -156,7 +186,7 @@
           "hover",
           "transition"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "3D Button Effect",
@@ -183,7 +213,7 @@
           "3D",
           "effect"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -206,7 +236,7 @@
           "background",
           "effects"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Hover Glow Effect",
@@ -229,7 +259,7 @@
           "glow",
           "effects"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -253,7 +283,7 @@
           "deduplicate",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Array",
@@ -271,7 +301,7 @@
           "flatten",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -306,7 +336,7 @@
           "slug",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Capitalize String",
@@ -323,7 +353,7 @@
           "capitalize",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Reverse String",
@@ -340,7 +370,7 @@
           "reverse",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -363,7 +393,7 @@
           "format",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Get Time Difference",
@@ -385,7 +415,7 @@
           "time-difference",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Relative Time Formatter",
@@ -456,7 +486,7 @@
           "repeat",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Debounce Function",
@@ -479,7 +509,7 @@
           "debounce",
           "performance"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Throttle Function",
@@ -514,7 +544,7 @@
           "throttle",
           "performance"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -540,7 +570,7 @@
           "class",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Smooth Scroll to Element",
@@ -560,7 +590,7 @@
           "scroll",
           "ui"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -585,7 +615,7 @@
           "storage",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Retrieve Item from localStorage",
@@ -606,7 +636,7 @@
           "storage",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Clear All localStorage",
@@ -625,7 +655,7 @@
           "storage",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -649,7 +679,7 @@
           "reverse",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Palindrome",
@@ -668,7 +698,7 @@
           "palindrome",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -693,7 +723,7 @@
           "flatten",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Unevenly Nested Lists",
@@ -740,7 +770,7 @@
           "duplicates",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -766,7 +796,7 @@
           "read",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Write to File",
@@ -785,7 +815,7 @@
           "write",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Find Files",
@@ -842,7 +872,7 @@
           "factorial",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Prime Number",
@@ -865,7 +895,7 @@
           "prime",
           "check"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -898,7 +928,7 @@
           "execution",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Generate Random String",
@@ -920,7 +950,7 @@
           "string",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1034,7 +1064,7 @@
           "typography",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Overflow Ellipsis",
@@ -1052,7 +1082,7 @@
           "text",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Font Import Helper",
@@ -1074,7 +1104,7 @@
           "fonts",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Gradient",
@@ -1093,7 +1123,7 @@
           "text",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1117,7 +1147,7 @@
           "layout",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flex Center",
@@ -1135,7 +1165,7 @@
           "center",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Aspect Ratio",
@@ -1160,7 +1190,7 @@
           "layout",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1191,7 +1221,7 @@
           "fade",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Slide In From Left",
@@ -1216,7 +1246,7 @@
           "slide",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1246,7 +1276,7 @@
           "media-queries",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Clearfix",
@@ -1266,7 +1296,7 @@
           "utility",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1288,7 +1318,7 @@
           "radius",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Box Shadow Helper",
@@ -1304,7 +1334,7 @@
           "css",
           "effects"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1335,7 +1365,7 @@
           "primary",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   }
