@@ -7,14 +7,14 @@
         "description": "Adjusts font size based on viewport width.",
         "code": ["h1 {", "  font-size: calc(1.5rem + 2vw);", "}"],
         "tags": ["css", "font", "responsive", "typography"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Letter Spacing",
         "description": "Adds space between letters for better readability.",
         "code": ["p {", "  letter-spacing: 0.05em;", "}"],
         "tags": ["css", "typography", "spacing"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -36,7 +36,7 @@
           "}"
         ],
         "tags": ["css", "layout", "footer", "sticky"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Equal-Width Columns",
@@ -53,7 +53,7 @@
           "}"
         ],
         "tags": ["css", "flexbox", "columns", "layout"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "CSS Reset",
@@ -67,6 +67,53 @@
         ],
         "tags": ["css", "reset", "browser", "layout"],
         "author": "AmeerMoustafa"
+      },
+      {
+        "title": "Responsive Design",
+        "description": "The different responsive breakpoints.",
+        "code": [
+          "/* Phone */",
+          ".element {",
+          "  margin: 0 10%",
+          "}",
+          "",
+          "/* Tablet */",
+          "@media (min-width: 640px) {",
+          "  .element {",
+          "    margin: 0 20%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop base */",
+          "@media (min-width: 768px) {",
+          "  .element {",
+          "    margin: 0 30%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop large */",
+          "@media (min-width: 1024px) {",
+          "  .element {",
+          "    margin: 0 40%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop extra large */",
+          "@media (min-width: 1280px) {",
+          "  .element {",
+          "    margin: 0 60%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop bige */",
+          "@media (min-width: 1536px) {",
+          "  .element {",
+          "    margin: 0 80%",
+          "  }",
+          "}"
+        ],
+        "tags": ["css", "responsive"],
+        "author": "kruimol"
       }
     ]
   },
@@ -92,7 +139,7 @@
           "}"
         ],
         "tags": ["css", "button", "hover", "transition"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "3D Button Effect",
@@ -114,7 +161,7 @@
           "}"
         ],
         "tags": ["css", "button", "3D", "effect"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -131,7 +178,7 @@
           "}"
         ],
         "tags": ["css", "blur", "background", "effects"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Hover Glow Effect",
@@ -149,7 +196,7 @@
           "}"
         ],
         "tags": ["css", "hover", "glow", "effects"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   }

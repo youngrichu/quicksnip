@@ -36,7 +36,10 @@ Look for the categoryName where your snippet belongs.
 {
   "title": "Name of the snippet",
   "description": "A short explanation of what the snippet does",
-  "code": ["your code goes here", "  this is a newline with a space"],
+  "code": [
+    "your code goes here", 
+    "  this is a newline with a space"
+  ],
   "tags": ["tag1", "tag2", "tag3"],
   "author": "your_github_username"
 }
@@ -81,7 +84,10 @@ Use this format:
       {
         "title": "Name of the snippet",
         "description": "A short explanation of what it does",
-        "code": ["your code goes here", "  this is a newline with a space"],
+        "code": [
+          "your code goes here", 
+          "  this is a newline with a space"
+        ],
         "tags": ["tag1", "tag2", "tag3"],
         "author": "your_github_username"
       }

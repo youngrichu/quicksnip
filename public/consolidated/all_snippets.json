@@ -7,9 +7,12 @@
         "title": "Reverse String",
         "description": "Reverses the characters in a string.",
         "code": [
-          "string reverseString(const string& input) {",
-          "    string reversed = input;",
-          "    reverse(reversed.begin(), reversed.end()); // Using STL's reverse function",
+          "#include <string>",
+          "#include <algorithm>",
+          "",
+          "std::string reverseString(const std::string& input) {",
+          "    std::string reversed = input;",
+          "    std::reverse(reversed.begin(), reversed.end());",
           "    return reversed;",
           "}"
         ],
@@ -20,6 +23,33 @@
           "utility"
         ],
         "author": "Vaibhav-kesarwani"
+      },
+      {
+        "title": "Split String",
+        "description": "Splits a string by a delimiter",
+        "code": [
+          "#include <string>",
+          "#include <vector>",
+          "",
+          "std::vector<std::string> split_string(std::string str, std::string delim) {",
+          "    std::vector<std::string> splits;",
+          "    int i = 0, j;",
+          "    int inc = delim.length();",
+          "    while (j != std::string::npos) {",
+          "        j = str.find(delim, i);",
+          "        splits.push_back(str.substr(i, j - i));",
+          "        i = j + inc;",
+          "    }",
+          "    return splits;",
+          "}"
+        ],
+        "tags": [
+          "cpp",
+          "string",
+          "split",
+          "utility"
+        ],
+        "author": "saminjay"
       }
     ]
   },
@@ -41,7 +71,7 @@
           "responsive",
           "typography"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Letter Spacing",
@@ -56,7 +86,7 @@
           "typography",
           "spacing"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -84,7 +114,7 @@
           "footer",
           "sticky"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Equal-Width Columns",
@@ -106,7 +136,7 @@
           "columns",
           "layout"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "CSS Reset",
@@ -125,6 +155,56 @@
           "layout"
         ],
         "author": "AmeerMoustafa"
+      },
+      {
+        "title": "Responsive Design",
+        "description": "The different responsive breakpoints.",
+        "code": [
+          "/* Phone */",
+          ".element {",
+          "  margin: 0 10%",
+          "}",
+          "",
+          "/* Tablet */",
+          "@media (min-width: 640px) {",
+          "  .element {",
+          "    margin: 0 20%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop base */",
+          "@media (min-width: 768px) {",
+          "  .element {",
+          "    margin: 0 30%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop large */",
+          "@media (min-width: 1024px) {",
+          "  .element {",
+          "    margin: 0 40%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop extra large */",
+          "@media (min-width: 1280px) {",
+          "  .element {",
+          "    margin: 0 60%",
+          "  }",
+          "}",
+          "",
+          "/* Desktop bige */",
+          "@media (min-width: 1536px) {",
+          "  .element {",
+          "    margin: 0 80%",
+          "  }",
+          "}"
+        ],
+        "tags": [
+          "css",
+          "responsive"
+        ],
+        "author": "kruimol"
       }
     ]
   },
@@ -156,7 +236,7 @@
           "hover",
           "transition"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "3D Button Effect",
@@ -183,7 +263,7 @@
           "3D",
           "effect"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -206,7 +286,7 @@
           "background",
           "effects"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Hover Glow Effect",
@@ -229,7 +309,7 @@
           "glow",
           "effects"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -253,7 +333,7 @@
           "deduplicate",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Array",
@@ -271,7 +351,7 @@
           "flatten",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -306,7 +386,7 @@
           "slug",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Capitalize String",
@@ -323,7 +403,7 @@
           "capitalize",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Reverse String",
@@ -340,7 +420,133 @@
           "reverse",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
+      },
+      {
+        "title": "Truncate Text",
+        "description": "Truncates the text to a maximum length and appends '...' if the text exceeds the maximum length.",
+        "code": [
+          "const truncateText = (text = '', maxLength = 50) => {",
+          "  return `${text.slice(0, maxLength)}${text.length >= maxLength ? '...' : ''}`;",
+          "};",
+          "",
+          "// Usage:",
+          "const title = \"Hello, World! This is a Test.\";",
+          "console.log(truncateText(title)); // Output: 'Hello, World! This is a Test.'",
+          "console.log(truncateText(title, 10)); // Output: 'Hello, Wor...'"
+        ],
+        "tags": [
+          "javascript",
+          "string",
+          "truncate",
+          "utility",
+          "text"
+        ],
+        "author": "realvishalrana"
+      },
+      {
+        "title": "Data with Prefix",
+        "description": "Adds a prefix and postfix to data, with a fallback value.",
+        "code": [
+          "const dataWithPrefix = (data, fallback = '-', prefix = '', postfix = '') => {",
+          "  return data ? `${prefix}${data}${postfix}` : fallback;",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(dataWithPrefix('123', '-', '(', ')')); // Output: '(123)'",
+          "console.log(dataWithPrefix('', '-', '(', ')')); // Output: '-'",
+          "console.log(dataWithPrefix('Hello', 'N/A', 'Mr. ', '')); // Output: 'Mr. Hello'",
+          "console.log(dataWithPrefix(null, 'N/A', 'Mr. ', '')); // Output: 'N/A'"
+        ],
+        "tags": [
+          "javascript",
+          "data",
+          "utility"
+        ],
+        "author": "realvishalrana"
+      }
+    ]
+  },
+  {
+    "language": "javascript",
+    "categoryName": "Object Manipulation",
+    "snippets": [
+      {
+        "title": "Filter Object",
+        "description": "Filter out entries in an object where the value is falsy, including empty strings, empty objects, null, and undefined.",
+        "code": [
+          "export const filterObject = (object = {}) =>",
+          "  Object.fromEntries(",
+          "    Object.entries(object)",
+          "      .filter(([key, value]) => value !== null && value !== undefined && value !== '' && (typeof value !== 'object' || Object.keys(value).length > 0))",
+          "  );",
+          "",
+          "// Usage:",
+          "const obj1 = { a: 1, b: null, c: undefined, d: 4, e: '', f: {} };",
+          "console.log(filterObject(obj1)); // Output: { a: 1, d: 4 }",
+          "",
+          "const obj2 = { x: 0, y: false, z: 'Hello', w: [] };",
+          "console.log(filterObject(obj2)); // Output: { z: 'Hello' }",
+          "",
+          "const obj3 = { name: 'John', age: null, address: { city: 'New York' }, phone: '' };",
+          "console.log(filterObject(obj3)); // Output: { name: 'John', address: { city: 'New York' } }",
+          "",
+          "const obj4 = { a: 0, b: '', c: false, d: {}, e: 'Valid' };",
+          "console.log(filterObject(obj4)); // Output: { e: 'Valid' }"
+        ],
+        "tags": [
+          "javascript",
+          "object",
+          "filter",
+          "utility"
+        ],
+        "author": "realvishalrana"
+      },
+      {
+        "title": "Get Nested Value",
+        "description": "Retrieves the value at a given path in a nested object.",
+        "code": [
+          "const getNestedValue = (obj, path) => {",
+          "  const keys = path.split('.');",
+          "  return keys.reduce((currentObject, key) => {",
+          "    return currentObject && typeof currentObject === 'object' ? currentObject[key] : undefined;",
+          "  }, obj);",
+          "};",
+          "",
+          "// Usage:",
+          "const obj = { a: { b: { c: 42 } } };",
+          "console.log(getNestedValue(obj, 'a.b.c')); // Output: 42"
+        ],
+        "tags": [
+          "javascript",
+          "object",
+          "nested",
+          "utility"
+        ],
+        "author": "realvishalrana"
+      },
+      {
+        "title": "Unique By Key",
+        "description": "Filters an array of objects to only include unique objects by a specified key.",
+        "code": [
+          "const uniqueByKey = (key, arr) =>",
+          "  arr.filter((obj, index, self) => index === self.findIndex((t) => t?.[key] === obj?.[key]));",
+          "",
+          "// Usage:",
+          "const arr = [",
+          "  { id: 1, name: 'John' },",
+          "  { id: 2, name: 'Jane' },",
+          "  { id: 1, name: 'John' }",
+          "];",
+          "console.log(uniqueByKey('id', arr)); // Output: [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }]"
+        ],
+        "tags": [
+          "javascript",
+          "array",
+          "unique",
+          "utility"
+        ],
+        "author": "realvishalrana"
       }
     ]
   },
@@ -363,7 +569,7 @@
           "format",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Get Time Difference",
@@ -385,7 +591,7 @@
           "time-difference",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Relative Time Formatter",
@@ -456,7 +662,7 @@
           "repeat",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Debounce Function",
@@ -479,7 +685,7 @@
           "debounce",
           "performance"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Throttle Function",
@@ -514,7 +720,7 @@
           "throttle",
           "performance"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -540,7 +746,7 @@
           "class",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Smooth Scroll to Element",
@@ -560,7 +766,7 @@
           "scroll",
           "ui"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -585,7 +791,7 @@
           "storage",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Retrieve Item from localStorage",
@@ -606,7 +812,7 @@
           "storage",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Clear All localStorage",
@@ -625,7 +831,40 @@
           "storage",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
+      }
+    ]
+  },
+  {
+    "language": "javascript",
+    "categoryName": "Number Formatting",
+    "snippets": [
+      {
+        "title": "Number Formatter",
+        "description": "Formats a number with suffixes (K, M, B, etc.).",
+        "code": [
+          "const nFormatter = (num) => {",
+          "  if (!num) return;",
+          "  num = parseFloat(num.toString().replace(/[^0-9.]/g, ''));",
+          "  const suffixes = ['', 'K', 'M', 'B', 'T', 'P', 'E'];",
+          "  let index = 0;",
+          "  while (num >= 1000 && index < suffixes.length - 1) {",
+          "    num /= 1000;",
+          "    index++;",
+          "  }",
+          "  return num.toFixed(2).replace(/\\.0+$|(\\.[0-9]*[1-9])0+$/, '$1') + suffixes[index];",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(nFormatter(1234567)); // Output: '1.23M'"
+        ],
+        "tags": [
+          "javascript",
+          "number",
+          "format",
+          "utility"
+        ],
+        "author": "realvishalrana"
       }
     ]
   },
@@ -649,7 +888,7 @@
           "reverse",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Palindrome",
@@ -668,7 +907,7 @@
           "palindrome",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -693,7 +932,7 @@
           "flatten",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Unevenly Nested Lists",
@@ -740,7 +979,7 @@
           "duplicates",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -766,7 +1005,7 @@
           "read",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Write to File",
@@ -785,7 +1024,7 @@
           "write",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Find Files",
@@ -842,7 +1081,7 @@
           "factorial",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Prime Number",
@@ -865,7 +1104,7 @@
           "prime",
           "check"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -898,7 +1137,7 @@
           "execution",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Generate Random String",
@@ -920,7 +1159,96 @@
           "string",
           "utility"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
+      }
+    ]
+  },
+  {
+    "language": "rust",
+    "categoryName": "String Manipulation",
+    "snippets": [
+      {
+        "title": "Capitalize String",
+        "description": "Makes the first letter of a string uppercase.",
+        "code": [
+          "fn capitalized(str: &str) -> String {",
+          "    let mut chars = str.chars();",
+          "    match chars.next() {",
+          "        None => String::new(),",
+          "        Some(f) => f.to_uppercase().chain(chars).collect(),",
+          "    }",
+          "}",
+          "",
+          "// Usage:",
+          "assert_eq!(capitalized(\"lower_case\"), \"Lower_case\")"
+        ],
+        "tags": [
+          "rust",
+          "string",
+          "capitalize",
+          "utility"
+        ],
+        "author": "Mathys-Gasnier"
+      }
+    ]
+  },
+  {
+    "language": "rust",
+    "categoryName": "File Handling",
+    "snippets": [
+      {
+        "title": "Read File Lines",
+        "description": "Reads all lines from a file and returns them as a vector of strings.",
+        "code": [
+          "fn read_lines(file_name: &str) -> std::io::Result<Vec<String>>",
+          "    Ok(",
+          "        std::fs::read_to_string(file_name)?",
+          "            .lines()",
+          "            .map(String::from)",
+          "            .collect()",
+          "    )",
+          "}",
+          "",
+          "// Usage:",
+          "let lines = read_lines(\"path/to/file.txt\").expect(\"Failed to read lines from file\")"
+        ],
+        "tags": [
+          "rust",
+          "file",
+          "read",
+          "utility"
+        ],
+        "author": "Mathys-Gasnier"
+      },
+      {
+        "title": "Find Files",
+        "description": "Finds all files of the specified extension within a given directory.",
+        "code": [
+          "fn find_files(directory: &str, file_type: &str) -> std::io::Result<Vec<std::path::PathBuf>> {",
+          "    let mut result = vec![];",
+          "",
+          "    for entry in std::fs::read_dir(directory)? {",
+          "        let dir = entry?;",
+          "        let path = dir.path();",
+          "        if dir.file_type().is_ok_and(|t| !t.is_file()) &&",
+          "            path.extension().is_some_and(|ext| ext != file_type) {",
+          "            continue;",
+          "        }",
+          "        result.push(path)",
+          "    }",
+          "",
+          "    Ok(result)",
+          "}",
+          "",
+          "// Usage:",
+          "let files = find_files(\"/path/to/your/directory\", \".pdf\")"
+        ],
+        "tags": [
+          "rust",
+          "file",
+          "search"
+        ],
+        "author": "Mathys-Gasnier"
       }
     ]
   },
@@ -945,7 +1273,7 @@
           "typography",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Overflow Ellipsis",
@@ -963,7 +1291,7 @@
           "text",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Font Import Helper",
@@ -985,7 +1313,7 @@
           "fonts",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Gradient",
@@ -1004,7 +1332,7 @@
           "text",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1028,7 +1356,7 @@
           "layout",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flex Center",
@@ -1046,7 +1374,7 @@
           "center",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Aspect Ratio",
@@ -1071,7 +1399,7 @@
           "layout",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1102,7 +1430,7 @@
           "fade",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Slide In From Left",
@@ -1127,7 +1455,7 @@
           "slide",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1157,7 +1485,7 @@
           "media-queries",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Clearfix",
@@ -1177,7 +1505,7 @@
           "utility",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1199,7 +1527,7 @@
           "radius",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Box Shadow Helper",
@@ -1215,7 +1543,7 @@
           "css",
           "effects"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1246,7 +1574,7 @@
           "primary",
           "css"
         ],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   }
