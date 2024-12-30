@@ -34,7 +34,7 @@
         "description": "Counts the number of vowels in a string.",
         "code": [
           "def count_vowels(s):",
-          "    vowels = 'aeiouAEIOU'",
+          "    vowels = 'aeiou'",
           "    return len([char for char in s.lower() if char in vowels])",
           "",
           "# Usage:",
