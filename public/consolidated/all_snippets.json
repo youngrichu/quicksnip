@@ -1,6 +1,31 @@
 [
   {
     "language": "cpp",
+    "categoryName": "Basics",
+    "snippets": [
+      {
+        "title": "Hello, World!",
+        "description": "Prints Hello, World! to the terminal.",
+        "code": [
+          "#include <iostream> // Includes the input/output stream library",
+          "",
+          "int main() { // Defines the main function",
+          "    std::cout << \"Hello, World!\" << std::endl; // Outputs Hello, World! and a newline",
+          "    return 0; // indicate the program executed successfully",
+          "}"
+        ],
+        "tags": [
+          "cpp",
+          "printing",
+          "hello-world",
+          "utility"
+        ],
+        "author": "James-Beans"
+      }
+    ]
+  },
+  {
+    "language": "cpp",
     "categoryName": "String Manipulation",
     "snippets": [
       {
@@ -345,6 +370,26 @@
           "effects"
         ],
         "author": "dostonnabotov"
+      }
+    ]
+  },
+  {
+    "language": "javascript",
+    "categoryName": "Basics",
+    "snippets": [
+      {
+        "title": "Hello, World!",
+        "description": "Prints Hello, World! to the terminal.",
+        "code": [
+          "console.log(\"Hello, World!\"); // Prints Hello, World! to the console"
+        ],
+        "tags": [
+          "javascript",
+          "printing",
+          "hello-world",
+          "utility"
+        ],
+        "author": "James-Beans"
       }
     ]
   },
@@ -924,6 +969,26 @@
   },
   {
     "language": "python",
+    "categoryName": "Basics",
+    "snippets": [
+      {
+        "title": "Hello, World!",
+        "description": "Prints Hello, World! to the terminal.",
+        "code": [
+          "print(\"Hello, World!\") # Prints Hello, World! to the terminal."
+        ],
+        "tags": [
+          "python",
+          "printing",
+          "hello-world",
+          "utility"
+        ],
+        "author": "James-Beans"
+      }
+    ]
+  },
+  {
+    "language": "python",
     "categoryName": "String Manipulation",
     "snippets": [
       {
@@ -1413,6 +1478,28 @@
           "utility"
         ],
         "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "language": "rust",
+    "categoryName": "Basics",
+    "snippets": [
+      {
+        "title": "Hello, World!",
+        "description": "Prints Hello, World! to the terminal.",
+        "code": [
+          "fn main() { // Defines the main running function",
+          "    println!(\"Hello, World!\"); // Prints Hello, World! to the terminal.",
+          "}"
+        ],
+        "tags": [
+          "rust",
+          "printing",
+          "hello-world",
+          "utility"
+        ],
+        "author": "James-Beans"
       }
     ]
   },
