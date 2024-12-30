@@ -233,5 +233,154 @@
         "author": "dostonnabotov"
       }
     ]
+  },
+  {
+    "categoryName": "JSON Manipulation",
+    "snippets": [
+      {
+        "title": "Read JSON File",
+        "description": "Reads a JSON file and parses its content.",
+        "code": [
+          "import json",
+          "",
+          "def read_json(filepath):",
+          "    with open(filepath, 'r') as file:",
+          "        return json.load(file)",
+          "",
+          "# Usage:",
+          "data = read_json('data.json')",
+          "print(data)"
+        ],
+        "tags": ["python", "json", "file", "read"],
+        "author": "e3nviction"
+      },
+      {
+        "title": "Write JSON File",
+        "description": "Writes a dictionary to a JSON file.",
+        "code": [
+          "import json",
+          "",
+          "def write_json(filepath, data):",
+          "    with open(filepath, 'w') as file:",
+          "        json.dump(data, file, indent=4)",
+          "",
+          "# Usage:",
+          "data = {'name': 'John', 'age': 30}",
+          "write_json('data.json', data)"
+        ],
+        "tags": ["python", "json", "file", "write"],
+        "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "categoryName": "SQLite Database",
+    "snippets": [
+      {
+        "title": "Create SQLite Database Table",
+        "description": "Creates a table in an SQLite database.",
+        "code": [
+          "import sqlite3",
+          "",
+          "def create_table(db_name, table_name):",
+          "    conn = sqlite3.connect(db_name)",
+          "    cursor = conn.cursor()",
+          "    cursor.execute(f'''",
+          "        CREATE TABLE IF NOT EXISTS {table_name} (",
+          "            id INTEGER PRIMARY KEY,",
+          "            name TEXT,",
+          "            age INTEGER",
+          "        )''')",
+          "    conn.commit()",
+          "    conn.close()",
+          "",
+          "# Usage:",
+          "create_table('example.db', 'users')"
+        ],
+        "tags": ["python", "sqlite", "database", "table"],
+        "author": "e3nviction"
+      },
+      {
+        "title": "Insert Data into SQLite Table",
+        "description": "Inserts data into a table in an SQLite database.",
+        "code": [
+          "import sqlite3",
+          "",
+          "def insert_data(db_name, table_name, name, age):",
+          "    conn = sqlite3.connect(db_name)",
+          "    cursor = conn.cursor()",
+          "    cursor.execute(f'''",
+          "        INSERT INTO {table_name} (name, age) VALUES (?, ?)''',",
+          "        (name, age))",
+          "    conn.commit()",
+          "    conn.close()",
+          "",
+          "# Usage:",
+          "insert_data('example.db', 'users', 'John Doe', 25)"
+        ],
+        "tags": ["python", "sqlite", "database", "insert"],
+        "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "categoryName": "Error Handling",
+    "snippets": [
+      {
+        "title": "Safe Division",
+        "description": "Performs division with error handling.",
+        "code": [
+          "def safe_divide(a, b):",
+          "    try:",
+          "        return a / b",
+          "    except ZeroDivisionError:",
+          "        return 'Cannot divide by zero!'",
+          "",
+          "# Usage:",
+          "print(safe_divide(10, 2))  # Output: 5.0",
+          "print(safe_divide(10, 0))  # Output: 'Cannot divide by zero!'"
+        ],
+        "tags": ["python", "error-handling", "division", "utility"],
+        "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "categoryName": "Datetime Utilities",
+    "snippets": [
+      {
+        "title": "Get Current Date and Time",
+        "description": "Retrieves the current date and time.",
+        "code": [
+          "from datetime import datetime",
+          "",
+          "def current_datetime():",
+          "    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')",
+          "",
+          "# Usage:",
+          "print(current_datetime())  # Output: Current date and time"
+        ],
+        "tags": ["python", "datetime", "current", "utility"],
+        "author": "e3nviction"
+      },
+      {
+        "title": "Calculate Date Difference",
+        "description": "Calculates the difference between two dates.",
+        "code": [
+          "from datetime import datetime",
+          "",
+          "def date_difference(date1, date2):",
+          "    format = '%Y-%m-%d'",
+          "    d1 = datetime.strptime(date1, format)",
+          "    d2 = datetime.strptime(date2, format)",
+          "    return abs((d2 - d1).days)",
+          "",
+          "# Usage:",
+          "print(date_difference('2024-01-01', '2024-01-10'))  # Output: 9"
+        ],
+        "tags": ["python", "datetime", "difference", "utility"],
+        "author": "e3nviction"
+      }
+    ]
   }
 ]
