@@ -28,6 +28,48 @@
         ],
         "tags": ["python", "string", "palindrome", "utility"],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Count Vowels",
+        "description": "Counts the number of vowels in a string.",
+        "code": [
+          "def count_vowels(s):",
+          "    vowels = 'aeiouAEIOU'",
+          "    return len([char for char in s if char in vowels])",
+          "",
+          "# Usage:",
+          "print(count_vowels('hello'))  # Output: 2"
+        ],
+        "tags": ["python", "string", "vowels", "count", "utility"],
+        "author": "SteliosGee"
+      },
+      {
+        "title": "Check Anagram",
+        "description": "Checks if two strings are anagrams of each other.",
+        "code": [
+          "def is_anagram(s1, s2):",
+          "    return sorted(s1) == sorted(s2)",
+          "",
+          "# Usage:",
+          "print(is_anagram('listen', 'silent'))  # Output: True"
+        ],
+        "tags": ["python", "string", "anagram", "check", "utility"],
+        "author": "SteliosGee"
+      },
+      {
+        "title": "Remove Punctuation",
+        "description": "Removes punctuation from a string.",
+        "code": [
+          "import string",
+          "",
+          "def remove_punctuation(s):",
+          "    return s.translate(str.maketrans('', '', string.punctuation))",
+          "",
+          "# Usage:",
+          "print(remove_punctuation('Hello, World!'))  # Output: 'Hello World'"
+        ],
+        "tags": ["python", "string", "punctuation", "remove", "utility"],
+        "author": "SteliosGee"
       }
     ]
   },
