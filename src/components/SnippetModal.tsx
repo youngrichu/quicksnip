@@ -23,7 +23,14 @@ const SnippetModal: React.FC<Props> = ({
   useEscapeKey(handleCloseModal);
 
   return ReactDOM.createPortal(
-    <div className="modal-overlay">
+    <div
+      className="modal-overlay"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          handleCloseModal();
+        }
+      }}
+    >
       <div className="modal | flow" data-flow-space="lg">
         <div className="modal__header">
           <h2 className="section-title">{snippet.title}</h2>
