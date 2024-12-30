@@ -13,12 +13,7 @@
           "    return reversed;",
           "}"
         ],
-        "tags": [
-          "cpp",
-          "array",
-          "reverse",
-          "utility"
-        ],
+        "tags": ["cpp", "array", "reverse", "utility"],
         "author": "Vaibhav-kesarwani"
       }
     ]
@@ -30,33 +25,16 @@
       {
         "title": "Responsive Font Sizing",
         "description": "Adjusts font size based on viewport width.",
-        "code": [
-          "h1 {",
-          "  font-size: calc(1.5rem + 2vw);",
-          "}"
-        ],
-        "tags": [
-          "css",
-          "font",
-          "responsive",
-          "typography"
-        ],
-        "author": "technoph1le"
+        "code": ["h1 {", "  font-size: calc(1.5rem + 2vw);", "}"],
+        "tags": ["css", "font", "responsive", "typography"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Letter Spacing",
         "description": "Adds space between letters for better readability.",
-        "code": [
-          "p {",
-          "  letter-spacing: 0.05em;",
-          "}"
-        ],
-        "tags": [
-          "css",
-          "typography",
-          "spacing"
-        ],
-        "author": "technoph1le"
+        "code": ["p {", "  letter-spacing: 0.05em;", "}"],
+        "tags": ["css", "typography", "spacing"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -78,13 +56,8 @@
           "  margin-top: auto;",
           "}"
         ],
-        "tags": [
-          "css",
-          "layout",
-          "footer",
-          "sticky"
-        ],
-        "author": "technoph1le"
+        "tags": ["css", "layout", "footer", "sticky"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Equal-Width Columns",
@@ -100,13 +73,8 @@
           "  margin: 0 10px;",
           "}"
         ],
-        "tags": [
-          "css",
-          "flexbox",
-          "columns",
-          "layout"
-        ],
-        "author": "technoph1le"
+        "tags": ["css", "flexbox", "columns", "layout"],
+        "author": "dostonnabotov"
       },
       {
         "title": "CSS Reset",
@@ -118,12 +86,7 @@
           "  box-sizing: border-box",
           "}"
         ],
-        "tags": [
-          "css",
-          "reset",
-          "browser",
-          "layout"
-        ],
+        "tags": ["css", "reset", "browser", "layout"],
         "author": "AmeerMoustafa"
       }
     ]
@@ -150,13 +113,8 @@
           "  background-color: #0056b3;",
           "}"
         ],
-        "tags": [
-          "css",
-          "button",
-          "hover",
-          "transition"
-        ],
-        "author": "technoph1le"
+        "tags": ["css", "button", "hover", "transition"],
+        "author": "dostonnabotov"
       },
       {
         "title": "3D Button Effect",
@@ -177,13 +135,8 @@
           "  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);",
           "}"
         ],
-        "tags": [
-          "css",
-          "button",
-          "3D",
-          "effect"
-        ],
-        "author": "technoph1le"
+        "tags": ["css", "button", "3D", "effect"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -200,13 +153,8 @@
           "  background: rgba(255, 255, 255, 0.5);",
           "}"
         ],
-        "tags": [
-          "css",
-          "blur",
-          "background",
-          "effects"
-        ],
-        "author": "technoph1le"
+        "tags": ["css", "blur", "background", "effects"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Hover Glow Effect",
@@ -223,13 +171,8 @@
           "  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);",
           "}"
         ],
-        "tags": [
-          "css",
-          "hover",
-          "glow",
-          "effects"
-        ],
-        "author": "technoph1le"
+        "tags": ["css", "hover", "glow", "effects"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -247,13 +190,8 @@
           "const numbers = [1, 2, 2, 3, 4, 4, 5];",
           "console.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]"
         ],
-        "tags": [
-          "javascript",
-          "array",
-          "deduplicate",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "array", "deduplicate", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Array",
@@ -265,13 +203,8 @@
           "const nestedArray = [1, [2, [3, [4]]]];",
           "console.log(flattenArray(nestedArray)); // Output: [1, 2, 3, 4]"
         ],
-        "tags": [
-          "javascript",
-          "array",
-          "flatten",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "array", "flatten", "utility"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -300,13 +233,8 @@
           "console.log(slugify(title)); // Output: 'hello-world-this-is-a-test'",
           "console.log(slugify(title, \"_\")); // Output: 'hello_world_this_is_a_test'"
         ],
-        "tags": [
-          "javascript",
-          "string",
-          "slug",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "string", "slug", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Capitalize String",
@@ -317,13 +245,8 @@
           "// Usage:",
           "console.log(capitalize('hello')); // Output: 'Hello'"
         ],
-        "tags": [
-          "javascript",
-          "string",
-          "capitalize",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "string", "capitalize", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Reverse String",
@@ -334,13 +257,8 @@
           "// Usage:",
           "console.log(reverseString('hello')); // Output: 'olleh'"
         ],
-        "tags": [
-          "javascript",
-          "string",
-          "reverse",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "string", "reverse", "utility"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -357,13 +275,8 @@
           "// Usage:",
           "console.log(formatDate(new Date())); // Output: '2024-12-10'"
         ],
-        "tags": [
-          "javascript",
-          "date",
-          "format",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "date", "format", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Get Time Difference",
@@ -379,13 +292,8 @@
           "const date2 = new Date('2024-12-31');",
           "console.log(getTimeDifference(date1, date2)); // Output: 365"
         ],
-        "tags": [
-          "javascript",
-          "date",
-          "time-difference",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "date", "time-difference", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Relative Time Formatter",
@@ -450,13 +358,8 @@
           "const randomFunction = () => console.log('Function called!');",
           "times(randomFunction, 3); // Logs 'Function called!' three times"
         ],
-        "tags": [
-          "javascript",
-          "function",
-          "repeat",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "function", "repeat", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Debounce Function",
@@ -473,13 +376,8 @@
           "// Usage:",
           "window.addEventListener('resize', debounce(() => console.log('Resized!'), 500));"
         ],
-        "tags": [
-          "javascript",
-          "utility",
-          "debounce",
-          "performance"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "utility", "debounce", "performance"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Throttle Function",
@@ -508,13 +406,8 @@
           "// Usage:",
           "document.addEventListener('scroll', throttle(() => console.log('Scrolled!'), 1000));"
         ],
-        "tags": [
-          "javascript",
-          "utility",
-          "throttle",
-          "performance"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "utility", "throttle", "performance"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -534,13 +427,8 @@
           "const element = document.querySelector('.my-element');",
           "toggleClass(element, 'active');"
         ],
-        "tags": [
-          "javascript",
-          "dom",
-          "class",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "dom", "class", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Smooth Scroll to Element",
@@ -554,13 +442,8 @@
           "const target = document.querySelector('#target');",
           "smoothScroll(target);"
         ],
-        "tags": [
-          "javascript",
-          "dom",
-          "scroll",
-          "ui"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "dom", "scroll", "ui"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -579,13 +462,8 @@
           "// Usage:",
           "addToLocalStorage('user', { name: 'John', age: 30 });"
         ],
-        "tags": [
-          "javascript",
-          "localStorage",
-          "storage",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "localStorage", "storage", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Retrieve Item from localStorage",
@@ -600,13 +478,8 @@
           "const user = getFromLocalStorage('user');",
           "console.log(user); // Output: { name: 'John', age: 30 }"
         ],
-        "tags": [
-          "javascript",
-          "localStorage",
-          "storage",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "localStorage", "storage", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Clear All localStorage",
@@ -619,13 +492,8 @@
           "// Usage:",
           "clearLocalStorage(); // Removes all items from localStorage"
         ],
-        "tags": [
-          "javascript",
-          "localStorage",
-          "storage",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["javascript", "localStorage", "storage", "utility"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -643,13 +511,8 @@
           "# Usage:",
           "print(reverse_string('hello'))  # Output: 'olleh'"
         ],
-        "tags": [
-          "python",
-          "string",
-          "reverse",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "string", "reverse", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Palindrome",
@@ -662,13 +525,8 @@
           "# Usage:",
           "print(is_palindrome('A man a plan a canal Panama'))  # Output: True"
         ],
-        "tags": [
-          "python",
-          "string",
-          "palindrome",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "string", "palindrome", "utility"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -687,13 +545,8 @@
           "nested_list = [[1, 2], [3, 4], [5]]",
           "print(flatten_list(nested_list))  # Output: [1, 2, 3, 4, 5]"
         ],
-        "tags": [
-          "python",
-          "list",
-          "flatten",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "list", "flatten", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Unevenly Nested Lists",
@@ -734,13 +587,8 @@
           "# Usage:",
           "print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]"
         ],
-        "tags": [
-          "python",
-          "list",
-          "duplicates",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "list", "duplicates", "utility"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -760,13 +608,8 @@
           "lines = read_file_lines('example.txt')",
           "print(lines)"
         ],
-        "tags": [
-          "python",
-          "file",
-          "read",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "file", "read", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Write to File",
@@ -779,13 +622,8 @@
           "# Usage:",
           "write_to_file('example.txt', 'Hello, World!')"
         ],
-        "tags": [
-          "python",
-          "file",
-          "write",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "file", "write", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Find Files",
@@ -810,12 +648,7 @@
           "pdf_files = find_files('/path/to/your/directory', '.pdf')",
           "print(pdf_files)"
         ],
-        "tags": [
-          "python",
-          "os",
-          "filesystem",
-          "file_search"
-        ],
+        "tags": ["python", "os", "filesystem", "file_search"],
         "author": "Jackeastern"
       }
     ]
@@ -836,13 +669,8 @@
           "# Usage:",
           "print(factorial(5))  # Output: 120"
         ],
-        "tags": [
-          "python",
-          "math",
-          "factorial",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "math", "factorial", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Prime Number",
@@ -859,13 +687,8 @@
           "# Usage:",
           "print(is_prime(17))  # Output: True"
         ],
-        "tags": [
-          "python",
-          "math",
-          "prime",
-          "check"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "math", "prime", "check"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -892,13 +715,8 @@
           "",
           "measure_time(slow_function)"
         ],
-        "tags": [
-          "python",
-          "time",
-          "execution",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "time", "execution", "utility"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Generate Random String",
@@ -914,13 +732,8 @@
           "# Usage:",
           "print(random_string(10))  # Output: Random 10-character string"
         ],
-        "tags": [
-          "python",
-          "random",
-          "string",
-          "utility"
-        ],
-        "author": "technoph1le"
+        "tags": ["python", "random", "string", "utility"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -943,12 +756,7 @@
           "// Usage:",
           "assert_eq!(capitalized(\"lower_case\"), \"Lower_case\")"
         ],
-        "tags": [
-          "rust",
-          "string",
-          "capitalize",
-          "utility"
-        ],
+        "tags": ["rust", "string", "capitalize", "utility"],
         "author": "Mathys-Gasnier"
       }
     ]
@@ -973,12 +781,7 @@
           "// Usage:",
           "let lines = read_lines(\"path/to/file.txt\").expect(\"Failed to read lines from file\")"
         ],
-        "tags": [
-          "rust",
-          "file",
-          "read",
-          "utility"
-        ],
+        "tags": ["rust", "file", "read", "utility"],
         "author": "Mathys-Gasnier"
       },
       {
@@ -1004,11 +807,7 @@
           "// Usage:",
           "let files = find_files(\"/path/to/your/directory\", \".pdf\")"
         ],
-        "tags": [
-          "rust",
-          "file",
-          "search"
-        ],
+        "tags": ["rust", "file", "search"],
         "author": "Mathys-Gasnier"
       }
     ]
@@ -1028,13 +827,8 @@
           "  overflow: hidden;",
           "}"
         ],
-        "tags": [
-          "sass",
-          "mixin",
-          "typography",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["sass", "mixin", "typography", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Overflow Ellipsis",
@@ -1046,13 +840,8 @@
           "  text-overflow: ellipsis;",
           "}"
         ],
-        "tags": [
-          "sass",
-          "mixin",
-          "text",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["sass", "mixin", "text", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Font Import Helper",
@@ -1068,13 +857,8 @@
           "  }",
           "}"
         ],
-        "tags": [
-          "sass",
-          "mixin",
-          "fonts",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["sass", "mixin", "fonts", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Gradient",
@@ -1086,14 +870,8 @@
           "  -webkit-text-fill-color: transparent;",
           "}"
         ],
-        "tags": [
-          "sass",
-          "mixin",
-          "gradient",
-          "text",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["sass", "mixin", "gradient", "text", "css"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1111,13 +889,8 @@
           "  gap: $gap;",
           "}"
         ],
-        "tags": [
-          "scss",
-          "grid",
-          "layout",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "grid", "layout", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Flex Center",
@@ -1129,13 +902,8 @@
           "  align-items: center;",
           "}"
         ],
-        "tags": [
-          "scss",
-          "flex",
-          "center",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "flex", "center", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Aspect Ratio",
@@ -1154,13 +922,8 @@
           "  }",
           "}"
         ],
-        "tags": [
-          "scss",
-          "aspect-ratio",
-          "layout",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "aspect-ratio", "layout", "css"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1185,13 +948,8 @@
           "  animation: fade-in $duration $easing;",
           "}"
         ],
-        "tags": [
-          "scss",
-          "animation",
-          "fade",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "animation", "fade", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Slide In From Left",
@@ -1210,13 +968,8 @@
           "  animation: slide-in-left $duration $easing;",
           "}"
         ],
-        "tags": [
-          "scss",
-          "animation",
-          "slide",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "animation", "slide", "css"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1240,13 +993,8 @@
           "  }",
           "}"
         ],
-        "tags": [
-          "scss",
-          "responsive",
-          "media-queries",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "responsive", "media-queries", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Clearfix",
@@ -1260,13 +1008,8 @@
           "  }",
           "}"
         ],
-        "tags": [
-          "scss",
-          "clearfix",
-          "utility",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "clearfix", "utility", "css"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1282,13 +1025,8 @@
           "  border-radius: $radius;",
           "}"
         ],
-        "tags": [
-          "scss",
-          "border",
-          "radius",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "border", "radius", "css"],
+        "author": "dostonnabotov"
       },
       {
         "title": "Box Shadow Helper",
@@ -1298,13 +1036,8 @@
           "  box-shadow: $x $y $blur $spread $color;",
           "}"
         ],
-        "tags": [
-          "scss",
-          "box-shadow",
-          "css",
-          "effects"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "box-shadow", "css", "effects"],
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -1329,13 +1062,8 @@
           "  }",
           "}"
         ],
-        "tags": [
-          "scss",
-          "button",
-          "primary",
-          "css"
-        ],
-        "author": "technoph1le"
+        "tags": ["scss", "button", "primary", "css"],
+        "author": "dostonnabotov"
       }
     ]
   }

@@ -14,7 +14,7 @@
           "}"
         ],
         "tags": ["sass", "mixin", "typography", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Overflow Ellipsis",
@@ -27,7 +27,7 @@
           "}"
         ],
         "tags": ["sass", "mixin", "text", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Font Import Helper",
@@ -44,7 +44,7 @@
           "}"
         ],
         "tags": ["sass", "mixin", "fonts", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Text Gradient",
@@ -57,7 +57,7 @@
           "}"
         ],
         "tags": ["sass", "mixin", "gradient", "text", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -75,7 +75,7 @@
           "}"
         ],
         "tags": ["scss", "grid", "layout", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flex Center",
@@ -88,7 +88,7 @@
           "}"
         ],
         "tags": ["scss", "flex", "center", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Aspect Ratio",
@@ -108,7 +108,7 @@
           "}"
         ],
         "tags": ["scss", "aspect-ratio", "layout", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -133,7 +133,7 @@
           "}"
         ],
         "tags": ["scss", "animation", "fade", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Slide In From Left",
@@ -153,7 +153,7 @@
           "}"
         ],
         "tags": ["scss", "animation", "slide", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -177,7 +177,7 @@
           "}"
         ],
         "tags": ["scss", "responsive", "media-queries", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Clearfix",
@@ -192,7 +192,7 @@
           "}"
         ],
         "tags": ["scss", "clearfix", "utility", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -208,7 +208,7 @@
           "}"
         ],
         "tags": ["scss", "border", "radius", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Box Shadow Helper",
@@ -219,7 +219,7 @@
           "}"
         ],
         "tags": ["scss", "box-shadow", "css", "effects"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -244,7 +244,7 @@
           "}"
         ],
         "tags": ["scss", "button", "primary", "css"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   }

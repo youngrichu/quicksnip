@@ -13,7 +13,7 @@
           "print(reverse_string('hello'))  # Output: 'olleh'"
         ],
         "tags": ["python", "string", "reverse", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Palindrome",
@@ -27,7 +27,7 @@
           "print(is_palindrome('A man a plan a canal Panama'))  # Output: True"
         ],
         "tags": ["python", "string", "palindrome", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -46,7 +46,7 @@
           "print(flatten_list(nested_list))  # Output: [1, 2, 3, 4, 5]"
         ],
         "tags": ["python", "list", "flatten", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Flatten Unevenly Nested Lists",
@@ -88,7 +88,7 @@
           "print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]"
         ],
         "tags": ["python", "list", "duplicates", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -108,7 +108,7 @@
           "print(lines)"
         ],
         "tags": ["python", "file", "read", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Write to File",
@@ -122,7 +122,7 @@
           "write_to_file('example.txt', 'Hello, World!')"
         ],
         "tags": ["python", "file", "write", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Find Files",
@@ -168,7 +168,7 @@
           "print(factorial(5))  # Output: 120"
         ],
         "tags": ["python", "math", "factorial", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Check Prime Number",
@@ -186,7 +186,7 @@
           "print(is_prime(17))  # Output: True"
         ],
         "tags": ["python", "math", "prime", "check"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   },
@@ -213,7 +213,7 @@
           "measure_time(slow_function)"
         ],
         "tags": ["python", "time", "execution", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       },
       {
         "title": "Generate Random String",
@@ -230,7 +230,7 @@
           "print(random_string(10))  # Output: Random 10-character string"
         ],
         "tags": ["python", "random", "string", "utility"],
-        "author": "technoph1le"
+        "author": "dostonnabotov"
       }
     ]
   }
