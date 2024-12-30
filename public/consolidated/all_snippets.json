@@ -264,6 +264,41 @@
           "effect"
         ],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "MacOS Button",
+        "description": "A macOS-like button style, with hover and shading effects.",
+        "code": [
+          ".button {",
+          " font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,;",
+          " background: #0a85ff;",
+          " color: #fff;",
+          " padding: 8px 12px;",
+          " border: none;",
+          " margin: 4px;",
+          " border-radius: 10px;",
+          " cursor: pointer;",
+          " box-shadow: inset 0 1px 1px #fff2, 0px 2px 3px -2px rgba(0, 0, 0, 0.3) !important; /*This is really performance heavy*/",
+          " font-size: 14px;",
+          " display: flex;",
+          " align-items: center;",
+          " justify-content: center;",
+          " text-decoration: none;",
+          " transition: all 150ms cubic-bezier(0.175, 0.885, 0.32, 1.275);",
+          "}",
+          ".button:hover {",
+          " background: #0974ee;",
+          " color: #fff",
+          "}"
+        ],
+        "tags": [
+          "css",
+          "button",
+          "macos",
+          "hover",
+          "transition"
+        ],
+        "author": "e3nviction"
       }
     ]
   },
@@ -1179,6 +1214,205 @@
           "utility"
         ],
         "author": "dostonnabotov"
+      }
+    ]
+  },
+  {
+    "language": "python",
+    "categoryName": "JSON Manipulation",
+    "snippets": [
+      {
+        "title": "Read JSON File",
+        "description": "Reads a JSON file and parses its content.",
+        "code": [
+          "import json",
+          "",
+          "def read_json(filepath):",
+          "    with open(filepath, 'r') as file:",
+          "        return json.load(file)",
+          "",
+          "# Usage:",
+          "data = read_json('data.json')",
+          "print(data)"
+        ],
+        "tags": [
+          "python",
+          "json",
+          "file",
+          "read"
+        ],
+        "author": "e3nviction"
+      },
+      {
+        "title": "Write JSON File",
+        "description": "Writes a dictionary to a JSON file.",
+        "code": [
+          "import json",
+          "",
+          "def write_json(filepath, data):",
+          "    with open(filepath, 'w') as file:",
+          "        json.dump(data, file, indent=4)",
+          "",
+          "# Usage:",
+          "data = {'name': 'John', 'age': 30}",
+          "write_json('data.json', data)"
+        ],
+        "tags": [
+          "python",
+          "json",
+          "file",
+          "write"
+        ],
+        "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "language": "python",
+    "categoryName": "SQLite Database",
+    "snippets": [
+      {
+        "title": "Create SQLite Database Table",
+        "description": "Creates a table in an SQLite database with a dynamic schema.",
+        "code": [
+          "import sqlite3",
+          "",
+          "def create_table(db_name, table_name, schema):",
+          "    conn = sqlite3.connect(db_name)",
+          "    cursor = conn.cursor()",
+          "    schema_string = ', '.join([f'{col} {dtype}' for col, dtype in schema.items()])",
+          "    cursor.execute(f'''",
+          "        CREATE TABLE IF NOT EXISTS {table_name} (",
+          "            {schema_string}",
+          "        )''')",
+          "    conn.commit()",
+          "    conn.close()",
+          "",
+          "# Usage:",
+          "db_name = 'example.db'",
+          "table_name = 'users'",
+          "schema = {",
+          "    'id': 'INTEGER PRIMARY KEY',",
+          "    'name': 'TEXT',",
+          "    'age': 'INTEGER',",
+          "    'email': 'TEXT'",
+          "}",
+          "create_table(db_name, table_name, schema)"
+        ],
+        "tags": [
+          "python",
+          "sqlite",
+          "database",
+          "table"
+        ],
+        "author": "e3nviction"
+      },
+      {
+        "title": "Insert Data into Sqlite Table",
+        "description": "Inserts a row into a specified SQLite table using a dictionary of fields and values.",
+        "code": [
+          "import sqlite3",
+          "",
+          "def insert_into_table(db_path, table_name, data):",
+          "    with sqlite3.connect(db_path) as conn:",
+          "        columns = ', '.join(data.keys())",
+          "        placeholders = ', '.join(['?'] * len(data))",
+          "        sql = f\"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})\"",
+          "        conn.execute(sql, tuple(data.values()))",
+          "        conn.commit()",
+          "",
+          "# Usage:",
+          "db_path = 'example.db'",
+          "table_name = 'users'",
+          "data = {",
+          "    'name': 'John Doe',",
+          "    'email': 'john@example.com',",
+          "    'age': 30",
+          "}",
+          "insert_into_table(db_path, table_name, data)"
+        ],
+        "tags": [
+          "python",
+          "sqlite",
+          "database",
+          "utility"
+        ],
+        "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "language": "python",
+    "categoryName": "Error Handling",
+    "snippets": [
+      {
+        "title": "Safe Division",
+        "description": "Performs division with error handling.",
+        "code": [
+          "def safe_divide(a, b):",
+          "    try:",
+          "        return a / b",
+          "    except ZeroDivisionError:",
+          "        return 'Cannot divide by zero!'",
+          "",
+          "# Usage:",
+          "print(safe_divide(10, 2))  # Output: 5.0",
+          "print(safe_divide(10, 0))  # Output: 'Cannot divide by zero!'"
+        ],
+        "tags": [
+          "python",
+          "error-handling",
+          "division",
+          "utility"
+        ],
+        "author": "e3nviction"
+      }
+    ]
+  },
+  {
+    "language": "python",
+    "categoryName": "Datetime Utilities",
+    "snippets": [
+      {
+        "title": "Get Current Date and Time String",
+        "description": "Fetches the current date and time as a formatted string.",
+        "code": [
+          "from datetime import datetime",
+          "",
+          "def get_current_datetime_string():",
+          "    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')",
+          "",
+          "# Usage:",
+          "print(get_current_datetime_string())  # Output: '2023-01-01 12:00:00'"
+        ],
+        "tags": [
+          "python",
+          "datetime",
+          "utility"
+        ],
+        "author": "e3nviction"
+      },
+      {
+        "title": "Calculate Date Difference in Milliseconds",
+        "description": "Calculates the difference between two dates in milliseconds.",
+        "code": [
+          "from datetime import datetime",
+          "",
+          "def date_difference_in_millis(date1, date2):",
+          "    delta = date2 - date1",
+          "    return delta.total_seconds() * 1000",
+          "",
+          "# Usage:",
+          "d1 = datetime(2023, 1, 1, 12, 0, 0)",
+          "d2 = datetime(2023, 1, 1, 12, 1, 0)",
+          "print(date_difference_in_millis(d1, d2))"
+        ],
+        "tags": [
+          "python",
+          "datetime",
+          "utility"
+        ],
+        "author": "e3nviction"
       }
     ]
   },
