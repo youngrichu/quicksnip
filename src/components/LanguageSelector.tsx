@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useAppContext } from "../contexts/AppContext";
 import { useLanguages } from "../hooks/useLanguages";
 import { LanguageType } from "../types";
@@ -36,6 +36,22 @@ const LanguageSelector = () => {
       setIsDropdownOpen(false);
     }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   if (loading) {
     return <p>Loading languages...</p>;
