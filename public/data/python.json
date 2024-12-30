@@ -278,47 +278,60 @@
     "snippets": [
       {
         "title": "Create SQLite Database Table",
-        "description": "Creates a table in an SQLite database.",
+        "description": "Creates a table in an SQLite database with a dynamic schema.",
         "code": [
           "import sqlite3",
           "",
-          "def create_table(db_name, table_name):",
+          "def create_table(db_name, table_name, schema):",
           "    conn = sqlite3.connect(db_name)",
           "    cursor = conn.cursor()",
+          "    schema_string = ', '.join([f'{col} {dtype}' for col, dtype in schema.items()])",
           "    cursor.execute(f'''",
           "        CREATE TABLE IF NOT EXISTS {table_name} (",
-          "            id INTEGER PRIMARY KEY,",
-          "            name TEXT,",
-          "            age INTEGER",
+          "            {schema_string}",
           "        )''')",
           "    conn.commit()",
           "    conn.close()",
           "",
           "# Usage:",
-          "create_table('example.db', 'users')"
+          "db_name = 'example.db'",
+          "table_name = 'users'",
+          "schema = {",
+          "    'id': 'INTEGER PRIMARY KEY',",
+          "    'name': 'TEXT',",
+          "    'age': 'INTEGER',",
+          "    'email': 'TEXT'",
+          "}",
+          "create_table(db_name, table_name, schema)"
         ],
         "tags": ["python", "sqlite", "database", "table"],
         "author": "e3nviction"
       },
       {
-        "title": "Insert Data into SQLite Table",
-        "description": "Inserts data into a table in an SQLite database.",
+        "title": "Insert Data into Sqlite Table",
+        "description": "Inserts a row into a specified SQLite table using a dictionary of fields and values.",
         "code": [
           "import sqlite3",
           "",
-          "def insert_data(db_name, table_name, name, age):",
-          "    conn = sqlite3.connect(db_name)",
-          "    cursor = conn.cursor()",
-          "    cursor.execute(f'''",
-          "        INSERT INTO {table_name} (name, age) VALUES (?, ?)''',",
-          "        (name, age))",
-          "    conn.commit()",
-          "    conn.close()",
+          "def insert_into_table(db_path, table_name, data):",
+          "    with sqlite3.connect(db_path) as conn:",
+          "        columns = ', '.join(data.keys())",
+          "        placeholders = ', '.join(['?'] * len(data))",
+          "        sql = f\"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})\"",
+          "        conn.execute(sql, tuple(data.values()))",
+          "        conn.commit()",
           "",
           "# Usage:",
-          "insert_data('example.db', 'users', 'John Doe', 25)"
+          "db_path = 'example.db'",
+          "table_name = 'users'",
+          "data = {",
+          "    'name': 'John Doe',",
+          "    'email': 'john@example.com',",
+          "    'age': 30",
+          "}",
+          "insert_into_table(db_path, table_name, data)"
         ],
-        "tags": ["python", "sqlite", "database", "insert"],
+        "tags": ["python", "sqlite", "database", "utility"],
         "author": "e3nviction"
       }
     ]
@@ -349,36 +362,36 @@
     "categoryName": "Datetime Utilities",
     "snippets": [
       {
-        "title": "Get Current Date and Time",
-        "description": "Retrieves the current date and time.",
+        "title": "Get Current Date and Time String",
+        "description": "Fetches the current date and time as a formatted string.",
         "code": [
           "from datetime import datetime",
           "",
-          "def current_datetime():",
+          "def get_current_datetime_string():",
           "    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')",
           "",
           "# Usage:",
-          "print(current_datetime())  # Output: Current date and time"
+          "print(get_current_datetime_string())  # Output: '2023-01-01 12:00:00'"
         ],
-        "tags": ["python", "datetime", "current", "utility"],
+        "tags": ["python", "datetime", "utility"],
         "author": "e3nviction"
       },
       {
-        "title": "Calculate Date Difference",
-        "description": "Calculates the difference between two dates.",
+        "title": "Calculate Date Difference in Milliseconds",
+        "description": "Calculates the difference between two dates in milliseconds.",
         "code": [
           "from datetime import datetime",
           "",
-          "def date_difference(date1, date2):",
-          "    format = '%Y-%m-%d'",
-          "    d1 = datetime.strptime(date1, format)",
-          "    d2 = datetime.strptime(date2, format)",
-          "    return abs((d2 - d1).days)",
+          "def date_difference_in_millis(date1, date2):",
+          "    delta = date2 - date1",
+          "    return delta.total_seconds() * 1000",
           "",
           "# Usage:",
-          "print(date_difference('2024-01-01', '2024-01-10'))  # Output: 9"
+          "d1 = datetime(2023, 1, 1, 12, 0, 0)",
+          "d2 = datetime(2023, 1, 1, 12, 1, 0)",
+          "print(date_difference_in_millis(d1, d2))"
         ],
-        "tags": ["python", "datetime", "difference", "utility"],
+        "tags": ["python", "datetime", "utility"],
         "author": "e3nviction"
       }
     ]
