@@ -80,6 +80,98 @@
         ],
         "tags": ["javascript", "string", "reverse", "utility"],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Truncate Text",
+        "description": "Truncates the text to a maximum length and appends '...' if the text exceeds the maximum length.",
+        "code": [
+          "const truncateText = (text = '', maxLength = 50) => {",
+          "  return `${text.slice(0, maxLength)}${text.length >= maxLength ? '...' : ''}`;",
+          "};",
+          "",
+          "// Usage:",
+          "const title = \"Hello, World! This is a Test.\";",
+          "console.log(truncateText(title)); // Output: 'Hello, World! This is a Test.'",
+          "console.log(truncateText(title, 10)); // Output: 'Hello, Wor...'"
+        ],
+        "tags": ["javascript", "string", "truncate", "utility", "text"],
+        "author": "realvishalrana"
+      },
+      {
+        "title": "Data with Prefix",
+        "description": "Adds a prefix and postfix to data, with a fallback value.",
+        "code": [
+          "const dataWithPrefix = (data, fallback = '-', prefix = '', postfix = '') => {",
+          "  return data ? `${prefix}${data}${postfix}` : fallback;",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(dataWithPrefix('123', '-', '(', ')')); // Output: '(123)'",
+          "console.log(dataWithPrefix('', '-', '(', ')')); // Output: '-'",
+          "console.log(dataWithPrefix('Hello', 'N/A', 'Mr. ', '')); // Output: 'Mr. Hello'",
+          "console.log(dataWithPrefix(null, 'N/A', 'Mr. ', '')); // Output: 'N/A'"
+        ],
+        "tags": ["javascript", "data", "utility"],
+        "author": "realvishalrana"
+      }
+    ]
+  },
+  {
+    "categoryName": "Object Manipulation",
+    "snippets": [
+      {
+        "title": "Filter Object",
+        "description": "Filters out entries in an object where the value is falsy.",
+        "code": [
+          "export const filterObject = (object = {}) =>",
+          "  Object.fromEntries(",
+          "    Object.entries(object)",
+          "      .map(([key, value]) => value && [key, value])",
+          "      .filter((item) => item),",
+          "  );",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: null, c: undefined, d: 4 };",
+          "console.log(filterObject(obj)); // Output: { a: 1, d: 4 }"
+        ],
+        "tags": ["javascript", "object", "filter", "utility"],
+        "author": "realvishalrana"
+      },
+      {
+        "title": "Get Nested Value",
+        "description": "Retrieves the value at a given path in a nested object.",
+        "code": [
+          "const getNestedValue = (obj, path) => {",
+          "  const keys = path.split('.');",
+          "  return keys.reduce((currentObject, key) => {",
+          "    return currentObject && typeof currentObject === 'object' ? currentObject[key] : undefined;",
+          "  }, obj);",
+          "};",
+          "",
+          "// Usage:",
+          "const obj = { a: { b: { c: 42 } } };",
+          "console.log(getNestedValue(obj, 'a.b.c')); // Output: 42"
+        ],
+        "tags": ["javascript", "object", "nested", "utility"],
+        "author": "realvishalrana"
+      },
+      {
+        "title": "Unique By Key",
+        "description": "Filters an array of objects to only include unique objects by a specified key.",
+        "code": [
+          "const uniqueByKey = (key, arr) =>",
+          "  arr.filter((obj, index, self) => index === self.findIndex((t) => t?.[key] === obj?.[key]));",
+          "",
+          "// Usage:",
+          "const arr = [",
+          "  { id: 1, name: 'John' },",
+          "  { id: 2, name: 'Jane' },",
+          "  { id: 1, name: 'John' }",
+          "];",
+          "console.log(uniqueByKey('id', arr)); // Output: [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }]"
+        ],
+        "tags": ["javascript", "array", "unique", "utility"],
+        "author": "realvishalrana"
       }
     ]
   },
@@ -313,5 +405,33 @@
         "author": "dostonnabotov"
       }
     ]
-  }
+  },
+{
+  "categoryName": "Number Formatting",
+  "snippets": [
+    {
+      "title": "Number Formatter",
+      "description": "Formats a number with suffixes (K, M, B, etc.).",
+      "code": [
+        "const nFormatter = (num) => {",
+        "  if (!num) return;",
+        "  num = parseFloat(num.toString().replace(/[^0-9.]/g, ''));",
+        "  const suffixes = ['', 'K', 'M', 'B', 'T', 'P', 'E'];",
+        "  let index = 0;",
+        "  while (num >= 1000 && index < suffixes.length - 1) {",
+        "    num /= 1000;",
+        "    index++;",
+        "  }",
+        "  return num.toFixed(2).replace(/\\.0+$|(\\.[0-9]*[1-9])0+$/, '$1') + suffixes[index];",
+        "};",
+        "",
+        "// Usage:",
+        "console.log(nFormatter(1234567)); // Output: '1.23M'"
+      ],
+      "tags": ["javascript", "number", "format", "utility"],
+      "author": "realvishalrana"
+    }
+  ]
+}
+  
 ]
