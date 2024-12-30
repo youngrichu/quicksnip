@@ -6,7 +6,7 @@ An open-source project that categorizes handy code snippets across various progr
   <img src="https://img.shields.io/static/v1?label=&message=Watch%20on%20YouTube&labelColor=FFFFFF&color=FF0000&style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Watch on YouTube" style="margin-right: 20px">
 </a>
 
-<br>
+<br><br>
 
 ![Website preview](/public/preview.png)
 
