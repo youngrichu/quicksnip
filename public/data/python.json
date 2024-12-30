@@ -1,5 +1,19 @@
 [
   {
+    "categoryName": "Basics",
+    "snippets": [
+      {
+        "title": "Hello, World!",
+        "description": "Prints Hello, World! to the terminal.",
+        "code": [
+          "print(\"Hello, World!\") # Prints Hello, World! to the terminal."
+        ],
+        "tags": ["python", "printing", "hello-world", "utility"],
+        "author": "James-Beans"
+      }
+    ]
+  },  
+  {
     "categoryName": "String Manipulation",
     "snippets": [
       {
