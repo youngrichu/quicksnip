@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { SnippetType } from "../types";
-import { useAppContext } from "../contexts/AppContext";
-import { useSnippets } from "../hooks/useSnippets";
 
-import SnippetModal from "./SnippetModal";
+import { useAppContext } from "contexts";
+import { useSnippets } from "hooks";
+import { SnippetType } from "types";
+
 import { LeftAngleArrowIcon } from "./Icons";
+import SnippetModal from "./SnippetModal";
 
 const SnippetList = () => {
   const { language, snippet, setSnippet } = useAppContext();

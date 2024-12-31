@@ -1,8 +1,10 @@
-import { useFetch } from "./useFetch";
-import { useAppContext } from "../contexts/AppContext";
-import { SnippetType } from "../types";
-import slugify from "../utils/slugify";
 import { useMemo } from "react";
+
+import { useAppContext } from "contexts";
+import { SnippetType } from "types";
+import { slugify } from "utils";
+
+import { useFetch } from "./";
 
 type CategoryData = {
   categoryName: string;

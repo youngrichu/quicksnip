@@ -1,7 +1,11 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-import CopyToClipboard from "./CopyToClipboard";
 import { useEffect, useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import {
+  oneDark,
+  oneLight,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
+
+import CopyToClipboard from "./CopyToClipboard";
 
 type Props = {
   language: string;
@@ -13,7 +17,9 @@ const CodePreview = ({ language = "markdown", code }: Props) => {
 
   useEffect(() => {
     const handleThemeChange = () => {
-      const newTheme = document.documentElement.getAttribute("data-theme") as "dark" | "light";
+      const newTheme = document.documentElement.getAttribute("data-theme") as
+        | "dark"
+        | "light";
       setTheme(newTheme || "dark");
     };
 

@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+import { useEscapeKey } from "hooks";
+import { SnippetType } from "types";
+import { slugify } from "utils";
+
 import Button from "./Button";
-import { CloseIcon } from "./Icons";
 import CodePreview from "./CodePreview";
-import { SnippetType } from "../types";
-import slugify from "../utils/slugify";
-import useEscapeKey from "../hooks/useEscapeKey";
+import { CloseIcon } from "./Icons";
 
 type Props = {
   snippet: SnippetType;
@@ -19,8 +21,12 @@ const SnippetModal: React.FC<Props> = ({
   handleCloseModal,
 }) => {
   const modalRoot = document.getElementById("modal-root");
-  if (!modalRoot) return null;
+
   useEscapeKey(handleCloseModal);
+
+  if (!modalRoot) {
+    return null;
+  }
 
   return ReactDOM.createPortal(
     <div
