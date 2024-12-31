@@ -141,6 +141,63 @@
         ],
         "tags": ["javascript", "data", "utility"],
         "author": "realvishalrana"
+      },
+      {
+        "title": "Check if String is a Palindrome",
+        "description": "Checks whether a given string is a palindrome.",
+        "code": [
+          "function isPalindrome(str) {",
+          "  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();",
+          "  return cleanStr === cleanStr.split('').reverse().join('');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(isPalindrome('A man, a plan, a canal, Panama')); // Output: true"
+        ],
+        "tags": ["javascript", "check", "palindrome", "string"],
+        "author": "axorax"
+      },
+      {
+        "title": "Count Words in a String",
+        "description": "Counts the number of words in a string.",
+        "code": [
+          "function countWords(str) {",
+          "  return str.trim().split(/\\s+/).length;",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(countWords('Hello world! This is a test.')); // Output: 6"
+        ],
+        "tags": ["string", "manipulation", "word count", "count"],
+        "author": "axorax"
+      },
+      {
+        "title": "Trim a String to a Specified Length",
+        "description": "Trims a string to a specified length and appends '...' if it exceeds that length.",
+        "code": [
+          "function trimString(str, maxLength) {",
+          "  return str.length > maxLength ? str.slice(0, maxLength) + '...' : str;",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(trimString('Hello, world!', 5)); // Output: 'Hello...'"
+        ],
+        "tags": ["string", "javascript", "trim"],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove All Whitespace",
+        "description": "Removes all whitespace from a string.",
+        "code": [
+          "function removeWhitespace(str) {",
+          "  return str.replace(/\\s+/g, '');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(removeWhitespace('Hello world!')); // Output: 'Helloworld!'"
+        ],
+        "tags": ["string", "whitespace"],
+        "author": "axorax"
       }
     ]
   },
