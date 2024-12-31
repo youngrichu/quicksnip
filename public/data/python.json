@@ -325,6 +325,74 @@
         ],
         "tags": ["python", "list", "duplicates", "utility"],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Find Duplicates in a List",
+        "description": "Identifies duplicate elements in a list.",
+        "code": [
+          "def find_duplicates(lst):",
+          "    seen = set()",
+          "    duplicates = set()",
+          "    for item in lst:",
+          "        if item in seen:",
+          "            duplicates.add(item)",
+          "        else:",
+          "            seen.add(item)",
+          "    return list(duplicates)",
+          "",
+          "# Usage:",
+          "data = [1, 2, 3, 2, 4, 5, 1]",
+          "print(find_duplicates(data))  # Output: [1, 2]"
+        ],
+        "tags": ["python", "list", "duplicates", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Partition List",
+        "description": "Partitions a list into sublists of a given size.",
+        "code": [
+          "def partition_list(lst, size):",
+          "    for i in range(0, len(lst), size):",
+          "        yield lst[i:i + size]",
+          "",
+          "# Usage:",
+          "data = [1, 2, 3, 4, 5, 6, 7]",
+          "partitions = list(partition_list(data, 3))",
+          "print(partitions)  # Output: [[1, 2, 3], [4, 5, 6], [7]]"
+        ],
+        "tags": ["python", "list", "partition", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Find Intersection of Two Lists",
+        "description": "Finds the common elements between two lists.",
+        "code": [
+          "def list_intersection(lst1, lst2):",
+          "    return [item for item in lst1 if item in lst2]",
+          "",
+          "# Usage:",
+          "list_a = [1, 2, 3, 4]",
+          "list_b = [3, 4, 5, 6]",
+          "print(list_intersection(list_a, list_b))  # Output: [3, 4]"
+        ],
+        "tags": ["python", "list", "intersection", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Find Maximum Difference in List",
+        "description": "Finds the maximum difference between any two elements in a list.",
+        "code": [
+          "def max_difference(lst):",
+          "    if not lst or len(lst) < 2:",
+          "        return 0",
+          "    return max(lst) - min(lst)",
+          "",
+          "# Usage:",
+          "data = [10, 3, 5, 20, 7]",
+          "print(max_difference(data))  # Output: 17"
+        ],
+        "tags": ["python", "list", "difference", "utility"],
+        "author": "axorax"
       }
     ]
   },
@@ -655,6 +723,22 @@
         ],
         "tags": ["python", "random", "string", "utility"],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Convert Bytes to Human-Readable Format",
+        "description": "Converts a size in bytes to a human-readable format.",
+        "code": [
+          "def bytes_to_human_readable(num):",
+          "    for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB']:",
+          "        if num < 1024:",
+          "            return f\"{num:.2f} {unit}\"",
+          "        num /= 1024",
+          "",
+          "# Usage:",
+          "print(bytes_to_human_readable(123456789))  # Output: '117.74 MB'"
+        ],
+        "tags": ["python", "bytes", "format", "utility"],
+        "author": "axorax"
       }
     ]
   },
@@ -904,6 +988,72 @@
         ],
         "tags": ["python", "error-handling", "division", "utility"],
         "author": "e3nviction"
+      },
+      {
+        "title": "Retry Function Execution on Exception",
+        "description": "Retries a function execution a specified number of times if it raises an exception.",
+        "code": [
+          "import time",
+          "",
+          "def retry(func, retries=3, delay=1):",
+          "    for attempt in range(retries):",
+          "        try:",
+          "            return func()",
+          "        except Exception as e:",
+          "            print(f\"Attempt {attempt + 1} failed: {e}\")",
+          "            time.sleep(delay)",
+          "    raise Exception(\"All retry attempts failed\")",
+          "",
+          "# Usage:",
+          "def unstable_function():",
+          "    raise ValueError(\"Simulated failure\")",
+          "",
+          "# Retry 3 times with 2 seconds delay:",
+          "try:",
+          "    retry(unstable_function, retries=3, delay=2)",
+          "except Exception as e:",
+          "    print(e)  # Output: All retry attempts failed"
+        ],
+        "tags": ["python", "error-handling", "retry", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Validate Input with Exception Handling",
+        "description": "Validates user input and handles invalid input gracefully.",
+        "code": [
+          "def validate_positive_integer(input_value):",
+          "    try:",
+          "        value = int(input_value)",
+          "        if value < 0:",
+          "            raise ValueError(\"The number must be positive\")",
+          "        return value",
+          "    except ValueError as e:",
+          "        return f\"Invalid input: {e}\"",
+          "",
+          "# Usage:",
+          "print(validate_positive_integer('10'))  # Output: 10",
+          "print(validate_positive_integer('-5'))  # Output: Invalid input: The number must be positive",
+          "print(validate_positive_integer('abc'))  # Output: Invalid input: invalid literal for int() with base 10: 'abc'"
+        ],
+        "tags": ["python", "error-handling", "validation", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Handle File Not Found Error",
+        "description": "Attempts to open a file and handles the case where the file does not exist.",
+        "code": [
+          "def read_file_safe(filepath):",
+          "    try:",
+          "        with open(filepath, 'r') as file:",
+          "            return file.read()",
+          "    except FileNotFoundError:",
+          "        return \"File not found!\"",
+          "",
+          "# Usage:",
+          "print(read_file_safe('nonexistent.txt'))  # Output: 'File not found!'"
+        ],
+        "tags": ["python", "error-handling", "file", "utility"],
+        "author": "axorax"
       }
     ]
   },
@@ -942,6 +1092,96 @@
         ],
         "tags": ["python", "datetime", "utility"],
         "author": "e3nviction"
+      },
+      {
+        "title": "Generate Date Range List",
+        "description": "Generates a list of dates between two given dates.",
+        "code": [
+          "from datetime import datetime, timedelta",
+          "",
+          "def generate_date_range(start_date, end_date):",
+          "    if start_date > end_date:",
+          "        raise ValueError(\"start_date must be before end_date\")",
+          "",
+          "    current_date = start_date",
+          "    date_list = []",
+          "    while current_date <= end_date:",
+          "        date_list.append(current_date)",
+          "        current_date += timedelta(days=1)",
+          "",
+          "    return date_list",
+          "",
+          "# Usage:",
+          "start = datetime(2023, 1, 1)",
+          "end = datetime(2023, 1, 5)",
+          "dates = generate_date_range(start, end)",
+          "for d in dates:",
+          "    print(d.strftime('%Y-%m-%d'))",
+          "# Output: '2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'"
+        ],
+        "tags": ["python", "datetime", "range", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Determine Day of the Week",
+        "description": "Calculates the day of the week for a given date.",
+        "code": [
+          "from datetime import datetime",
+          "",
+          "def get_day_of_week(date):",
+          "    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']",
+          "    try:",
+          "        return days[date.weekday()]",
+          "    except IndexError:",
+          "        raise ValueError(\"Invalid date\")",
+          "",
+          "# Usage:",
+          "date = datetime(2023, 1, 1)",
+          "day = get_day_of_week(date)",
+          "print(day)  # Output: 'Sunday'"
+        ],
+        "tags": ["python", "datetime", "weekday", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Check if Date is a Weekend",
+        "description": "Checks whether a given date falls on a weekend.",
+        "code": [
+          "from datetime import datetime",
+          "",
+          "def is_weekend(date):",
+          "    try:",
+          "        return date.weekday() >= 5  # Saturday = 5, Sunday = 6",
+          "    except AttributeError:",
+          "        raise TypeError(\"Input must be a datetime object\")",
+          "",
+          "# Usage:",
+          "date = datetime(2023, 1, 1)",
+          "weekend = is_weekend(date)",
+          "print(weekend)  # Output: True (Sunday)"
+        ],
+        "tags": ["python", "datetime", "weekend", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Get Number of Days in a Month",
+        "description": "Determines the number of days in a specific month and year.",
+        "code": [
+          "from calendar import monthrange",
+          "from datetime import datetime",
+          "",
+          "def get_days_in_month(year, month):",
+          "    try:",
+          "        return monthrange(year, month)[1]",
+          "    except ValueError as e:",
+          "        raise ValueError(f\"Invalid month or year: {e}\")",
+          "",
+          "# Usage:",
+          "days = get_days_in_month(2023, 2)",
+          "print(days)  # Output: 28 (for non-leap year February)"
+        ],
+        "tags": ["python", "datetime", "calendar", "utility"],
+        "author": "axorax"
       }
     ]
   }
