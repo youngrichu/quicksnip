@@ -1,0 +1,129 @@
+[
+    {
+      "categoryName": "Basics",
+      "snippets": [
+        {
+          "title": "Hello, World!",
+          "description": "Prints Hello, World! to the terminal.",
+          "code": [
+            "public class HelloWorld {",
+            "    public static void main(String[] args) {",
+            "        // Output: \"Hello, World!\"",
+            "        System.out.println(\"Hello, World!\");",
+            "    }",
+            "}"
+          ],
+          "tags": ["java", "hello-world"],
+          "author": "axorax"
+        }
+      ]
+    },
+    {
+        "categoryName": "String Manipulation",
+        "snippets": [
+          {
+            "title": "Reverse String",
+            "description": "Reverses the characters in a string.",
+            "code": [
+              "public class StringManipulation {",
+              "    public static String reverseString(String s) {",
+              "        StringBuilder reversed = new StringBuilder(s);",
+              "        return reversed.reverse().toString();",
+              "    }",
+              "",
+              "    // Usage:",
+              "    public static void main(String[] args) {",
+              "        System.out.println(reverseString('hello'));  // Output: 'olleh'",
+              "    }",
+              "}"
+            ],
+            "tags": ["java", "string", "reverse", "utility"],
+            "author": "axorax"
+          },
+          {
+            "title": "Check Palindrome",
+            "description": "Checks if a string is a palindrome.",
+            "code": [
+              "public class StringManipulation {",
+              "    public static boolean isPalindrome(String s) {",
+              "        String cleanString = s.replaceAll(\"\\s+\", \"\").toLowerCase();",
+              "        StringBuilder reversed = new StringBuilder(cleanString);",
+              "        return cleanString.equals(reversed.reverse().toString());",
+              "    }",
+              "",
+              "    // Usage:",
+              "    public static void main(String[] args) {",
+              "        System.out.println(isPalindrome('A man a plan a canal Panama'));  // Output: true",
+              "    }",
+              "}"
+            ],
+            "tags": ["java", "string", "palindrome", "check"],
+            "author": "axorax"
+          },
+          {
+            "title": "Count Vowels",
+            "description": "Counts the number of vowels in a string.",
+            "code": [
+              "public class StringManipulation {",
+              "    public static int countVowels(String s) {",
+              "        int count = 0;",
+              "        String vowels = 'aeiouAEIOU';",
+              "        for (int i = 0; i < s.length(); i++) {",
+              "            if (vowels.indexOf(s.charAt(i)) != -1) {",
+              "                count++;",
+              "            }",
+              "        }",
+              "        return count;",
+              "    }",
+              "",
+              "    // Usage:",
+              "    public static void main(String[] args) {",
+              "        System.out.println(countVowels('hello'));  // Output: 2",
+              "    }",
+              "}"
+            ],
+            "tags": ["java", "string", "vowels", "count"],
+            "author": "axorax"
+          },
+          {
+            "title": "Find Substring First Occurrence",
+            "description": "Finds the first occurrence of a substring in a string.",
+            "code": [
+              "public class StringManipulation {",
+              "    public static int findSubstring(String s, String substring) {",
+              "        return s.indexOf(substring);",
+              "    }",
+              "",
+              "    // Usage:",
+              "    public static void main(String[] args) {",
+              "        System.out.println(findSubstring('hello world', 'world'));  // Output: 6",
+              "    }",
+              "}"
+            ],
+            "tags": ["java", "string", "substring", "search"],
+            "author": "axorax"
+          },
+          {
+            "title": "Capitalize First Letter",
+            "description": "Capitalizes the first letter of a string.",
+            "code": [
+              "public class StringManipulation {",
+              "    public static String capitalizeFirstLetter(String s) {",
+              "        if (s == null || s.isEmpty()) {",
+              "            return s;",
+              "        }",
+              "        return s.substring(0, 1).toUpperCase() + s.substring(1);",
+              "    }",
+              "",
+              "    // Usage:",
+              "    public static void main(String[] args) {",
+              "        System.out.println(capitalizeFirstLetter('hello'));  // Output: 'Hello'",
+              "    }",
+              "}"
+            ],
+            "tags": ["java", "string", "capitalize", "utility"],
+            "author": "axorax"
+          }
+        ]
+    }
+]
