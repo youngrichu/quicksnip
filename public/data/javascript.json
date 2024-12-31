@@ -184,6 +184,96 @@
         ],
         "tags": ["string", "whitespace"],
         "author": "axorax"
+      },
+      {
+        "title": "Pad String on Both Sides",
+        "description": "Pads a string on both sides with a specified character until it reaches the desired length.",
+        "code": [
+          "function padString(str, length, char = ' ') {",
+          "  const totalPad = length - str.length;",
+          "  const padStart = Math.floor(totalPad / 2);",
+          "  const padEnd = totalPad - padStart;",
+          "  return char.repeat(padStart) + str + char.repeat(padEnd);",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(padString('hello', 10, '*')); // Output: '**hello***'"
+        ],
+        "tags": ["string", "pad", "manipulation"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert String to Snake Case",
+        "description": "Converts a given string into snake_case.",
+        "code": [
+          "function toSnakeCase(str) {",
+          "  return str.replace(/([a-z])([A-Z])/g, '$1_$2')",
+          "            .replace(/\\s+/g, '_')",
+          "            .toLowerCase();",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toSnakeCase('Hello World Test')); // Output: 'hello_world_test'"
+        ],
+        "tags": ["string", "case", "snake_case"],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove Vowels from a String",
+        "description": "Removes all vowels from a given string.",
+        "code": [
+          "function removeVowels(str) {",
+          "  return str.replace(/[aeiouAEIOU]/g, '');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(removeVowels('Hello World')); // Output: 'Hll Wrld'"
+        ],
+        "tags": ["string", "remove", "vowels"],
+        "author": "axorax"
+      },
+      {
+        "title": "Mask Sensitive Information",
+        "description": "Masks parts of a sensitive string, like a credit card or email address.",
+        "code": [
+          "function maskSensitiveInfo(str, visibleCount = 4, maskChar = '*') {",
+          "  return str.slice(0, visibleCount) + maskChar.repeat(Math.max(0, str.length - visibleCount));",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(maskSensitiveInfo('123456789', 4)); // Output: '1234*****'",
+          "console.log(maskSensitiveInfo('example@mail.com', 2, '#')); // Output: 'ex#############'"
+        ],
+        "tags": ["string", "mask", "sensitive"],
+        "author": "axorax"
+      },
+      {
+        "title": "Extract Initials from Name",
+        "description": "Extracts and returns the initials from a full name.",
+        "code": [
+          "function getInitials(name) {",
+          "  return name.split(' ').map(part => part.charAt(0).toUpperCase()).join('');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(getInitials('John Doe')); // Output: 'JD'"
+        ],
+        "tags": ["string", "initials", "name"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Tabs to Spaces",
+        "description": "Converts all tab characters in a string to spaces.",
+        "code": [
+          "function tabsToSpaces(str, spacesPerTab = 4) {",
+          "  return str.replace(/\\t/g, ' '.repeat(spacesPerTab));",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(tabsToSpaces('Hello\\tWorld', 2)); // Output: 'Hello  World'"
+        ],
+        "tags": ["string", "tabs", "spaces"],
+        "author": "axorax"
       }
     ]
   },
@@ -251,6 +341,206 @@
         ],
         "tags": ["javascript", "array", "unique", "utility"],
         "author": "realvishalrana"
+      },
+      {
+        "title": "Merge Objects Deeply",
+        "description": "Deeply merges two or more objects, including nested properties.",
+        "code": [
+          "function deepMerge(...objects) {",
+          "  return objects.reduce((acc, obj) => {",
+          "    Object.keys(obj).forEach(key => {",
+          "      if (typeof obj[key] === 'object' && obj[key] !== null) {",
+          "        acc[key] = deepMerge(acc[key] || {}, obj[key]);",
+          "      } else {",
+          "        acc[key] = obj[key];",
+          "      }",
+          "    });",
+          "    return acc;",
+          "  }, {});",
+          "}",
+          "",
+          "// Usage:",
+          "const obj1 = { a: 1, b: { c: 2 } };",
+          "const obj2 = { b: { d: 3 }, e: 4 };",
+          "console.log(deepMerge(obj1, obj2)); // Output: { a: 1, b: { c: 2, d: 3 }, e: 4 }"
+        ],
+        "tags": ["javascript", "object", "merge", "deep"],
+        "author": "axorax"
+      },
+      {
+        "title": "Omit Keys from Object",
+        "description": "Creates a new object with specific keys omitted.",
+        "code": [
+          "function omitKeys(obj, keys) {",
+          "  return Object.fromEntries(",
+          "    Object.entries(obj).filter(([key]) => !keys.includes(key))",
+          "  );",
+          "}",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: 2, c: 3 };",
+          "console.log(omitKeys(obj, ['b', 'c'])); // Output: { a: 1 }"
+        ],
+        "tags": ["javascript", "object", "omit", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Object to Query String",
+        "description": "Converts an object to a query string for use in URLs.",
+        "code": [
+          "function toQueryString(obj) {",
+          "  return Object.entries(obj)",
+          "    .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))",
+          "    .join('&');",
+          "}",
+          "",
+          "// Usage:",
+          "const params = { search: 'test', page: 1 };",
+          "console.log(toQueryString(params)); // Output: 'search=test&page=1'"
+        ],
+        "tags": ["javascript", "object", "query string", "url"],
+        "author": "axorax"
+      },
+      {
+        "title": "Flatten Nested Object",
+        "description": "Flattens a nested object into a single-level object with dot notation for keys.",
+        "code": [
+          "function flattenObject(obj, prefix = '') {",
+          "  return Object.keys(obj).reduce((acc, key) => {",
+          "    const fullPath = prefix ? `${prefix}.${key}` : key;",
+          "    if (typeof obj[key] === 'object' && obj[key] !== null) {",
+          "      Object.assign(acc, flattenObject(obj[key], fullPath));",
+          "    } else {",
+          "      acc[fullPath] = obj[key];",
+          "    }",
+          "    return acc;",
+          "  }, {});",
+          "}",
+          "",
+          "// Usage:",
+          "const nestedObj = { a: { b: { c: 1 }, d: 2 }, e: 3 };",
+          "console.log(flattenObject(nestedObj)); // Output: { 'a.b.c': 1, 'a.d': 2, e: 3 }"
+        ],
+        "tags": ["javascript", "object", "flatten", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Pick Keys from Object",
+        "description": "Creates a new object with only the specified keys.",
+        "code": [
+          "function pickKeys(obj, keys) {",
+          "  return Object.fromEntries(",
+          "    Object.entries(obj).filter(([key]) => keys.includes(key))",
+          "  );",
+          "}",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: 2, c: 3 };",
+          "console.log(pickKeys(obj, ['a', 'c'])); // Output: { a: 1, c: 3 }"
+        ],
+        "tags": ["javascript", "object", "pick", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Check if Object is Empty",
+        "description": "Checks whether an object has no own enumerable properties.",
+        "code": [
+          "function isEmptyObject(obj) {",
+          "  return Object.keys(obj).length === 0;",
+          "}",
+          "",
+          "// Usage:",
+          "console.log(isEmptyObject({})); // Output: true",
+          "console.log(isEmptyObject({ a: 1 })); // Output: false"
+        ],
+        "tags": ["javascript", "object", "check", "empty"],
+        "author": "axorax"
+      },
+      {
+        "title": "Invert Object Keys and Values",
+        "description": "Creates a new object by swapping keys and values of the given object.",
+        "code": [
+          "function invertObject(obj) {",
+          "  return Object.fromEntries(",
+          "    Object.entries(obj).map(([key, value]) => [value, key])",
+          "  );",
+          "}",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: 2, c: 3 };",
+          "console.log(invertObject(obj)); // Output: { '1': 'a', '2': 'b', '3': 'c' }"
+        ],
+        "tags": ["javascript", "object", "invert", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Clone Object Shallowly",
+        "description": "Creates a shallow copy of an object.",
+        "code": [
+          "function shallowClone(obj) {",
+          "  return { ...obj };",
+          "}",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: 2 };",
+          "const clone = shallowClone(obj);",
+          "console.log(clone); // Output: { a: 1, b: 2 }"
+        ],
+        "tags": ["javascript", "object", "clone", "shallow"],
+        "author": "axorax"
+      },
+      {
+        "title": "Count Properties in Object",
+        "description": "Counts the number of own properties in an object.",
+        "code": [
+          "function countProperties(obj) {",
+          "  return Object.keys(obj).length;",
+          "}",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: 2, c: 3 };",
+          "console.log(countProperties(obj)); // Output: 3"
+        ],
+        "tags": ["javascript", "object", "count", "properties"],
+        "author": "axorax"
+      },
+      {
+        "title": "Compare Two Objects Shallowly",
+        "description": "Compares two objects shallowly and returns whether they are equal.",
+        "code": [
+          "function shallowEqual(obj1, obj2) {",
+          "  const keys1 = Object.keys(obj1);",
+          "  const keys2 = Object.keys(obj2);",
+          "  if (keys1.length !== keys2.length) return false;",
+          "  return keys1.every(key => obj1[key] === obj2[key]);",
+          "}",
+          "",
+          "// Usage:",
+          "const obj1 = { a: 1, b: 2 };",
+          "const obj2 = { a: 1, b: 2 };",
+          "const obj3 = { a: 1, b: 3 };",
+          "console.log(shallowEqual(obj1, obj2)); // Output: true",
+          "console.log(shallowEqual(obj1, obj3)); // Output: false"
+        ],
+        "tags": ["javascript", "object", "compare", "shallow"],
+        "author": "axorax"
+      },
+      {
+        "title": "Freeze Object",
+        "description": "Freezes an object to make it immutable.",
+        "code": [
+          "function freezeObject(obj) {",
+          "  return Object.freeze(obj);",
+          "}",
+          "",
+          "// Usage:",
+          "const obj = { a: 1, b: 2 };",
+          "const frozenObj = freezeObject(obj);",
+          "frozenObj.a = 42;         // This will fail silently in strict mode.",
+          "console.log(frozenObj.a); // Output: 1"
+        ],
+        "tags": ["javascript", "object", "freeze", "immutable"],
+        "author": "axorax"
       }
     ]
   },
@@ -328,6 +618,91 @@
           "utility"
         ],
         "author": "Yugveer06"
+      },
+      {
+        "title": "Get Current Timestamp",
+        "description": "Retrieves the current timestamp in milliseconds since January 1, 1970.",
+        "code": [
+          "const getCurrentTimestamp = () => Date.now();",
+          "",
+          "// Usage:",
+          "console.log(getCurrentTimestamp()); // Output: 1691825935839 (example)"
+        ],
+        "tags": ["javascript", "date", "timestamp", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Check Leap Year",
+        "description": "Determines if a given year is a leap year.",
+        "code": [
+          "const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;",
+          "",
+          "// Usage:",
+          "console.log(isLeapYear(2024)); // Output: true",
+          "console.log(isLeapYear(2023)); // Output: false"
+        ],
+        "tags": ["javascript", "date", "leap-year", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Add Days to a Date",
+        "description": "Adds a specified number of days to a given date.",
+        "code": [
+          "const addDays = (date, days) => {",
+          "  const result = new Date(date);",
+          "  result.setDate(result.getDate() + days);",
+          "  return result;",
+          "};",
+          "",
+          "// Usage:",
+          "const today = new Date();",
+          "console.log(addDays(today, 10)); // Output: Date object 10 days ahead"
+        ],
+        "tags": ["javascript", "date", "add-days", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Start of the Day",
+        "description": "Returns the start of the day (midnight) for a given date.",
+        "code": [
+          "const startOfDay = (date) => new Date(date.setHours(0, 0, 0, 0));",
+          "",
+          "// Usage:",
+          "const today = new Date();",
+          "console.log(startOfDay(today)); // Output: Date object for midnight"
+        ],
+        "tags": ["javascript", "date", "start-of-day", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Get Days in Month",
+        "description": "Calculates the number of days in a specific month of a given year.",
+        "code": [
+          "const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();",
+          "",
+          "// Usage:",
+          "console.log(getDaysInMonth(2024, 1)); // Output: 29 (February in a leap year)",
+          "console.log(getDaysInMonth(2023, 1)); // Output: 28"
+        ],
+        "tags": ["javascript", "date", "days-in-month", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Get Day of the Year",
+        "description": "Calculates the day of the year (1-365 or 1-366 for leap years) for a given date.",
+        "code": [
+          "const getDayOfYear = (date) => {",
+          "  const startOfYear = new Date(date.getFullYear(), 0, 0);",
+          "  const diff = date - startOfYear + (startOfYear.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000;",
+          "  return Math.floor(diff / (1000 * 60 * 60 * 24));",
+          "};",
+          "",
+          "// Usage:",
+          "const today = new Date('2024-12-31');",
+          "console.log(getDayOfYear(today)); // Output: 366 (in a leap year)"
+        ],
+        "tags": ["javascript", "date", "day-of-year", "utility"],
+        "author": "axorax"
       }
     ]
   },
