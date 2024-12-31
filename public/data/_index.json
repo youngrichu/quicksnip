@@ -22,9 +22,5 @@
   {
     "lang": "Rust",
     "icon": "/icons/rust.svg"
-  },
-  {
-    "lang": "Java",
-    "icon": "/icons/java.svg"
   }
 ]
