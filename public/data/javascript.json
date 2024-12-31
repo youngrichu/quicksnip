@@ -809,6 +809,19 @@
         ],
         "tags": ["javascript", "sleep", "delay", "utility", "promises"],
         "author": "0xHouss"
+      },
+      {
+        "title": "Random string",
+        "description": "Generates a random string of characters of a certain length",
+        "code": [
+          "function makeid(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {",
+          "  return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');",
+          "}",
+          "",
+          "console.log(makeid(5), \"1234\" /* (optional) */);"
+        ],
+        "tags": ["javascript", "function", "random"],
+        "author": "kruimol"
       }
     ]
   },
