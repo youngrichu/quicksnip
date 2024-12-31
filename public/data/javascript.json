@@ -12,7 +12,7 @@
         "author": "James-Beans"
       }
     ]
-  },   
+  },
   {
     "categoryName": "Array Manipulation",
     "snippets": [
@@ -41,7 +41,7 @@
         ],
         "tags": ["javascript", "array", "flatten", "utility"],
         "author": "dostonnabotov"
-      }, 
+      },
       {
         "title": "Shuffle Array",
         "description": "Shuffles an Array.",
@@ -617,11 +617,19 @@
           "// usage",
           "const pastDate = new Date('2021-12-29 13:00:00');",
           "const futureDate = new Date('2026-12-29 13:00:00');",
-          "console.log(timeAgoOrAhead(pastDate)); // x years ago",
-          "console.log(timeAgoOrAhead(new Date())); // just now",
-          "console.log(timeAgoOrAhead(futureDate)); // in x years"
+          "console.log(getRelativeTime(pastDate)); // x years ago",
+          "console.log(getRelativeTime(new Date())); // just now",
+          "console.log(getRelativeTime(futureDate)); // in x years"
         ],
-        "tags": ["javascript", "date", "time", "relative", "future", "past", "utility"],
+        "tags": [
+          "javascript",
+          "date",
+          "time",
+          "relative",
+          "future",
+          "past",
+          "utility"
+        ],
         "author": "Yugveer06"
       },
       {
@@ -802,7 +810,14 @@
           "console.log(getContrastColor('#ff6347')); // Output: #000000 (black)",
           "console.log(getContrastColor('#f4f')); // Output: #000000 (black)"
         ],
-        "tags": ["javascript", "color", "hex", "contrast", "brightness", "utility"],
+        "tags": [
+          "javascript",
+          "color",
+          "hex",
+          "contrast",
+          "brightness",
+          "utility"
+        ],
         "author": "yaya12085"
       },
       {
