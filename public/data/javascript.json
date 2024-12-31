@@ -885,7 +885,7 @@
         "description": "Composes multiple functions into a single function, where the output of one function becomes the input of the next.",
         "code": [
           "const compose = (...funcs) => (initialValue) => {",
-          "  return funcs.reduceRight((acc, func) => func(acc), initialValue);",
+          "  return funcs.reduce((acc, func) => func(acc), initialValue);",
           "};",
           "",
           "// Usage:",
@@ -895,46 +895,6 @@
           "console.log(composed(5)); // Output: 21 ((5 + 2) * 3)"
         ],
         "tags": ["javascript", "function", "compose", "utility"],
-        "author": "axorax"
-      },
-      {
-        "title": "Pipe Functions",
-        "description": "Pipes multiple functions into a single function, where the output of one function becomes the input of the next.",
-        "code": [
-          "const pipe = (...funcs) => (initialValue) => {",
-          "  return funcs.reduce((acc, func) => func(acc), initialValue);",
-          "};",
-          "",
-          "// Usage:",
-          "const add2 = (x) => x + 2;",
-          "const multiply3 = (x) => x * 3;",
-          "const piped = pipe(add2, multiply3);",
-          "console.log(piped(5)); // Output: 21 ((5 + 2) * 3)"
-        ],
-        "tags": ["javascript", "function", "pipe", "utility"],
-        "author": "axorax"
-      },
-      {
-        "title": "Once Per Interval",
-        "description": "Ensures that a function can only be invoked once within a specific time interval.",
-        "code": [
-          "const oncePerInterval = (func, interval) => {",
-          "  let lastCallTime = 0;",
-          "  return (...args) => {",
-          "    const now = Date.now();",
-          "    if (now - lastCallTime >= interval) {",
-          "      lastCallTime = now;",
-          "      func(...args);",
-          "    }",
-          "  };",
-          "};",
-          "",
-          "// Usage:",
-          "const logMessage = () => console.log('Message logged');",
-          "const logOncePerSecond = oncePerInterval(logMessage, 1000);",
-          "setInterval(() => logOncePerSecond(), 200); // Logs once per second"
-        ],
-        "tags": ["javascript", "function", "interval", "utility"],
         "author": "axorax"
       },
       {
@@ -1062,22 +1022,6 @@
         ],
         "tags": ["javascript", "dom", "remove", "utility"],
         "author": "axorax"
-      },
-      {
-        "title": "Toggle Visibility",
-        "description": "Toggles the visibility of an element.",
-        "code": [
-          "const toggleVisibility = (element) => {",
-          "  const currentDisplay = window.getComputedStyle(element).display;",
-          "  element.style.display = currentDisplay === 'none' ? 'block' : 'none';",
-          "};",
-          "",
-          "// Usage:",
-          "const element = document.querySelector('.my-element');",
-          "toggleVisibility(element);"
-        ],
-        "tags": ["javascript", "dom", "visibility", "toggle"],
-        "author": "axorax"
       }
     ]
   },
@@ -1143,10 +1087,10 @@
         "author": "axorax"
       },
       {
-        "title": "Check Storage Capacity",
-        "description": "Checks the available space in the localStorage.",
+        "title": "Check bytes used",
+        "description": "Checks the amount of bytes used in the localStorage.",
         "code": [
-          "const checkLocalStorageCapacity = () => {",
+          "const checkBytesUsed = () => {",
           "  let spaceUsed = 0;",
           "  for (let i = 0; i < localStorage.length; i++) {",
           "    spaceUsed += localStorage.key(i).length + localStorage.getItem(localStorage.key(i)).length;",
@@ -1155,7 +1099,7 @@
           "};",
           "",
           "// Usage:",
-          "checkLocalStorageCapacity();"
+          "checkBytesUsed();"
         ],
         "tags": ["javascript", "localStorage", "storage", "utility"],
         "author": "axorax"
@@ -1274,28 +1218,6 @@
           "console.log(numberToWords(2045)); // Output: 'Two Thousand Forty Five'"
         ],
         "tags": ["javascript", "number", "words", "utility"],
-        "author": "axorax"
-      },
-      {
-        "title": "Format Large Numbers with Abbreviations",
-        "description": "Formats large numbers with abbreviations like K, M, B, etc.",
-        "code": [
-          "const abbreviateNumber = (num) => {",
-          "  const abbreviations = ['K', 'M', 'B', 'T'];",
-          "  let i = 0;",
-          "  while (num >= 1000 && i < abbreviations.length) {",
-          "    num /= 1000;",
-          "    i++;",
-          "  }",
-          "  return num.toFixed(1) + abbreviations[i];",
-          "};",
-          "",
-          "// Usage:",
-          "console.log(abbreviateNumber(2500)); // Output: '2.5K'",
-          "console.log(abbreviateNumber(10500000)); // Output: '10.5M'",
-          "console.log(abbreviateNumber(1000000000)); // Output: '1.0B'"
-        ],
-        "tags": ["javascript", "number", "abbreviate", "utility"],
         "author": "axorax"
       },
       {
