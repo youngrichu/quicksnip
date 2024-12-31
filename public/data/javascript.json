@@ -422,7 +422,7 @@
           "console.log(getContrastColor('#ff6347')); // Output: #000000 (black)",
           "console.log(getContrastColor('#f4f')); // Output: #000000 (black)"
         ],
-        "tags": ["color", "hex", "contrast", "brightness", "utility"],
+        "tags": ["javascript", "color", "hex", "contrast", "brightness", "utility"],
         "author": "yaya12085"
       },
       {
@@ -440,7 +440,7 @@
           "",
           "main();"
         ],
-        "tags": ["sleep", "delay", "utility", "promises"],
+        "tags": ["javascript", "sleep", "delay", "utility", "promises"],
         "author": "0xHouss"
       }
     ]
