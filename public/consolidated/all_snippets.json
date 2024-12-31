@@ -1390,9 +1390,9 @@
           "// usage",
           "const pastDate = new Date('2021-12-29 13:00:00');",
           "const futureDate = new Date('2026-12-29 13:00:00');",
-          "console.log(timeAgoOrAhead(pastDate)); // x years ago",
-          "console.log(timeAgoOrAhead(new Date())); // just now",
-          "console.log(timeAgoOrAhead(futureDate)); // in x years"
+          "console.log(getRelativeTime(pastDate)); // x years ago",
+          "console.log(getRelativeTime(new Date())); // just now",
+          "console.log(getRelativeTime(futureDate)); // in x years"
         ],
         "tags": [
           "javascript",
