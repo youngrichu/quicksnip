@@ -24,6 +24,10 @@
     "icon": "/icons/cpp.svg"
   },
   {
+    "lang": "C",
+    "icon": "/icons/c.svg"
+  },
+  {
     "lang": "Rust",
     "icon": "/icons/rust.svg"
   }
