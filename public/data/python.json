@@ -84,6 +84,212 @@
         ],
         "tags": ["python", "string", "punctuation", "remove", "utility"],
         "author": "SteliosGee"
+      },
+      {
+        "title": "Capitalize Words",
+        "description": "Capitalizes the first letter of each word in a string.",
+        "code": [
+          "def capitalize_words(s):",
+          "    return ' '.join(word.capitalize() for word in s.split())",
+          "",
+          "# Usage:",
+          "print(capitalize_words('hello world'))  # Output: 'Hello World'"
+        ],
+        "tags": ["python", "string", "capitalize", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Find Longest Word",
+        "description": "Finds the longest word in a string.",
+        "code": [
+          "def find_longest_word(s):",
+          "    words = s.split()",
+          "    return max(words, key=len) if words else ''",
+          "",
+          "# Usage:",
+          "print(find_longest_word('The quick brown fox'))  # Output: 'quick'"
+        ],
+        "tags": ["python", "string", "longest-word", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove Duplicate Characters",
+        "description": "Removes duplicate characters from a string while maintaining the order.",
+        "code": [
+          "def remove_duplicate_chars(s):",
+          "    seen = set()",
+          "    return ''.join(char for char in s if not (char in seen or seen.add(char)))",
+          "",
+          "# Usage:",
+          "print(remove_duplicate_chars('programming'))  # Output: 'progamin'"
+        ],
+        "tags": ["python", "string", "duplicates", "remove", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Count Words",
+        "description": "Counts the number of words in a string.",
+        "code": [
+          "def count_words(s):",
+          "    return len(s.split())",
+          "",
+          "# Usage:",
+          "print(count_words('The quick brown fox'))  # Output: 4"
+        ],
+        "tags": ["python", "string", "word-count", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Replace Substring",
+        "description": "Replaces all occurrences of a substring in a string with another substring.",
+        "code": [
+          "def replace_substring(s, old, new):",
+          "    return s.replace(old, new)",
+          "",
+          "# Usage:",
+          "print(replace_substring('hello world', 'world', 'Python'))  # Output: 'hello Python'"
+        ],
+        "tags": ["python", "string", "replace", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Split Camel Case",
+        "description": "Splits a camel case string into separate words.",
+        "code": [
+          "import re",
+          "",
+          "def split_camel_case(s):",
+          "    return ' '.join(re.findall(r'[A-Z][a-z]*|[a-z]+', s))",
+          "",
+          "# Usage:",
+          "print(split_camel_case('camelCaseString'))  # Output: 'camel Case String'"
+        ],
+        "tags": ["python", "string", "camel-case", "split", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Count Character Frequency",
+        "description": "Counts the frequency of each character in a string.",
+        "code": [
+          "from collections import Counter",
+          "",
+          "def char_frequency(s):",
+          "    return dict(Counter(s))",
+          "",
+          "# Usage:",
+          "print(char_frequency('hello'))  # Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}"
+        ],
+        "tags": ["python", "string", "character-frequency", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove Whitespace",
+        "description": "Removes all whitespace from a string.",
+        "code": [
+          "def remove_whitespace(s):",
+          "    return ''.join(s.split())",
+          "",
+          "# Usage:",
+          "print(remove_whitespace('hello world'))  # Output: 'helloworld'"
+        ],
+        "tags": ["python", "string", "whitespace", "remove", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Swap Case",
+        "description": "Swaps the case of all characters in a string.",
+        "code": [
+          "def swap_case(s):",
+          "    return s.swapcase()",
+          "",
+          "# Usage:",
+          "print(swap_case('Hello World'))  # Output: 'hELLO wORLD'"
+        ],
+        "tags": ["python", "string", "case", "swap", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Find All Substrings",
+        "description": "Finds all substrings of a given string.",
+        "code": [
+          "def find_substrings(s):",
+          "    substrings = []",
+          "    for i in range(len(s)):",
+          "        for j in range(i + 1, len(s) + 1):",
+          "            substrings.append(s[i:j])",
+          "    return substrings",
+          "",
+          "# Usage:",
+          "print(find_substrings('abc'))  # Output: ['a', 'ab', 'abc', 'b', 'bc', 'c']"
+        ],
+        "tags": ["python", "string", "substring", "find", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Snake Case to Camel Case",
+        "description": "Converts a snake_case string to camelCase.",
+        "code": [
+          "def snake_to_camel(s):",
+          "    parts = s.split('_')",
+          "    return parts[0] + ''.join(word.capitalize() for word in parts[1:])",
+          "",
+          "# Usage:",
+          "print(snake_to_camel('hello_world'))  # Output: 'helloWorld'"
+        ],
+        "tags": ["python", "string", "snake-case", "camel-case", "convert", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove Specific Characters",
+        "description": "Removes specific characters from a string.",
+        "code": [
+          "def remove_chars(s, chars):",
+          "    return ''.join(c for c in s if c not in chars)",
+          "",
+          "# Usage:",
+          "print(remove_chars('hello world', 'eo'))  # Output: 'hll wrld'"
+        ],
+        "tags": ["python", "string", "remove", "characters", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Find Unique Characters",
+        "description": "Finds all unique characters in a string.",
+        "code": [
+          "def find_unique_chars(s):",
+          "    return ''.join(sorted(set(s)))",
+          "",
+          "# Usage:",
+          "print(find_unique_chars('banana'))  # Output: 'abn'"
+        ],
+        "tags": ["python", "string", "unique", "characters", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert String to ASCII",
+        "description": "Converts a string into its ASCII representation.",
+        "code": [
+          "def string_to_ascii(s):",
+          "    return [ord(char) for char in s]",
+          "",
+          "# Usage:",
+          "print(string_to_ascii('hello'))  # Output: [104, 101, 108, 108, 111]"
+        ],
+        "tags": ["python", "string", "ascii", "convert", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Truncate String",
+        "description": "Truncates a string to a specified length and adds an ellipsis.",
+        "code": [
+          "def truncate_string(s, length):",
+          "    return s[:length] + '...' if len(s) > length else s",
+          "",
+          "# Usage:",
+          "print(truncate_string('This is a long string', 10))  # Output: 'This is a ...'"
+        ],
+        "tags": ["python", "string", "truncate", "utility"],
+        "author": "axorax"
       }
     ]
   },
@@ -205,6 +411,135 @@
         ],
         "tags": ["python", "os", "filesystem", "file_search"],
         "author": "Jackeastern"
+      },
+      {
+        "title": "Append to File",
+        "description": "Appends content to the end of a file.",
+        "code": [
+          "def append_to_file(filepath, content):",
+          "    with open(filepath, 'a') as file:",
+          "        file.write(content + '\\n')",
+          "",
+          "# Usage:",
+          "append_to_file('example.txt', 'This is an appended line.')"
+        ],
+        "tags": ["python", "file", "append", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Check if File Exists",
+        "description": "Checks if a file exists at the specified path.",
+        "code": [
+          "import os",
+          "",
+          "def file_exists(filepath):",
+          "    return os.path.isfile(filepath)",
+          "",
+          "# Usage:",
+          "print(file_exists('example.txt'))  # Output: True or False"
+        ],
+        "tags": ["python", "file", "exists", "check", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Delete File",
+        "description": "Deletes a file at the specified path.",
+        "code": [
+          "import os",
+          "",
+          "def delete_file(filepath):",
+          "    if os.path.exists(filepath):",
+          "        os.remove(filepath)",
+          "        print(f'File {filepath} deleted.')",
+          "    else:",
+          "        print(f'File {filepath} does not exist.')",
+          "",
+          "# Usage:",
+          "delete_file('example.txt')"
+        ],
+        "tags": ["python", "file", "delete", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Copy File",
+        "description": "Copies a file from source to destination.",
+        "code": [
+          "import shutil",
+          "",
+          "def copy_file(src, dest):",
+          "    shutil.copy(src, dest)",
+          "",
+          "# Usage:",
+          "copy_file('example.txt', 'copy_of_example.txt')"
+        ],
+        "tags": ["python", "file", "copy", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Rename File",
+        "description": "Renames a file from its current name to a new name.",
+        "code": [
+          "import os",
+          "",
+          "def rename_file(old_name, new_name):",
+          "    if os.path.exists(old_name):",
+          "        os.rename(old_name, new_name)",
+          "        print(f'File renamed from {old_name} to {new_name}')",
+          "    else:",
+          "        print(f'File {old_name} does not exist.')",
+          "",
+          "# Usage:",
+          "rename_file('example.txt', 'new_example.txt')"
+        ],
+        "tags": ["python", "file", "rename", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "List Files in Directory",
+        "description": "Lists all files in a specified directory.",
+        "code": [
+          "import os",
+          "",
+          "def list_files(directory):",
+          "    return [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]",
+          "",
+          "# Usage:",
+          "files = list_files('/path/to/directory')",
+          "print(files)"
+        ],
+        "tags": ["python", "file", "list", "directory", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Get File Extension",
+        "description": "Gets the extension of a file.",
+        "code": [
+          "import os",
+          "",
+          "def get_file_extension(filepath):",
+          "    return os.path.splitext(filepath)[1]",
+          "",
+          "# Usage:",
+          "print(get_file_extension('example.txt'))  # Output: '.txt'"
+        ],
+        "tags": ["python", "file", "extension", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Read File in Chunks",
+        "description": "Reads a file in chunks of a specified size.",
+        "code": [
+          "def read_file_in_chunks(filepath, chunk_size):",
+          "    with open(filepath, 'r') as file:",
+          "        while chunk := file.read(chunk_size):",
+          "            yield chunk",
+          "",
+          "# Usage:",
+          "for chunk in read_file_in_chunks('example.txt', 1024):",
+          "    print(chunk)"
+        ],
+        "tags": ["python", "file", "read", "chunks", "utility"],
+        "author": "axorax"
       }
     ]
   },
@@ -243,6 +578,131 @@
         ],
         "tags": ["python", "math", "prime", "check"],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Generate Fibonacci Sequence",
+        "description": "Generates a Fibonacci sequence up to a given number of terms.",
+        "code": [
+          "def generate_fibonacci(n):",
+          "    sequence = [0, 1]",
+          "    for _ in range(2, n):",
+          "        sequence.append(sequence[-1] + sequence[-2])",
+          "    return sequence[:n]",
+          "",
+          "# Usage:",
+          "print(generate_fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
+        ],
+        "tags": ["python", "math", "fibonacci", "sequence"],
+        "author": "axorax"
+      },
+      {
+        "title": "Check Perfect Square",
+        "description": "Checks if a number is a perfect square.",
+        "code": [
+          "def is_perfect_square(n):",
+          "    if n < 0:",
+          "        return False",
+          "    root = int(n**0.5)",
+          "    return root * root == n",
+          "",
+          "# Usage:",
+          "print(is_perfect_square(16))  # Output: True",
+          "print(is_perfect_square(20))  # Output: False"
+        ],
+        "tags": ["python", "math", "perfect square", "check"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Binary to Decimal",
+        "description": "Converts a binary string to its decimal equivalent.",
+        "code": [
+          "def binary_to_decimal(binary_str):",
+          "    return int(binary_str, 2)",
+          "",
+          "# Usage:",
+          "print(binary_to_decimal('1010'))  # Output: 10",
+          "print(binary_to_decimal('1101'))  # Output: 13"
+        ],
+        "tags": ["python", "math", "binary", "decimal", "conversion"],
+        "author": "axorax"
+      },
+      {
+        "title": "Generate Random Number",
+        "description": "Generates a random number within a given range.",
+        "code": [
+          "import random",
+          "",
+          "def generate_random_number(start, end):",
+          "    return random.randint(start, end)",
+          "",
+          "# Usage:",
+          "print(generate_random_number(1, 100))  # Output: A random number between 1 and 100"
+        ],
+        "tags": ["python", "math", "random", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Calculate GCD (Greatest Common Divisor)",
+        "description": "Calculates the greatest common divisor (GCD) of two numbers using Euclid's algorithm.",
+        "code": [
+          "def gcd(a, b):",
+          "    while b:",
+          "        a, b = b, a % b",
+          "    return a",
+          "",
+          "# Usage:",
+          "print(gcd(56, 98))  # Output: 14",
+          "print(gcd(101, 10))  # Output: 1"
+        ],
+        "tags": ["python", "math", "gcd", "algorithm"],
+        "author": "axorax"
+      },
+      {
+        "title": "Find LCM (Least Common Multiple)",
+        "description": "Calculates the least common multiple (LCM) of two numbers.",
+        "code": [
+          "def lcm(a, b):",
+          "    return abs(a * b) // gcd(a, b)",
+          "",
+          "# Usage:",
+          "print(lcm(12, 15))  # Output: 60",
+          "print(lcm(7, 5))    # Output: 35"
+        ],
+        "tags": ["python", "math", "lcm", "gcd", "utility"],
+        "author": "axorax"
+      },
+      {
+        "title": "Solve Quadratic Equation",
+        "description": "Solves a quadratic equation ax^2 + bx + c = 0 and returns the roots.",
+        "code": [
+          "import cmath",
+          "",
+          "def solve_quadratic(a, b, c):",
+          "    discriminant = cmath.sqrt(b**2 - 4 * a * c)",
+          "    root1 = (-b + discriminant) / (2 * a)",
+          "    root2 = (-b - discriminant) / (2 * a)",
+          "    return root1, root2",
+          "",
+          "# Usage:",
+          "print(solve_quadratic(1, -3, 2))  # Output: ((2+0j), (1+0j))",
+          "print(solve_quadratic(1, 2, 5))   # Output: ((-1+2j), (-1-2j))"
+        ],
+        "tags": ["python", "math", "quadratic", "equation", "solver"],
+        "author": "axorax"
+      },
+      {
+        "title": "Calculate Compound Interest",
+        "description": "Calculates compound interest for a given principal amount, rate, and time period.",
+        "code": [
+          "def compound_interest(principal, rate, time, n=1):",
+          "    return principal * (1 + rate / n) ** (n * time)",
+          "",
+          "# Usage:",
+          "print(compound_interest(1000, 0.05, 5))   # Output: 1276.2815625000003",
+          "print(compound_interest(1000, 0.05, 5, 12)) # Output: 1283.68"
+        ],
+        "tags": ["python", "math", "compound interest", "finance"],
+        "author": "axorax"
       }
     ]
   },
@@ -326,6 +786,131 @@
         ],
         "tags": ["python", "json", "file", "write"],
         "author": "e3nviction"
+      },
+      {
+        "title": "Update JSON File",
+        "description": "Updates an existing JSON file with new data or modifies the existing values.",
+        "code": [
+          "import json",
+          "",
+          "def update_json(filepath, new_data):",
+          "    # Read the existing JSON data",
+          "    with open(filepath, 'r') as file:",
+          "        data = json.load(file)",
+          "",
+          "    # Update the data with the new content",
+          "    data.update(new_data)",
+          "",
+          "    # Write the updated data back to the JSON file",
+          "    with open(filepath, 'w') as file:",
+          "        json.dump(data, file, indent=4)",
+          "",
+          "# Usage:",
+          "new_data = {'age': 31}",
+          "update_json('data.json', new_data)"
+        ],
+        "tags": ["python", "json", "update", "file"],
+        "author": "axorax"
+      },
+      {
+        "title": "Merge Multiple JSON Files",
+        "description": "Merges multiple JSON files into one and writes the merged data into a new file.",
+        "code": [
+          "import json",
+          "",
+          "def merge_json_files(filepaths, output_filepath):",
+          "    merged_data = []",
+          "",
+          "    # Read each JSON file and merge their data",
+          "    for filepath in filepaths:",
+          "        with open(filepath, 'r') as file:",
+          "            data = json.load(file)",
+          "            merged_data.extend(data)",
+          "",
+          "    # Write the merged data into a new file",
+          "    with open(output_filepath, 'w') as file:",
+          "        json.dump(merged_data, file, indent=4)",
+          "",
+          "# Usage:",
+          "files_to_merge = ['file1.json', 'file2.json']",
+          "merge_json_files(files_to_merge, 'merged.json')"
+        ],
+        "tags": ["python", "json", "merge", "file"],
+        "author": "axorax"
+      },
+      {
+        "title": "Filter JSON Data",
+        "description": "Filters a JSON object based on a condition and returns the filtered data.",
+        "code": [
+          "import json",
+          "",
+          "def filter_json_data(filepath, condition):",
+          "    with open(filepath, 'r') as file:",
+          "        data = json.load(file)",
+          "",
+          "    # Filter data based on the provided condition",
+          "    filtered_data = [item for item in data if condition(item)]",
+          "",
+          "    return filtered_data",
+          "",
+          "# Usage:",
+          "condition = lambda x: x['age'] > 25",
+          "filtered = filter_json_data('data.json', condition)",
+          "print(filtered)"
+        ],
+        "tags": ["python", "json", "filter", "data"],
+        "author": "axorax"
+      },
+      {
+        "title": "Validate JSON Schema",
+        "description": "Validates a JSON object against a predefined schema.",
+        "code": [
+          "import jsonschema",
+          "from jsonschema import validate",
+          "",
+          "def validate_json_schema(data, schema):",
+          "    try:",
+          "        validate(instance=data, schema=schema)",
+          "        return True  # Data is valid",
+          "    except jsonschema.exceptions.ValidationError as err:",
+          "        return False  # Data is invalid",
+          "",
+          "# Usage:",
+          "schema = {",
+          "    'type': 'object',",
+          "    'properties': {",
+          "        'name': {'type': 'string'},",
+          "        'age': {'type': 'integer'}",
+          "    },",
+          "    'required': ['name', 'age']",
+          "}",
+          "data = {'name': 'John', 'age': 30}",
+          "is_valid = validate_json_schema(data, schema)",
+          "print(is_valid)  # Output: True"
+        ],
+        "tags": ["python", "json", "validation", "schema"],
+        "author": "axorax"
+      },
+      {
+        "title": "Flatten Nested JSON",
+        "description": "Flattens a nested JSON object into a flat dictionary.",
+        "code": [
+          "def flatten_json(nested_json, prefix=''):",
+          "    flat_dict = {}",
+          "    for key, value in nested_json.items():",
+          "        if isinstance(value, dict):",
+          "            flat_dict.update(flatten_json(value, prefix + key + '.'))",
+          "        else:",
+          "            flat_dict[prefix + key] = value",
+          "    return flat_dict",
+          "",
+          "# Usage:",
+          "nested_json = {'name': 'John', 'address': {'city': 'New York', 'zip': '10001'}}",
+          "flattened = flatten_json(nested_json)",
+          "print(flattened)  # Output: {'name': 'John', 'address.city': 'New York', 'address.zip': '10001'}"
+        ],
+        "tags": ["python", "json", "flatten", "nested"],
+        "author": "axorax"
       }
     ]
   },
