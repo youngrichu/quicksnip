@@ -260,6 +260,20 @@
         "tags": ["string", "case", "pascalCase"],
         "author": "aumirza"
       },
+            {
+        "title": "Convert String to Param Case",
+        "description": "Converts a given string into param-case.",
+        "code": [
+          "function toParamCase(str) {",
+          "  return str.toLowerCase().replace(/\\s+/g, '-');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toParamCase('Hello World Test')); // Output: 'hello-world-test'"
+        ],
+        "tags": ["string", "case", "paramCase"],
+        "author": "aumirza"
+      },
       {
         "title": "Remove Vowels from a String",
         "description": "Removes all vowels from a given string.",
