@@ -890,6 +890,78 @@
         "author": "axorax"
       },
       {
+        "title": "Convert String to Camel Case",
+        "description": "Converts a given string into camelCase.",
+        "code": [
+          "function toCamelCase(str) {",
+          "  return str.replace(/\\W+(.)/g, (match, chr) => chr.toUpperCase());",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toCamelCase('hello world test')); // Output: 'helloWorldTest'"
+        ],
+        "tags": [
+          "string",
+          "case",
+          "camelCase"
+        ],
+        "author": "aumirza"
+      },
+      {
+        "title": "Convert String to Title Case",
+        "description": "Converts a given string into Title Case.",
+        "code": [
+          "function toTitleCase(str) {",
+          "  return str.toLowerCase().replace(/\\b\\w/g, (s) => s.toUpperCase());",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toTitleCase('hello world test')); // Output: 'Hello World Test'"
+        ],
+        "tags": [
+          "string",
+          "case",
+          "titleCase"
+        ],
+        "author": "aumirza"
+      },
+      {
+        "title": "Convert String to Pascal Case",
+        "description": "Converts a given string into Pascal Case.",
+        "code": [
+          "function toPascalCase(str) {",
+          "  return str.replace(/\\b\\w/g, (s) => s.toUpperCase()).replace(/\\W+(.)/g, (match, chr) => chr.toUpperCase());",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toPascalCase('hello world test')); // Output: 'HelloWorldTest'"
+        ],
+        "tags": [
+          "string",
+          "case",
+          "pascalCase"
+        ],
+        "author": "aumirza"
+      },
+      {
+        "title": "Convert String to Param Case",
+        "description": "Converts a given string into param-case.",
+        "code": [
+          "function toParamCase(str) {",
+          "  return str.toLowerCase().replace(/\\s+/g, '-');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toParamCase('Hello World Test')); // Output: 'hello-world-test'"
+        ],
+        "tags": [
+          "string",
+          "case",
+          "paramCase"
+        ],
+        "author": "aumirza"
+      },
+      {
         "title": "Remove Vowels from a String",
         "description": "Removes all vowels from a given string.",
         "code": [
@@ -1662,6 +1734,145 @@
           "promises"
         ],
         "author": "0xHouss"
+      },
+      {
+        "title": "Memoize Function",
+        "description": "Caches the result of a function based on its arguments to improve performance.",
+        "code": [
+          "const memoize = (func) => {",
+          "  const cache = new Map();",
+          "  return (...args) => {",
+          "    const key = JSON.stringify(args);",
+          "    if (cache.has(key)) {",
+          "      return cache.get(key);",
+          "    }",
+          "    const result = func(...args);",
+          "    cache.set(key, result);",
+          "    return result;",
+          "  };",
+          "};",
+          "",
+          "// Usage:",
+          "const factorial = memoize((n) => (n <= 1 ? 1 : n * factorial(n - 1)));",
+          "console.log(factorial(5)); // Output: 120",
+          "console.log(factorial(5)); // Output: 120 (retrieved from cache)"
+        ],
+        "tags": [
+          "javascript",
+          "memoization",
+          "optimization",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Once Function",
+        "description": "Ensures a function is only called once.",
+        "code": [
+          "const once = (func) => {",
+          "  let called = false;",
+          "  return (...args) => {",
+          "    if (!called) {",
+          "      called = true;",
+          "      return func(...args);",
+          "    }",
+          "  };",
+          "};",
+          "",
+          "// Usage:",
+          "const initialize = once(() => console.log('Initialized!'));",
+          "initialize(); // Output: Initialized!",
+          "initialize(); // No output"
+        ],
+        "tags": [
+          "javascript",
+          "function",
+          "once",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Curry Function",
+        "description": "Transforms a function into its curried form.",
+        "code": [
+          "const curry = (func) => {",
+          "  const curried = (...args) => {",
+          "    if (args.length >= func.length) {",
+          "      return func(...args);",
+          "    }",
+          "    return (...nextArgs) => curried(...args, ...nextArgs);",
+          "  };",
+          "  return curried;",
+          "};",
+          "",
+          "// Usage:",
+          "const add = (a, b, c) => a + b + c;",
+          "const curriedAdd = curry(add);",
+          "console.log(curriedAdd(1)(2)(3)); // Output: 6",
+          "console.log(curriedAdd(1, 2)(3)); // Output: 6"
+        ],
+        "tags": [
+          "javascript",
+          "curry",
+          "function",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Compose Functions",
+        "description": "Composes multiple functions into a single function, where the output of one function becomes the input of the next.",
+        "code": [
+          "const compose = (...funcs) => (initialValue) => {",
+          "  return funcs.reduce((acc, func) => func(acc), initialValue);",
+          "};",
+          "",
+          "// Usage:",
+          "const add2 = (x) => x + 2;",
+          "const multiply3 = (x) => x * 3;",
+          "const composed = compose(multiply3, add2);",
+          "console.log(composed(5)); // Output: 21 ((5 + 2) * 3)"
+        ],
+        "tags": [
+          "javascript",
+          "function",
+          "compose",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Rate Limit Function",
+        "description": "Limits how often a function can be executed within a given time window.",
+        "code": [
+          "const rateLimit = (func, limit, timeWindow) => {",
+          "  let queue = [];",
+          "  setInterval(() => {",
+          "    if (queue.length) {",
+          "      const next = queue.shift();",
+          "      func(...next.args);",
+          "    }",
+          "  }, timeWindow);",
+          "  return (...args) => {",
+          "    if (queue.length < limit) {",
+          "      queue.push({ args });",
+          "    }",
+          "  };",
+          "};",
+          "",
+          "// Usage:",
+          "const fetchData = () => console.log('Fetching data...');",
+          "const rateLimitedFetch = rateLimit(fetchData, 2, 1000);",
+          "setInterval(() => rateLimitedFetch(), 200); // Only calls fetchData twice every second"
+        ],
+        "tags": [
+          "javascript",
+          "function",
+          "rate-limiting",
+          "utility"
+        ],
+        "author": "axorax"
       }
     ]
   },
@@ -1708,6 +1919,72 @@
           "ui"
         ],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Get Element Position",
+        "description": "Gets the position of an element relative to the viewport.",
+        "code": [
+          "const getElementPosition = (element) => {",
+          "  const rect = element.getBoundingClientRect();",
+          "  return { x: rect.left, y: rect.top };",
+          "};",
+          "",
+          "// Usage:",
+          "const element = document.querySelector('.my-element');",
+          "const position = getElementPosition(element);",
+          "console.log(position); // { x: 100, y: 150 }"
+        ],
+        "tags": [
+          "javascript",
+          "dom",
+          "position",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Change Element Style",
+        "description": "Changes the inline style of an element.",
+        "code": [
+          "const changeElementStyle = (element, styleObj) => {",
+          "  Object.entries(styleObj).forEach(([property, value]) => {",
+          "    element.style[property] = value;",
+          "  });",
+          "};",
+          "",
+          "// Usage:",
+          "const element = document.querySelector('.my-element');",
+          "changeElementStyle(element, { color: 'red', backgroundColor: 'yellow' });"
+        ],
+        "tags": [
+          "javascript",
+          "dom",
+          "style",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove Element",
+        "description": "Removes a specified element from the DOM.",
+        "code": [
+          "const removeElement = (element) => {",
+          "  if (element && element.parentNode) {",
+          "    element.parentNode.removeChild(element);",
+          "  }",
+          "};",
+          "",
+          "// Usage:",
+          "const element = document.querySelector('.my-element');",
+          "removeElement(element);"
+        ],
+        "tags": [
+          "javascript",
+          "dom",
+          "remove",
+          "utility"
+        ],
+        "author": "axorax"
       }
     ]
   },
@@ -1773,6 +2050,25 @@
           "utility"
         ],
         "author": "dostonnabotov"
+      },
+      {
+        "title": "Check if Item Exists in localStorage",
+        "description": "Checks if a specific item exists in localStorage.",
+        "code": [
+          "const isItemInLocalStorage = (key) => {",
+          "  return localStorage.getItem(key) !== null;",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(isItemInLocalStorage('user')); // Output: true or false"
+        ],
+        "tags": [
+          "javascript",
+          "localStorage",
+          "storage",
+          "utility"
+        ],
+        "author": "axorax"
       }
     ]
   },
@@ -1806,6 +2102,193 @@
           "utility"
         ],
         "author": "realvishalrana"
+      },
+      {
+        "title": "Format Number with Commas",
+        "description": "Formats a number with commas for better readability (e.g., 1000 -> 1,000).",
+        "code": [
+          "const formatNumberWithCommas = (num) => {",
+          "  return num.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(formatNumberWithCommas(1000)); // Output: '1,000'",
+          "console.log(formatNumberWithCommas(1234567)); // Output: '1,234,567'",
+          "console.log(formatNumberWithCommas(987654321)); // Output: '987,654,321'"
+        ],
+        "tags": [
+          "javascript",
+          "number",
+          "format",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Number to Currency",
+        "description": "Converts a number to a currency format with a specific locale.",
+        "code": [
+          "const convertToCurrency = (num, locale = 'en-US', currency = 'USD') => {",
+          "  return new Intl.NumberFormat(locale, {",
+          "    style: 'currency',",
+          "    currency: currency",
+          "  }).format(num);",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(convertToCurrency(1234567.89)); // Output: '$1,234,567.89'",
+          "console.log(convertToCurrency(987654.32, 'de-DE', 'EUR')); // Output: '987.654,32 €'"
+        ],
+        "tags": [
+          "javascript",
+          "number",
+          "currency",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Number to Roman Numerals",
+        "description": "Converts a number to Roman numeral representation.",
+        "code": [
+          "const numberToRoman = (num) => {",
+          "  const romanNumerals = {",
+          "    1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L',",
+          "    90: 'XC', 100: 'C', 400: 'CD', 500: 'D', 900: 'CM', 1000: 'M'",
+          "  };",
+          "  let result = '';",
+          "  Object.keys(romanNumerals).reverse().forEach(value => {",
+          "    while (num >= value) {",
+          "      result += romanNumerals[value];",
+          "      num -= value;",
+          "    }",
+          "  });",
+          "  return result;",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(numberToRoman(1994)); // Output: 'MCMXCIV'",
+          "console.log(numberToRoman(58)); // Output: 'LVIII'"
+        ],
+        "tags": [
+          "javascript",
+          "number",
+          "roman",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Number to Words Converter",
+        "description": "Converts a number to its word representation in English.",
+        "code": [
+          "const numberToWords = (num) => {",
+          "  const below20 = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];",
+          "  const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];",
+          "  const above1000 = ['Hundred', 'Thousand', 'Million', 'Billion'];",
+          "  if (num < 20) return below20[num];",
+          "  let words = '';",
+          "  for (let i = 0; num > 0; i++) {",
+          "    if (i > 0 && num % 1000 !== 0) words = above1000[i] + ' ' + words;",
+          "    if (num % 100 >= 20) {",
+          "      words = tens[Math.floor(num / 10)] + ' ' + words;",
+          "      num %= 10;",
+          "    }",
+          "    if (num < 20) words = below20[num] + ' ' + words;",
+          "    num = Math.floor(num / 100);",
+          "  }",
+          "  return words.trim();",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(numberToWords(123)); // Output: 'One Hundred Twenty Three'",
+          "console.log(numberToWords(2045)); // Output: 'Two Thousand Forty Five'"
+        ],
+        "tags": [
+          "javascript",
+          "number",
+          "words",
+          "utility"
+        ],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert to Scientific Notation",
+        "description": "Converts a number to scientific notation.",
+        "code": [
+          "const toScientificNotation = (num) => {",
+          "  if (isNaN(num)) {",
+          "    throw new Error('Input must be a number');",
+          "  }",
+          "  if (num === 0) {",
+          "    return '0e+0';",
+          "  }",
+          "  const exponent = Math.floor(Math.log10(Math.abs(num)));",
+          "  const mantissa = num / Math.pow(10, exponent);",
+          "  return `${mantissa.toFixed(2)}e${exponent >= 0 ? '+' : ''}${exponent}`;",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(toScientificNotation(12345)); // Output: '1.23e+4'",
+          "console.log(toScientificNotation(0.0005678)); // Output: '5.68e-4'",
+          "console.log(toScientificNotation(1000)); // Output: '1.00e+3'",
+          "console.log(toScientificNotation(0)); // Output: '0e+0'",
+          "console.log(toScientificNotation(-54321)); // Output: '-5.43e+4'"
+        ],
+        "tags": [
+          "javascript",
+          "number",
+          "scientific",
+          "utility"
+        ],
+        "author": "axorax"
+      }
+    ]
+  },
+  {
+    "language": "javascript",
+    "categoryName": "Regular expression",
+    "snippets": [
+      {
+        "title": "Regex Match Utility Function",
+        "description": "Enhanced regular expression matching utility.",
+        "code": [
+          "/**",
+          "* @param {string | number} input",
+          "*          The input string to match",
+          "* @param {regex | string}  expression",
+          "*          Regular expression",
+          "* @param {string} flags",
+          "*          Optional Flags",
+          "*",
+          "* @returns {array}",
+          "* [{",
+          "* match: '...',",
+          "* matchAtIndex: 0,",
+          "* capturedGroups: [ '...', '...' ]",
+          "* }]",
+          "*/",
+          "function regexMatch(input, expression, flags = 'g') {",
+          "  let regex =",
+          "    expression instanceof RegExp",
+          "      ? expression",
+          "      : new RegExp(expression, flags);",
+          "  let matches = input.matchAll(regex);",
+          "  matches = [...matches];",
+          "  return matches.map((item) => {",
+          "    return {",
+          "      match: item[0],",
+          "      matchAtIndex: item.index,",
+          "      capturedGroups: item.length > 1 ? item.slice(1) : undefined,",
+          "    };",
+          "  });",
+          "}"
+        ],
+        "tags": [
+          "javascript",
+          "regex"
+        ],
+        "author": "aumirza"
       }
     ]
   },
