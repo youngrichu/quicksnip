@@ -140,19 +140,6 @@
         "author": "axorax"
       },
       {
-        "title": "Replace Substring",
-        "description": "Replaces all occurrences of a substring in a string with another substring.",
-        "code": [
-          "def replace_substring(s, old, new):",
-          "    return s.replace(old, new)",
-          "",
-          "# Usage:",
-          "print(replace_substring('hello world', 'world', 'Python'))  # Output: 'hello Python'"
-        ],
-        "tags": ["python", "string", "replace", "utility"],
-        "author": "axorax"
-      },
-      {
         "title": "Split Camel Case",
         "description": "Splits a camel case string into separate words.",
         "code": [
@@ -193,19 +180,6 @@
           "print(remove_whitespace('hello world'))  # Output: 'helloworld'"
         ],
         "tags": ["python", "string", "whitespace", "remove", "utility"],
-        "author": "axorax"
-      },
-      {
-        "title": "Swap Case",
-        "description": "Swaps the case of all characters in a string.",
-        "code": [
-          "def swap_case(s):",
-          "    return s.swapcase()",
-          "",
-          "# Usage:",
-          "print(swap_case('Hello World'))  # Output: 'hELLO wORLD'"
-        ],
-        "tags": ["python", "string", "case", "swap", "utility"],
         "author": "axorax"
       },
       {
@@ -476,25 +450,6 @@
         "author": "axorax"
       },
       {
-        "title": "Rename File",
-        "description": "Renames a file from its current name to a new name.",
-        "code": [
-          "import os",
-          "",
-          "def rename_file(old_name, new_name):",
-          "    if os.path.exists(old_name):",
-          "        os.rename(old_name, new_name)",
-          "        print(f'File renamed from {old_name} to {new_name}')",
-          "    else:",
-          "        print(f'File {old_name} does not exist.')",
-          "",
-          "# Usage:",
-          "rename_file('example.txt', 'new_example.txt')"
-        ],
-        "tags": ["python", "file", "rename", "utility"],
-        "author": "axorax"
-      },
-      {
         "title": "List Files in Directory",
         "description": "Lists all files in a specified directory.",
         "code": [
@@ -580,22 +535,6 @@
         "author": "dostonnabotov"
       },
       {
-        "title": "Generate Fibonacci Sequence",
-        "description": "Generates a Fibonacci sequence up to a given number of terms.",
-        "code": [
-          "def generate_fibonacci(n):",
-          "    sequence = [0, 1]",
-          "    for _ in range(2, n):",
-          "        sequence.append(sequence[-1] + sequence[-2])",
-          "    return sequence[:n]",
-          "",
-          "# Usage:",
-          "print(generate_fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]"
-        ],
-        "tags": ["python", "math", "fibonacci", "sequence"],
-        "author": "axorax"
-      },
-      {
         "title": "Check Perfect Square",
         "description": "Checks if a number is a perfect square.",
         "code": [
@@ -624,37 +563,6 @@
           "print(binary_to_decimal('1101'))  # Output: 13"
         ],
         "tags": ["python", "math", "binary", "decimal", "conversion"],
-        "author": "axorax"
-      },
-      {
-        "title": "Generate Random Number",
-        "description": "Generates a random number within a given range.",
-        "code": [
-          "import random",
-          "",
-          "def generate_random_number(start, end):",
-          "    return random.randint(start, end)",
-          "",
-          "# Usage:",
-          "print(generate_random_number(1, 100))  # Output: A random number between 1 and 100"
-        ],
-        "tags": ["python", "math", "random", "utility"],
-        "author": "axorax"
-      },
-      {
-        "title": "Calculate GCD (Greatest Common Divisor)",
-        "description": "Calculates the greatest common divisor (GCD) of two numbers using Euclid's algorithm.",
-        "code": [
-          "def gcd(a, b):",
-          "    while b:",
-          "        a, b = b, a % b",
-          "    return a",
-          "",
-          "# Usage:",
-          "print(gcd(56, 98))  # Output: 14",
-          "print(gcd(101, 10))  # Output: 1"
-        ],
-        "tags": ["python", "math", "gcd", "algorithm"],
         "author": "axorax"
       },
       {
