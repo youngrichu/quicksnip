@@ -184,6 +184,96 @@
         ],
         "tags": ["string", "whitespace"],
         "author": "axorax"
+      },
+      {
+        "title": "Pad String on Both Sides",
+        "description": "Pads a string on both sides with a specified character until it reaches the desired length.",
+        "code": [
+          "function padString(str, length, char = ' ') {",
+          "  const totalPad = length - str.length;",
+          "  const padStart = Math.floor(totalPad / 2);",
+          "  const padEnd = totalPad - padStart;",
+          "  return char.repeat(padStart) + str + char.repeat(padEnd);",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(padString('hello', 10, '*')); // Output: '**hello***'"
+        ],
+        "tags": ["string", "pad", "manipulation"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert String to Snake Case",
+        "description": "Converts a given string into snake_case.",
+        "code": [
+          "function toSnakeCase(str) {",
+          "  return str.replace(/([a-z])([A-Z])/g, '$1_$2')",
+          "            .replace(/\\s+/g, '_')",
+          "            .toLowerCase();",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toSnakeCase('Hello World Test')); // Output: 'hello_world_test'"
+        ],
+        "tags": ["string", "case", "snake_case"],
+        "author": "axorax"
+      },
+      {
+        "title": "Remove Vowels from a String",
+        "description": "Removes all vowels from a given string.",
+        "code": [
+          "function removeVowels(str) {",
+          "  return str.replace(/[aeiouAEIOU]/g, '');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(removeVowels('Hello World')); // Output: 'Hll Wrld'"
+        ],
+        "tags": ["string", "remove", "vowels"],
+        "author": "axorax"
+      },
+      {
+        "title": "Mask Sensitive Information",
+        "description": "Masks parts of a sensitive string, like a credit card or email address.",
+        "code": [
+          "function maskSensitiveInfo(str, visibleCount = 4, maskChar = '*') {",
+          "  return str.slice(0, visibleCount) + maskChar.repeat(Math.max(0, str.length - visibleCount));",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(maskSensitiveInfo('123456789', 4)); // Output: '1234*****'",
+          "console.log(maskSensitiveInfo('example@mail.com', 2, '#')); // Output: 'ex#############'"
+        ],
+        "tags": ["string", "mask", "sensitive"],
+        "author": "axorax"
+      },
+      {
+        "title": "Extract Initials from Name",
+        "description": "Extracts and returns the initials from a full name.",
+        "code": [
+          "function getInitials(name) {",
+          "  return name.split(' ').map(part => part.charAt(0).toUpperCase()).join('');",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(getInitials('John Doe')); // Output: 'JD'"
+        ],
+        "tags": ["string", "initials", "name"],
+        "author": "axorax"
+      },
+      {
+        "title": "Convert Tabs to Spaces",
+        "description": "Converts all tab characters in a string to spaces.",
+        "code": [
+          "function tabsToSpaces(str, spacesPerTab = 4) {",
+          "  return str.replace(/\\t/g, ' '.repeat(spacesPerTab));",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(tabsToSpaces('Hello\\tWorld', 2)); // Output: 'Hello  World'"
+        ],
+        "tags": ["string", "tabs", "spaces"],
+        "author": "axorax"
       }
     ]
   },
