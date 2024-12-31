@@ -232,6 +232,20 @@
         "tags": ["string", "case", "camelCase"],
         "author": "aumirza"
       },
+            {
+        "title": "Convert String to Title Case",
+        "description": "Converts a given string into Title Case.",
+        "code": [
+          "function toTitleCase(str) {",
+          "  return str.toLowerCase().replace(/\\b\\w/g, (s) => s.toUpperCase());",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toTitleCase('hello world test')); // Output: 'Hello World Test'"
+        ],
+        "tags": ["string", "case", "titleCase"],
+        "author": "aumirza"
+      },
       {
         "title": "Remove Vowels from a String",
         "description": "Removes all vowels from a given string.",
