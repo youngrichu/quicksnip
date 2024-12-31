@@ -911,33 +911,6 @@
         "author": "axorax"
       },
       {
-        "title": "Rate Limit Function",
-        "description": "Limits how often a function can be executed within a given time window.",
-        "code": [
-          "const rateLimit = (func, limit, timeWindow) => {",
-          "  let queue = [];",
-          "  setInterval(() => {",
-          "    if (queue.length) {",
-          "      const next = queue.shift();",
-          "      func(...next.args);",
-          "    }",
-          "  }, timeWindow);",
-          "  return (...args) => {",
-          "    if (queue.length < limit) {",
-          "      queue.push({ args });",
-          "    }",
-          "  };",
-          "};",
-          "",
-          "// Usage:",
-          "const fetchData = () => console.log('Fetching data...');",
-          "const rateLimitedFetch = rateLimit(fetchData, 2, 1000);",
-          "setInterval(() => rateLimitedFetch(), 200); // Only calls fetchData twice every second"
-        ],
-        "tags": ["javascript", "function", "rate-limiting", "utility"],
-        "author": "axorax"
-      },
-      {
         "title": "Random string",
         "description": "Generates a random string of characters of a certain length",
         "code": [
@@ -1095,24 +1068,6 @@
           "",
           "// Usage:",
           "console.log(isItemInLocalStorage('user')); // Output: true or false"
-        ],
-        "tags": ["javascript", "localStorage", "storage", "utility"],
-        "author": "axorax"
-      },
-      {
-        "title": "Check bytes used",
-        "description": "Checks the amount of bytes used in the localStorage.",
-        "code": [
-          "const checkBytesUsed = () => {",
-          "  let spaceUsed = 0;",
-          "  for (let i = 0; i < localStorage.length; i++) {",
-          "    spaceUsed += localStorage.key(i).length + localStorage.getItem(localStorage.key(i)).length;",
-          "  }",
-          "  console.log(`Used space: ${spaceUsed} bytes`);",
-          "};",
-          "",
-          "// Usage:",
-          "checkBytesUsed();"
         ],
         "tags": ["javascript", "localStorage", "storage", "utility"],
         "author": "axorax"
