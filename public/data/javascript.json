@@ -818,7 +818,7 @@
           "  return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');",
           "}",
           "",
-          "console.log(makeid(5), \"1234\" /* (optional) */);"
+          "console.log(makeid(5, \"1234\" /* (optional) */));"
         ],
         "tags": ["javascript", "function", "random"],
         "author": "kruimol"
