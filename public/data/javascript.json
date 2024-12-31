@@ -798,6 +798,20 @@
   ],
   "tags": ["color", "hex", "contrast", "brightness", "utility"],
   "author": "yaya12085"
+},
+{
+  "title": "Random string",
+  "description": "Generates a random string of characters of a certain length",
+  "code": [
+    "function makeid(length) {",
+    "  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';",
+    "  return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');",
+    "}",
+    "",
+    "console.log(makeid(5));"
+  ],
+  "tags": ["javascript", "function", "random"],
+  "author": "kruimol"
 }
 
     ]
