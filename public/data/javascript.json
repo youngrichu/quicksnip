@@ -168,7 +168,7 @@
           "// Example usage:",
           "console.log(countWords('Hello world! This is a test.')); // Output: 6"
         ],
-        "tags": ["string", "manipulation", "word count", "count"],
+        "tags": ["javascript", "string", "manipulation", "word count", "count"],
         "author": "axorax"
       },
       {
@@ -182,7 +182,7 @@
           "// Example usage:",
           "console.log(removeWhitespace('Hello world!')); // Output: 'Helloworld!'"
         ],
-        "tags": ["string", "whitespace"],
+        "tags": ["javascript", "string", "whitespace"],
         "author": "axorax"
       }
     ]
@@ -318,15 +318,7 @@
           "console.log(timeAgoOrAhead(new Date())); // just now",
           "console.log(timeAgoOrAhead(futureDate)); // in x years"
         ],
-        "tags": [
-          "javascript",
-          "date",
-          "time",
-          "relative",
-          "future",
-          "past",
-          "utility"
-        ],
+        "tags": ["javascript", "date", "time", "relative", "future", "past", "utility"],
         "author": "Yugveer06"
       }
     ]
@@ -529,32 +521,31 @@
       }
     ]
   },
-{
-  "categoryName": "Number Formatting",
-  "snippets": [
-    {
-      "title": "Number Formatter",
-      "description": "Formats a number with suffixes (K, M, B, etc.).",
-      "code": [
-        "const nFormatter = (num) => {",
-        "  if (!num) return;",
-        "  num = parseFloat(num.toString().replace(/[^0-9.]/g, ''));",
-        "  const suffixes = ['', 'K', 'M', 'B', 'T', 'P', 'E'];",
-        "  let index = 0;",
-        "  while (num >= 1000 && index < suffixes.length - 1) {",
-        "    num /= 1000;",
-        "    index++;",
-        "  }",
-        "  return num.toFixed(2).replace(/\\.0+$|(\\.[0-9]*[1-9])0+$/, '$1') + suffixes[index];",
-        "};",
-        "",
-        "// Usage:",
-        "console.log(nFormatter(1234567)); // Output: '1.23M'"
-      ],
-      "tags": ["javascript", "number", "format", "utility"],
-      "author": "realvishalrana"
-    }
-  ]
-}
-  
+  {
+    "categoryName": "Number Formatting",
+    "snippets": [
+      {
+        "title": "Number Formatter",
+        "description": "Formats a number with suffixes (K, M, B, etc.).",
+        "code": [
+          "const nFormatter = (num) => {",
+          "  if (!num) return;",
+          "  num = parseFloat(num.toString().replace(/[^0-9.]/g, ''));",
+          "  const suffixes = ['', 'K', 'M', 'B', 'T', 'P', 'E'];",
+          "  let index = 0;",
+          "  while (num >= 1000 && index < suffixes.length - 1) {",
+          "    num /= 1000;",
+          "    index++;",
+          "  }",
+          "  return num.toFixed(2).replace(/\\.0+$|(\\.[0-9]*[1-9])0+$/, '$1') + suffixes[index];",
+          "};",
+          "",
+          "// Usage:",
+          "console.log(nFormatter(1234567)); // Output: '1.23M'"
+        ],
+        "tags": ["javascript", "number", "format", "utility"],
+        "author": "realvishalrana"
+      }
+    ]
+  }
 ]
