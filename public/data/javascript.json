@@ -911,17 +911,31 @@
         "author": "axorax"
       },
       {
-        "title": "Random string",
-        "description": "Generates a random string of characters of a certain length",
+        "title": "Rate Limit Function",
+        "description": "Limits how often a function can be executed within a given time window.",
         "code": [
-          "function makeid(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {",
-          "  return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');",
-          "}",
+          "const rateLimit = (func, limit, timeWindow) => {",
+          "  let queue = [];",
+          "  setInterval(() => {",
+          "    if (queue.length) {",
+          "      const next = queue.shift();",
+          "      func(...next.args);",
+          "    }",
+          "  }, timeWindow);",
+          "  return (...args) => {",
+          "    if (queue.length < limit) {",
+          "      queue.push({ args });",
+          "    }",
+          "  };",
+          "};",
           "",
-          "console.log(makeid(5), \"1234\" /* (optional) */);"
+          "// Usage:",
+          "const fetchData = () => console.log('Fetching data...');",
+          "const rateLimitedFetch = rateLimit(fetchData, 2, 1000);",
+          "setInterval(() => rateLimitedFetch(), 200); // Only calls fetchData twice every second"
         ],
-        "tags": ["javascript", "function", "random"],
-        "author": "kruimol"
+        "tags": ["javascript", "function", "rate-limiting", "utility"],
+        "author": "axorax"
       }
     ]
   },
