@@ -219,6 +219,20 @@
         "author": "axorax"
       },
       {
+        "title": "Convert String to Camel Case",
+        "description": "Converts a given string into camelCase.",
+        "code": [
+          "function toCamelCase(str) {",
+          "  return str.replace(/\\W+(.)/g, (match, chr) => chr.toUpperCase());",
+          "}",
+          "",
+          "// Example usage:",
+          "console.log(toCamelCase('hello world test')); // Output: 'helloWorldTest'"
+        ],
+        "tags": ["string", "case", "camelCase"],
+        "author": "aumirza"
+      },
+      {
         "title": "Remove Vowels from a String",
         "description": "Removes all vowels from a given string.",
         "code": [
