@@ -1,6 +1,6 @@
-import { useAppContext } from "contexts";
+import { useAppContext } from "contexts/AppContext";
 import { SnippetType } from "types";
-import { slugify } from "utils";
+import { slugify } from "utils/slugify";
 
 import { useFetch } from "./useFetch";
 

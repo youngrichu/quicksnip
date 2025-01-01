@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { useEscapeKey } from "hooks";
+import { useEscapeKey } from "hooks/useEscapeKey";
 import { SnippetType } from "types";
-import { slugify } from "utils";
+import { slugify } from "utils/slugify";
 
 import Button from "./Button";
 import CodePreview from "./CodePreview";

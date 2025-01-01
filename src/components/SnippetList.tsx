@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { useAppContext } from "contexts";
-import { useSnippets } from "hooks";
+import { useAppContext } from "contexts/AppContext";
+import { useSnippets } from "hooks/useSnippets";
 import { SnippetType } from "types";
 
 import { LeftAngleArrowIcon } from "./Icons";

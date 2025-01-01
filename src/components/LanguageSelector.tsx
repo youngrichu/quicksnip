@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
-import { useAppContext } from "contexts";
-import { useKeyboardNavigation, useLanguages } from "hooks";
+import { useAppContext } from "contexts/AppContext";
+import { useKeyboardNavigation } from "hooks/useKeyboardNavigation";
+import { useLanguages } from "hooks/useLanguages";
 import { LanguageType } from "types";
 
 // Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
@@ -9,8 +10,9 @@ import { LanguageType } from "types";
 const LanguageSelector = () => {
   const { language, setLanguage } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
+
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (selected: LanguageType) => {
     setLanguage(selected);

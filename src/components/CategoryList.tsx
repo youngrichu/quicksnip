@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import { useAppContext } from "contexts";
-import { useCategories } from "hooks";
+import { useAppContext } from "contexts/AppContext";
+import { useCategories } from "hooks/useCategories";
 
 const CategoryList = () => {
   const { category, setCategory } = useAppContext();

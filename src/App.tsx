@@ -1,5 +1,5 @@
 import SnippetList from "components/SnippetList";
-import { useAppContext } from "contexts";
+import { useAppContext } from "contexts/AppContext";
 import Banner from "layouts/Banner";
 import Footer from "layouts/Footer";
 import Header from "layouts/Header";
