@@ -1,0 +1,38 @@
+[
+    {
+        "categoryName": "List Utilities",
+        "snippets": [
+            {
+                "title": "Swap two items at determined indexes",
+                "description": "Swaps two items at determined indexes",
+                "author": "omegaleo",
+                "tags": [
+                    "csharp",
+                    "c#",
+                    "list",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "/// <summary>\n/// Swaps the position of 2 elements inside of a List\n/// </summary>\n/// <returns>List with swapped elements</returns>\npublic static IList<T> Swap<T>(this IList<T> list, int indexA, int indexB)\n{\n    (list[indexA], list[indexB]) = (list[indexB], list[indexA]);\n    return list;\n}\n\nvar list = new List<string>() {\"Test\", \"Test2\"};\n\nConsole.WriteLine(list[0]); // Outputs: Test\nConsole.WriteLine(list[1]); // Outputs: Test2\n\nlist = list.Swap(0, 1).ToList();\n\nConsole.WriteLine(list[0]); // Outputs: Test2\nConsole.WriteLine(list[1]); // Outputs: Test\n"
+            }
+        ]
+    },
+    {
+        "categoryName": "String Utilities",
+        "snippets": [
+            {
+                "title": "Truncate a String",
+                "description": "Cut off a string once it reaches a determined amount of characters and add '...' to the end of the string",
+                "author": "omegaleo",
+                "tags": [
+                    "csharp",
+                    "c#",
+                    "list",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "/// <summary>\n/// Cut off a string once it reaches a <paramref name=\"maxChars\"/> amount of characters and add '...' to the end of the string\n/// </summary>\npublic static string Truncate(this string value, int maxChars)\n{\n    return value.Length <= maxChars ? value : value.Substring(0, maxChars) + \"...\";\n}\n\nvar str = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique rhoncus bibendum. Vivamus laoreet tortor vel neque lacinia, nec rhoncus ligula pellentesque. Nullam eu ornare nibh. Donec tincidunt viverra nulla.\";\n\nConsole.WriteLine(str); // Outputs the full string\nConsole.WriteLine(str.Truncate(5)); // Outputs Lorem...\n"
+            }
+        ]
+    }
+]
