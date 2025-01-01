@@ -72,6 +72,19 @@
                 ],
                 "contributors": [],
                 "code": ".glow {\n  background-color: #f39c12;\n  padding: 10px 20px;\n  border-radius: 5px;\n  transition: box-shadow 0.3s ease;\n}\n\n.glow:hover {\n  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8);\n}\n"
+            },
+            {
+                "title": "Hover to Reveal Color",
+                "description": "A card with an image that transitions from grayscale to full color on hover.",
+                "author": "Haider-Mukhtar",
+                "tags": [
+                    "css",
+                    "hover",
+                    "image",
+                    "effects"
+                ],
+                "contributors": [],
+                "code": ".card {\n  height: 300px;\n  width: 200px;\n  border-radius: 5px;\n  overflow: hidden;\n}\n\n.card img{\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n  filter: grayscale(100%);\n  transition: all 0.3s;\n  transition-duration: 200ms;\n  cursor: pointer;\n}\n\n.card:hover img {\n  filter: grayscale(0%);\n  scale: 1.05;\n}\n"
             }
         ]
     },
@@ -114,7 +127,7 @@
                     "grid"
                 ],
                 "contributors": [],
-                "code": ".grid-container {\n  display: grid\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n/* Explanation:\n- `auto-fit`: Automatically fits as many columns as possible within the container.\n- `minmax(250px, 1fr)`: Defines a minimum column size of 250px and a maximum size of 1fr (fraction of available space).\n*/\n}\n\n"
+                "code": ".grid-container {\n  display: grid\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n/* Explanation:\n- `auto-fit`: Automatically fits as many columns as possible within the container.\n- `minmax(250px, 1fr)`: Defines a minimum column size of 250px and a maximum size of 1fr (fraction of available space).\n*/\n}\n"
             },
             {
                 "title": "Responsive Design",
