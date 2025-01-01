@@ -15,7 +15,7 @@ export interface SnippetType {
   code: string[];
   tags: string[];
   author: string;
-}
+};
 
 export type AppState = {
   language: LanguageType;
