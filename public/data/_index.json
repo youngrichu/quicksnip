@@ -4,15 +4,15 @@
         "icon": "/icons/c.svg"
     },
     {
-        "lang": "CPP",
+        "lang": "Cpp",
         "icon": "/icons/cpp.svg"
     },
     {
-        "lang": "CSS",
+        "lang": "Css",
         "icon": "/icons/css.svg"
     },
     {
-        "lang": "HTML",
+        "lang": "Html",
         "icon": "/icons/html.svg"
     },
     {
@@ -28,7 +28,7 @@
         "icon": "/icons/rust.svg"
     },
     {
-        "lang": "SCSS",
+        "lang": "Scss",
         "icon": "/icons/scss.svg"
     }
 ]
