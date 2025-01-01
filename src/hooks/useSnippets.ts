@@ -1,7 +1,8 @@
-import slugify from "../utils/slugify";
+import { useAppContext } from "@contexts/AppContext";
+import { SnippetType } from "@types";
+import { slugify } from "@utils/slugify";
+
 import { useFetch } from "./useFetch";
-import { useAppContext } from "../contexts/AppContext";
-import { SnippetType } from "../types";
 
 type CategoryData = {
   categoryName: string;

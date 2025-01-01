@@ -1,4 +1,5 @@
-import { LanguageType } from "../types";
+import { LanguageType } from "@types";
+
 import { useFetch } from "./useFetch";
 
 export const useLanguages = () => {
