@@ -1,34 +1,34 @@
 [
-  {
-    "lang": "JavaScript",
-    "icon": "/icons/javascript.svg"
-  },
-  {
-    "lang": "CSS",
-    "icon": "/icons/css.svg"
-  },
-  {
-    "lang": "HTML",
-    "icon": "/icons/html5.svg"
-  },
-  {
-    "lang": "Python",
-    "icon": "/icons/python.svg"
-  },
-  {
-    "lang": "SCSS",
-    "icon": "/icons/sass.svg"
-  },
-  {
-    "lang": "CPP",
-    "icon": "/icons/cpp.svg"
-  },
-  {
-    "lang": "C",
-    "icon": "/icons/c.svg"
-  },
-  {
-    "lang": "Rust",
-    "icon": "/icons/rust.svg"
-  }
+    {
+        "lang": "C",
+        "icon": "/icons/c.svg"
+    },
+    {
+        "lang": "Cpp",
+        "icon": "/icons/cpp.svg"
+    },
+    {
+        "lang": "Css",
+        "icon": "/icons/css.svg"
+    },
+    {
+        "lang": "Html",
+        "icon": "/icons/html.svg"
+    },
+    {
+        "lang": "Javascript",
+        "icon": "/icons/javascript.svg"
+    },
+    {
+        "lang": "Python",
+        "icon": "/icons/python.svg"
+    },
+    {
+        "lang": "Rust",
+        "icon": "/icons/rust.svg"
+    },
+    {
+        "lang": "Scss",
+        "icon": "/icons/scss.svg"
+    }
 ]
