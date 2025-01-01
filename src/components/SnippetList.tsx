@@ -31,30 +31,27 @@ const SnippetList = () => {
 
   return (
     <>
-      <motion.ul
-        role="list"
-        className="snippets"
-      >
+      <motion.ul role="list" className="snippets">
         <AnimatePresence mode="popLayout">
           {fetchedSnippets.map((snippet, idx) => (
             <motion.li
               key={idx}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ 
-                opacity: 1, 
+              animate={{
+                opacity: 1,
                 y: 0,
                 transition: {
                   delay: idx * 0.05,
-                  duration: 0.2
-                }
+                  duration: 0.2,
+                },
               }}
-              exit={{ 
-                opacity: 0, 
+              exit={{
+                opacity: 0,
                 y: -20,
                 transition: {
                   delay: (fetchedSnippets.length - 1 - idx) * 0.01,
-                  duration: 0.09
-                }
+                  duration: 0.09,
+                },
               }}
             >
               <motion.button

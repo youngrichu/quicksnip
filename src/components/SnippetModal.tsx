@@ -20,8 +20,10 @@ const SnippetModal: React.FC<Props> = ({
   handleCloseModal,
 }) => {
   const modalRoot = document.getElementById("modal-root");
-  if (!modalRoot) return null;
+
   useEscapeKey(handleCloseModal);
+
+  if (!modalRoot) return null;
 
   return ReactDOM.createPortal(
     <motion.div
