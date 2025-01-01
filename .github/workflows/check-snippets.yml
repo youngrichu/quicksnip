@@ -9,6 +9,10 @@ jobs:
   check-snippets:
     runs-on: ubuntu-latest
 
+    permissions:
+      content: read
+      pull-requests: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -19,5 +23,9 @@ jobs:
           node-version: "16"
 
       - name: Check if snippets are formated correctly
-        run: |
-          node utils/checkSnippetFormatting.js # Run the script located in the utils/ folder
+        uses: int128/comment-action@v1
+        with:
+          run: node utils/checkSnippetFormatting.js # Run the script located in the utils/ folder
+          post-on-failure: |
+            ## :x: Snipper Format Error
+            ${run.output}
