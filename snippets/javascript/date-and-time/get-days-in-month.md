@@ -1,8 +1,8 @@
 ---
-Title: Get Days in Month
-Description: Calculates the number of days in a specific month of a given year.
-Author: axorax
-Tags: javascript,date,days-in-month,utility
+title: Get Days in Month
+description: Calculates the number of days in a specific month of a given year.
+author: axorax
+tags: javascript,date,days-in-month,utility
 ---
 
 ```js

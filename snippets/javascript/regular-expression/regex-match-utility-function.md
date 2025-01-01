@@ -1,8 +1,8 @@
 ---
-Title: Regex Match Utility Function
-Description: Enhanced regular expression matching utility.
-Author: aumirza
-Tags: javascript,regex
+title: Regex Match Utility Function
+description: Enhanced regular expression matching utility.
+author: aumirza
+tags: javascript,regex
 ---
 
 ```js

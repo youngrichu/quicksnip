@@ -1,8 +1,8 @@
 ---
-Title: Count Properties in Object
-Description: Counts the number of own properties in an object.
-Author: axorax
-Tags: javascript,object,count,properties
+title: Count Properties in Object
+description: Counts the number of own properties in an object.
+author: axorax
+tags: javascript,object,count,properties
 ---
 
 ```js

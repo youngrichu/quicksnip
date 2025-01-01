@@ -1,8 +1,8 @@
 ---
-Title: Get Nested Value
-Description: Retrieves the value at a given path in a nested object.
-Author: realvishalrana
-Tags: javascript,object,nested,utility
+title: Get Nested Value
+description: Retrieves the value at a given path in a nested object.
+author: realvishalrana
+tags: javascript,object,nested,utility
 ---
 
 ```js

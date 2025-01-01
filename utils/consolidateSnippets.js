@@ -3,7 +3,7 @@ import { parseAllSnippets, reverseSlugify } from './snippetParser.js';
 import { join } from 'path';
 import { copyFileSync, writeFileSync } from 'fs';
 
-const dataPath = 'public/data/';
+const dataPath = 'public/consolidated/';
 const indexPath = join(dataPath, '_index.json');
 const iconPath = 'public/icons/';
 const snippetsPath = 'snippets/';

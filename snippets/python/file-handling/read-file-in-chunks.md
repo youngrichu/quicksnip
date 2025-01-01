@@ -1,8 +1,8 @@
 ---
-Title: Read File in Chunks
-Description: Reads a file in chunks of a specified size.
-Author: axorax
-Tags: python,file,read,chunks,utility
+title: Read File in Chunks
+description: Reads a file in chunks of a specified size.
+author: axorax
+tags: python,file,read,chunks,utility
 ---
 
 ```py

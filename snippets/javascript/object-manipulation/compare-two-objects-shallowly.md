@@ -1,8 +1,8 @@
 ---
-Title: Compare Two Objects Shallowly
-Description: Compares two objects shallowly and returns whether they are equal.
-Author: axorax
-Tags: javascript,object,compare,shallow
+title: Compare Two Objects Shallowly
+description: Compares two objects shallowly and returns whether they are equal.
+author: axorax
+tags: javascript,object,compare,shallow
 ---
 
 ```js

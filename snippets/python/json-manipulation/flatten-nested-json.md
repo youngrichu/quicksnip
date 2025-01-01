@@ -1,8 +1,8 @@
 ---
-Title: Flatten Nested JSON
-Description: Flattens a nested JSON object into a flat dictionary.
-Author: axorax
-Tags: python,json,flatten,nested
+title: Flatten Nested JSON
+description: Flattens a nested JSON object into a flat dictionary.
+author: axorax
+tags: python,json,flatten,nested
 ---
 
 ```py

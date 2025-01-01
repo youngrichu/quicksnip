@@ -1,8 +1,8 @@
 ---
-Title: Remove Punctuation
-Description: Removes punctuation from a string.
-Author: SteliosGee
-Tags: python,string,punctuation,remove,utility
+title: Remove Punctuation
+description: Removes punctuation from a string.
+author: SteliosGee
+tags: python,string,punctuation,remove,utility
 ---
 
 ```py

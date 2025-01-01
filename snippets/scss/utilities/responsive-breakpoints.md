@@ -1,8 +1,8 @@
 ---
-Title: Responsive Breakpoints
-Description: Generates media queries for responsive design.
-Author: dostonnabotov
-Tags: scss,responsive,media-queries,css
+title: Responsive Breakpoints
+description: Generates media queries for responsive design.
+author: dostonnabotov
+tags: scss,responsive,media-queries,css
 ---
 
 ```scss

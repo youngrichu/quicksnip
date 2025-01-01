@@ -1,8 +1,8 @@
 ---
-Title: Grid Container
-Description: Creates a responsive grid container with customizable column counts.
-Author: dostonnabotov
-Tags: scss,grid,layout,css
+title: Grid Container
+description: Creates a responsive grid container with customizable column counts.
+author: dostonnabotov
+tags: scss,grid,layout,css
 ---
 
 ```scss

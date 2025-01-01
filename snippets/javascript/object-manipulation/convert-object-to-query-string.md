@@ -1,8 +1,8 @@
 ---
-Title: Convert Object to Query String
-Description: Converts an object to a query string for use in URLs.
-Author: axorax
-Tags: javascript,object,query string,url
+title: Convert Object to Query String
+description: Converts an object to a query string for use in URLs.
+author: axorax
+tags: javascript,object,query string,url
 ---
 
 ```js

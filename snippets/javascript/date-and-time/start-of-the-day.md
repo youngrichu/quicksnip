@@ -1,8 +1,8 @@
 ---
-Title: Start of the Day
-Description: Returns the start of the day (midnight) for a given date.
-Author: axorax
-Tags: javascript,date,start-of-day,utility
+title: Start of the Day
+description: Returns the start of the day (midnight) for a given date.
+author: axorax
+tags: javascript,date,start-of-day,utility
 ---
 
 ```js

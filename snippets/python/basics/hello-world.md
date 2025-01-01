@@ -1,8 +1,8 @@
 ---
-Title: Hello, World!
-Description: Prints Hello, World! to the terminal.
-Author: James-Beans
-Tags: python,printing,hello-world,utility
+title: Hello, World!
+description: Prints Hello, World! to the terminal.
+author: James-Beans
+tags: python,printing,hello-world,utility
 ---
 
 ```py

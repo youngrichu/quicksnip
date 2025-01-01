@@ -1,8 +1,8 @@
 ---
-Title: Generate Random String
-Description: Generates a random alphanumeric string.
-Author: dostonnabotov
-Tags: python,random,string,utility
+title: Generate Random String
+description: Generates a random alphanumeric string.
+author: dostonnabotov
+tags: python,random,string,utility
 ---
 
 ```py

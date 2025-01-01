@@ -1,8 +1,8 @@
 ---
-Title: Partition List
-Description: Partitions a list into sublists of a given size.
-Author: axorax
-Tags: python,list,partition,utility
+title: Partition List
+description: Partitions a list into sublists of a given size.
+author: axorax
+tags: python,list,partition,utility
 ---
 
 ```py

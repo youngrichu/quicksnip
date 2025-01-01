@@ -1,8 +1,8 @@
 ---
-Title: Convert String to Pascal Case
-Description: Converts a given string into Pascal Case.
-Author: aumirza
-Tags: string,case,pascalCase
+title: Convert String to Pascal Case
+description: Converts a given string into Pascal Case.
+author: aumirza
+tags: string,case,pascalCase
 ---
 
 ```js

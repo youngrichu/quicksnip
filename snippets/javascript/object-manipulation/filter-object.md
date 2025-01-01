@@ -1,8 +1,8 @@
 ---
-Title: Filter Object
-Description: Filter out entries in an object where the value is falsy, including empty strings, empty objects, null, and undefined.
-Author: realvishalrana
-Tags: javascript,object,filter,utility
+title: Filter Object
+description: Filter out entries in an object where the value is falsy, including empty strings, empty objects, null, and undefined.
+author: realvishalrana
+tags: javascript,object,filter,utility
 ---
 
 ```js

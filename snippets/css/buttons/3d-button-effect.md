@@ -1,8 +1,8 @@
 ---
-Title: 3D Button Effect
-Description: Adds a 3D effect to a button when clicked.
-Author: dostonnabotov
-Tags: css,button,3D,effect
+title: 3D Button Effect
+description: Adds a 3D effect to a button when clicked.
+author: dostonnabotov
+tags: css,button,3D,effect
 ---
 
 ```css

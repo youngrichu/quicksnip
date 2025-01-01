@@ -1,8 +1,8 @@
 ---
-Title: Copy File
-Description: Copies a file from source to destination.
-Author: axorax
-Tags: python,file,copy,utility
+title: Copy File
+description: Copies a file from source to destination.
+author: axorax
+tags: python,file,copy,utility
 ---
 
 ```py

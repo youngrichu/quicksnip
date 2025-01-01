@@ -1,8 +1,8 @@
 ---
-Title: Once Function
-Description: Ensures a function is only called once.
-Author: axorax
-Tags: javascript,function,once,utility
+title: Once Function
+description: Ensures a function is only called once.
+author: axorax
+tags: javascript,function,once,utility
 ---
 
 ```js

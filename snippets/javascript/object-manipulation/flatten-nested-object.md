@@ -1,8 +1,8 @@
 ---
-Title: Flatten Nested Object
-Description: Flattens a nested object into a single-level object with dot notation for keys.
-Author: axorax
-Tags: javascript,object,flatten,utility
+title: Flatten Nested Object
+description: Flattens a nested object into a single-level object with dot notation for keys.
+author: axorax
+tags: javascript,object,flatten,utility
 ---
 
 ```js

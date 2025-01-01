@@ -1,8 +1,8 @@
 ---
-Title: Check if Date is a Weekend
-Description: Checks whether a given date falls on a weekend.
-Author: axorax
-Tags: python,datetime,weekend,utility
+title: Check if Date is a Weekend
+description: Checks whether a given date falls on a weekend.
+author: axorax
+tags: python,datetime,weekend,utility
 ---
 
 ```py

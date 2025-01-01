@@ -1,8 +1,8 @@
 ---
-Title: Read JSON File
-Description: Reads a JSON file and parses its content.
-Author: e3nviction
-Tags: python,json,file,read
+title: Read JSON File
+description: Reads a JSON file and parses its content.
+author: e3nviction
+tags: python,json,file,read
 ---
 
 ```py

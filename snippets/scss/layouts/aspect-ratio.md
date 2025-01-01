@@ -1,8 +1,8 @@
 ---
-Title: Aspect Ratio
-Description: Ensures that elements maintain a specific aspect ratio.
-Author: dostonnabotov
-Tags: scss,aspect-ratio,layout,css
+title: Aspect Ratio
+description: Ensures that elements maintain a specific aspect ratio.
+author: dostonnabotov
+tags: scss,aspect-ratio,layout,css
 ---
 
 ```scss

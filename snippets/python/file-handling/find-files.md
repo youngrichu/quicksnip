@@ -1,8 +1,8 @@
 ---
-Title: Find Files
-Description: Finds all files of the specified type within a given directory.
-Author: Jackeastern
-Tags: python,os,filesystem,file_search
+title: Find Files
+description: Finds all files of the specified type within a given directory.
+author: Jackeastern
+tags: python,os,filesystem,file_search
 ---
 
 ```py

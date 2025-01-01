@@ -1,8 +1,8 @@
 ---
-Title: Throttle Function
-Description: Limits a function execution to once every specified time interval.
-Author: dostonnabotov
-Tags: javascript,utility,throttle,performance
+title: Throttle Function
+description: Limits a function execution to once every specified time interval.
+author: dostonnabotov
+tags: javascript,utility,throttle,performance
 ---
 
 ```js

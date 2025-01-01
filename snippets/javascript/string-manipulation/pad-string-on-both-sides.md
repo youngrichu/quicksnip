@@ -1,8 +1,8 @@
 ---
-Title: Pad String on Both Sides
-Description: Pads a string on both sides with a specified character until it reaches the desired length.
-Author: axorax
-Tags: string,pad,manipulation
+title: Pad String on Both Sides
+description: Pads a string on both sides with a specified character until it reaches the desired length.
+author: axorax
+tags: string,pad,manipulation
 ---
 
 ```js

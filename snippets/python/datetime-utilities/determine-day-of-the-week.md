@@ -1,8 +1,8 @@
 ---
-Title: Determine Day of the Week
-Description: Calculates the day of the week for a given date.
-Author: axorax
-Tags: python,datetime,weekday,utility
+title: Determine Day of the Week
+description: Calculates the day of the week for a given date.
+author: axorax
+tags: python,datetime,weekday,utility
 ---
 
 ```py

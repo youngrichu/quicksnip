@@ -1,8 +1,8 @@
 ---
-Title: Merge Objects Deeply
-Description: Deeply merges two or more objects, including nested properties.
-Author: axorax
-Tags: javascript,object,merge,deep
+title: Merge Objects Deeply
+description: Deeply merges two or more objects, including nested properties.
+author: axorax
+tags: javascript,object,merge,deep
 ---
 
 ```js

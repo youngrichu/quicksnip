@@ -1,8 +1,8 @@
 ---
-Title: Convert Binary to Decimal
-Description: Converts a binary string to its decimal equivalent.
-Author: axorax
-Tags: python,math,binary,decimal,conversion
+title: Convert Binary to Decimal
+description: Converts a binary string to its decimal equivalent.
+author: axorax
+tags: python,math,binary,decimal,conversion
 ---
 
 ```py

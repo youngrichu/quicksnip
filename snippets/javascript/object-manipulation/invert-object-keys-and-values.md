@@ -1,8 +1,8 @@
 ---
-Title: Invert Object Keys and Values
-Description: Creates a new object by swapping keys and values of the given object.
-Author: axorax
-Tags: javascript,object,invert,utility
+title: Invert Object Keys and Values
+description: Creates a new object by swapping keys and values of the given object.
+author: axorax
+tags: javascript,object,invert,utility
 ---
 
 ```js

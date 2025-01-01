@@ -1,8 +1,8 @@
 ---
-Title: Remove Duplicates
-Description: Removes duplicate elements from a list while maintaining order.
-Author: dostonnabotov
-Tags: python,list,duplicates,utility
+title: Remove Duplicates
+description: Removes duplicate elements from a list while maintaining order.
+author: dostonnabotov
+tags: python,list,duplicates,utility
 ---
 
 ```py

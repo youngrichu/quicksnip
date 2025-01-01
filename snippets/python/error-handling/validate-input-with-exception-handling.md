@@ -1,8 +1,8 @@
 ---
-Title: Validate Input with Exception Handling
-Description: Validates user input and handles invalid input gracefully.
-Author: axorax
-Tags: python,error-handling,validation,utility
+title: Validate Input with Exception Handling
+description: Validates user input and handles invalid input gracefully.
+author: axorax
+tags: python,error-handling,validation,utility
 ---
 
 ```py

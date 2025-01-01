@@ -1,8 +1,8 @@
 ---
-Title: Hello, World!
-Description: Prints Hello, World! to the terminal.
-Author: 0xHouss
-Tags: c,printing,hello-world,utility
+title: Hello, World!
+description: Prints Hello, World! to the terminal.
+author: 0xHouss
+tags: c,printing,hello-world,utility
 ---
 
 ```c

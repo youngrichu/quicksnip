@@ -1,8 +1,8 @@
 ---
-Title: Get Element Position
-Description: Gets the position of an element relative to the viewport.
-Author: axorax
-Tags: javascript,dom,position,utility
+title: Get Element Position
+description: Gets the position of an element relative to the viewport.
+author: axorax
+tags: javascript,dom,position,utility
 ---
 
 ```js

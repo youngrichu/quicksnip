@@ -1,8 +1,8 @@
 ---
-Title: Find Unique Characters
-Description: Finds all unique characters in a string.
-Author: axorax
-Tags: python,string,unique,characters,utility
+title: Find Unique Characters
+description: Finds all unique characters in a string.
+author: axorax
+tags: python,string,unique,characters,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Line Clamp Mixin
-Description: A Sass mixin to clamp text to a specific number of lines.
-Author: dostonnabotov
-Tags: sass,mixin,typography,css
+title: Line Clamp Mixin
+description: A Sass mixin to clamp text to a specific number of lines.
+author: dostonnabotov
+tags: sass,mixin,typography,css
 ---
 
 ```scss

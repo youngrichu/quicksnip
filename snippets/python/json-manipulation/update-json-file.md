@@ -1,8 +1,8 @@
 ---
-Title: Update JSON File
-Description: Updates an existing JSON file with new data or modifies the existing values.
-Author: axorax
-Tags: python,json,update,file
+title: Update JSON File
+description: Updates an existing JSON file with new data or modifies the existing values.
+author: axorax
+tags: python,json,update,file
 ---
 
 ```py

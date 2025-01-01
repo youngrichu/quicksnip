@@ -1,8 +1,8 @@
 ---
-Title: Random string
-Description: Generates a random string of characters of a certain length
-Author: kruimol
-Tags: javascript,function,random
+title: Random string
+description: Generates a random string of characters of a certain length
+author: kruimol
+tags: javascript,function,random
 ---
 
 ```js

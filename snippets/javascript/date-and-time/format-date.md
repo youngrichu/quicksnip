@@ -1,8 +1,8 @@
 ---
-Title: Format Date
-Description: Formats a date in 'YYYY-MM-DD' format.
-Author: dostonnabotov
-Tags: javascript,date,format,utility
+title: Format Date
+description: Formats a date in 'YYYY-MM-DD' format.
+author: dostonnabotov
+tags: javascript,date,format,utility
 ---
 
 ```js

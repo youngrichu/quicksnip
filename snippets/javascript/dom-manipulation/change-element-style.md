@@ -1,8 +1,8 @@
 ---
-Title: Change Element Style
-Description: Changes the inline style of an element.
-Author: axorax
-Tags: javascript,dom,style,utility
+title: Change Element Style
+description: Changes the inline style of an element.
+author: axorax
+tags: javascript,dom,style,utility
 ---
 
 ```js

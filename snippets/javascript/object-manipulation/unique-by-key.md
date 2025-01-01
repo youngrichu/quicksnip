@@ -1,8 +1,8 @@
 ---
-Title: Unique By Key
-Description: Filters an array of objects to only include unique objects by a specified key.
-Author: realvishalrana
-Tags: javascript,array,unique,utility
+title: Unique By Key
+description: Filters an array of objects to only include unique objects by a specified key.
+author: realvishalrana
+tags: javascript,array,unique,utility
 ---
 
 ```js

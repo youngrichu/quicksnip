@@ -1,8 +1,8 @@
 ---
-Title: Count Words
-Description: Counts the number of words in a string.
-Author: axorax
-Tags: python,string,word-count,utility
+title: Count Words
+description: Counts the number of words in a string.
+author: axorax
+tags: python,string,word-count,utility
 ---
 
 ```py

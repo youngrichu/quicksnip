@@ -1,8 +1,8 @@
 ---
-Title: Responsive Design
-Description: The different responsive breakpoints.
-Author: kruimol
-Tags: css,responsive
+title: Responsive Design
+description: The different responsive breakpoints.
+author: kruimol
+tags: css,responsive
 ---
 
 ```css

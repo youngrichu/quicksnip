@@ -1,8 +1,8 @@
 ---
-Title: Validate JSON Schema
-Description: Validates a JSON object against a predefined schema.
-Author: axorax
-Tags: python,json,validation,schema
+title: Validate JSON Schema
+description: Validates a JSON object against a predefined schema.
+author: axorax
+tags: python,json,validation,schema
 ---
 
 ```py

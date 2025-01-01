@@ -1,8 +1,8 @@
 ---
-Title: Convert String to Param Case
-Description: Converts a given string into param-case.
-Author: aumirza
-Tags: string,case,paramCase
+title: Convert String to Param Case
+description: Converts a given string into param-case.
+author: aumirza
+tags: string,case,paramCase
 ---
 
 ```js

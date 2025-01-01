@@ -1,8 +1,8 @@
 ---
-Title: Number Formatter
-Description: Formats a number with suffixes (K, M, B, etc.).
-Author: realvishalrana
-Tags: javascript,number,format,utility
+title: Number Formatter
+description: Formats a number with suffixes (K, M, B, etc.).
+author: realvishalrana
+tags: javascript,number,format,utility
 ---
 
 ```js

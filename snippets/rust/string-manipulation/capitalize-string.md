@@ -1,8 +1,8 @@
 ---
-Title: Capitalize String
-Description: Makes the first letter of a string uppercase.
-Author: Mathys-Gasnier
-Tags: rust,string,capitalize,utility
+title: Capitalize String
+description: Makes the first letter of a string uppercase.
+author: Mathys-Gasnier
+tags: rust,string,capitalize,utility
 ---
 
 ```rust

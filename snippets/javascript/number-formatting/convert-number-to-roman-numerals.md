@@ -1,8 +1,8 @@
 ---
-Title: Convert Number to Roman Numerals
-Description: Converts a number to Roman numeral representation.
-Author: axorax
-Tags: javascript,number,roman,utility
+title: Convert Number to Roman Numerals
+description: Converts a number to Roman numeral representation.
+author: axorax
+tags: javascript,number,roman,utility
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Sticky Footer
-Description: Ensures the footer always stays at the bottom of the page.
-Author: dostonnabotov
-Tags: css,layout,footer,sticky
+title: Sticky Footer
+description: Ensures the footer always stays at the bottom of the page.
+author: dostonnabotov
+tags: css,layout,footer,sticky
 ---
 
 ```css

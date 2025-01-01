@@ -1,8 +1,8 @@
 ---
-Title: Convert Bytes to Human-Readable Format
-Description: Converts a size in bytes to a human-readable format.
-Author: axorax
-Tags: python,bytes,format,utility
+title: Convert Bytes to Human-Readable Format
+description: Converts a size in bytes to a human-readable format.
+author: axorax
+tags: python,bytes,format,utility
 ---
 
 ```py

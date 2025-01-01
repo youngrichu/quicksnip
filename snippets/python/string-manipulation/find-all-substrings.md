@@ -1,8 +1,8 @@
 ---
-Title: Find All Substrings
-Description: Finds all substrings of a given string.
-Author: axorax
-Tags: python,string,substring,find,utility
+title: Find All Substrings
+description: Finds all substrings of a given string.
+author: axorax
+tags: python,string,substring,find,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Find Longest Word
-Description: Finds the longest word in a string.
-Author: axorax
-Tags: python,string,longest-word,utility
+title: Find Longest Word
+description: Finds the longest word in a string.
+author: axorax
+tags: python,string,longest-word,utility
 ---
 
 ```py

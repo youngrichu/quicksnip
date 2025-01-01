@@ -1,8 +1,8 @@
 ---
-Title: Format Number with Commas
-Description: Formats a number with commas for better readability (e.g., 1000 -> 1,000).
-Author: axorax
-Tags: javascript,number,format,utility
+title: Format Number with Commas
+description: Formats a number with commas for better readability (e.g., 1000 -> 1,000).
+author: axorax
+tags: javascript,number,format,utility
 ---
 
 ```js

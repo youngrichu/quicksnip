@@ -1,8 +1,8 @@
 ---
-Title: Check Palindrome
-Description: Checks if a string is a palindrome.
-Author: dostonnabotov
-Tags: python,string,palindrome,utility
+title: Check Palindrome
+description: Checks if a string is a palindrome.
+author: dostonnabotov
+tags: python,string,palindrome,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Toggle Class
-Description: Toggles a class on an element.
-Author: dostonnabotov
-Tags: javascript,dom,class,utility
+title: Toggle Class
+description: Toggles a class on an element.
+author: dostonnabotov
+tags: javascript,dom,class,utility
 ---
 
 ```js

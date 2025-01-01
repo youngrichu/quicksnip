@@ -16,7 +16,7 @@ function raise(issue, snippet = '') {
     return null;
 }
 
-const propertyRegex = /^\s+([a-zA-Z]+): (.+)/;
+const propertyRegex = /^\s+([a-zA-Z]+):\s*(.+)/;
 const headerEndCodeStartRegex = /^\s+---\s+```.*\n/;
 const codeRegex = /^(.+)```/s
 function parseSnippet(snippetPath, text) {

@@ -1,8 +1,8 @@
 ---
-Title: Convert Tabs to Spaces
-Description: Converts all tab characters in a string to spaces.
-Author: axorax
-Tags: string,tabs,spaces
+title: Convert Tabs to Spaces
+description: Converts all tab characters in a string to spaces.
+author: axorax
+tags: string,tabs,spaces
 ---
 
 ```js

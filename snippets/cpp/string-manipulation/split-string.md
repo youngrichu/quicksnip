@@ -1,8 +1,8 @@
 ---
-Title: Split String
-Description: Splits a string by a delimiter
-Author: saminjay
-Tags: cpp,string,split,utility
+title: Split String
+description: Splits a string by a delimiter
+author: saminjay
+tags: cpp,string,split,utility
 ---
 
 ```cpp

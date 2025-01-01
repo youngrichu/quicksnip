@@ -1,8 +1,8 @@
 ---
-Title: CSS Reset
-Description: Resets some default browser styles, ensuring consistency across browsers.
-Author: AmeerMoustafa
-Tags: css,reset,browser,layout
+title: CSS Reset
+description: Resets some default browser styles, ensuring consistency across browsers.
+author: AmeerMoustafa
+tags: css,reset,browser,layout
 ---
 
 ```css

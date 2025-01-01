@@ -1,8 +1,8 @@
 ---
-Title: Read File Lines
-Description: Reads all lines from a file and returns them as a vector of strings.
-Author: Mathys-Gasnier
-Tags: rust,file,read,utility
+title: Read File Lines
+description: Reads all lines from a file and returns them as a vector of strings.
+author: Mathys-Gasnier
+tags: rust,file,read,utility
 ---
 
 ```rust

@@ -1,8 +1,8 @@
 ---
-Title: Truncate String
-Description: Truncates a string to a specified length and adds an ellipsis.
-Author: axorax
-Tags: python,string,truncate,utility
+title: Truncate String
+description: Truncates a string to a specified length and adds an ellipsis.
+author: axorax
+tags: python,string,truncate,utility
 ---
 
 ```py

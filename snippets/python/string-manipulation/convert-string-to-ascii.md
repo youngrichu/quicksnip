@@ -1,8 +1,8 @@
 ---
-Title: Convert String to ASCII
-Description: Converts a string into its ASCII representation.
-Author: axorax
-Tags: python,string,ascii,convert,utility
+title: Convert String to ASCII
+description: Converts a string into its ASCII representation.
+author: axorax
+tags: python,string,ascii,convert,utility
 ---
 
 ```py

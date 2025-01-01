@@ -1,8 +1,8 @@
 ---
-Title: Check if Object is Empty
-Description: Checks whether an object has no own enumerable properties.
-Author: axorax
-Tags: javascript,object,check,empty
+title: Check if Object is Empty
+description: Checks whether an object has no own enumerable properties.
+author: axorax
+tags: javascript,object,check,empty
 ---
 
 ```js

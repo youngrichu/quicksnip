@@ -1,8 +1,8 @@
 ---
-Title: Count Vowels
-Description: Counts the number of vowels in a string.
-Author: SteliosGee
-Tags: python,string,vowels,count,utility
+title: Count Vowels
+description: Counts the number of vowels in a string.
+author: SteliosGee
+tags: python,string,vowels,count,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Remove Whitespace
-Description: Removes all whitespace from a string.
-Author: axorax
-Tags: python,string,whitespace,remove,utility
+title: Remove Whitespace
+description: Removes all whitespace from a string.
+author: axorax
+tags: python,string,whitespace,remove,utility
 ---
 
 ```py

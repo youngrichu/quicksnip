@@ -1,8 +1,8 @@
 ---
-Title: Filter JSON Data
-Description: Filters a JSON object based on a condition and returns the filtered data.
-Author: axorax
-Tags: python,json,filter,data
+title: Filter JSON Data
+description: Filters a JSON object based on a condition and returns the filtered data.
+author: axorax
+tags: python,json,filter,data
 ---
 
 ```py

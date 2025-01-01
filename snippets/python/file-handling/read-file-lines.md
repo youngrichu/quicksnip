@@ -1,8 +1,8 @@
 ---
-Title: Read File Lines
-Description: Reads all lines from a file and returns them as a list.
-Author: dostonnabotov
-Tags: python,file,read,utility
+title: Read File Lines
+description: Reads all lines from a file and returns them as a list.
+author: dostonnabotov
+tags: python,file,read,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Mask Sensitive Information
-Description: Masks parts of a sensitive string, like a credit card or email address.
-Author: axorax
-Tags: string,mask,sensitive
+title: Mask Sensitive Information
+description: Masks parts of a sensitive string, like a credit card or email address.
+author: axorax
+tags: string,mask,sensitive
 ---
 
 ```js

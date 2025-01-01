@@ -1,8 +1,8 @@
 ---
-Title: Merge Multiple JSON Files
-Description: Merges multiple JSON files into one and writes the merged data into a new file.
-Author: axorax
-Tags: python,json,merge,file
+title: Merge Multiple JSON Files
+description: Merges multiple JSON files into one and writes the merged data into a new file.
+author: axorax
+tags: python,json,merge,file
 ---
 
 ```py

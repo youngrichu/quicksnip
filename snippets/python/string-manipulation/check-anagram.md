@@ -1,8 +1,8 @@
 ---
-Title: Check Anagram
-Description: Checks if two strings are anagrams of each other.
-Author: SteliosGee
-Tags: python,string,anagram,check,utility
+title: Check Anagram
+description: Checks if two strings are anagrams of each other.
+author: SteliosGee
+tags: python,string,anagram,check,utility
 ---
 
 ```py
