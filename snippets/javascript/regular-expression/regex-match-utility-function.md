@@ -5,7 +5,7 @@ Author: aumirza
 Tags: javascript,regex
 ---
 
-```
+```js
 /**
 * @param {string | number} input
 *          The input string to match

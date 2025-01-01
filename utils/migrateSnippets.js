@@ -13,7 +13,12 @@ function slugify(string, separator = "-") {
         .replace(/\-$/g, ""); // Remove trailing -
 }
 
-function formatSnippet(snippet) {
+const languageToMarkdownHighlightOverwrites = {
+    'javascript': 'js',
+    'python': 'py'
+};
+
+function formatSnippet(language, snippet) {
     return `---
 Title: ${snippet.title}
 Description: ${snippet.description}
@@ -21,7 +26,7 @@ Author: ${snippet.author}
 Tags: ${snippet.tags}${('contributors' in snippet) && snippet.contributors.length > 0 ? `\nContributors: ${snippet.contributors}` : ''}
 ---
 
-\`\`\`
+\`\`\`${language in languageToMarkdownHighlightOverwrites ? languageToMarkdownHighlightOverwrites[language] : language}
 ${Array.isArray(snippet.code) ? snippet.code.join('\n').trim() : snippet.code.trim()}
 \`\`\`
 `;
@@ -51,7 +56,7 @@ for (const file of readdirSync(dataDir)) {
         for(const snippet of category.snippets) {
             const snippetPath = join(categoryPath, `${slugify(snippet.title)}.md`);
 
-            writeFileSync(snippetPath, formatSnippet(snippet));
+            writeFileSync(snippetPath, formatSnippet(languageName, snippet));
         }
     }
 }

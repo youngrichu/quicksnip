@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,dom,remove,utility
 ---
 
-```
+```js
 const removeElement = (element) => {
   if (element && element.parentNode) {
     element.parentNode.removeChild(element);

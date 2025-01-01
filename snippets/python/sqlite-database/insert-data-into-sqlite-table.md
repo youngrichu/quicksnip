@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,sqlite,database,utility
 ---
 
-```
+```py
 import sqlite3
 
 def insert_into_table(db_path, table_name, data):

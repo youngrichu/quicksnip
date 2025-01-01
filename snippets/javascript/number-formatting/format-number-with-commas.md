@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,number,format,utility
 ---
 
-```
+```js
 const formatNumberWithCommas = (num) => {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };

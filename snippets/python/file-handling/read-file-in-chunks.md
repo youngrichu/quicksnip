@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,file,read,chunks,utility
 ---
 
-```
+```py
 def read_file_in_chunks(filepath, chunk_size):
     with open(filepath, 'r') as file:
         while chunk := file.read(chunk_size):

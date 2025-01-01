@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,math,factorial,utility
 ---
 
-```
+```py
 def factorial(n):
     if n == 0:
         return 1

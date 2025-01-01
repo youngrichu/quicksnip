@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,localStorage,storage,utility
 ---
 
-```
+```js
 const addToLocalStorage = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
 };

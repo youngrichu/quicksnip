@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,list,difference,utility
 ---
 
-```
+```py
 def max_difference(lst):
     if not lst or len(lst) < 2:
         return 0

@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,number,roman,utility
 ---
 
-```
+```js
 const numberToRoman = (num) => {
   const romanNumerals = {
     1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L',

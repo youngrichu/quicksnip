@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: sass,mixin,text,css
 ---
 
-```
+```scss
 @mixin text-ellipsis {
   overflow: hidden;
   white-space: nowrap;

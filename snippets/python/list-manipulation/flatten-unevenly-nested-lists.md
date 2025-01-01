@@ -5,7 +5,7 @@ Author: agilarasu
 Tags: python,list,flattening,nested-lists,depth,utilities
 ---
 
-```
+```py
 def flatten(nested_list):
     """
     Flattens unevenly nested lists of any depth into a single flat list.

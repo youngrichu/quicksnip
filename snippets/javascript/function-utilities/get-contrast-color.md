@@ -5,7 +5,7 @@ Author: yaya12085
 Tags: javascript,color,hex,contrast,brightness,utility
 ---
 
-```
+```js
 const getContrastColor = (hexColor) => {
   // Expand short hex color to full format
   if (hexColor.length === 4) {

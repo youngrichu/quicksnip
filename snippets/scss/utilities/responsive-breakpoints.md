@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: scss,responsive,media-queries,css
 ---
 
-```
+```scss
 @mixin breakpoint($breakpoint) {
   @if $breakpoint == sm {
     @media (max-width: 576px) { @content; }

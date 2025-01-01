@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,datetime,weekday,utility
 ---
 
-```
+```py
 from datetime import datetime
 
 def get_day_of_week(date):

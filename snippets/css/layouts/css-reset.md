@@ -5,7 +5,7 @@ Author: AmeerMoustafa
 Tags: css,reset,browser,layout
 ---
 
-```
+```css
 * {
   margin: 0;
   padding: 0;

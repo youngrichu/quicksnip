@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,string,whitespace
 ---
 
-```
+```js
 function removeWhitespace(str) {
   return str.replace(/\s+/g, '');
 }

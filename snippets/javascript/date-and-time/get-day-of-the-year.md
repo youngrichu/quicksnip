@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,date,day-of-year,utility
 ---
 
-```
+```js
 const getDayOfYear = (date) => {
   const startOfYear = new Date(date.getFullYear(), 0, 0);
   const diff = date - startOfYear + (startOfYear.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000;

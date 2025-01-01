@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,pick,utility
 ---
 
-```
+```js
 function pickKeys(obj, keys) {
   return Object.fromEntries(
     Object.entries(obj).filter(([key]) => keys.includes(key))

@@ -5,7 +5,7 @@ Author: Jackeastern
 Tags: python,os,filesystem,file_search
 ---
 
-```
+```py
 import os
 
 def find_files(directory, file_type):

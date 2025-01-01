@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,error-handling,retry,utility
 ---
 
-```
+```py
 import time
 
 def retry(func, retries=3, delay=1):

@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,truncate,utility
 ---
 
-```
+```py
 def truncate_string(s, length):
     return s[:length] + '...' if len(s) > length else s
 

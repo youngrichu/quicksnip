@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,error-handling,file,utility
 ---
 
-```
+```py
 def read_file_safe(filepath):
     try:
         with open(filepath, 'r') as file:

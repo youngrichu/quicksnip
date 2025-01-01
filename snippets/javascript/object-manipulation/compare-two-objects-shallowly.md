@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,compare,shallow
 ---
 
-```
+```js
 function shallowEqual(obj1, obj2) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);

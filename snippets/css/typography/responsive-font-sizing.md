@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,font,responsive,typography
 ---
 
-```
+```css
 h1 {
   font-size: calc(1.5rem + 2vw);
 }

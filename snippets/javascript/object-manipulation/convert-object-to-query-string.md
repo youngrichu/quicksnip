@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,query string,url
 ---
 
-```
+```js
 function toQueryString(obj) {
   return Object.entries(obj)
     .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))

@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,utility,throttle,performance
 ---
 
-```
+```js
 const throttle = (func, limit) => {
   let lastFunc;
   let lastRan;

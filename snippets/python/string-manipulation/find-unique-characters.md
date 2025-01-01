@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,unique,characters,utility
 ---
 
-```
+```py
 def find_unique_chars(s):
     return ''.join(sorted(set(s)))
 

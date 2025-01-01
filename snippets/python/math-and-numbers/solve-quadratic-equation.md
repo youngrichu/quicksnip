@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,math,quadratic,equation,solver
 ---
 
-```
+```py
 import cmath
 
 def solve_quadratic(a, b, c):

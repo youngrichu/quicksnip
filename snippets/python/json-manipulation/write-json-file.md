@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,json,file,write
 ---
 
-```
+```py
 import json
 
 def write_json(filepath, data):

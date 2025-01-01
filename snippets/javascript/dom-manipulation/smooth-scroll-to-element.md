@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,dom,scroll,ui
 ---
 
-```
+```js
 const smoothScroll = (element) => {
   element.scrollIntoView({ behavior: 'smooth' });
 };

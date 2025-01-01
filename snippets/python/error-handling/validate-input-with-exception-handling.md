@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,error-handling,validation,utility
 ---
 
-```
+```py
 def validate_positive_integer(input_value):
     try:
         value = int(input_value)

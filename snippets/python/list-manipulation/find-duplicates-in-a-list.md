@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,list,duplicates,utility
 ---
 
-```
+```py
 def find_duplicates(lst):
     seen = set()
     duplicates = set()

@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,word-count,utility
 ---
 
-```
+```py
 def count_words(s):
     return len(s.split())
 

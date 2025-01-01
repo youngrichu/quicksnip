@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,layout,footer,sticky
 ---
 
-```
+```css
 body {
   display: flex;
   flex-direction: column;

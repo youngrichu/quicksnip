@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,function,once,utility
 ---
 
-```
+```js
 const once = (func) => {
   let called = false;
   return (...args) => {

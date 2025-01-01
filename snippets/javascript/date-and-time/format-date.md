@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,date,format,utility
 ---
 
-```
+```js
 const formatDate = (date) => date.toISOString().split('T')[0];
 
 // Usage:

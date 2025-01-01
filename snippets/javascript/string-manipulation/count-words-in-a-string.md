@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,string,manipulation,word count,count
 ---
 
-```
+```js
 function countWords(str) {
   return str.trim().split(/\s+/).length;
 }

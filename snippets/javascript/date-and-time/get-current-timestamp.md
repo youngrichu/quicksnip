@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,date,timestamp,utility
 ---
 
-```
+```js
 const getCurrentTimestamp = () => Date.now();
 
 // Usage:

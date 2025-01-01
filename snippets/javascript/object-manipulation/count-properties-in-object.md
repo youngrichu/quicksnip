@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,count,properties
 ---
 
-```
+```js
 function countProperties(obj) {
   return Object.keys(obj).length;
 }

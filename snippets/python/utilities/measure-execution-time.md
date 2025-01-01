@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,time,execution,utility
 ---
 
-```
+```py
 import time
 
 def measure_time(func, *args):

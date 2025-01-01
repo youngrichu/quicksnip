@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,json,update,file
 ---
 
-```
+```py
 import json
 
 def update_json(filepath, new_data):

@@ -5,7 +5,7 @@ Author: SteliosGee
 Tags: python,string,anagram,check,utility
 ---
 
-```
+```py
 def is_anagram(s1, s2):
     return sorted(s1) == sorted(s2)
 

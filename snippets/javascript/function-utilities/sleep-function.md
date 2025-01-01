@@ -5,7 +5,7 @@ Author: 0xHouss
 Tags: javascript,sleep,delay,utility,promises
 ---
 
-```
+```js
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // Usage:

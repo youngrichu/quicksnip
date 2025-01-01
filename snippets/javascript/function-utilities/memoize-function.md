@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,memoization,optimization,utility
 ---
 
-```
+```js
 const memoize = (func) => {
   const cache = new Map();
   return (...args) => {

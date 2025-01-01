@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,math,perfect square,check
 ---
 
-```
+```py
 def is_perfect_square(n):
     if n < 0:
         return False

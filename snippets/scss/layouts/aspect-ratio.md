@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: scss,aspect-ratio,layout,css
 ---
 
-```
+```scss
 @mixin aspect-ratio($width, $height) {
   position: relative;
   width: 100%;

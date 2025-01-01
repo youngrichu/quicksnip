@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,check,empty
 ---
 
-```
+```js
 function isEmptyObject(obj) {
   return Object.keys(obj).length === 0;
 }

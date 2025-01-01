@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,function,rate-limiting,utility
 ---
 
-```
+```js
 const rateLimit = (func, limit, timeWindow) => {
   let queue = [];
   setInterval(() => {

@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,button,3D,effect
 ---
 
-```
+```css
 .button {
   background-color: #28a745;
   color: white;

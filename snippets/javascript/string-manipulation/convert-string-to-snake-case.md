@@ -5,7 +5,7 @@ Author: axorax
 Tags: string,case,snake_case
 ---
 
-```
+```js
 function toSnakeCase(str) {
   return str.replace(/([a-z])([A-Z])/g, '$1_$2')
             .replace(/\s+/g, '_')

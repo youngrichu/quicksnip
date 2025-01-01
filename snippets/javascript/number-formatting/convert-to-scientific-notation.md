@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,number,scientific,utility
 ---
 
-```
+```js
 const toScientificNotation = (num) => {
   if (isNaN(num)) {
     throw new Error('Input must be a number');

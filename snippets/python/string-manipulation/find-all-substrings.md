@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,substring,find,utility
 ---
 
-```
+```py
 def find_substrings(s):
     substrings = []
     for i in range(len(s)):

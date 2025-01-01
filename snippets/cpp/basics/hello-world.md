@@ -5,7 +5,7 @@ Author: James-Beans
 Tags: cpp,printing,hello-world,utility
 ---
 
-```
+```cpp
 #include <iostream> // Includes the input/output stream library
 
 int main() { // Defines the main function

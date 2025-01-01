@@ -5,7 +5,7 @@ Author: aumirza
 Tags: string,case,camelCase
 ---
 
-```
+```js
 function toCamelCase(str) {
   return str.replace(/\W+(.)/g, (match, chr) => chr.toUpperCase());
 }

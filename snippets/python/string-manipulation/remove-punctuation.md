@@ -5,7 +5,7 @@ Author: SteliosGee
 Tags: python,string,punctuation,remove,utility
 ---
 
-```
+```py
 import string
 
 def remove_punctuation(s):

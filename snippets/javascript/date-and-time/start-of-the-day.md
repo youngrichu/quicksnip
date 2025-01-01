@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,date,start-of-day,utility
 ---
 
-```
+```js
 const startOfDay = (date) => new Date(date.setHours(0, 0, 0, 0));
 
 // Usage:

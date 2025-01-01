@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,file,copy,utility
 ---
 
-```
+```py
 import shutil
 
 def copy_file(src, dest):

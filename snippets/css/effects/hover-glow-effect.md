@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,hover,glow,effects
 ---
 
-```
+```css
 .glow {
   background-color: #f39c12;
   padding: 10px 20px;

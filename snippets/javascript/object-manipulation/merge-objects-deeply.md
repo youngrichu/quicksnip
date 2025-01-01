@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,merge,deep
 ---
 
-```
+```js
 function deepMerge(...objects) {
   return objects.reduce((acc, obj) => {
     Object.keys(obj).forEach(key => {

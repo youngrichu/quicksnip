@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,datetime,calendar,utility
 ---
 
-```
+```py
 from calendar import monthrange
 from datetime import datetime
 

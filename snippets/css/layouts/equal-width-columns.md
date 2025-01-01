@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,flexbox,columns,layout
 ---
 
-```
+```css
 .columns {
   display: flex;
   justify-content: space-between;

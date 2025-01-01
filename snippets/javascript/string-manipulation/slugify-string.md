@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,string,slug,utility
 ---
 
-```
+```js
 const slugify = (string, separator = "-") => {
   return string
     .toString() // Cast to string (optional)

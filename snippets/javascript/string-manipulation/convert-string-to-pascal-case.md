@@ -5,7 +5,7 @@ Author: aumirza
 Tags: string,case,pascalCase
 ---
 
-```
+```js
 function toPascalCase(str) {
   return str.replace(/\b\w/g, (s) => s.toUpperCase()).replace(/\W+(.)/g, (match, chr) => chr.toUpperCase());
 }

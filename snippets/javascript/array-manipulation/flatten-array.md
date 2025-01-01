@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,array,flatten,utility
 ---
 
-```
+```js
 const flattenArray = (arr) => arr.flat(Infinity);
 
 // Usage:

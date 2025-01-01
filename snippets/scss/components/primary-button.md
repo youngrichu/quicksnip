@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: scss,button,primary,css
 ---
 
-```
+```scss
 @mixin primary-button($bg: #007bff, $color: #fff) {
   background-color: $bg;
   color: $color;

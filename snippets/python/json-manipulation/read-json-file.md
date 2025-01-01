@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,json,file,read
 ---
 
-```
+```py
 import json
 
 def read_json(filepath):

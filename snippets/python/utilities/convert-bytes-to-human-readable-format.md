@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,bytes,format,utility
 ---
 
-```
+```py
 def bytes_to_human_readable(num):
     for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB']:
         if num < 1024:

@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,blur,background,effects
 ---
 
-```
+```css
 .blur-background {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.5);

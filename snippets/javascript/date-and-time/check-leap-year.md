@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,date,leap-year,utility
 ---
 
-```
+```js
 const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 
 // Usage:

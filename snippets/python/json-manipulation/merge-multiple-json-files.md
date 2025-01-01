@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,json,merge,file
 ---
 
-```
+```py
 import json
 
 def merge_json_files(filepaths, output_filepath):

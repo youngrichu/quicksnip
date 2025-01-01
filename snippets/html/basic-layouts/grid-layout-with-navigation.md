@@ -5,7 +5,7 @@ Author: GreenMan36
 Tags: html,css,layout,sticky,grid,full-height
 ---
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>

@@ -5,7 +5,7 @@ Author: 0xHouss
 Tags: c,math,factorial,utility
 ---
 
-```
+```c
 int factorial(int x) {
   int y = 1;
 

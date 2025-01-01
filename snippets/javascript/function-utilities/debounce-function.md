@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,utility,debounce,performance
 ---
 
-```
+```js
 const debounce = (func, delay) => {
   let timeout;
 

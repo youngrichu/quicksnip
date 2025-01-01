@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: sass,mixin,typography,css
 ---
 
-```
+```scss
 @mixin line-clamp($number) {
   display: -webkit-box;
   -webkit-box-orient: vertical;

@@ -5,7 +5,7 @@ Author: axorax
 Tags: string,pad,manipulation
 ---
 
-```
+```js
 function padString(str, length, char = ' ') {
   const totalPad = length - str.length;
   const padStart = Math.floor(totalPad / 2);

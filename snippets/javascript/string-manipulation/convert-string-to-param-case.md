@@ -5,7 +5,7 @@ Author: aumirza
 Tags: string,case,paramCase
 ---
 
-```
+```js
 function toParamCase(str) {
   return str.toLowerCase().replace(/\s+/g, '-');
 }

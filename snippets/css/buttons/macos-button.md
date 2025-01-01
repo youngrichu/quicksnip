@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: css,button,macos,hover,transition
 ---
 
-```
+```css
 .button {
  font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,;
  background: #0a85ff;

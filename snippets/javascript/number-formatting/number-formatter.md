@@ -5,7 +5,7 @@ Author: realvishalrana
 Tags: javascript,number,format,utility
 ---
 
-```
+```js
 const nFormatter = (num) => {
   if (!num) return;
   num = parseFloat(num.toString().replace(/[^0-9.]/g, ''));

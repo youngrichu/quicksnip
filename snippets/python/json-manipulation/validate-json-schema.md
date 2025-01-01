@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,json,validation,schema
 ---
 
-```
+```py
 import jsonschema
 from jsonschema import validate
 

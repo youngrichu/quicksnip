@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: scss,animation,fade,css
 ---
 
-```
+```scss
 @keyframes fade-in {
   from {
     opacity: 0;

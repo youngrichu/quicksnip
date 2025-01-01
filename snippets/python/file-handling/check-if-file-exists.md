@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,file,exists,check,utility
 ---
 
-```
+```py
 import os
 
 def file_exists(filepath):

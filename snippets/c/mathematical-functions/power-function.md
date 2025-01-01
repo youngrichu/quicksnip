@@ -5,7 +5,7 @@ Author: 0xHouss
 Tags: c,math,power,utility
 ---
 
-```
+```c
 int power(int x, int n) {
   int y = 1;
 

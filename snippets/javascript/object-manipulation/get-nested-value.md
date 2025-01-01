@@ -5,7 +5,7 @@ Author: realvishalrana
 Tags: javascript,object,nested,utility
 ---
 
-```
+```js
 const getNestedValue = (obj, path) => {
   const keys = path.split('.');
   return keys.reduce((currentObject, key) => {

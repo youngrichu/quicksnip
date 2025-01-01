@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,freeze,immutable
 ---
 
-```
+```js
 function freezeObject(obj) {
   return Object.freeze(obj);
 }

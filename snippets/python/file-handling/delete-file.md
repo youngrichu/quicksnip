@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,file,delete,utility
 ---
 
-```
+```py
 import os
 
 def delete_file(filepath):

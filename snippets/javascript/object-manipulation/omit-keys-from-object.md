@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,omit,utility
 ---
 
-```
+```js
 function omitKeys(obj, keys) {
   return Object.fromEntries(
     Object.entries(obj).filter(([key]) => !keys.includes(key))

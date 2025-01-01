@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,camel-case,split,utility
 ---
 
-```
+```py
 import re
 
 def split_camel_case(s):

@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,date,add-days,utility
 ---
 
-```
+```js
 const addDays = (date, days) => {
   const result = new Date(date);
   result.setDate(result.getDate() + days);

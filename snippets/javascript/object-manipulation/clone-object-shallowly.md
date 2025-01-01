@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,clone,shallow
 ---
 
-```
+```js
 function shallowClone(obj) {
   return { ...obj };
 }

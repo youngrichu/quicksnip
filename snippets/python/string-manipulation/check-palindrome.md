@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,string,palindrome,utility
 ---
 
-```
+```py
 def is_palindrome(s):
     s = s.lower().replace(' ', '')
     return s == s[::-1]

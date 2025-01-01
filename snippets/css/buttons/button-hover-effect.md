@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,button,hover,transition
 ---
 
-```
+```css
 .button {
   background-color: #007bff;
   color: white;

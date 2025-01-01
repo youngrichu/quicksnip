@@ -5,7 +5,7 @@ Author: realvishalrana
 Tags: javascript,string,truncate,utility,text
 ---
 
-```
+```js
 const truncateText = (text = '', maxLength = 50) => {
   return `${text.slice(0, maxLength)}${text.length >= maxLength ? '...' : ''}`;
 };

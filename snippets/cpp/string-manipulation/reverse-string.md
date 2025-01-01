@@ -5,7 +5,7 @@ Author: Vaibhav-kesarwani
 Tags: cpp,array,reverse,utility
 ---
 
-```
+```cpp
 #include <string>
 #include <algorithm>
 

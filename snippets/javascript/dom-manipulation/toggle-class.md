@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,dom,class,utility
 ---
 
-```
+```js
 const toggleClass = (element, className) => {
   element.classList.toggle(className);
 };

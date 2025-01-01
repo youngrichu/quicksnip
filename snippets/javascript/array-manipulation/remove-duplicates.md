@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,array,deduplicate,utility
 ---
 
-```
+```js
 const removeDuplicates = (arr) => [...new Set(arr)];
 
 // Usage:

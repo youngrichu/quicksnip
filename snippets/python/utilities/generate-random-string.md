@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,random,string,utility
 ---
 
-```
+```py
 import random
 import string
 

@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,datetime,range,utility
 ---
 
-```
+```py
 from datetime import datetime, timedelta
 
 def generate_date_range(start_date, end_date):

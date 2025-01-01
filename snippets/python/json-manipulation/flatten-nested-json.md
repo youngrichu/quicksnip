@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,json,flatten,nested
 ---
 
-```
+```py
 def flatten_json(nested_json, prefix=''):
     flat_dict = {}
     for key, value in nested_json.items():

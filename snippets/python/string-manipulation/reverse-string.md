@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,string,reverse,utility
 ---
 
-```
+```py
 def reverse_string(s):
     return s[::-1]
 

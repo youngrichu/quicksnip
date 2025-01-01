@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: scss,animation,slide,css
 ---
 
-```
+```scss
 @keyframes slide-in-left {
   from {
     transform: translateX(-100%);

@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,math,binary,decimal,conversion
 ---
 
-```
+```py
 def binary_to_decimal(binary_str):
     return int(binary_str, 2)
 

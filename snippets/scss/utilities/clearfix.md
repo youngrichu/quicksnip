@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: scss,clearfix,utility,css
 ---
 
-```
+```scss
 @mixin clearfix {
   &::after {
     content: '';

@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,function,compose,utility
 ---
 
-```
+```js
 const compose = (...funcs) => (initialValue) => {
   return funcs.reduce((acc, func) => func(acc), initialValue);
 };

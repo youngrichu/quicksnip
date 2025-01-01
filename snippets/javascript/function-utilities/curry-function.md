@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,curry,function,utility
 ---
 
-```
+```js
 const curry = (func) => {
   const curried = (...args) => {
     if (args.length >= func.length) {

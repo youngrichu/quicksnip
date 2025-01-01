@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,datetime,utility
 ---
 
-```
+```py
 from datetime import datetime
 
 def get_current_datetime_string():

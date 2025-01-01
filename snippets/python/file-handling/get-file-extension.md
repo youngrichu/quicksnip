@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,file,extension,utility
 ---
 
-```
+```py
 import os
 
 def get_file_extension(filepath):

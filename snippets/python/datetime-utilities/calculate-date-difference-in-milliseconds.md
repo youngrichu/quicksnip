@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,datetime,utility
 ---
 
-```
+```py
 from datetime import datetime
 
 def date_difference_in_millis(date1, date2):

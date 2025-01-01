@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,error-handling,division,utility
 ---
 
-```
+```py
 def safe_divide(a, b):
     try:
         return a / b

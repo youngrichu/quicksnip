@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,datetime,weekend,utility
 ---
 
-```
+```py
 from datetime import datetime
 
 def is_weekend(date):

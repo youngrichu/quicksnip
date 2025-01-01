@@ -5,7 +5,7 @@ Author: realvishalrana
 Tags: javascript,object,filter,utility
 ---
 
-```
+```js
 export const filterObject = (object = {}) =>
   Object.fromEntries(
     Object.entries(object)

@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,list,duplicates,utility
 ---
 
-```
+```py
 def remove_duplicates(lst):
     return list(dict.fromkeys(lst))
 

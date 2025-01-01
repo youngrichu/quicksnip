@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,ascii,convert,utility
 ---
 
-```
+```py
 def string_to_ascii(s):
     return [ord(char) for char in s]
 

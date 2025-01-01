@@ -5,7 +5,7 @@ Author: e3nviction
 Tags: python,sqlite,database,table
 ---
 
-```
+```py
 import sqlite3
 
 def create_table(db_name, table_name, schema):

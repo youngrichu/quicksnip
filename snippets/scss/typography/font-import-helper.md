@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: sass,mixin,fonts,css
 ---
 
-```
+```scss
 @mixin import-font($family, $weight: 400, $style: normal) {
   @font-face {
     font-family: #{$family};

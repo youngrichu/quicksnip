@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,function,repeat,utility
 ---
 
-```
+```js
 const times = (func, n) => {
   Array.from(Array(n)).forEach(() => {
     func();

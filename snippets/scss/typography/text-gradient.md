@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: sass,mixin,gradient,text,css
 ---
 
-```
+```scss
 @mixin text-gradient($from, $to) {
   background: linear-gradient(to right, $from, $to);
   -webkit-background-clip: text;

@@ -5,7 +5,7 @@ Author: axorax
 Tags: string,remove,vowels
 ---
 
-```
+```js
 function removeVowels(str) {
   return str.replace(/[aeiouAEIOU]/g, '');
 }

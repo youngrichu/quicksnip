@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: javascript,string,reverse,utility
 ---
 
-```
+```js
 const reverseString = (str) => str.split('').reverse().join('');
 
 // Usage:

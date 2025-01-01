@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: python,file,write,utility
 ---
 
-```
+```py
 def write_to_file(filepath, content):
     with open(filepath, 'w') as file:
         file.write(content)

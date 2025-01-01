@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,json,filter,data
 ---
 
-```
+```py
 import json
 
 def filter_json_data(filepath, condition):

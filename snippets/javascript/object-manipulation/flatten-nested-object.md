@@ -5,7 +5,7 @@ Author: axorax
 Tags: javascript,object,flatten,utility
 ---
 
-```
+```js
 function flattenObject(obj, prefix = '') {
   return Object.keys(obj).reduce((acc, key) => {
     const fullPath = prefix ? `${prefix}.${key}` : key;

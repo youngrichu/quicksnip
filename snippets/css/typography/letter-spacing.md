@@ -5,7 +5,7 @@ Author: dostonnabotov
 Tags: css,typography,spacing
 ---
 
-```
+```css
 p {
   letter-spacing: 0.05em;
 }

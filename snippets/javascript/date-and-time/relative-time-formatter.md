@@ -5,7 +5,7 @@ Author: Yugveer06
 Tags: javascript,date,time,relative,future,past,utility
 ---
 
-```
+```js
 const getRelativeTime = (date) => {
   const now = Date.now();
   const diff = date.getTime() - now;

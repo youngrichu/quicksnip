@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,math,lcm,gcd,utility
 ---
 
-```
+```py
 def lcm(a, b):
     return abs(a * b) // gcd(a, b)
 

@@ -5,7 +5,7 @@ Author: saminjay
 Tags: cpp,string,split,utility
 ---
 
-```
+```cpp
 #include <string>
 #include <vector>
 

@@ -5,7 +5,7 @@ Author: kruimol
 Tags: css,responsive
 ---
 
-```
+```css
 /* Phone */
 .element {
   margin: 0 10%

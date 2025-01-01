@@ -5,7 +5,7 @@ Author: Mathys-Gasnier
 Tags: rust,string,capitalize,utility
 ---
 
-```
+```rust
 fn capitalized(str: &str) -> String {
     let mut chars = str.chars();
     match chars.next() {

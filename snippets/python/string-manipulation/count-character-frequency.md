@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,string,character-frequency,utility
 ---
 
-```
+```py
 from collections import Counter
 
 def char_frequency(s):

@@ -5,7 +5,7 @@ Author: GreenMan36
 Tags: html,css,layout,sticky,flexbox,viewport
 ---
 
-```
+```html
 <!DOCTYPE html>
 <html style="margin: 0">
   <head>

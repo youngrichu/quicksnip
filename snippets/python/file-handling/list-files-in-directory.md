@@ -5,7 +5,7 @@ Author: axorax
 Tags: python,file,list,directory,utility
 ---
 
-```
+```py
 import os
 
 def list_files(directory):
