@@ -52,6 +52,7 @@ function parseSnippet(snippetPath, text) {
         description: properties.description,
         author: properties.author,
         tags: properties.tags.split(',').map((tag) => tag.trim()).filter((tag) => tag),
+        contributors: 'contributors' in properties ? properties.contributors.split(',').map((contributor) => contributor.trim()).filter((contributor) => contributor) : [],
         code: code,
     }
 }
