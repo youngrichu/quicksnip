@@ -1,8 +1,8 @@
 ---
-Title: Remove Element
-Description: Removes a specified element from the DOM.
-Author: axorax
-Tags: javascript,dom,remove,utility
+title: Remove Element
+description: Removes a specified element from the DOM.
+author: axorax
+tags: javascript,dom,remove,utility
 ---
 
 ```js

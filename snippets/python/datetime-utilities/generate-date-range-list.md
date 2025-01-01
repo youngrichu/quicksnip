@@ -1,8 +1,8 @@
 ---
-Title: Generate Date Range List
-Description: Generates a list of dates between two given dates.
-Author: axorax
-Tags: python,datetime,range,utility
+title: Generate Date Range List
+description: Generates a list of dates between two given dates.
+author: axorax
+tags: python,datetime,range,utility
 ---
 
 ```py

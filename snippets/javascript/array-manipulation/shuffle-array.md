@@ -1,8 +1,8 @@
 ---
-Title: Shuffle Array
-Description: Shuffles an Array.
-Author: loxt-nixo
-Tags: javascript,array,shuffle,utility
+title: Shuffle Array
+description: Shuffles an Array.
+author: loxt-nixo
+tags: javascript,array,shuffle,utility
 ---
 
 ```js

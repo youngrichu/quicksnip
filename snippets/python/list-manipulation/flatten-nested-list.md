@@ -1,8 +1,8 @@
 ---
-Title: Flatten Nested List
-Description: Flattens a multi-dimensional list into a single list.
-Author: dostonnabotov
-Tags: python,list,flatten,utility
+title: Flatten Nested List
+description: Flattens a multi-dimensional list into a single list.
+author: dostonnabotov
+tags: python,list,flatten,utility
 ---
 
 ```py

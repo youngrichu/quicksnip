@@ -1,8 +1,8 @@
 ---
-Title: Memoize Function
-Description: Caches the result of a function based on its arguments to improve performance.
-Author: axorax
-Tags: javascript,memoization,optimization,utility
+title: Memoize Function
+description: Caches the result of a function based on its arguments to improve performance.
+author: axorax
+tags: javascript,memoization,optimization,utility
 ---
 
 ```js

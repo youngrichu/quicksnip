@@ -1,8 +1,8 @@
 ---
-Title: List Files in Directory
-Description: Lists all files in a specified directory.
-Author: axorax
-Tags: python,file,list,directory,utility
+title: List Files in Directory
+description: Lists all files in a specified directory.
+author: axorax
+tags: python,file,list,directory,utility
 ---
 
 ```py

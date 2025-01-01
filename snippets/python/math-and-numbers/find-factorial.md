@@ -1,8 +1,8 @@
 ---
-Title: Find Factorial
-Description: Calculates the factorial of a number.
-Author: dostonnabotov
-Tags: python,math,factorial,utility
+title: Find Factorial
+description: Calculates the factorial of a number.
+author: dostonnabotov
+tags: python,math,factorial,utility
 ---
 
 ```py

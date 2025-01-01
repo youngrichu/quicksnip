@@ -1,8 +1,8 @@
 ---
-Title: Reverse String
-Description: Reverses the characters in a string.
-Author: Vaibhav-kesarwani
-Tags: cpp,array,reverse,utility
+title: Reverse String
+description: Reverses the characters in a string.
+author: Vaibhav-kesarwani
+tags: cpp,array,reverse,utility
 ---
 
 ```cpp

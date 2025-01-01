@@ -1,8 +1,8 @@
 ---
-Title: Repeat Function Invocation
-Description: Invokes a function a specified number of times.
-Author: dostonnabotov
-Tags: javascript,function,repeat,utility
+title: Repeat Function Invocation
+description: Invokes a function a specified number of times.
+author: dostonnabotov
+tags: javascript,function,repeat,utility
 ---
 
 ```js

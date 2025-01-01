@@ -1,8 +1,8 @@
 ---
-Title: Relative Time Formatter
-Description: Displays how long ago a date occurred or how far in the future a date is.
-Author: Yugveer06
-Tags: javascript,date,time,relative,future,past,utility
+title: Relative Time Formatter
+description: Displays how long ago a date occurred or how far in the future a date is.
+author: Yugveer06
+tags: javascript,date,time,relative,future,past,utility
 ---
 
 ```js

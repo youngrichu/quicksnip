@@ -1,8 +1,8 @@
 ---
-Title: Curry Function
-Description: Transforms a function into its curried form.
-Author: axorax
-Tags: javascript,curry,function,utility
+title: Curry Function
+description: Transforms a function into its curried form.
+author: axorax
+tags: javascript,curry,function,utility
 ---
 
 ```js

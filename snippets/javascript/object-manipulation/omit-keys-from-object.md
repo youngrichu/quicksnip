@@ -1,8 +1,8 @@
 ---
-Title: Omit Keys from Object
-Description: Creates a new object with specific keys omitted.
-Author: axorax
-Tags: javascript,object,omit,utility
+title: Omit Keys from Object
+description: Creates a new object with specific keys omitted.
+author: axorax
+tags: javascript,object,omit,utility
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Delete File
-Description: Deletes a file at the specified path.
-Author: axorax
-Tags: python,file,delete,utility
+title: Delete File
+description: Deletes a file at the specified path.
+author: axorax
+tags: python,file,delete,utility
 ---
 
 ```py

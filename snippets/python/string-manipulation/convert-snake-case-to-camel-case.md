@@ -1,8 +1,8 @@
 ---
-Title: Convert Snake Case to Camel Case
-Description: Converts a snake_case string to camelCase.
-Author: axorax
-Tags: python,string,snake-case,camel-case,convert,utility
+title: Convert Snake Case to Camel Case
+description: Converts a snake_case string to camelCase.
+author: axorax
+tags: python,string,snake-case,camel-case,convert,utility
 ---
 
 ```py

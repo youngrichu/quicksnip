@@ -1,8 +1,8 @@
 ---
-Title: Data with Prefix
-Description: Adds a prefix and postfix to data, with a fallback value.
-Author: realvishalrana
-Tags: javascript,data,utility
+title: Data with Prefix
+description: Adds a prefix and postfix to data, with a fallback value.
+author: realvishalrana
+tags: javascript,data,utility
 ---
 
 ```js

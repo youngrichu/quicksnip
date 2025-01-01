@@ -1,8 +1,8 @@
 ---
-Title: Measure Execution Time
-Description: Measures the execution time of a code block.
-Author: dostonnabotov
-Tags: python,time,execution,utility
+title: Measure Execution Time
+description: Measures the execution time of a code block.
+author: dostonnabotov
+tags: python,time,execution,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Convert to Unix Timestamp
-Description: Converts a date to a Unix timestamp in seconds.
-Author: Yugveer06
-Tags: javascript,date,unix,timestamp,utility
+title: Convert to Unix Timestamp
+description: Converts a date to a Unix timestamp in seconds.
+author: Yugveer06
+tags: javascript,date,unix,timestamp,utility
 ---
 
 ```js

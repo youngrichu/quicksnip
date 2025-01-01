@@ -1,8 +1,8 @@
 ---
-Title: Check if String is a Palindrome
-Description: Checks whether a given string is a palindrome.
-Author: axorax
-Tags: javascript,check,palindrome,string
+title: Check if String is a Palindrome
+description: Checks whether a given string is a palindrome.
+author: axorax
+tags: javascript,check,palindrome,string
 ---
 
 ```js

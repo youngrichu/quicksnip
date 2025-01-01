@@ -1,8 +1,8 @@
 ---
-Title: Convert String to Snake Case
-Description: Converts a given string into snake_case.
-Author: axorax
-Tags: string,case,snake_case
+title: Convert String to Snake Case
+description: Converts a given string into snake_case.
+author: axorax
+tags: string,case,snake_case
 ---
 
 ```js

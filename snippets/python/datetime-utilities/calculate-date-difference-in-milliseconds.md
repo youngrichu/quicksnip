@@ -1,8 +1,8 @@
 ---
-Title: Calculate Date Difference in Milliseconds
-Description: Calculates the difference between two dates in milliseconds.
-Author: e3nviction
-Tags: python,datetime,utility
+title: Calculate Date Difference in Milliseconds
+description: Calculates the difference between two dates in milliseconds.
+author: e3nviction
+tags: python,datetime,utility
 ---
 
 ```py

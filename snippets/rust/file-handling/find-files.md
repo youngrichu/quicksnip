@@ -1,8 +1,8 @@
 ---
-Title: Find Files
-Description: Finds all files of the specified extension within a given directory.
-Author: Mathys-Gasnier
-Tags: rust,file,search
+title: Find Files
+description: Finds all files of the specified extension within a given directory.
+author: Mathys-Gasnier
+tags: rust,file,search
 ---
 
 ```rust

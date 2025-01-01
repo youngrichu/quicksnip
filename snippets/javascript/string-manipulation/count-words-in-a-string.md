@@ -1,8 +1,8 @@
 ---
-Title: Count Words in a String
-Description: Counts the number of words in a string.
-Author: axorax
-Tags: javascript,string,manipulation,word count,count
+title: Count Words in a String
+description: Counts the number of words in a string.
+author: axorax
+tags: javascript,string,manipulation,word count,count
 ---
 
 ```js

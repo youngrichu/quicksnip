@@ -1,8 +1,8 @@
 ---
-Title: Remove Vowels from a String
-Description: Removes all vowels from a given string.
-Author: axorax
-Tags: string,remove,vowels
+title: Remove Vowels from a String
+description: Removes all vowels from a given string.
+author: axorax
+tags: string,remove,vowels
 ---
 
 ```js

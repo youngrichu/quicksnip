@@ -1,8 +1,8 @@
 ---
-Title: Capitalize String
-Description: Capitalizes the first letter of a string.
-Author: dostonnabotov
-Tags: javascript,string,capitalize,utility
+title: Capitalize String
+description: Capitalizes the first letter of a string.
+author: dostonnabotov
+tags: javascript,string,capitalize,utility
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Retrieve Item from localStorage
-Description: Retrieves a value from localStorage by key and parses it.
-Author: dostonnabotov
-Tags: javascript,localStorage,storage,utility
+title: Retrieve Item from localStorage
+description: Retrieves a value from localStorage by key and parses it.
+author: dostonnabotov
+tags: javascript,localStorage,storage,utility
 ---
 
 ```js

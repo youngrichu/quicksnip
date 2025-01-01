@@ -1,8 +1,8 @@
 ---
-Title: Find Maximum Difference in List
-Description: Finds the maximum difference between any two elements in a list.
-Author: axorax
-Tags: python,list,difference,utility
+title: Find Maximum Difference in List
+description: Finds the maximum difference between any two elements in a list.
+author: axorax
+tags: python,list,difference,utility
 ---
 
 ```py

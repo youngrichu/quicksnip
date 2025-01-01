@@ -1,8 +1,8 @@
 ---
-Title: Box Shadow Helper
-Description: Generates a box shadow with customizable values.
-Author: dostonnabotov
-Tags: scss,box-shadow,css,effects
+title: Box Shadow Helper
+description: Generates a box shadow with customizable values.
+author: dostonnabotov
+tags: scss,box-shadow,css,effects
 ---
 
 ```scss

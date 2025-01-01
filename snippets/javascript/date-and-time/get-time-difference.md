@@ -1,8 +1,8 @@
 ---
-Title: Get Time Difference
-Description: Calculates the time difference in days between two dates.
-Author: dostonnabotov
-Tags: javascript,date,time-difference,utility
+title: Get Time Difference
+description: Calculates the time difference in days between two dates.
+author: dostonnabotov
+tags: javascript,date,time-difference,utility
 ---
 
 ```js

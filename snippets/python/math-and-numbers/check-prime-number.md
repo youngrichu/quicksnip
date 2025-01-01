@@ -1,8 +1,8 @@
 ---
-Title: Check Prime Number
-Description: Checks if a number is a prime number.
-Author: dostonnabotov
-Tags: python,math,prime,check
+title: Check Prime Number
+description: Checks if a number is a prime number.
+author: dostonnabotov
+tags: python,math,prime,check
 ---
 
 ```py

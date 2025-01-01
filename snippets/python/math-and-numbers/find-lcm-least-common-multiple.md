@@ -1,8 +1,8 @@
 ---
-Title: Find LCM (Least Common Multiple)
-Description: Calculates the least common multiple (LCM) of two numbers.
-Author: axorax
-Tags: python,math,lcm,gcd,utility
+title: Find LCM (Least Common Multiple)
+description: Calculates the least common multiple (LCM) of two numbers.
+author: axorax
+tags: python,math,lcm,gcd,utility
 ---
 
 ```py

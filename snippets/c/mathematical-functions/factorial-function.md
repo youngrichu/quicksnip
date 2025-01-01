@@ -1,8 +1,8 @@
 ---
-Title: Factorial Function
-Description: Calculates the factorial of a number.
-Author: 0xHouss
-Tags: c,math,factorial,utility
+title: Factorial Function
+description: Calculates the factorial of a number.
+author: 0xHouss
+tags: c,math,factorial,utility
 ---
 
 ```c

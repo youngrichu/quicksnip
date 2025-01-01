@@ -1,8 +1,8 @@
 ---
-Title: Remove Duplicates
-Description: Removes duplicate values from an array.
-Author: dostonnabotov
-Tags: javascript,array,deduplicate,utility
+title: Remove Duplicates
+description: Removes duplicate values from an array.
+author: dostonnabotov
+tags: javascript,array,deduplicate,utility
 ---
 
 ```js

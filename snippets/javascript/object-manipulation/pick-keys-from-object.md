@@ -1,8 +1,8 @@
 ---
-Title: Pick Keys from Object
-Description: Creates a new object with only the specified keys.
-Author: axorax
-Tags: javascript,object,pick,utility
+title: Pick Keys from Object
+description: Creates a new object with only the specified keys.
+author: axorax
+tags: javascript,object,pick,utility
 ---
 
 ```js

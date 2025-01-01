@@ -1,8 +1,8 @@
 ---
-Title: Flatten Unevenly Nested Lists
-Description: Converts unevenly nested lists of any depth into a single flat list.
-Author: agilarasu
-Tags: python,list,flattening,nested-lists,depth,utilities
+title: Flatten Unevenly Nested Lists
+description: Converts unevenly nested lists of any depth into a single flat list.
+author: agilarasu
+tags: python,list,flattening,nested-lists,depth,utilities
 ---
 
 ```py

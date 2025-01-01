@@ -1,8 +1,8 @@
 ---
-Title: Power Function
-Description: Calculates the power of a number.
-Author: 0xHouss
-Tags: c,math,power,utility
+title: Power Function
+description: Calculates the power of a number.
+author: 0xHouss
+tags: c,math,power,utility
 ---
 
 ```c

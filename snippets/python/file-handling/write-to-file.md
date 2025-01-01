@@ -1,8 +1,8 @@
 ---
-Title: Write to File
-Description: Writes content to a file.
-Author: dostonnabotov
-Tags: python,file,write,utility
+title: Write to File
+description: Writes content to a file.
+author: dostonnabotov
+tags: python,file,write,utility
 ---
 
 ```py

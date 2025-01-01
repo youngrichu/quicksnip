@@ -1,8 +1,8 @@
 ---
-Title: Split Camel Case
-Description: Splits a camel case string into separate words.
-Author: axorax
-Tags: python,string,camel-case,split,utility
+title: Split Camel Case
+description: Splits a camel case string into separate words.
+author: axorax
+tags: python,string,camel-case,split,utility
 ---
 
 ```py

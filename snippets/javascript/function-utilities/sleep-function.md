@@ -1,8 +1,8 @@
 ---
-Title: Sleep Function
-Description: Waits for a specified amount of milliseconds before resolving.
-Author: 0xHouss
-Tags: javascript,sleep,delay,utility,promises
+title: Sleep Function
+description: Waits for a specified amount of milliseconds before resolving.
+author: 0xHouss
+tags: javascript,sleep,delay,utility,promises
 ---
 
 ```js

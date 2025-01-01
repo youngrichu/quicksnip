@@ -1,8 +1,8 @@
 ---
-Title: Safe Division
-Description: Performs division with error handling.
-Author: e3nviction
-Tags: python,error-handling,division,utility
+title: Safe Division
+description: Performs division with error handling.
+author: e3nviction
+tags: python,error-handling,division,utility
 ---
 
 ```py

@@ -1,8 +1,8 @@
 ---
-Title: Check if Item Exists in localStorage
-Description: Checks if a specific item exists in localStorage.
-Author: axorax
-Tags: javascript,localStorage,storage,utility
+title: Check if Item Exists in localStorage
+description: Checks if a specific item exists in localStorage.
+author: axorax
+tags: javascript,localStorage,storage,utility
 ---
 
 ```js

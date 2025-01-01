@@ -1,8 +1,8 @@
 ---
-Title: Append to File
-Description: Appends content to the end of a file.
-Author: axorax
-Tags: python,file,append,utility
+title: Append to File
+description: Appends content to the end of a file.
+author: axorax
+tags: python,file,append,utility
 ---
 
 ```py

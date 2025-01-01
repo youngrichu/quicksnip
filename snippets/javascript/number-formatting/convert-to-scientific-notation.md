@@ -1,8 +1,8 @@
 ---
-Title: Convert to Scientific Notation
-Description: Converts a number to scientific notation.
-Author: axorax
-Tags: javascript,number,scientific,utility
+title: Convert to Scientific Notation
+description: Converts a number to scientific notation.
+author: axorax
+tags: javascript,number,scientific,utility
 ---
 
 ```js

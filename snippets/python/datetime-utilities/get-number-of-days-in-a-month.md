@@ -1,8 +1,8 @@
 ---
-Title: Get Number of Days in a Month
-Description: Determines the number of days in a specific month and year.
-Author: axorax
-Tags: python,datetime,calendar,utility
+title: Get Number of Days in a Month
+description: Determines the number of days in a specific month and year.
+author: axorax
+tags: python,datetime,calendar,utility
 ---
 
 ```py

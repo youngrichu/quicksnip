@@ -1,8 +1,8 @@
 ---
-Title: Clone Object Shallowly
-Description: Creates a shallow copy of an object.
-Author: axorax
-Tags: javascript,object,clone,shallow
+title: Clone Object Shallowly
+description: Creates a shallow copy of an object.
+author: axorax
+tags: javascript,object,clone,shallow
 ---
 
 ```js

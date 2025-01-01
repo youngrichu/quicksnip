@@ -1,8 +1,8 @@
 ---
-Title: Get Contrast Color
-Description: Returns either black or white text color based on the brightness of the provided hex color.
-Author: yaya12085
-Tags: javascript,color,hex,contrast,brightness,utility
+title: Get Contrast Color
+description: Returns either black or white text color based on the brightness of the provided hex color.
+author: yaya12085
+tags: javascript,color,hex,contrast,brightness,utility
 ---
 
 ```js

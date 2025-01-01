@@ -1,8 +1,8 @@
 ---
-Title: Truncate Text
-Description: Truncates the text to a maximum length and appends '...' if the text exceeds the maximum length.
-Author: realvishalrana
-Tags: javascript,string,truncate,utility,text
+title: Truncate Text
+description: Truncates the text to a maximum length and appends '...' if the text exceeds the maximum length.
+author: realvishalrana
+tags: javascript,string,truncate,utility,text
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Clear All localStorage
-Description: Clears all data from localStorage.
-Author: dostonnabotov
-Tags: javascript,localStorage,storage,utility
+title: Clear All localStorage
+description: Clears all data from localStorage.
+author: dostonnabotov
+tags: javascript,localStorage,storage,utility
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Capitalize Words
-Description: Capitalizes the first letter of each word in a string.
-Author: axorax
-Tags: python,string,capitalize,utility
+title: Capitalize Words
+description: Capitalizes the first letter of each word in a string.
+author: axorax
+tags: python,string,capitalize,utility
 ---
 
 ```py

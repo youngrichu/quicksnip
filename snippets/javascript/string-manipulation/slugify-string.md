@@ -1,8 +1,8 @@
 ---
-Title: Slugify String
-Description: Converts a string into a URL-friendly slug format.
-Author: dostonnabotov
-Tags: javascript,string,slug,utility
+title: Slugify String
+description: Converts a string into a URL-friendly slug format.
+author: dostonnabotov
+tags: javascript,string,slug,utility
 ---
 
 ```js

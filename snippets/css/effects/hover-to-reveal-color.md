@@ -1,8 +1,8 @@
 ---
-Title: Hover to Reveal Color
-Description: A card with an image that transitions from grayscale to full color on hover.
-Author: Haider-Mukhtar
-Tags: css,hover,image,effects
+title: Hover to Reveal Color
+description: A card with an image that transitions from grayscale to full color on hover.
+author: Haider-Mukhtar
+tags: css,hover,image,effects
 ---
 
 ```css

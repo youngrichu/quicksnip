@@ -1,8 +1,8 @@
 ---
-Title: Check Leap Year
-Description: Determines if a given year is a leap year.
-Author: axorax
-Tags: javascript,date,leap-year,utility
+title: Check Leap Year
+description: Determines if a given year is a leap year.
+author: axorax
+tags: javascript,date,leap-year,utility
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Get File Extension
-Description: Gets the extension of a file.
-Author: axorax
-Tags: python,file,extension,utility
+title: Get File Extension
+description: Gets the extension of a file.
+author: axorax
+tags: python,file,extension,utility
 ---
 
 ```py

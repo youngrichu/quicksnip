@@ -1,8 +1,8 @@
 ---
-Title: Zip Arrays
-Description: Combines two arrays by pairing corresponding elements from each array.
-Author: Swaraj-Singh-30
-Tags: javascript,array,utility,map
+title: Zip Arrays
+description: Combines two arrays by pairing corresponding elements from each array.
+author: Swaraj-Singh-30
+tags: javascript,array,utility,map
 ---
 
 ```js

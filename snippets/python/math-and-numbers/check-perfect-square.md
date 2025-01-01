@@ -1,8 +1,8 @@
 ---
-Title: Check Perfect Square
-Description: Checks if a number is a perfect square.
-Author: axorax
-Tags: python,math,perfect square,check
+title: Check Perfect Square
+description: Checks if a number is a perfect square.
+author: axorax
+tags: python,math,perfect square,check
 ---
 
 ```py

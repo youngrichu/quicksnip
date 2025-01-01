@@ -1,8 +1,8 @@
 ---
-Title: Convert String to Title Case
-Description: Converts a given string into Title Case.
-Author: aumirza
-Tags: string,case,titleCase
+title: Convert String to Title Case
+description: Converts a given string into Title Case.
+author: aumirza
+tags: string,case,titleCase
 ---
 
 ```js

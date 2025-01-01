@@ -1,8 +1,8 @@
 ---
-Title: Convert Number to Currency
-Description: Converts a number to a currency format with a specific locale.
-Author: axorax
-Tags: javascript,number,currency,utility
+title: Convert Number to Currency
+description: Converts a number to a currency format with a specific locale.
+author: axorax
+tags: javascript,number,currency,utility
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Extract Initials from Name
-Description: Extracts and returns the initials from a full name.
-Author: axorax
-Tags: string,initials,name
+title: Extract Initials from Name
+description: Extracts and returns the initials from a full name.
+author: axorax
+tags: string,initials,name
 ---
 
 ```js

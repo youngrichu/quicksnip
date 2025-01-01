@@ -1,8 +1,8 @@
 ---
-Title: Grid layout
-Description: Equal sized items in a responsive grid
-Author: xshubhamg
-Tags: css,layout,grid
+title: Grid layout
+description: Equal sized items in a responsive grid
+author: xshubhamg
+tags: css,layout,grid
 ---
 
 ```css

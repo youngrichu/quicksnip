@@ -1,8 +1,8 @@
 ---
-Title: Reverse String
-Description: Reverses the characters in a string.
-Author: dostonnabotov
-Tags: python,string,reverse,utility
+title: Reverse String
+description: Reverses the characters in a string.
+author: dostonnabotov
+tags: python,string,reverse,utility
 ---
 
 ```py

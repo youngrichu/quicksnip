@@ -1,8 +1,8 @@
 ---
-Title: Convert String to Camel Case
-Description: Converts a given string into camelCase.
-Author: aumirza
-Tags: string,case,camelCase
+title: Convert String to Camel Case
+description: Converts a given string into camelCase.
+author: aumirza
+tags: string,case,camelCase
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Compose Functions
-Description: Composes multiple functions into a single function, where the output of one function becomes the input of the next.
-Author: axorax
-Tags: javascript,function,compose,utility
+title: Compose Functions
+description: Composes multiple functions into a single function, where the output of one function becomes the input of the next.
+author: axorax
+tags: javascript,function,compose,utility
 ---
 
 ```js

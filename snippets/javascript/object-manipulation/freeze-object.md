@@ -1,8 +1,8 @@
 ---
-Title: Freeze Object
-Description: Freezes an object to make it immutable.
-Author: axorax
-Tags: javascript,object,freeze,immutable
+title: Freeze Object
+description: Freezes an object to make it immutable.
+author: axorax
+tags: javascript,object,freeze,immutable
 ---
 
 ```js

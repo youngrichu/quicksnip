@@ -1,8 +1,8 @@
 ---
-Title: Border Radius Helper
-Description: Applies a customizable border-radius.
-Author: dostonnabotov
-Tags: scss,border,radius,css
+title: Border Radius Helper
+description: Applies a customizable border-radius.
+author: dostonnabotov
+tags: scss,border,radius,css
 ---
 
 ```scss

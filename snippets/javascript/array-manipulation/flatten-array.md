@@ -1,8 +1,8 @@
 ---
-Title: Flatten Array
-Description: Flattens a multi-dimensional array.
-Author: dostonnabotov
-Tags: javascript,array,flatten,utility
+title: Flatten Array
+description: Flattens a multi-dimensional array.
+author: dostonnabotov
+tags: javascript,array,flatten,utility
 ---
 
 ```js

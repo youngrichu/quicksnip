@@ -1,8 +1,8 @@
 ---
-Title: Handle File Not Found Error
-Description: Attempts to open a file and handles the case where the file does not exist.
-Author: axorax
-Tags: python,error-handling,file,utility
+title: Handle File Not Found Error
+description: Attempts to open a file and handles the case where the file does not exist.
+author: axorax
+tags: python,error-handling,file,utility
 ---
 
 ```py

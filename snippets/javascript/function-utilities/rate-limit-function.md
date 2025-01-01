@@ -1,8 +1,8 @@
 ---
-Title: Rate Limit Function
-Description: Limits how often a function can be executed within a given time window.
-Author: axorax
-Tags: javascript,function,rate-limiting,utility
+title: Rate Limit Function
+description: Limits how often a function can be executed within a given time window.
+author: axorax
+tags: javascript,function,rate-limiting,utility
 ---
 
 ```js

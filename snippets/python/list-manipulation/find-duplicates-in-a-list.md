@@ -1,8 +1,8 @@
 ---
-Title: Find Duplicates in a List
-Description: Identifies duplicate elements in a list.
-Author: axorax
-Tags: python,list,duplicates,utility
+title: Find Duplicates in a List
+description: Identifies duplicate elements in a list.
+author: axorax
+tags: python,list,duplicates,utility
 ---
 
 ```py

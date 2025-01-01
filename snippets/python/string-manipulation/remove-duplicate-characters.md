@@ -1,8 +1,8 @@
 ---
-Title: Remove Duplicate Characters
-Description: Removes duplicate characters from a string while maintaining the order.
-Author: axorax
-Tags: python,string,duplicates,remove,utility
+title: Remove Duplicate Characters
+description: Removes duplicate characters from a string while maintaining the order.
+author: axorax
+tags: python,string,duplicates,remove,utility
 ---
 
 ```py

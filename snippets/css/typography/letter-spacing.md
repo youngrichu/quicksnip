@@ -1,8 +1,8 @@
 ---
-Title: Letter Spacing
-Description: Adds space between letters for better readability.
-Author: dostonnabotov
-Tags: css,typography,spacing
+title: Letter Spacing
+description: Adds space between letters for better readability.
+author: dostonnabotov
+tags: css,typography,spacing
 ---
 
 ```css

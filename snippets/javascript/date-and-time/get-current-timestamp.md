@@ -1,8 +1,8 @@
 ---
-Title: Get Current Timestamp
-Description: Retrieves the current timestamp in milliseconds since January 1, 1970.
-Author: axorax
-Tags: javascript,date,timestamp,utility
+title: Get Current Timestamp
+description: Retrieves the current timestamp in milliseconds since January 1, 1970.
+author: axorax
+tags: javascript,date,timestamp,utility
 ---
 
 ```js

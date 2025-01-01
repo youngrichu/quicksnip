@@ -1,8 +1,8 @@
 ---
-Title: Number to Words Converter
-Description: Converts a number to its word representation in English.
-Author: axorax
-Tags: javascript,number,words,utility
+title: Number to Words Converter
+description: Converts a number to its word representation in English.
+author: axorax
+tags: javascript,number,words,utility
 ---
 
 ```js

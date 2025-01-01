@@ -1,8 +1,8 @@
 ---
-Title: Remove All Whitespace
-Description: Removes all whitespace from a string.
-Author: axorax
-Tags: javascript,string,whitespace
+title: Remove All Whitespace
+description: Removes all whitespace from a string.
+author: axorax
+tags: javascript,string,whitespace
 ---
 
 ```js

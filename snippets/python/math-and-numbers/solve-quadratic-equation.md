@@ -1,8 +1,8 @@
 ---
-Title: Solve Quadratic Equation
-Description: Solves a quadratic equation ax^2 + bx + c = 0 and returns the roots.
-Author: axorax
-Tags: python,math,quadratic,equation,solver
+title: Solve Quadratic Equation
+description: Solves a quadratic equation ax^2 + bx + c = 0 and returns the roots.
+author: axorax
+tags: python,math,quadratic,equation,solver
 ---
 
 ```py

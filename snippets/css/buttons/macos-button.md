@@ -1,8 +1,8 @@
 ---
-Title: MacOS Button
-Description: A macOS-like button style, with hover and shading effects.
-Author: e3nviction
-Tags: css,button,macos,hover,transition
+title: MacOS Button
+description: A macOS-like button style, with hover and shading effects.
+author: e3nviction
+tags: css,button,macos,hover,transition
 ---
 
 ```css

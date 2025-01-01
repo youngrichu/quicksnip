@@ -1,8 +1,8 @@
 ---
-Title: Grid Layout with Navigation
-Description: Full-height grid layout with header navigation using nesting syntax.
-Author: GreenMan36
-Tags: html,css,layout,sticky,grid,full-height
+title: Grid Layout with Navigation
+description: Full-height grid layout with header navigation using nesting syntax.
+author: GreenMan36
+tags: html,css,layout,sticky,grid,full-height
 ---
 
 ```html

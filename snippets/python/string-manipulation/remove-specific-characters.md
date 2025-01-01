@@ -1,8 +1,8 @@
 ---
-Title: Remove Specific Characters
-Description: Removes specific characters from a string.
-Author: axorax
-Tags: python,string,remove,characters,utility
+title: Remove Specific Characters
+description: Removes specific characters from a string.
+author: axorax
+tags: python,string,remove,characters,utility
 ---
 
 ```py

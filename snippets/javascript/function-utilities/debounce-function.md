@@ -1,8 +1,8 @@
 ---
-Title: Debounce Function
-Description: Delays a function execution until after a specified time.
-Author: dostonnabotov
-Tags: javascript,utility,debounce,performance
+title: Debounce Function
+description: Delays a function execution until after a specified time.
+author: dostonnabotov
+tags: javascript,utility,debounce,performance
 ---
 
 ```js

@@ -1,8 +1,8 @@
 ---
-Title: Add Days to a Date
-Description: Adds a specified number of days to a given date.
-Author: axorax
-Tags: javascript,date,add-days,utility
+title: Add Days to a Date
+description: Adds a specified number of days to a given date.
+author: axorax
+tags: javascript,date,add-days,utility
 ---
 
 ```js

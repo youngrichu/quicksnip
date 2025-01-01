@@ -1,8 +1,8 @@
 ---
-Title: Find Intersection of Two Lists
-Description: Finds the common elements between two lists.
-Author: axorax
-Tags: python,list,intersection,utility
+title: Find Intersection of Two Lists
+description: Finds the common elements between two lists.
+author: axorax
+tags: python,list,intersection,utility
 ---
 
 ```py

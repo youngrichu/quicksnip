@@ -1,8 +1,8 @@
 ---
-Title: Smooth Scroll to Element
-Description: Scrolls smoothly to a specified element.
-Author: dostonnabotov
-Tags: javascript,dom,scroll,ui
+title: Smooth Scroll to Element
+description: Scrolls smoothly to a specified element.
+author: dostonnabotov
+tags: javascript,dom,scroll,ui
 ---
 
 ```js
