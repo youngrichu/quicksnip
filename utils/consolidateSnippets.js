@@ -18,7 +18,7 @@ for(const [language, categories] of Object.entries(snippets)) {
 
     copyFileSync(languageIconPath, join(iconPath, `${language}.svg`));
 
-    index.push({ lang: reverseSlugify(language), icon: `/icons/${language}.svg` });
+    index.push({ lang: reverseSlugify(language).toUpperCase(), icon: `/icons/${language}.svg` });
     
     const languageFilePath = join(dataPath, `${language}.json`);
     

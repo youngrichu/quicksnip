@@ -12,6 +12,7 @@
                     "hello-world",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "print(\"Hello, World!\") # Prints Hello, World! to the terminal.\n"
             }
         ]
@@ -28,6 +29,7 @@
                     "datetime",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from datetime import datetime\n\ndef date_difference_in_millis(date1, date2):\n    delta = date2 - date1\n    return delta.total_seconds() * 1000\n\n# Usage:\nd1 = datetime(2023, 1, 1, 12, 0, 0)\nd2 = datetime(2023, 1, 1, 12, 1, 0)\nprint(date_difference_in_millis(d1, d2))\n"
             },
             {
@@ -40,6 +42,7 @@
                     "weekend",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from datetime import datetime\n\ndef is_weekend(date):\n    try:\n        return date.weekday() >= 5  # Saturday = 5, Sunday = 6\n    except AttributeError:\n        raise TypeError(\"Input must be a datetime object\")\n\n# Usage:\ndate = datetime(2023, 1, 1)\nweekend = is_weekend(date)\nprint(weekend)  # Output: True (Sunday)\n"
             },
             {
@@ -52,6 +55,7 @@
                     "weekday",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from datetime import datetime\n\ndef get_day_of_week(date):\n    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']\n    try:\n        return days[date.weekday()]\n    except IndexError:\n        raise ValueError(\"Invalid date\")\n\n# Usage:\ndate = datetime(2023, 1, 1)\nday = get_day_of_week(date)\nprint(day)  # Output: 'Sunday'\n"
             },
             {
@@ -64,6 +68,7 @@
                     "range",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from datetime import datetime, timedelta\n\ndef generate_date_range(start_date, end_date):\n    if start_date > end_date:\n        raise ValueError(\"start_date must be before end_date\")\n\n    current_date = start_date\n    date_list = []\n    while current_date <= end_date:\n        date_list.append(current_date)\n        current_date += timedelta(days=1)\n\n    return date_list\n\n# Usage:\nstart = datetime(2023, 1, 1)\nend = datetime(2023, 1, 5)\ndates = generate_date_range(start, end)\nfor d in dates:\n    print(d.strftime('%Y-%m-%d'))\n# Output: '2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'\n"
             },
             {
@@ -75,6 +80,7 @@
                     "datetime",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from datetime import datetime\n\ndef get_current_datetime_string():\n    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n\n# Usage:\nprint(get_current_datetime_string())  # Output: '2023-01-01 12:00:00'\n"
             },
             {
@@ -87,6 +93,7 @@
                     "calendar",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from calendar import monthrange\nfrom datetime import datetime\n\ndef get_days_in_month(year, month):\n    try:\n        return monthrange(year, month)[1]\n    except ValueError as e:\n        raise ValueError(f\"Invalid month or year: {e}\")\n\n# Usage:\ndays = get_days_in_month(2023, 2)\nprint(days)  # Output: 28 (for non-leap year February)\n"
             }
         ]
@@ -104,6 +111,7 @@
                     "file",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def read_file_safe(filepath):\n    try:\n        with open(filepath, 'r') as file:\n            return file.read()\n    except FileNotFoundError:\n        return \"File not found!\"\n\n# Usage:\nprint(read_file_safe('nonexistent.txt'))  # Output: 'File not found!'\n"
             },
             {
@@ -116,6 +124,7 @@
                     "retry",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import time\n\ndef retry(func, retries=3, delay=1):\n    for attempt in range(retries):\n        try:\n            return func()\n        except Exception as e:\n            print(f\"Attempt {attempt + 1} failed: {e}\")\n            time.sleep(delay)\n    raise Exception(\"All retry attempts failed\")\n\n# Usage:\ndef unstable_function():\n    raise ValueError(\"Simulated failure\")\n\n# Retry 3 times with 2 seconds delay:\ntry:\n    retry(unstable_function, retries=3, delay=2)\nexcept Exception as e:\n    print(e)  # Output: All retry attempts failed\n"
             },
             {
@@ -128,6 +137,7 @@
                     "division",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def safe_divide(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return 'Cannot divide by zero!'\n\n# Usage:\nprint(safe_divide(10, 2))  # Output: 5.0\nprint(safe_divide(10, 0))  # Output: 'Cannot divide by zero!'\n"
             },
             {
@@ -140,6 +150,7 @@
                     "validation",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def validate_positive_integer(input_value):\n    try:\n        value = int(input_value)\n        if value < 0:\n            raise ValueError(\"The number must be positive\")\n        return value\n    except ValueError as e:\n        return f\"Invalid input: {e}\"\n\n# Usage:\nprint(validate_positive_integer('10'))  # Output: 10\nprint(validate_positive_integer('-5'))  # Output: Invalid input: The number must be positive\nprint(validate_positive_integer('abc'))  # Output: Invalid input: invalid literal for int() with base 10: 'abc'\n"
             }
         ]
@@ -157,6 +168,7 @@
                     "append",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def append_to_file(filepath, content):\n    with open(filepath, 'a') as file:\n        file.write(content + '\\n')\n\n# Usage:\nappend_to_file('example.txt', 'This is an appended line.')\n"
             },
             {
@@ -170,6 +182,7 @@
                     "check",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import os\n\ndef file_exists(filepath):\n    return os.path.isfile(filepath)\n\n# Usage:\nprint(file_exists('example.txt'))  # Output: True or False\n"
             },
             {
@@ -182,6 +195,7 @@
                     "copy",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import shutil\n\ndef copy_file(src, dest):\n    shutil.copy(src, dest)\n\n# Usage:\ncopy_file('example.txt', 'copy_of_example.txt')\n"
             },
             {
@@ -194,6 +208,7 @@
                     "delete",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import os\n\ndef delete_file(filepath):\n    if os.path.exists(filepath):\n        os.remove(filepath)\n        print(f'File {filepath} deleted.')\n    else:\n        print(f'File {filepath} does not exist.')\n\n# Usage:\ndelete_file('example.txt')\n"
             },
             {
@@ -206,6 +221,7 @@
                     "filesystem",
                     "file_search"
                 ],
+                "contributors": [],
                 "code": "import os\n\ndef find_files(directory, file_type):\n  file_type = file_type.lower()  # Convert file_type to lowercase\n  found_files = []\n\n  for root, _, files in os.walk(directory):\n    for file in files:\n      file_ext = os.path.splitext(file)[1].lower()\n      if file_ext == file_type:\n        full_path = os.path.join(root, file)\n        found_files.append(full_path)\n\n  return found_files\n\n# Example Usage:\npdf_files = find_files('/path/to/your/directory', '.pdf')\nprint(pdf_files)\n"
             },
             {
@@ -218,6 +234,7 @@
                     "extension",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import os\n\ndef get_file_extension(filepath):\n    return os.path.splitext(filepath)[1]\n\n# Usage:\nprint(get_file_extension('example.txt'))  # Output: '.txt'\n"
             },
             {
@@ -231,6 +248,7 @@
                     "directory",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import os\n\ndef list_files(directory):\n    return [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]\n\n# Usage:\nfiles = list_files('/path/to/directory')\nprint(files)\n"
             },
             {
@@ -244,6 +262,7 @@
                     "chunks",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def read_file_in_chunks(filepath, chunk_size):\n    with open(filepath, 'r') as file:\n        while chunk := file.read(chunk_size):\n            yield chunk\n\n# Usage:\nfor chunk in read_file_in_chunks('example.txt', 1024):\n    print(chunk)\n"
             },
             {
@@ -256,6 +275,7 @@
                     "read",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def read_file_lines(filepath):\n    with open(filepath, 'r') as file:\n        return file.readlines()\n\n# Usage:\nlines = read_file_lines('example.txt')\nprint(lines)\n"
             },
             {
@@ -268,6 +288,7 @@
                     "write",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def write_to_file(filepath, content):\n    with open(filepath, 'w') as file:\n        file.write(content)\n\n# Usage:\nwrite_to_file('example.txt', 'Hello, World!')\n"
             }
         ]
@@ -285,6 +306,7 @@
                     "filter",
                     "data"
                 ],
+                "contributors": [],
                 "code": "import json\n\ndef filter_json_data(filepath, condition):\n    with open(filepath, 'r') as file:\n        data = json.load(file)\n\n    # Filter data based on the provided condition\n    filtered_data = [item for item in data if condition(item)]\n\n    return filtered_data\n\n# Usage:\ncondition = lambda x: x['age'] > 25\nfiltered = filter_json_data('data.json', condition)\nprint(filtered)\n"
             },
             {
@@ -297,6 +319,7 @@
                     "flatten",
                     "nested"
                 ],
+                "contributors": [],
                 "code": "def flatten_json(nested_json, prefix=''):\n    flat_dict = {}\n    for key, value in nested_json.items():\n        if isinstance(value, dict):\n            flat_dict.update(flatten_json(value, prefix + key + '.'))\n        else:\n            flat_dict[prefix + key] = value\n    return flat_dict\n\n# Usage:\nnested_json = {'name': 'John', 'address': {'city': 'New York', 'zip': '10001'}}\nflattened = flatten_json(nested_json)\nprint(flattened)  # Output: {'name': 'John', 'address.city': 'New York', 'address.zip': '10001'}\n"
             },
             {
@@ -309,6 +332,7 @@
                     "merge",
                     "file"
                 ],
+                "contributors": [],
                 "code": "import json\n\ndef merge_json_files(filepaths, output_filepath):\n    merged_data = []\n\n    # Read each JSON file and merge their data\n    for filepath in filepaths:\n        with open(filepath, 'r') as file:\n            data = json.load(file)\n            merged_data.extend(data)\n\n    # Write the merged data into a new file\n    with open(output_filepath, 'w') as file:\n        json.dump(merged_data, file, indent=4)\n\n# Usage:\nfiles_to_merge = ['file1.json', 'file2.json']\nmerge_json_files(files_to_merge, 'merged.json')\n"
             },
             {
@@ -321,6 +345,7 @@
                     "file",
                     "read"
                 ],
+                "contributors": [],
                 "code": "import json\n\ndef read_json(filepath):\n    with open(filepath, 'r') as file:\n        return json.load(file)\n\n# Usage:\ndata = read_json('data.json')\nprint(data)\n"
             },
             {
@@ -333,6 +358,7 @@
                     "update",
                     "file"
                 ],
+                "contributors": [],
                 "code": "import json\n\ndef update_json(filepath, new_data):\n    # Read the existing JSON data\n    with open(filepath, 'r') as file:\n        data = json.load(file)\n\n    # Update the data with the new content\n    data.update(new_data)\n\n    # Write the updated data back to the JSON file\n    with open(filepath, 'w') as file:\n        json.dump(data, file, indent=4)\n\n# Usage:\nnew_data = {'age': 31}\nupdate_json('data.json', new_data)\n"
             },
             {
@@ -345,6 +371,7 @@
                     "validation",
                     "schema"
                 ],
+                "contributors": [],
                 "code": "import jsonschema\nfrom jsonschema import validate\n\ndef validate_json_schema(data, schema):\n    try:\n        validate(instance=data, schema=schema)\n        return True  # Data is valid\n    except jsonschema.exceptions.ValidationError as err:\n        return False  # Data is invalid\n\n# Usage:\nschema = {\n    'type': 'object',\n    'properties': {\n        'name': {'type': 'string'},\n        'age': {'type': 'integer'}\n    },\n    'required': ['name', 'age']\n}\ndata = {'name': 'John', 'age': 30}\nis_valid = validate_json_schema(data, schema)\nprint(is_valid)  # Output: True\n"
             },
             {
@@ -357,6 +384,7 @@
                     "file",
                     "write"
                 ],
+                "contributors": [],
                 "code": "import json\n\ndef write_json(filepath, data):\n    with open(filepath, 'w') as file:\n        json.dump(data, file, indent=4)\n\n# Usage:\ndata = {'name': 'John', 'age': 30}\nwrite_json('data.json', data)\n"
             }
         ]
@@ -374,6 +402,7 @@
                     "duplicates",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def find_duplicates(lst):\n    seen = set()\n    duplicates = set()\n    for item in lst:\n        if item in seen:\n            duplicates.add(item)\n        else:\n            seen.add(item)\n    return list(duplicates)\n\n# Usage:\ndata = [1, 2, 3, 2, 4, 5, 1]\nprint(find_duplicates(data))  # Output: [1, 2]\n"
             },
             {
@@ -386,6 +415,7 @@
                     "intersection",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def list_intersection(lst1, lst2):\n    return [item for item in lst1 if item in lst2]\n\n# Usage:\nlist_a = [1, 2, 3, 4]\nlist_b = [3, 4, 5, 6]\nprint(list_intersection(list_a, list_b))  # Output: [3, 4]\n"
             },
             {
@@ -398,6 +428,7 @@
                     "difference",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def max_difference(lst):\n    if not lst or len(lst) < 2:\n        return 0\n    return max(lst) - min(lst)\n\n# Usage:\ndata = [10, 3, 5, 20, 7]\nprint(max_difference(data))  # Output: 17\n"
             },
             {
@@ -410,6 +441,7 @@
                     "flatten",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def flatten_list(lst):\n    return [item for sublist in lst for item in sublist]\n\n# Usage:\nnested_list = [[1, 2], [3, 4], [5]]\nprint(flatten_list(nested_list))  # Output: [1, 2, 3, 4, 5]\n"
             },
             {
@@ -424,6 +456,7 @@
                     "depth",
                     "utilities"
                 ],
+                "contributors": [],
                 "code": "def flatten(nested_list):\n    \"\"\"\n    Flattens unevenly nested lists of any depth into a single flat list.\n    \"\"\"\n    for item in nested_list:\n        if isinstance(item, list):\n            yield from flatten(item)\n        else:\n            yield item\n\n# Usage:\nnested_list = [1, [2, [3, 4]], 5]\nflattened = list(flatten(nested_list))\nprint(flattened)  # Output: [1, 2, 3, 4, 5]\n"
             },
             {
@@ -436,6 +469,7 @@
                     "partition",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def partition_list(lst, size):\n    for i in range(0, len(lst), size):\n        yield lst[i:i + size]\n\n# Usage:\ndata = [1, 2, 3, 4, 5, 6, 7]\npartitions = list(partition_list(data, 3))\nprint(partitions)  # Output: [[1, 2, 3], [4, 5, 6], [7]]\n"
             },
             {
@@ -448,6 +482,7 @@
                     "duplicates",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def remove_duplicates(lst):\n    return list(dict.fromkeys(lst))\n\n# Usage:\nprint(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]\n"
             }
         ]
@@ -465,6 +500,7 @@
                     "compound interest",
                     "finance"
                 ],
+                "contributors": [],
                 "code": "def compound_interest(principal, rate, time, n=1):\n    return principal * (1 + rate / n) ** (n * time)\n\n# Usage:\nprint(compound_interest(1000, 0.05, 5))   # Output: 1276.2815625000003\nprint(compound_interest(1000, 0.05, 5, 12)) # Output: 1283.68\n"
             },
             {
@@ -477,6 +513,7 @@
                     "perfect square",
                     "check"
                 ],
+                "contributors": [],
                 "code": "def is_perfect_square(n):\n    if n < 0:\n        return False\n    root = int(n**0.5)\n    return root * root == n\n\n# Usage:\nprint(is_perfect_square(16))  # Output: True\nprint(is_perfect_square(20))  # Output: False\n"
             },
             {
@@ -489,6 +526,7 @@
                     "prime",
                     "check"
                 ],
+                "contributors": [],
                 "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Usage:\nprint(is_prime(17))  # Output: True\n"
             },
             {
@@ -502,6 +540,7 @@
                     "decimal",
                     "conversion"
                 ],
+                "contributors": [],
                 "code": "def binary_to_decimal(binary_str):\n    return int(binary_str, 2)\n\n# Usage:\nprint(binary_to_decimal('1010'))  # Output: 10\nprint(binary_to_decimal('1101'))  # Output: 13\n"
             },
             {
@@ -514,6 +553,7 @@
                     "factorial",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n\n# Usage:\nprint(factorial(5))  # Output: 120\n"
             },
             {
@@ -527,6 +567,7 @@
                     "gcd",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def lcm(a, b):\n    return abs(a * b) // gcd(a, b)\n\n# Usage:\nprint(lcm(12, 15))  # Output: 60\nprint(lcm(7, 5))    # Output: 35\n"
             },
             {
@@ -540,6 +581,7 @@
                     "equation",
                     "solver"
                 ],
+                "contributors": [],
                 "code": "import cmath\n\ndef solve_quadratic(a, b, c):\n    discriminant = cmath.sqrt(b**2 - 4 * a * c)\n    root1 = (-b + discriminant) / (2 * a)\n    root2 = (-b - discriminant) / (2 * a)\n    return root1, root2\n\n# Usage:\nprint(solve_quadratic(1, -3, 2))  # Output: ((2+0j), (1+0j))\nprint(solve_quadratic(1, 2, 5))   # Output: ((-1+2j), (-1-2j))\n"
             }
         ]
@@ -557,6 +599,7 @@
                     "database",
                     "table"
                 ],
+                "contributors": [],
                 "code": "import sqlite3\n\ndef create_table(db_name, table_name, schema):\n    conn = sqlite3.connect(db_name)\n    cursor = conn.cursor()\n    schema_string = ', '.join([f'{col} {dtype}' for col, dtype in schema.items()])\n    cursor.execute(f'''\n        CREATE TABLE IF NOT EXISTS {table_name} (\n            {schema_string}\n        )''')\n    conn.commit()\n    conn.close()\n\n# Usage:\ndb_name = 'example.db'\ntable_name = 'users'\nschema = {\n    'id': 'INTEGER PRIMARY KEY',\n    'name': 'TEXT',\n    'age': 'INTEGER',\n    'email': 'TEXT'\n}\ncreate_table(db_name, table_name, schema)\n"
             },
             {
@@ -569,6 +612,7 @@
                     "database",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import sqlite3\n\ndef insert_into_table(db_path, table_name, data):\n    with sqlite3.connect(db_path) as conn:\n        columns = ', '.join(data.keys())\n        placeholders = ', '.join(['?'] * len(data))\n        sql = f\"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})\"\n        conn.execute(sql, tuple(data.values()))\n        conn.commit()\n\n# Usage:\ndb_path = 'example.db'\ntable_name = 'users'\ndata = {\n    'name': 'John Doe',\n    'email': 'john@example.com',\n    'age': 30\n}\ninsert_into_table(db_path, table_name, data)\n"
             }
         ]
@@ -586,6 +630,7 @@
                     "capitalize",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def capitalize_words(s):\n    return ' '.join(word.capitalize() for word in s.split())\n\n# Usage:\nprint(capitalize_words('hello world'))  # Output: 'Hello World'\n"
             },
             {
@@ -599,6 +644,7 @@
                     "check",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def is_anagram(s1, s2):\n    return sorted(s1) == sorted(s2)\n\n# Usage:\nprint(is_anagram('listen', 'silent'))  # Output: True\n"
             },
             {
@@ -611,6 +657,7 @@
                     "palindrome",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\n# Usage:\nprint(is_palindrome('A man a plan a canal Panama'))  # Output: True\n"
             },
             {
@@ -625,6 +672,7 @@
                     "convert",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def snake_to_camel(s):\n    parts = s.split('_')\n    return parts[0] + ''.join(word.capitalize() for word in parts[1:])\n\n# Usage:\nprint(snake_to_camel('hello_world'))  # Output: 'helloWorld'\n"
             },
             {
@@ -638,6 +686,7 @@
                     "convert",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def string_to_ascii(s):\n    return [ord(char) for char in s]\n\n# Usage:\nprint(string_to_ascii('hello'))  # Output: [104, 101, 108, 108, 111]\n"
             },
             {
@@ -650,6 +699,7 @@
                     "character-frequency",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "from collections import Counter\n\ndef char_frequency(s):\n    return dict(Counter(s))\n\n# Usage:\nprint(char_frequency('hello'))  # Output: {'h': 1, 'e': 1, 'l': 2, 'o': 1}\n"
             },
             {
@@ -663,6 +713,7 @@
                     "count",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def count_vowels(s):\n    vowels = 'aeiou'\n    return len([char for char in s.lower() if char in vowels])\n\n# Usage:\nprint(count_vowels('hello'))  # Output: 2\n"
             },
             {
@@ -675,6 +726,7 @@
                     "word-count",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def count_words(s):\n    return len(s.split())\n\n# Usage:\nprint(count_words('The quick brown fox'))  # Output: 4\n"
             },
             {
@@ -688,6 +740,7 @@
                     "find",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def find_substrings(s):\n    substrings = []\n    for i in range(len(s)):\n        for j in range(i + 1, len(s) + 1):\n            substrings.append(s[i:j])\n    return substrings\n\n# Usage:\nprint(find_substrings('abc'))  # Output: ['a', 'ab', 'abc', 'b', 'bc', 'c']\n"
             },
             {
@@ -700,6 +753,7 @@
                     "longest-word",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def find_longest_word(s):\n    words = s.split()\n    return max(words, key=len) if words else ''\n\n# Usage:\nprint(find_longest_word('The quick brown fox'))  # Output: 'quick'\n"
             },
             {
@@ -713,6 +767,7 @@
                     "characters",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def find_unique_chars(s):\n    return ''.join(sorted(set(s)))\n\n# Usage:\nprint(find_unique_chars('banana'))  # Output: 'abn'\n"
             },
             {
@@ -726,6 +781,7 @@
                     "remove",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def remove_duplicate_chars(s):\n    seen = set()\n    return ''.join(char for char in s if not (char in seen or seen.add(char)))\n\n# Usage:\nprint(remove_duplicate_chars('programming'))  # Output: 'progamin'\n"
             },
             {
@@ -739,6 +795,7 @@
                     "remove",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import string\n\ndef remove_punctuation(s):\n    return s.translate(str.maketrans('', '', string.punctuation))\n\n# Usage:\nprint(remove_punctuation('Hello, World!'))  # Output: 'Hello World'\n"
             },
             {
@@ -752,6 +809,7 @@
                     "characters",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def remove_chars(s, chars):\n    return ''.join(c for c in s if c not in chars)\n\n# Usage:\nprint(remove_chars('hello world', 'eo'))  # Output: 'hll wrld'\n"
             },
             {
@@ -765,6 +823,7 @@
                     "remove",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def remove_whitespace(s):\n    return ''.join(s.split())\n\n# Usage:\nprint(remove_whitespace('hello world'))  # Output: 'helloworld'\n"
             },
             {
@@ -777,6 +836,7 @@
                     "reverse",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def reverse_string(s):\n    return s[::-1]\n\n# Usage:\nprint(reverse_string('hello'))  # Output: 'olleh'\n"
             },
             {
@@ -790,6 +850,7 @@
                     "split",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import re\n\ndef split_camel_case(s):\n    return ' '.join(re.findall(r'[A-Z][a-z]*|[a-z]+', s))\n\n# Usage:\nprint(split_camel_case('camelCaseString'))  # Output: 'camel Case String'\n"
             },
             {
@@ -802,6 +863,7 @@
                     "truncate",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def truncate_string(s, length):\n    return s[:length] + '...' if len(s) > length else s\n\n# Usage:\nprint(truncate_string('This is a long string', 10))  # Output: 'This is a ...'\n"
             }
         ]
@@ -819,6 +881,7 @@
                     "format",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "def bytes_to_human_readable(num):\n    for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB']:\n        if num < 1024:\n            return f\"{num:.2f} {unit}\"\n        num /= 1024\n\n# Usage:\nprint(bytes_to_human_readable(123456789))  # Output: '117.74 MB'\n"
             },
             {
@@ -831,6 +894,7 @@
                     "string",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import random\nimport string\n\ndef random_string(length):\n    letters_and_digits = string.ascii_letters + string.digits\n    return ''.join(random.choice(letters_and_digits) for _ in range(length))\n\n# Usage:\nprint(random_string(10))  # Output: Random 10-character string\n"
             },
             {
@@ -843,6 +907,7 @@
                     "execution",
                     "utility"
                 ],
+                "contributors": [],
                 "code": "import time\n\ndef measure_time(func, *args):\n    start = time.time()\n    result = func(*args)\n    end = time.time()\n    print(f'Execution time: {end - start:.6f} seconds')\n    return result\n\n# Usage:\ndef slow_function():\n    time.sleep(2)\n\nmeasure_time(slow_function)\n"
             }
         ]
