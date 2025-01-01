@@ -1,9 +1,6 @@
 name: Pre-commit checks
 
 on:
-  push:
-    branches:
-      - '**'
   pull_request:
     branches:
       - '**'
