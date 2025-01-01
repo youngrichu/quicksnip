@@ -14,5 +14,4 @@ Tags: css,layout,grid
 - `minmax(250px, 1fr)`: Defines a minimum column size of 250px and a maximum size of 1fr (fraction of available space).
 */
 }
-
 ```

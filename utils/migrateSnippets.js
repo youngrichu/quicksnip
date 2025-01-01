@@ -18,11 +18,11 @@ function formatSnippet(snippet) {
 Title: ${snippet.title}
 Description: ${snippet.description}
 Author: ${snippet.author}
-Tags: ${snippet.tags}
+Tags: ${snippet.tags}${('contributors' in snippet) && snippet.contributors.length > 0 ? `\nContributors: ${snippet.contributors}` : ''}
 ---
 
 \`\`\`
-${snippet.code.join('\n')}
+${Array.isArray(snippet.code) ? snippet.code.join('\n').trim() : snippet.code.trim()}
 \`\`\`
 `;
 }
