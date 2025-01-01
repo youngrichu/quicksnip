@@ -69,7 +69,7 @@ const SnippetList = () => {
         ))}
       </motion.ul>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isModalOpen && snippet && (
           <SnippetModal
             snippet={snippet}
