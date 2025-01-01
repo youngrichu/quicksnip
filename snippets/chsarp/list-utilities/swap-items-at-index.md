@@ -16,13 +16,13 @@ public static IList<T> Swap<T>(this IList<T> list, int indexA, int indexB)
     return list;
 }
 
-var list = new List<string>() {'Test', 'Test2'}
+var list = new List<string>() {"Test", "Test2"};
 
-Console.WriteLine(list[0]) // Outputs: Test
-Console.WriteLine(list[1]) // Outputs: Test2
+Console.WriteLine(list[0]); // Outputs: Test
+Console.WriteLine(list[1]); // Outputs: Test2
 
-list = list.Swap(0, 1);
+list = list.Swap(0, 1).ToList();
 
-Console.WriteLine(list[0]) // Outputs: Test2
-Console.WriteLine(list[1]) // Outputs: Test
+Console.WriteLine(list[0]); // Outputs: Test2
+Console.WriteLine(list[1]); // Outputs: Test
 ```
