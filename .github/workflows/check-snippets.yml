@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      content: read
+      contents: read
       pull-requests: write
 
     steps:
@@ -27,5 +27,5 @@ jobs:
         with:
           run: node utils/checkSnippetFormatting.js # Run the script located in the utils/ folder
           post-on-failure: |
-            ## :x: Snipper Format Error
+            ## :x: Snippet Format Error
             ${run.output}
