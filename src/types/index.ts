@@ -8,13 +8,14 @@ export type CategoryType = {
   snippets: SnippetType[];
 };
 
-export type SnippetType = {
+export interface SnippetType {
+  id?: string | number;
   title: string;
   description: string;
   code: string[];
   tags: string[];
   author: string;
-};
+}
 
 export type AppState = {
   language: LanguageType;

@@ -34,39 +34,44 @@ const SnippetList = () => {
       <motion.ul
         role="list"
         className="snippets"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.1
-            }
-          }
-        }}
       >
-        {fetchedSnippets.map((snippet, idx) => (
-          <motion.li
-            key={idx}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 }
-            }}
-          >
-            <motion.button
-              className="snippet | flow"
-              data-flow-space="sm"
-              onClick={() => handleOpenModal(snippet)}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.98 }}
+        <AnimatePresence mode="popLayout">
+          {fetchedSnippets.map((snippet, idx) => (
+            <motion.li
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0,
+                transition: {
+                  delay: idx * 0.05,
+                  duration: 0.2
+                }
+              }}
+              exit={{ 
+                opacity: 0, 
+                y: -20,
+                transition: {
+                  delay: (fetchedSnippets.length - 1 - idx) * 0.01,
+                  duration: 0.09
+                }
+              }}
             >
-              <div className="snippet__preview">
-                <img src={language.icon} alt={language.lang} />
-              </div>
-
-              <h3 className="snippet__title">{snippet.title}</h3>
-            </motion.button>
-          </motion.li>
-        ))}
+              <motion.button
+                className="snippet | flow"
+                data-flow-space="sm"
+                onClick={() => handleOpenModal(snippet)}
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="snippet__preview">
+                  <img src={language.icon} alt={language.lang} />
+                </div>
+                <h3 className="snippet__title">{snippet.title}</h3>
+              </motion.button>
+            </motion.li>
+          ))}
+        </AnimatePresence>
       </motion.ul>
 
       <AnimatePresence mode="wait">
