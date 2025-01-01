@@ -69,6 +69,14 @@ export default tseslint.config(
           "type",
           "unknown"
         ],
+        "pathGroups": [
+          {
+            "pattern": "@*",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin", "internal"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",

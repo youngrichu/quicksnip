@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 
-import { useAppContext } from "contexts/AppContext";
-import { useKeyboardNavigation } from "hooks/useKeyboardNavigation";
-import { useLanguages } from "hooks/useLanguages";
-import { LanguageType } from "types";
+import { useAppContext } from "@contexts/AppContext";
+import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
+import { useLanguages } from "@hooks/useLanguages";
+import { LanguageType } from "@types";
 
 // Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
 

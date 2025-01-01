@@ -1,6 +1,6 @@
 import { createContext, FC, useContext, useState } from "react";
 
-import { AppState, LanguageType, SnippetType } from "types";
+import { AppState, LanguageType, SnippetType } from "@types";
 
 // tokens
 const defaultLanguage: LanguageType = {
