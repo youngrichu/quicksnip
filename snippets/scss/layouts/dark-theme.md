@@ -7,19 +7,19 @@ tags: scss, css, mixin, snippet, dark-theme, layout
 
 ```scss
 @mixin isDark($type: 'module') {
-	$root: &;
+  $root: &;
 
-	@if $type == 'module' {
-		:global {
-			@at-root body[theme='dark'] #{$root} {
-				@content;
-			}
-		}
-	} @else {
-		&[theme='dark'] {
-			@content;
-		}
-	}
+  @if $type == 'module' {
+    :global {
+      @at-root body[theme='dark'] #{$root} {
+        @content;
+      }
+    }
+  } @else {
+    &[theme='dark'] {
+      @content;
+    }
+  }
 }
 
 // Usage:
