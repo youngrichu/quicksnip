@@ -18,6 +18,24 @@
         ]
     },
     {
+        "categoryName": "Data Structure Conversion",
+        "snippets": [
+            {
+                "title": "Vector to Queue",
+                "description": "Convert vector into queue quickly",
+                "author": "mrityunjay2003",
+                "tags": [
+                    "cpp",
+                    "data structures",
+                    "queue",
+                    "vector"
+                ],
+                "contributors": [],
+                "code": "#include<queue>\n#include<vector>\n#include<deque>\n\nstd::queue<int> vectorToQueue(const std::vector<int>& v) {\n    return std::queue<int>(std::deque<int>(v.begin(), v.end()));\n}\n"
+            }
+        ]
+    },
+    {
         "categoryName": "Math And Numbers",
         "snippets": [
             {
