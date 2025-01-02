@@ -8,7 +8,7 @@ export type CategoryType = {
   snippets: SnippetType[];
 };
 
-export interface SnippetType {
+export type SnippetType = {
   title: string;
   description: string;
   code: string[];
