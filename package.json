@@ -11,7 +11,9 @@
     "format:check": "prettier --check .",
     "preview": "vite preview",
     "prepare": "husky",
-    "cspell": "cspell --config cspell.json \"**/*.{ts,tsx,js,jsx,json,html}\""
+    "cspell": "cspell --config cspell.json \"**/*.{ts,tsx,js,jsx,json,html}\"",
+    "snippets:check": "node ./utils/checkSnippetFormatting.js",
+    "snippets:consolidate": "node ./utils/consolidateSnippets.js"
   },
   "dependencies": {
     "framer-motion": "^11.15.0",
