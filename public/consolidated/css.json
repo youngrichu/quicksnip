@@ -7,7 +7,6 @@
                 "description": "Adds a 3D effect to a button when clicked.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "button",
                     "3D",
                     "effect"
@@ -20,7 +19,6 @@
                 "description": "Creates a hover effect with a color transition.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "button",
                     "hover",
                     "transition"
@@ -33,7 +31,6 @@
                 "description": "A macOS-like button style, with hover and shading effects.",
                 "author": "e3nviction",
                 "tags": [
-                    "css",
                     "button",
                     "macos",
                     "hover",
@@ -52,7 +49,6 @@
                 "description": "Applies a blur effect to the background of an element.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "blur",
                     "background",
                     "effects"
@@ -65,7 +61,6 @@
                 "description": "Adds a glowing effect on hover.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "hover",
                     "glow",
                     "effects"
@@ -78,7 +73,6 @@
                 "description": "A card with an image that transitions from grayscale to full color on hover.",
                 "author": "Haider-Mukhtar",
                 "tags": [
-                    "css",
                     "hover",
                     "image",
                     "effects"
@@ -96,7 +90,6 @@
                 "description": "Resets some default browser styles, ensuring consistency across browsers.",
                 "author": "AmeerMoustafa",
                 "tags": [
-                    "css",
                     "reset",
                     "browser",
                     "layout"
@@ -109,7 +102,6 @@
                 "description": "Creates columns with equal widths using flexbox.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "flexbox",
                     "columns",
                     "layout"
@@ -122,7 +114,6 @@
                 "description": "Equal sized items in a responsive grid",
                 "author": "xshubhamg",
                 "tags": [
-                    "css",
                     "layout",
                     "grid"
                 ],
@@ -134,8 +125,8 @@
                 "description": "The different responsive breakpoints.",
                 "author": "kruimol",
                 "tags": [
-                    "css",
-                    "responsive"
+                    "responsive",
+                    "media queries"
                 ],
                 "contributors": [],
                 "code": "/* Phone */\n.element {\n  margin: 0 10%\n}\n\n/* Tablet */\n@media (min-width: 640px) {\n  .element {\n    margin: 0 20%\n  }\n}\n\n/* Desktop base */\n@media (min-width: 768px) {\n  .element {\n    margin: 0 30%\n  }\n}\n\n/* Desktop large */\n@media (min-width: 1024px) {\n  .element {\n    margin: 0 40%\n  }\n}\n\n/* Desktop extra large */\n@media (min-width: 1280px) {\n  .element {\n    margin: 0 60%\n  }\n}\n\n/* Desktop bige */\n@media (min-width: 1536px) {\n  .element {\n    margin: 0 80%\n  }\n}\n"
@@ -145,7 +136,6 @@
                 "description": "Ensures the footer always stays at the bottom of the page.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "layout",
                     "footer",
                     "sticky"
@@ -163,7 +153,6 @@
                 "description": "Adds space between letters for better readability.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "typography",
                     "spacing"
                 ],
@@ -175,7 +164,6 @@
                 "description": "Adjusts font size based on viewport width.",
                 "author": "dostonnabotov",
                 "tags": [
-                    "css",
                     "font",
                     "responsive",
                     "typography"
