@@ -7,7 +7,7 @@ QuickSnip is a welcoming and collaborative community for developers to organize,
 - Be respectful to everyone in the community.
 - Avoid harassment, trolling, or spamming.
 - Ensure QuickSnip remains a safe and productive space for all.
-- Report any inappropriate behavior to me, the owner of QuickSnip, at [technophilechannelyt@gmail.com](mailto:technophilechannelyt@gmail.com) or our [Discord team](https://discord.gg/UtJJcnsN).
+- Report any inappropriate behavior to [me](mailto:technophilechannelyt@gmail.com), the owner of QuickSnip, or our [Discord team](https://discord.gg/UtJJcnsN).
 - No unauthorized bots without prior permission.
 
 ---
@@ -24,7 +24,7 @@ We are committed to providing a harassment-free experience for everyone, regardl
 
 #### Reporting Issues
 
-If you experience or witness harassment, trolling, spamming, or any other inappropriate behavior, please report it to me, the owner of QuickSnip, at [technophilechannelyt@gmail.com](mailto:technophilechannelyt@gmail.com) or our QuickSnip [Discord team](https://discord.gg/UtJJcnsN). Include details like screenshots and URLs, if possible, to help us address the issue effectively.
+If you experience or witness harassment, trolling, spamming, or any other inappropriate behavior, please report it to [me](mailto:technophilechannelyt@gmail.com), the owner of QuickSnip, or our QuickSnip [Discord team](https://discord.gg/UtJJcnsN). Include details like screenshots and URLs, if possible, to help us address the issue effectively.
 
 I, or the QuickSnip team will review all reports and take appropriate actions, which may include warnings, temporary bans, or permanent removal from the community.
 
