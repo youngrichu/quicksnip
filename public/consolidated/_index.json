@@ -16,6 +16,10 @@
         "icon": "/icons/css.svg"
     },
     {
+        "lang": "HASKELL",
+        "icon": "/icons/haskell.svg"
+    },
+    {
         "lang": "HTML",
         "icon": "/icons/html.svg"
     },
