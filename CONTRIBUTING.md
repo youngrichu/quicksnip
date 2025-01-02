@@ -85,10 +85,12 @@ Expected file structure:
 
 ```md
 /snippets
-    |- language
-        |- category-name
-            |- your-snippet-here.md
+  |- language
+    |- category-name
+      |- your-snippet-here.md
 ```
+
+> Please do **NOT** add or edit anything in `/public` folder. It will be used for consolidating snippets.
 
 ### Editing a Existing Snippet
 
@@ -122,9 +124,9 @@ contributors: contributor1, contributor2, your-github-username
 
 3. **Document changes:**
 
-Clearly indicate what you updated and why in your pull request description.
+    - Clearly indicate what you updated and why in your pull request description.
 
-We want to make sure that original author and contributor(s) are credited for their work.
+> We want to make sure that original author and contributor(s) are credited for their work.
 
 
 ### Adding a New Category
@@ -145,10 +147,10 @@ Example structure:
 
 ```md
 /snippets
-    |- python
-        |- file-handling
-        |- list-manipulation
-        |- ....
+  |- python
+    |- file-handling
+    |- list-manipulation
+    |- ....
 ```
 
 ### Adding a New Language
