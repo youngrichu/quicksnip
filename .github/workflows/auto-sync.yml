@@ -1,0 +1,26 @@
+name: Auto Sync with Main Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Target Repository
+        uses: actions/checkout@v2
+        with:
+          repository: gihanrangana/quicksnip
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync with Main Repository
+        run: |
+          git remote add upstream https://github.com/gihanrangana/quicksnip.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main
+          git push origin main
