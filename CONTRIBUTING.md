@@ -20,6 +20,12 @@ If you have a feature request or want to fix a bug, feel free to:
 
 ## Snippets Guidelines
 
+### Snippet Tags
+
+Tags must describe the snippet with simple word. \
+For example a snippet that capitalize a word would have `string` and `capitalize` as tags. \
+**! Do not add the language you are using as a tag, nor some generic keyword like `utility` !**
+
 ### Snippet Format
 
 **All** snippets should follow the following structure:
