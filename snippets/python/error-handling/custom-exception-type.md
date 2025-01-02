@@ -6,13 +6,13 @@ tags: python,error-creation,organisation,utility
 ---
 
 ```py
-class ExceptionName(Exception):
+class ExceptionName(BaseException):
     def __init__(message: str):
         super().__init__(message)
 
 # Usage
 a: int = 1
 
-if a > 0:  #Simple if function
-  raise ExceptionName('Error Message') #Rasing the Custom Exception
+if a > 0:
+  raise ExceptionName('Error Message')
 ```
