@@ -1,5 +1,5 @@
 ---
-title: Transform from Snake Case to Camel Case
+title: Snake_Case to CamelCase
 description: Converts a Snake Case string to Camel Case.
 author: ACR1209
 tags: string,convert,snake-case,camel-case,utilty

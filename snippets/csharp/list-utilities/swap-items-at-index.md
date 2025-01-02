@@ -1,5 +1,5 @@
 ---
-title: Swap two items at determined indexes
+title: Swap items at index
 description: Swaps two items at determined indexes
 author: omegaleo
 tags: list,swapping

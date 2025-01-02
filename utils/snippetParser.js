@@ -8,6 +8,17 @@ export function reverseSlugify(string, separator = "-") {
         .join(' ')
         .trim();
 }
+export function slugify(string, separator = "-") {
+    return string
+        .toString() // Cast to string (optional)
+        .toLowerCase() // Convert the string to lowercase letters
+        .trim() // Remove whitespace from both sides of a string (optional)
+        .replace(/\s+/g, separator) // Replace spaces with {separator}
+        .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+        .replace(/\_/g, separator) // Replace _ with {separator}
+        .replace(/\-\-+/g, separator) // Replace multiple - with single {separator}
+        .replace(/\-$/g, ""); // Remove trailing -
+}
 
 let errored = false;
 function raise(issue, snippet = '') {
@@ -20,7 +31,7 @@ const crlfRegex = /\r\n/gm;
 const propertyRegex = /^\s+([a-zA-Z]+):\s*(.+)/;
 const headerEndCodeStartRegex = /^\s*---\s*```.*\n/;
 const codeRegex = /^(.+)```/s
-function parseSnippet(snippetPath, text) {
+function parseSnippet(snippetPath, name, text) {
     if(crlfRegex.exec(text) !== null) return raise('Found CRLF line endings instead of LF line endings', snippetPath);
     let cursor = 0;
 
@@ -40,6 +51,8 @@ function parseSnippet(snippetPath, text) {
     if(!('description' in properties)) return raise(`Missing 'description' property`, snippetPath);
     if(!('author' in properties)) return raise(`Missing 'author' property`, snippetPath);
     if(!('tags' in properties)) return raise(`Missing 'tags' property`, snippetPath);
+
+    if(slugify(properties.title) !== name) return raise(`slugifyed 'title' property doesn't match snippet file name`, snippetPath);
 
     match = headerEndCodeStartRegex.exec(fromCursor());
     if(match === null) return raise('Missing header end \'---\' or code start \'```\'', snippetPath);
@@ -82,8 +95,9 @@ export function parseAllSnippets() {
             for(const snippet of readdirSync(categoryPath)) {
                 const snippetPath = join(categoryPath, snippet);
                 const snippetContent = readFileSync(snippetPath).toString();
+                const snippetFileName = snippet.slice(0, -3);
     
-                const snippetData = parseSnippet(snippetPath, snippetContent);
+                const snippetData = parseSnippet(snippetPath, snippetFileName, snippetContent);
                 if(!snippetData) continue;
                 categorySnippets.push(snippetData);
             }

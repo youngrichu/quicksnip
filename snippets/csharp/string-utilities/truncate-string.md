@@ -1,5 +1,5 @@
 ---
-title: Truncate a String
+title: Truncate String
 description: Cut off a string once it reaches a determined amount of characters and add '...' to the end of the string
 author: omegaleo
 tags: string,truncate
