@@ -38,5 +38,9 @@
     {
         "lang": "SCSS",
         "icon": "/icons/scss.svg"
+    },
+    {
+        "lang": "TYPESCRIPT",
+        "icon": "/icons/typescript.svg"
     }
 ]
