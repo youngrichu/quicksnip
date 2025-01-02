@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
 import React from "react";
 import ReactDOM from "react-dom";
-import { motion } from "framer-motion";
+
 import { useEscapeKey } from "@hooks/useEscapeKey";
 import { SnippetType } from "@types";
 import { slugify } from "@utils/slugify";
+
 import Button from "./Button";
 import CodePreview from "./CodePreview";
 import { CloseIcon } from "./Icons";

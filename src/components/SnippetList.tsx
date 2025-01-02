@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SnippetType } from "../types";
-import { useAppContext } from "../contexts/AppContext";
-import { useSnippets } from "../hooks/useSnippets";
+import { useState } from "react";
+
 import { useAppContext } from "@contexts/AppContext";
 import { useSnippets } from "@hooks/useSnippets";
 import { SnippetType } from "@types";
