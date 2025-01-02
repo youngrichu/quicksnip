@@ -2,7 +2,7 @@
 Title: Find files
 Description: Find all the files in a directory using a predicate function.
 Author: majvax
-Tags: cpp,array,filesystem,file_search
+Tags: cpp,filesystem,file_search
 ---
 
 ```cpp

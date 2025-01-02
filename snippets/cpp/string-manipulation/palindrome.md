@@ -2,7 +2,7 @@
 title: Palindrome
 description: Check if a string is a palindrome or not.
 author: majvax
-tags: cpp,string,utility
+tags: cpp,string,utility,c++23
 ---
 
 ```cpp

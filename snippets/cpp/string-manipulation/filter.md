@@ -2,7 +2,7 @@
 title: Filter
 description: Filter a string with a predicate function
 author: majvax
-tags: cpp,string,utility,filtering
+tags: cpp,string,utility,filtering,c++23
 ---
 
 ```cpp

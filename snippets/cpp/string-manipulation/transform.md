@@ -2,7 +2,7 @@
 title: Transform
 description: Transform a string with a function
 author: majvax
-tags: cpp,string,utility,transform
+tags: cpp,string,utility,transform,c++23
 ---
 
 ```cpp
