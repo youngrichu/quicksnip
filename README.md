@@ -73,10 +73,12 @@ Expected file structure:
 
 ```md
 /snippets
-    |- language
-        |- category-name
-            |- your-snippet-here.md
+  |- language
+    |- category-name
+      |- your-snippet-here.md
 ```
+
+> Please do **NOT** add or edit anything in `/public` folder. It will be used for consolidating snippets.
 
 For more details about adding new categories or programming languages, check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file.
 
