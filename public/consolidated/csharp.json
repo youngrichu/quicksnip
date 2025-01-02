@@ -1,5 +1,111 @@
 [
     {
+        "categoryName": "Basics",
+        "snippets": [
+            {
+                "title": "Hello, World!",
+                "description": "Prints Hello, World! to the terminal.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "printing",
+                    "hello-world",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public class Program {\n  public static void Main(string[] args) {\n    System.Console.WriteLine(\"Hello, World!\");\n  }\n}\n"
+            }
+        ]
+    },
+    {
+        "categoryName": "Guid Utilities",
+        "snippets": [
+            {
+                "title": "Hello, World!",
+                "description": "Generates a new GUID",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "guid",
+                    "generate",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static string GenerateGuid() {\n  return Guid.NewGuid().ToString();\n}\n"
+            },
+            {
+                "title": "Hello, World!",
+                "description": "Converts a GUID to a byte array.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "guid",
+                    "byte-array",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static byte[] GuidToByteArray(string guid) {\n  return new Guid(guid).ToByteArray();\n}\n"
+            },
+            {
+                "title": "Hello, World!",
+                "description": "Checks if a string is a valid GUID.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "guid",
+                    "validate",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static bool IsGuid(string str) {\n  return Guid.TryParse(str, out _);\n}\n"
+            }
+        ]
+    },
+    {
+        "categoryName": "Jwt Utilities",
+        "snippets": [
+            {
+                "title": "Hello, World!",
+                "description": "Decodes a JWT.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "jwt",
+                    "decode",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static string DecodeJwt(string token) {\n  return new JwtSecurityTokenHandler().ReadJwtToken(token).ToString();\n}\n"
+            },
+            {
+                "title": "Hello, World!",
+                "description": "Generates a new JWT.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "jwt",
+                    "generate",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static string GenerateJwt(string secret, string issuer, string audience, int expirationMinutes) {\n  var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));\n  var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);\n  var token = new JwtSecurityToken(issuer, audience, null, expires: DateTime.UtcNow.AddMinutes(expirationMinutes), signingCredentials: credentials);\n  return new JwtSecurityTokenHandler().WriteToken(token);\n}\n"
+            },
+            {
+                "title": "Hello, World!",
+                "description": "Validates a JWT.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "jwt",
+                    "validate",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static bool ValidateJwt(string token, string secret) {\n  var tokenHandler = new JwtSecurityTokenHandler();\n  var validationParameters = new TokenValidationParameters {\n    ValidateIssuerSigningKey = true,\n    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret)),\n    ValidateIssuer = false,\n    ValidateAudience = false\n  };\n  try {\n    tokenHandler.ValidateToken(token, validationParameters, out _);\n    return true;\n  }\n  catch {\n    return false\n  }\n}\n"
+            }
+        ]
+    },
+    {
         "categoryName": "List Utilities",
         "snippets": [
             {
@@ -20,6 +126,32 @@
     {
         "categoryName": "String Utilities",
         "snippets": [
+            {
+                "title": "Hello, World!",
+                "description": "Makes the first letter of a string uppercase.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "string",
+                    "capitalize",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "/// <summary>\n/// Capitalize the first character of the string\n/// <summary>\npublic static string Capitalize(this string str) {\n  return str.Substring(0, 1).ToUpper() + str.Substring(1);\n}\n"
+            },
+            {
+                "title": "Hello, World!",
+                "description": "Splits a string by a delimiter.",
+                "author": "chaitanya-jvnm",
+                "tags": [
+                    "c#",
+                    "string",
+                    "split",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "public static string[] SplitString(string str, string delimiter) {\n  return str.Split(delimiter);\n}\n"
+            },
             {
                 "title": "Truncate a String",
                 "description": "Cut off a string once it reaches a determined amount of characters and add '...' to the end of the string",
