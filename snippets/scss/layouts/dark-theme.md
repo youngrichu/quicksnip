@@ -1,6 +1,6 @@
 ---
 title: Dark Theme
-description: SCSS mixin to change styles for dark themes
+description: SCSS mixin to change styles for dark themes.
 tags: scss, css, mixin, snippet, dark-theme, layout
 author: gihanrangana
 ---
@@ -19,6 +19,14 @@ author: gihanrangana
 		&[theme='dark'] {
 			@content;
 		}
+	}
+}
+
+// Usage:
+.container{
+	background: #f0f0f0;
+	@include isDark {
+		background: #222;
 	}
 }
 ```
