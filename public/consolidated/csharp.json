@@ -21,7 +21,7 @@
         "categoryName": "Guid Utilities",
         "snippets": [
             {
-                "title": "Hello, World!",
+                "title": "Generate GUID",
                 "description": "Generates a new GUID",
                 "author": "chaitanya-jvnm",
                 "tags": [
@@ -34,7 +34,7 @@
                 "code": "public static string GenerateGuid() {\n  return Guid.NewGuid().ToString();\n}\n"
             },
             {
-                "title": "Hello, World!",
+                "title": "Validate GUID",
                 "description": "Checks if a string is a valid GUID.",
                 "author": "chaitanya-jvnm",
                 "tags": [
@@ -52,7 +52,7 @@
         "categoryName": "Jwt Utilities",
         "snippets": [
             {
-                "title": "Hello, World!",
+                "title": "Decode JWT",
                 "description": "Decodes a JWT.",
                 "author": "chaitanya-jvnm",
                 "tags": [
@@ -65,7 +65,7 @@
                 "code": "/// <summary>\n/// Decodes the JWT\n/// <summary>\npublic static string DecodeJwt(string token) {\n  return new JwtSecurityTokenHandler().ReadJwtToken(token).ToString();\n}\n\n//Example\nstring token = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\";\n\nstring decodedJwt = DecodeJwt(token);\n\nConsole.WriteLine(decodedJwt); //Prints {\"alg\":\"HS256\",\"typ\":\"JWT\"}.{\"sub\":\"1234567890\",\"name\":\"John Doe\",\"iat\":1516239022}\n"
             },
             {
-                "title": "Hello, World!",
+                "title": "Generate JWT",
                 "description": "Generates a new JWT.",
                 "author": "chaitanya-jvnm",
                 "tags": [
@@ -78,7 +78,7 @@
                 "code": "public static string GenerateJwt(string secret, string issuer, string audience, int expirationMinutes) {\n  var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));\n  var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);\n  var token = new JwtSecurityToken(issuer, audience, null, expires: DateTime.UtcNow.AddMinutes(expirationMinutes), signingCredentials: credentials);\n  return new JwtSecurityTokenHandler().WriteToken(token);\n}\n"
             },
             {
-                "title": "Hello, World!",
+                "title": "Validate JWT",
                 "description": "Validates a JWT.",
                 "author": "chaitanya-jvnm",
                 "tags": [
@@ -114,7 +114,7 @@
         "categoryName": "String Utilities",
         "snippets": [
             {
-                "title": "Hello, World!",
+                "title": "Capitalize first letter",
                 "description": "Makes the first letter of a string uppercase.",
                 "author": "chaitanya-jvnm",
                 "tags": [

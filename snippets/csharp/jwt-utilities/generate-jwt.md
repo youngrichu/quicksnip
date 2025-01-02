@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Generate JWT
 description: Generates a new JWT.
 author: chaitanya-jvnm
 tags: c#,jwt,generate,utility
