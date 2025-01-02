@@ -29,6 +29,19 @@
                 "code": "const removeDuplicates = (arr) => [...new Set(arr)];\n\n// Usage:\nconst numbers = [1, 2, 2, 3, 4, 4, 5];\nconsole.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]\n"
             },
             {
+                "title": "Remove Falsy Values",
+                "description": "Removes falsy values like null, undefined, and false from an array.",
+                "author": "mubasshir",
+                "tags": [
+                    "javascript",
+                    "array",
+                    "falsy",
+                    "filter"
+                ],
+                "contributors": [],
+                "code": "const removeFalsy = (arr) => arr.filter(Boolean);\n\n// Usage:\nconst array = [0, 1, false, 2, \"\", 3, null];\nconsole.log(removeFalsy(array)); // Output: [1, 2, 3]\n"
+            },
+            {
                 "title": "Shuffle Array",
                 "description": "Shuffles an Array.",
                 "author": "loxt-nixo",
