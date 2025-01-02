@@ -18,28 +18,59 @@ If you have a feature request or want to fix a bug, feel free to:
 
 ---
 
+## Snippets Guidelines
+
+### Snippet Format
+
+**All** snippets should follow the following structure:
+- A `code` segment, containing a function with the actual snippet functionnality
+- An `example` segement, containing one or more examples of use
+
+Example in javascript:
+```js
+function example(x) {
+    return x * 2;
+}
+
+// Usage:
+example(5) // Returns: 10
+```
+If your function doesn't return anything just show how to use it. \
+If the result of your function is too complicated to be expressed in a single comment, your snippet is probably too complex to begin with.
+
+### Snippet boundaries
+
+To **check if your snippet will not get refused** ask yourself those questions:
+- **Does the standard library of my language provide an easy way of doing this ?**
+- **Does that snippet have a real, and practical use case ?**
+- **Could it be split into separate parts to be better understood ?**
+
+If one of question is true, then your snippet will most likely get refused !
+
+---
+
 ## Adding Snippets
 
 ### Adding a New Snippet
 
-To add a new code snippet:
+1. **Ensure your snippet match [guidelines](#snippets-guidelines)**
 
-1. **Navigate to the relevant folder:**
+2. **Navigate to the relevant folder:**
   
     - Go to the `/snippets` folder in the root directory.
     - Locate the folder for the programming language of your snippet, such as `javascript` or `python`.
 
-2. **Choose the correct category:**
+3. **Choose the correct category:**
 
     - Within the language folder, find the relevant category folder for your snippet.
     - If no suitable category exists, refer to [Adding a New Category](#adding-a-new-category).
 
-3. **Create a markdown file:**
+4. **Create a markdown file:**
 
     - Create a new file with a `.md` extension.
     - Name the file appropriately, keeping it descriptive and concise.
 
-4. **Add your snippet:**
+5. **Add your snippet:**
 
     - Use the following format to structure your snippet:
 
@@ -74,11 +105,11 @@ console.log(formatDate(new Date())); // Output: '2024-12-10'
 ```
 ````
 
-5. **Use syntax highlighting:**
+6. **Use syntax highlighting:**
     - Enclose your code with triple backticks (```).
     - Specify the language after the first set of backticks for syntax highlighting.
 
-6. **Test your snippet:**
+7. **Test your snippet:**
    - Ensure your code runs as expected. \
         To test that your snippets are formatted correctly use the `snippets:check` script:
         ```
