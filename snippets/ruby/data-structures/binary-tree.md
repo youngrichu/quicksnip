@@ -2,7 +2,7 @@
 title: Binary Tree
 description: Implements a basic binary tree with in-order traversal.
 author: ACR1209
-tags: ruby,data structures,binary tree
+tags: data structures,binary tree
 ---
 
 ```rb

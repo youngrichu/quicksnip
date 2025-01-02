@@ -3,7 +3,7 @@ title: Calculate Compound Interest
 description: Calculates compound interest for a given principal amount, rate, and time period.
 author: ACR1209
 contributors: axorax
-tags: ruby,math,compound interest,finance
+tags: math,compound interest,finance
 ---
 
 ```rb

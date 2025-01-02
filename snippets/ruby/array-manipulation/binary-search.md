@@ -2,7 +2,7 @@
 title: Binary Search
 description: Searches for an element in a sorted array using binary search.
 author: ACR1209
-tags: ruby,array,binary-search,search
+tags: array,binary-search,search
 ---
 
 ```rb

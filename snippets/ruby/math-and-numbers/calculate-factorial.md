@@ -2,7 +2,7 @@
 title: Calculate Factorial
 description: Computes the factorial of a given integer.
 author: ACR1209
-tags: ruby,math,factorial
+tags: math,factorial
 ---
 
 ```rb

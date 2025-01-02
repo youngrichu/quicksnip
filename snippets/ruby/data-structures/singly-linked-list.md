@@ -2,7 +2,7 @@
 title: Singly Linked List
 description: Implements a basic singly linked list with node insertion and traversal.
 author: ACR1209
-tags: ruby,data structures,linked list
+tags: data structures,linked list
 ---
 
 ```rb

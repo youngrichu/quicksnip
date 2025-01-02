@@ -2,7 +2,7 @@
 title: Chunk Array
 description: Splits an array into chunks of a specified size.
 author: ACR1209
-tags: ruby,array,chunk,utility
+tags: array,chunk
 ---
 
 ```rb

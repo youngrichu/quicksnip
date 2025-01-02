@@ -2,7 +2,7 @@
 title: Matrix Transpose
 description: Transposes a 2D matrix.
 author: ACR1209
-tags: ruby,array,matrix,transpose
+tags: array,matrix,transpose
 ---
 
 ```ruby

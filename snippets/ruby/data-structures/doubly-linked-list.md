@@ -2,7 +2,7 @@
 title: Doubly Linked List
 description: Implements a doubly linked list with node insertion and traversal.
 author: ACR1209
-tags: ruby,data structures,linked list,doubly linked list
+tags: data structures,linked list,doubly linked list
 ---
 
 ```rb

@@ -3,7 +3,7 @@ title: Check Prime Number
 description: Checks if a number is a prime number.
 author: ACR1209
 contributors: dostonnabotov
-tags: ruby,math,prime,check
+tags: math,prime,check
 ---
 
 ```rb

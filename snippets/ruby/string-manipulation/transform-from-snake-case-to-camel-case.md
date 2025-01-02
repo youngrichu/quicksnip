@@ -2,7 +2,7 @@
 title: Transform from Snake Case to Camel Case
 description: Converts a Snake Case string to Camel Case.
 author: ACR1209
-tags: ruby,string,convert,snake-case,camel-case,utility
+tags: string,convert,snake-case,camel-case
 ---
 
 ```rb
@@ -12,6 +12,7 @@ def snake_to_camel(str)
     }.join
 end
 
+# Usage
 snake_case = "snake_case_to_camel_case"
 puts snake_to_camel(snake_case) # Output: "snakeCaseToCamelCase"
 ```
