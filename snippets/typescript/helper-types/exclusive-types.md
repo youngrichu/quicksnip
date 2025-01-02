@@ -13,7 +13,7 @@ type Exclusive<T, U = T> = T | U extends Record<string, unknown>
   : T | U;
 
 
-# Usage:
+// Usage:
 type A = { name: string; email?: string; provider?: string };
 type B = { name: string; phone?: string; country?: string };
 
