@@ -3,9 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SnippetType } from "../types";
 import { useAppContext } from "../contexts/AppContext";
 import { useSnippets } from "../hooks/useSnippets";
+import { useAppContext } from "@contexts/AppContext";
+import { useSnippets } from "@hooks/useSnippets";
+import { SnippetType } from "@types";
 
-import SnippetModal from "./SnippetModal";
 import { LeftAngleArrowIcon } from "./Icons";
+import SnippetModal from "./SnippetModal";
 
 const SnippetList = () => {
   const { language, snippet, setSnippet } = useAppContext();

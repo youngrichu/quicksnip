@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
+import { useEscapeKey } from "@hooks/useEscapeKey";
+import { SnippetType } from "@types";
+import { slugify } from "@utils/slugify";
 import Button from "./Button";
-import { CloseIcon } from "./Icons";
 import CodePreview from "./CodePreview";
-import { SnippetType } from "../types";
-import slugify from "../utils/slugify";
-import useEscapeKey from "../hooks/useEscapeKey";
+import { CloseIcon } from "./Icons";
 
 type Props = {
   snippet: SnippetType;
@@ -23,7 +23,9 @@ const SnippetModal: React.FC<Props> = ({
 
   useEscapeKey(handleCloseModal);
 
-  if (!modalRoot) return null;
+  if (!modalRoot) {
+    return null;
+  }
 
   return ReactDOM.createPortal(
     <motion.div
