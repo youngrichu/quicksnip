@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Capitalize first letter
 description: Makes the first letter of a string uppercase.
 author: chaitanya-jvnm
 tags: c#,string,capitalize,utility

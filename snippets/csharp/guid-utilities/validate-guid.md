@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Validate GUID
 description: Checks if a string is a valid GUID.
 author: chaitanya-jvnm
 tags: c#,guid,validate,utility
