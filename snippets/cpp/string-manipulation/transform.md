@@ -15,4 +15,11 @@ std::string transform(const std::string& str, F&& transformer) {
         | std::ranges::views::transform(std::forward<F>(transformer))
         | std::ranges::to<std::string>();
 }
+
+
+
+// Usage:
+std::string str = "Hello, World!";
+std::string transformed = transform(str, [](char c){ return std::toupper(c); });
+std::cout << transformed << std::endl; // HELLO, WORLD!
 ```

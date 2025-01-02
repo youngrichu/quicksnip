@@ -15,4 +15,11 @@ auto filter(const std::vector<T>& vec, P&& predicate) {
         | std::views::filter(std::forward<P>(predicate))
         | std::ranges::to<std::vector<T>>();
 }
+
+
+
+// Usage:
+std::vector<int> vec = {1, 2, 3, 4, 5};
+std::vector<int> filtered = filter(vec, [](int i){ return i % 2 == 0; });
+// filtered contains 2 and 4
 ```

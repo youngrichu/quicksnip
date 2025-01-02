@@ -32,7 +32,9 @@ std::vector<std::filesystem::path> find_files_recursive(const std::string& path,
 }
 
 
-// usage: 
+
+// Usage:
+
 // Find all files with size greater than 10MB
 auto files = find_files_recursive("Path", [](const auto& p) {
     return std::filesystem::file_size(p) > 10 * 1024 * 1024;

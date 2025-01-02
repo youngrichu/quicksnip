@@ -29,4 +29,9 @@ std::vector<std::filesystem::path> list_directories(const std::string& path) {
 
     return files;
 }
+
+
+
+// Usage:
+auto directories = list_directories("Path");
 ```

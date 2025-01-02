@@ -18,4 +18,9 @@ bool is_palindrome(const std::string& str) {
     
     return std::ranges::equal(sanitized_string, sanitized_string | std::views::reverse);
 }
+
+
+
+// Usage:
+bool pal = is_palindrome("A man, a plan, a canal, Panama"); // true
 ```

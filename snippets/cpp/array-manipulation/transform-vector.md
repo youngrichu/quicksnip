@@ -16,4 +16,11 @@ auto transform(const std::vector<T>& vec, F&& transformer) {
         | std::views::transform(std::forward<F>(transformer))
         | std::ranges::to<std::vector<U>>();
 }
+
+
+
+// Usage:
+std::vector<int> vec = {1, 2, 3, 4, 5};
+std::vector<int> transformed = transform(vec, [](int i){ return i * 2; });
+// transformed containes 2, 4, 6, 8, 10
 ```
