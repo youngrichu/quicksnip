@@ -2,7 +2,7 @@
 title: Number to Words Converter
 description: Converts a number to its word representation in English.
 author: axorax
-tags: javascript,number,words,utility
+tags: number,words
 ---
 
 ```js
@@ -25,6 +25,6 @@ const numberToWords = (num) => {
 };
 
 // Usage:
-console.log(numberToWords(123)); // Output: 'One Hundred Twenty Three'
-console.log(numberToWords(2045)); // Output: 'Two Thousand Forty Five'
+numberToWords(123); // Returns: 'One Hundred Twenty Three'
+numberToWords(2045); // Returns: 'Two Thousand Forty Five'
 ```

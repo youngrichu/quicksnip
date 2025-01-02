@@ -2,7 +2,7 @@
 title: Primary Button
 description: Generates a styled primary button.
 author: dostonnabotov
-tags: scss,button,primary,css
+tags: button,primary,css
 ---
 
 ```scss

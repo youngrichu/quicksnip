@@ -2,7 +2,7 @@
 title: Convert to Scientific Notation
 description: Converts a number to scientific notation.
 author: axorax
-tags: javascript,number,scientific,utility
+tags: number,scientific
 ---
 
 ```js
@@ -19,9 +19,9 @@ const toScientificNotation = (num) => {
 };
 
 // Usage:
-console.log(toScientificNotation(12345)); // Output: '1.23e+4'
-console.log(toScientificNotation(0.0005678)); // Output: '5.68e-4'
-console.log(toScientificNotation(1000)); // Output: '1.00e+3'
-console.log(toScientificNotation(0)); // Output: '0e+0'
-console.log(toScientificNotation(-54321)); // Output: '-5.43e+4'
+toScientificNotation(12345); // Returns: '1.23e+4'
+toScientificNotation(0.0005678); // Returns: '5.68e-4'
+toScientificNotation(1000); // Returns: '1.00e+3'
+toScientificNotation(0); // Returns: '0e+0'
+toScientificNotation(-54321); // Returns: '-5.43e+4'
 ```

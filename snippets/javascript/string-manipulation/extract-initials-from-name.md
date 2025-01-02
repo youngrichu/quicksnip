@@ -10,6 +10,6 @@ function getInitials(name) {
   return name.split(' ').map(part => part.charAt(0).toUpperCase()).join('');
 }
 
-// Example usage:
-console.log(getInitials('John Doe')); // Output: 'JD'
+// Usage:
+getInitials('John Doe'); // Returns: 'JD'
 ```

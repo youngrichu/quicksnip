@@ -10,6 +10,6 @@ function toTitleCase(str) {
   return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
 }
 
-// Example usage:
-console.log(toTitleCase('hello world test')); // Output: 'Hello World Test'
+// Usage:
+toTitleCase('hello world test'); // Returns: 'Hello World Test'
 ```

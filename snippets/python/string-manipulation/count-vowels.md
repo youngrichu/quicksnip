@@ -2,7 +2,7 @@
 title: Count Vowels
 description: Counts the number of vowels in a string.
 author: SteliosGee
-tags: python,string,vowels,count,utility
+tags: string,vowels,count
 ---
 
 ```py
@@ -11,5 +11,5 @@ def count_vowels(s):
     return len([char for char in s.lower() if char in vowels])
 
 # Usage:
-print(count_vowels('hello'))  # Output: 2
+count_vowels('hello') # Returns: 2
 ```

@@ -2,7 +2,7 @@
 title: Insert Data into Sqlite Table
 description: Inserts a row into a specified SQLite table using a dictionary of fields and values.
 author: e3nviction
-tags: python,sqlite,database,utility
+tags: sqlite,database
 ---
 
 ```py

@@ -2,7 +2,7 @@
 title: Either Monad for Error Handling
 description: Using the Either monad to handle errors in a computation.
 author: ACR1209
-tags: haskell, monads, either, error handling
+tags: monads, either, error handling
 ---
 
 ```hs
@@ -10,6 +10,7 @@ safeDiv :: Int -> Int -> Either String Int
 safeDiv _ 0 = Left "Division by zero error"
 safeDiv x y = Right (x `div` y)
 
+-- Usage:
 main :: IO ()
 main = do
     let result = do

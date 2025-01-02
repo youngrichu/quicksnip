@@ -2,7 +2,7 @@
 title: Convert Bytes to Human-Readable Format
 description: Converts a size in bytes to a human-readable format.
 author: axorax
-tags: python,bytes,format,utility
+tags: bytes,format
 ---
 
 ```py
@@ -13,5 +13,5 @@ def bytes_to_human_readable(num):
         num /= 1024
 
 # Usage:
-print(bytes_to_human_readable(123456789))  # Output: '117.74 MB'
+bytes_to_human_readable(123456789) # Returns: '117.74 MB'
 ```

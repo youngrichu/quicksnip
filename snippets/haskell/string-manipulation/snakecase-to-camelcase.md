@@ -2,7 +2,7 @@
 title: Transform from Snake Case to Camel Case
 description: Converts a Snake Case string to Camel Case.
 author: ACR1209
-tags: haskell,string,convert,snake-case,camel-case,utilty
+tags: string,convert,snake-case,camel-case,utilty
 ---
 
 ```hs
@@ -13,6 +13,7 @@ snakeToCamel [] = []
 snakeToCamel ('_':x:xs) = toUpper x : snakeToCamel xs
 snakeToCamel (x:xs) = x : snakeToCamel xs
 
+-- Usage:
 main :: IO ()
 main = do
     let snakeCase = "snake_case_to_camel_case"

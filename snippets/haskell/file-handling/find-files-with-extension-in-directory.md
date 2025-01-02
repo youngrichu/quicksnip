@@ -2,7 +2,7 @@
 title: Find Files in Directory by Type
 description: Finds all files in a directory with a specific extension.
 author: ACR1209
-tags: haskell,file,search,extension,filesystem
+tags: file,search,extension,filesystem
 ---
 
 ```hs
@@ -14,6 +14,7 @@ findFilesByExtension dir ext = do
     files <- listDirectory dir
     return $ filter (\f -> takeExtension f == ext) files
 
+-- Usage:
 main :: IO ()
 main = do
     let directory = "."

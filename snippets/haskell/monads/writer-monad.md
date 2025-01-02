@@ -2,7 +2,7 @@
 title: Writer Monad
 description: Using the Writer monad to accumulate logs or other outputs alongside a computation.
 author: ACR1209
-tags: haskell, monads, writer, logs
+tags: monads, writer, logs
 ---
 
 ```hs
@@ -13,6 +13,7 @@ addAndLog x y = do
     tell ["Adding " ++ show x ++ " and " ++ show y]
     return (x + y)
 
+-- Usage:
 main :: IO ()
 main = do
     let (result, logs) = runWriter $ do

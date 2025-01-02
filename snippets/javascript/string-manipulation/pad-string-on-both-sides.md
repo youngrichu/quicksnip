@@ -13,6 +13,6 @@ function padString(str, length, char = ' ') {
   return char.repeat(padStart) + str + char.repeat(padEnd);
 }
 
-// Example usage:
-console.log(padString('hello', 10, '*')); // Output: '**hello***'
+// Usage:
+padString('hello', 10, '*'); // Returns: '**hello***'
 ```

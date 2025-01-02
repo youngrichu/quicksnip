@@ -2,7 +2,7 @@
 title: Write JSON File
 description: Writes a dictionary to a JSON file.
 author: e3nviction
-tags: python,json,file,write
+tags: json,file,write
 ---
 
 ```py

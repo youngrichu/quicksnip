@@ -1,8 +1,8 @@
 ---
-title: Determine Day of the Week
-description: Calculates the day of the week for a given date.
+title: Day of the Week String
+description: Gets the string of the day of the week for a given date.
 author: axorax
-tags: python,datetime,weekday,utility
+tags: datetime,weekday
 ---
 
 ```py
@@ -17,6 +17,5 @@ def get_day_of_week(date):
 
 # Usage:
 date = datetime(2023, 1, 1)
-day = get_day_of_week(date)
-print(day)  # Output: 'Sunday'
+get_day_of_week(date) # Returns: 'Sunday'
 ```

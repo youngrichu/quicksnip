@@ -2,7 +2,7 @@
 title: Convert Object to Query String
 description: Converts an object to a query string for use in URLs.
 author: axorax
-tags: javascript,object,query string,url
+tags: object,query string,url
 ---
 
 ```js
@@ -14,5 +14,5 @@ function toQueryString(obj) {
 
 // Usage:
 const params = { search: 'test', page: 1 };
-console.log(toQueryString(params)); // Output: 'search=test&page=1'
+toQueryString(params); // Returns: 'search=test&page=1'
 ```

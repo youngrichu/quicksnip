@@ -2,7 +2,7 @@
 title: State Monad
 description: Managing mutable state using the State monad.
 author: ACR1209
-tags: haskell, monads, state, state-management
+tags: monads, state, state-management
 ---
 
 ```hs
@@ -14,6 +14,7 @@ increment = do
     put (count + 1)
     return count
 
+-- Usage:
 main :: IO ()
 main = do
     let (res1, intermediateState) = runState increment 0

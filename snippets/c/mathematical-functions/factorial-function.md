@@ -2,7 +2,7 @@
 title: Factorial Function
 description: Calculates the factorial of a number.
 author: 0xHouss
-tags: c,math,factorial,utility
+tags: math,factorial
 ---
 
 ```c
@@ -14,4 +14,7 @@ int factorial(int x) {
 
   return y;
 }
+
+// Usage:
+factorial(4); // Returns: 24
 ```

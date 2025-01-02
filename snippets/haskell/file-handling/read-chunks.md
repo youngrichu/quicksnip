@@ -2,7 +2,7 @@
 title: Read File in Chunks
 description: Reads a file in chunks grouped by lines.
 author: ACR1209
-tags: haskell,file,read,chunks,utility
+tags: file,read,chunks,utility
 ---
 
 ```hs
@@ -19,6 +19,7 @@ readFileInChunks filePath chunkSize = do
     go [] = []
     go xs = take chunkSize xs : go (drop chunkSize xs)
 
+-- Usage:
 main :: IO ()
 main = do
     let file = "example.txt"

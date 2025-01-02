@@ -10,6 +10,6 @@ function toParamCase(str) {
   return str.toLowerCase().replace(/\s+/g, '-');
 }
 
-// Example usage:
-console.log(toParamCase('Hello World Test')); // Output: 'hello-world-test'
+// Usage:
+toParamCase('Hello World Test'); // Returns: 'hello-world-test'
 ```

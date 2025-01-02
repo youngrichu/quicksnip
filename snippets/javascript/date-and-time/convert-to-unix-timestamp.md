@@ -2,17 +2,10 @@
 title: Convert to Unix Timestamp
 description: Converts a date to a Unix timestamp in seconds.
 author: Yugveer06
-tags: javascript,date,unix,timestamp,utility
+tags: date,unix,timestamp
 ---
 
 ```js
-/**
- * Converts a date string or Date object to Unix timestamp in seconds.
- *
- * @param {string|Date} input - A valid date string or Date object.
- * @returns {number} - The Unix timestamp in seconds.
- * @throws {Error} - Throws an error if the input is invalid.
- */
 function convertToUnixSeconds(input) {
   if (typeof input === 'string') {
     if (!input.trim()) {
@@ -39,8 +32,8 @@ function convertToUnixSeconds(input) {
   return Math.floor(date.getTime() / 1000);
 }
 
-// Usage
-console.log(convertToUnixSeconds('2025-01-01T12:00:00Z')); // 1735732800
-console.log(convertToUnixSeconds(new Date('2025-01-01T12:00:00Z'))); // 1735732800
-console.log(convertToUnixSeconds(new Date())); //Current Unix timestamp in seconds (varies depending on execution time)
+// Usage:
+convertToUnixSeconds('2025-01-01T12:00:00Z'); // Returns: 1735732800
+convertToUnixSeconds(new Date('2025-01-01T12:00:00Z')); // Returns: 1735732800
+convertToUnixSeconds(new Date()); // Returns: Current Unix timestamp in seconds
 ```
