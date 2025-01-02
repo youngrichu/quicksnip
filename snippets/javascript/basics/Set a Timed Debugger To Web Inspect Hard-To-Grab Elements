@@ -1,0 +1,18 @@
+---
+title: Set a Timed Debugger To Web Inspect Hard-To-Grab Elements
+description: Use setTimeout with the debugger statement to inspect hard-to-grab elements like dropdown menus and other dynamic UI components.
+author: youngrichu
+tags: javascript, debugging, inspection, dynamic, elements
+---
+
+```js
+setTimeout(() => { debugger; }, 3000);
+
+// Usage:
+// 1. Open Developer Tools: Press F12 or Ctrl+Shift+I to open the developer tools in your browser.
+// 2. Navigate to the Console: Click on the Console tab in the developer tools.
+// 3. Enter the Code: Type or paste the following code into the console:
+//    setTimeout(() => { debugger; }, 3000);
+// 4. Interact with the Element: Quickly interact with the dropdown menu or the element you want to inspect within the 3-second window.
+// 5. Inspect the Element: Once the timeout is reached, the debugger will pause the execution, allowing you to inspect the element using the developer tools.
+```
