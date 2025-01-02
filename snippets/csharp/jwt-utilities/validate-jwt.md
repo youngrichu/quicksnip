@@ -22,4 +22,14 @@ public static bool ValidateJwt(string token, string secret) {
     return false
   }
 }
+
+//Example
+string JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+
+string correctSecret = "your-256-bit-secret";
+string wrongSecret = "this-is-not-the-right-secret";
+
+Console.WriteLine(ValidateJwt(JWT, correctSecret)) // returns True
+Console.WriteLine(ValidateJwt(JWT, wrongSecret)) // returns False
+
 ```
