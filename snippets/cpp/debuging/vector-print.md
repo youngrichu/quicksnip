@@ -1,5 +1,5 @@
 ---
-title: vector-print
+title: Vector Print
 description: Overloads the << operator to print the contents of a vector just like in python.
 author: Mohamed-faaris
 tags: printing,debuging,vector
@@ -22,7 +22,7 @@ std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {
     return os; // Return the stream
 }
 
-//std::vector<int> numbers = {1, 2, 3, 4, 5};
-//std::cout << numbers << std::endl; // Outputs: [1, 2, 3, 4, 5]
+std::vector<int> numbers = {1, 2, 3, 4, 5};
+std::cout << numbers << std::endl; // Outputs: [1, 2, 3, 4, 5]
 
 ```
