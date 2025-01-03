@@ -25,7 +25,7 @@ jobs:
       - name: Check if snippets are formated correctly
         uses: int128/comment-action@v1
         with:
-          run: node utils/checkSnippetFormatting.js # Run the script located in the utils/ folder
+          run: tsx utils/checkSnippetFormatting.ts # Run the script located in the utils/ folder
           post-on-failure: |
             ## :x: Snippet Format Error
             ${run.output}

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import { slugify } from "../src/utils/slugify";
+import { reverseSlugify, slugify } from "../src/utils/slugify";
 
 describe(slugify.name, () => {
   it("should convert a string to lowercase and replace spaces with dashes", () => {
@@ -49,5 +49,41 @@ describe(slugify.name, () => {
     expect(slugify("__Consecutive   ___ Spaces___")).toBe(
       "-consecutive-spaces"
     );
+  });
+});
+
+describe(reverseSlugify.name, () => {
+  it("should convert a slugified string back to a human-readable string", () => {
+    expect(reverseSlugify("hello-world")).toBe("Hello World");
+  });
+
+  it("should handle strings with custom separators", () => {
+    expect(reverseSlugify("custom_separator_example", "_")).toBe(
+      "Custom Separator Example"
+    );
+  });
+
+  it("should handle strings with multiple consecutive separators", () => {
+    expect(reverseSlugify("multiple---dashes")).toBe("Multiple   Dashes");
+  });
+
+  it("should handle empty strings correctly", () => {
+    expect(reverseSlugify("")).toBe("");
+  });
+
+  it("should handle strings with a single word", () => {
+    expect(reverseSlugify("single")).toBe("Single");
+  });
+
+  it("should handle strings with trailing separators", () => {
+    expect(reverseSlugify("trailing-dash-")).toBe("Trailing Dash");
+  });
+
+  it("should handle strings with numbers and separators", () => {
+    expect(reverseSlugify("123-number-test")).toBe("123 Number Test");
+  });
+
+  it("should handle strings with only separators", () => {
+    expect(reverseSlugify("---", "-")).toBe("");
   });
 });
