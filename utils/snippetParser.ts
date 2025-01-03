@@ -13,15 +13,11 @@ const codeRegex = /^(.+)```/s;
 
 let errored = false;
 
-function parseSnippet({
-  snippetPath,
-  name,
-  text,
-}: {
-  snippetPath: string;
-  name: string;
-  text: string;
-}): SnippetType | null {
+function parseSnippet(
+  snippetPath: string,
+  name: string,
+  text: string
+): SnippetType | null {
   if (crlfRegex.exec(text) !== null) {
     return raise(
       "Found CRLF line endings instead of LF line endings",
@@ -117,11 +113,11 @@ export function parseAllSnippets() {
         const snippetPath = join(categoryPath, snippet);
         const snippetContent = readFileSync(snippetPath).toString();
         const snippetFileName = snippet.slice(0, -3);
-        const snippetData = parseSnippet({
+        const snippetData = parseSnippet(
           snippetPath,
-          name: snippetFileName,
-          text: snippetContent,
-        });
+          snippetFileName,
+          snippetContent
+        );
         if (snippetData === null) {
           errored = true;
           continue;
