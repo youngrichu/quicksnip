@@ -6,7 +6,7 @@ tags: css,animation
 ---
 
 ```css
-.parent {
+.blink {
     animation: blink 1s linear infinite;
 }
 
