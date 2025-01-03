@@ -76,7 +76,6 @@ function parseSnippet(snippetPath, name, text) {
     title: properties.title,
     description: properties.description,
     author: properties.author,
-    code,
     tags: properties.tags
       .split(",")
       .map((tag) => tag.trim())
@@ -85,6 +84,7 @@ function parseSnippet(snippetPath, name, text) {
       .split(",")
       .map((contributor) => contributor.trim())
       .filter((contributor) => contributor),
+    code,
   };
 }
 
