@@ -27,7 +27,7 @@ jobs:
 
       - name: Consolidate Snippets
         run: |
-          tsx utils/consolidateSnippets.ts  # Run the script located in the utils/ folder
+          npx tsx utils/consolidateSnippets.ts  # Run the script located in the utils/ folder
 
       - name: Commit and push changes
         run: |

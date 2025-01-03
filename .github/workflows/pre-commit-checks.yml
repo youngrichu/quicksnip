@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Temp
-        run: npx tsx utils/checkSnippetFormatting.ts
-
       - name: Run cspell
         run: npm run cspell
 
