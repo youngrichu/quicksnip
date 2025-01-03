@@ -2,7 +2,7 @@
 title: Typewriter Animation
 description: Adds a typewriter animation + blinking cursor
 author: AlsoKnownAs-Ax
-tags: css,blinking,typewriter
+tags: blinking,typewriter
 ---
 
 ```html

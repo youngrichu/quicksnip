@@ -2,7 +2,7 @@
 title: Pulse Animation
 description: Adds a smooth pulsing animation with opacity and scale effects
 author: AlsoKnownAs-Ax
-tags: css,animation,pulse,pulse-scale
+tags: animation,pulse,pulse-scale
 ---
 
 ```css

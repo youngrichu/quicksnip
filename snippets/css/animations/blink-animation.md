@@ -2,7 +2,7 @@
 title: Blink Animation
 description: Adds an infinite blinking animation to an element
 author: AlsoKnownAs-Ax
-tags: css,animation,blink,infinite
+tags: animation,blink,infinite
 ---
 
 ```css

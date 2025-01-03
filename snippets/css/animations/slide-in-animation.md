@@ -2,7 +2,7 @@
 title: Slide-in Animation
 description: Adds a slide-in from the right side of the screen
 author: AlsoKnownAs-Ax
-tags: css,animation,slide-in,slide-right
+tags: animation,slide-in,slide-right
 ---
 
 ```css
