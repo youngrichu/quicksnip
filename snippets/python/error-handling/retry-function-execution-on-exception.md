@@ -2,7 +2,7 @@
 title: Retry Function Execution on Exception
 description: Retries a function execution a specified number of times if it raises an exception.
 author: axorax
-tags: python,error-handling,retry,utility
+tags: error-handling,retry
 ---
 
 ```py

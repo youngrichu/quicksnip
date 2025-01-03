@@ -2,7 +2,7 @@
 title: Hello, World!
 description: Prints Hello, World! to the terminal.
 author: James-Beans
-tags: javascript,printing,hello-world,utility
+tags: printing,hello-world
 ---
 
 ```js

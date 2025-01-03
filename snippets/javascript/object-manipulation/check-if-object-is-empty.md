@@ -2,7 +2,7 @@
 title: Check if Object is Empty
 description: Checks whether an object has no own enumerable properties.
 author: axorax
-tags: javascript,object,check,empty
+tags: object,check,empty
 ---
 
 ```js
@@ -11,6 +11,6 @@ function isEmptyObject(obj) {
 }
 
 // Usage:
-console.log(isEmptyObject({})); // Output: true
-console.log(isEmptyObject({ a: 1 })); // Output: false
+isEmptyObject({}); // Returns: true
+isEmptyObject({ a: 1 }); // Returns: false
 ```

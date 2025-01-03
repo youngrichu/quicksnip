@@ -2,7 +2,7 @@
 title: Number Formatter
 description: Formats a number with suffixes (K, M, B, etc.).
 author: realvishalrana
-tags: javascript,number,format,utility
+tags: number,format
 ---
 
 ```js
@@ -19,5 +19,5 @@ const nFormatter = (num) => {
 };
 
 // Usage:
-console.log(nFormatter(1234567)); // Output: '1.23M'
+nFormatter(1234567); // Returns: '1.23M'
 ```

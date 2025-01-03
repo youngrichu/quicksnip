@@ -2,7 +2,7 @@
 title: Get Contrast Color
 description: Returns either black or white text color based on the brightness of the provided hex color.
 author: yaya12085
-tags: javascript,color,hex,contrast,brightness,utility
+tags: color,hex,contrast,brightness
 ---
 
 ```js
@@ -19,8 +19,8 @@ const getContrastColor = (hexColor) => {
 };
 
 // Usage:
-console.log(getContrastColor('#fff')); // Output: #000000 (black)
-console.log(getContrastColor('#123456')); // Output: #FFFFFF (white)
-console.log(getContrastColor('#ff6347')); // Output: #000000 (black)
-console.log(getContrastColor('#f4f')); // Output: #000000 (black)
+getContrastColor('#fff'); // Returns: #000000 (black)
+getContrastColor('#123456'); // Returns: #FFFFFF (white)
+getContrastColor('#ff6347'); // Returns: #000000 (black)
+getContrastColor('#f4f'); // Returns: #000000 (black)
 ```

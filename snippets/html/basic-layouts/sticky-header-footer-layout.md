@@ -2,7 +2,7 @@
 title: Sticky Header-Footer Layout
 description: Full-height layout with sticky header and footer, using modern viewport units and flexbox.
 author: GreenMan36
-tags: html,css,layout,sticky,flexbox,viewport
+tags: css,layout,sticky,flexbox,viewport
 ---
 
 ```html

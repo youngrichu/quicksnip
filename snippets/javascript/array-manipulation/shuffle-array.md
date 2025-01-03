@@ -2,7 +2,7 @@
 title: Shuffle Array
 description: Shuffles an Array.
 author: loxt-nixo
-tags: javascript,array,shuffle,utility
+tags: array,shuffle
 ---
 
 ```js
@@ -12,4 +12,8 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+// Usage:
+const array = [1, 2, 3, 4, 5];
+shuffleArray(array); // Shuffles `array` in place
 ```

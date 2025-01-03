@@ -2,7 +2,7 @@
 title: Matrix Transpose
 description: Transposes a 2D matrix.
 author: ACR1209
-tags: haskell,array,matrix,transpose
+tags: array,matrix,transpose
 ---
 
 ```hs
@@ -11,6 +11,7 @@ transposeMatrix [] = []
 transposeMatrix ([]:_) = []
 transposeMatrix xs = map head xs : transposeMatrix (map tail xs)
 
+-- Usage:
 main :: IO ()
 main = do
     let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]

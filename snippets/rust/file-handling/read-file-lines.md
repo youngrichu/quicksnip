@@ -2,7 +2,7 @@
 title: Read File Lines
 description: Reads all lines from a file and returns them as a vector of strings.
 author: Mathys-Gasnier
-tags: rust,file,read,utility
+tags: file,read
 ---
 
 ```rust
@@ -16,5 +16,5 @@ fn read_lines(file_name: &str) -> std::io::Result<Vec<String>>
 }
 
 // Usage:
-let lines = read_lines("path/to/file.txt").expect("Failed to read lines from file")
+read_lines("path/to/file.txt"); // Returns: If Ok(), a Vec of the lines of the file
 ```
