@@ -6,15 +6,23 @@ import { isCorrectType } from "../src/utils/objectUtils";
 import { raise } from "../src/utils/raise";
 import { reverseSlugify, slugify } from "../src/utils/slugify";
 
-let errored = false;
-
 const crlfRegex = /\r\n/gm;
 const propertyRegex = /^\s+([a-zA-Z]+):\s*(.+)/;
 const headerEndCodeStartRegex = /^\s*---\s*```.*\n/;
 const codeRegex = /^(.+)```/s;
-function parseSnippet(snippetPath, name, text) {
+
+let errored = false;
+
+function parseSnippet({
+  snippetPath,
+  name,
+  text,
+}: {
+  snippetPath: string;
+  name: string;
+  text: string;
+}): SnippetType | null {
   if (crlfRegex.exec(text) !== null) {
-    errored = true;
     return raise(
       "Found CRLF line endings instead of LF line endings",
       snippetPath
@@ -25,7 +33,6 @@ function parseSnippet(snippetPath, name, text) {
   const fromCursor = () => text.substring(cursor);
 
   if (!fromCursor().trim().startsWith("---")) {
-    errored = true;
     return raise("Missing header start delimiter '---'", snippetPath);
   }
   cursor += 3;
@@ -46,12 +53,10 @@ function parseSnippet(snippetPath, name, text) {
       "tags",
     ])
   ) {
-    errored = true;
     return raise("Invalid properties", snippetPath);
   }
 
   if (slugify(properties.title) !== name) {
-    errored = true;
     return raise(
       `slugifyed 'title' property doesn't match snippet file name`,
       snippetPath
@@ -60,14 +65,12 @@ function parseSnippet(snippetPath, name, text) {
 
   match = headerEndCodeStartRegex.exec(fromCursor());
   if (match === null) {
-    errored = true;
     return raise("Missing header end '---' or code start '```'", snippetPath);
   }
   cursor += match[0].length;
 
   match = codeRegex.exec(fromCursor());
   if (match === null) {
-    errored = true;
     return raise("Missing code block end '```'", snippetPath);
   }
   const code: string = match[1];
@@ -103,24 +106,29 @@ export function parseAllSnippets() {
     }
 
     const categories: CategoryType[] = [];
+
     for (const category of readdirSync(languagePath)) {
       if (category === "icon.svg") continue;
-      const categoryPath = join(languagePath, category);
 
+      const categoryPath = join(languagePath, category);
       const categorySnippets: SnippetType[] = [];
+
       for (const snippet of readdirSync(categoryPath)) {
         const snippetPath = join(categoryPath, snippet);
         const snippetContent = readFileSync(snippetPath).toString();
         const snippetFileName = snippet.slice(0, -3);
-
-        const snippetData = parseSnippet(
+        const snippetData = parseSnippet({
           snippetPath,
-          snippetFileName,
-          snippetContent
-        );
-        if (!snippetData) continue;
+          name: snippetFileName,
+          text: snippetContent,
+        });
+        if (snippetData === null) {
+          errored = true;
+          continue;
+        }
         categorySnippets.push(snippetData);
       }
+
       categories.push({
         categoryName: reverseSlugify(category),
         snippets: categorySnippets,
