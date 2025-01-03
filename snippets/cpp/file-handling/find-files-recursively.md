@@ -1,5 +1,5 @@
 ---
-Title: Find files
+Title: Find files recursively
 Description: Find all the files in a directory and subdirectories using a predicate function.
 Author: majvax
 Tags: filesystem,file_search,c++17
