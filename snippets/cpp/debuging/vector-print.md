@@ -1,8 +1,8 @@
 ---
-title: std::vector Print Utility
+title: vector-print
 description: Overloads the << operator to print the contents of a vector just like in python.
 author: Mohamed-faaris
-tags: cpp,printing,debuging,vector,utility
+tags: printing,debuging,vector
 ---
 
 ```cpp
