@@ -1,3 +1,4 @@
+npm run snippets:check
 npm run cspell
 npm run lint
 npm run test-ci
