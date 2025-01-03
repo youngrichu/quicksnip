@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Check if snippets are formated correctly
         uses: int128/comment-action@v1
         with:
