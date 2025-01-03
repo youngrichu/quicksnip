@@ -2,7 +2,7 @@
 title: Shake Animation
 description: Adds a shake animation ( commonly used to mark invalid fields )
 author: AlsoKnownAs-Ax
-tags: css,animation
+tags: css,shake,shake-horizontal
 ---
 
 ```css

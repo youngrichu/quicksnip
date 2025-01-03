@@ -2,7 +2,7 @@
 title: Typewriter Animation
 description: Adds a typewriter animation + blinking cursor
 author: AlsoKnownAs-Ax
-tags: css,animation
+tags: css,blinking,typewriter
 ---
 
 ```html
@@ -26,6 +26,8 @@ tags: css,animation
         border-right: 1px solid;
         margin-inline: auto;
         white-space: nowrap;
+        /* The cursor will inherit the text's color by default */
+        /* border-color: red */                
         /* Steps: number of chars (better to set directly in js)*/
         animation: typing 3s steps(21) forwards,
         blink 1s step-end infinite;
@@ -35,8 +37,6 @@ tags: css,animation
         from{
             width: 0%
         }
-        f
-
         to{
             width: 100%
         }
