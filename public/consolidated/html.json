@@ -7,7 +7,6 @@
                 "description": "Full-height grid layout with header navigation using nesting syntax.",
                 "author": "GreenMan36",
                 "tags": [
-                    "html",
                     "css",
                     "layout",
                     "sticky",
@@ -22,7 +21,6 @@
                 "description": "Full-height layout with sticky header and footer, using modern viewport units and flexbox.",
                 "author": "GreenMan36",
                 "tags": [
-                    "html",
                     "css",
                     "layout",
                     "sticky",

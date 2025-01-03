@@ -2,7 +2,7 @@
 title: MacOS Button
 description: A macOS-like button style, with hover and shading effects.
 author: e3nviction
-tags: css,button,macos,hover,transition
+tags: button,macos,hover,transition
 ---
 
 ```css

@@ -10,6 +10,6 @@ function toCamelCase(str) {
   return str.replace(/\W+(.)/g, (match, chr) => chr.toUpperCase());
 }
 
-// Example usage:
-console.log(toCamelCase('hello world test')); // Output: 'helloWorldTest'
+// Usage:
+toCamelCase('hello world test'); // Returns: 'helloWorldTest'
 ```

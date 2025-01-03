@@ -2,7 +2,7 @@
 title: Create SQLite Database Table
 description: Creates a table in an SQLite database with a dynamic schema.
 author: e3nviction
-tags: python,sqlite,database,table
+tags: sqlite,database,table
 ---
 
 ```py

@@ -2,7 +2,7 @@
 title: Omit Keys from Object
 description: Creates a new object with specific keys omitted.
 author: axorax
-tags: javascript,object,omit,utility
+tags: object,omit
 ---
 
 ```js
@@ -14,5 +14,5 @@ function omitKeys(obj, keys) {
 
 // Usage:
 const obj = { a: 1, b: 2, c: 3 };
-console.log(omitKeys(obj, ['b', 'c'])); // Output: { a: 1 }
+omitKeys(obj, ['b', 'c']); // Returns: { a: 1 }
 ```

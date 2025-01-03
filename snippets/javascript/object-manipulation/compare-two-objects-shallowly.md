@@ -2,7 +2,7 @@
 title: Compare Two Objects Shallowly
 description: Compares two objects shallowly and returns whether they are equal.
 author: axorax
-tags: javascript,object,compare,shallow
+tags: object,compare,shallow
 ---
 
 ```js
@@ -17,6 +17,6 @@ function shallowEqual(obj1, obj2) {
 const obj1 = { a: 1, b: 2 };
 const obj2 = { a: 1, b: 2 };
 const obj3 = { a: 1, b: 3 };
-console.log(shallowEqual(obj1, obj2)); // Output: true
-console.log(shallowEqual(obj1, obj3)); // Output: false
+shallowEqual(obj1, obj2); // Returns: true
+shallowEqual(obj1, obj3); // Returns: false
 ```

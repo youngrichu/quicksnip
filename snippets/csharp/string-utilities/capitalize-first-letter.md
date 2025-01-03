@@ -2,19 +2,14 @@
 title: Capitalize first letter
 description: Makes the first letter of a string uppercase.
 author: chaitanya-jvnm
-tags: c#,string,capitalize,utility
+tags: string,capitalize
 ---
 
-```c#
-/// <summary>
-/// Capitalize the first character of the string
-/// <summary>
+```csharp
 public static string Capitalize(this string str) {
   return str.Substring(0, 1).ToUpper() + str.Substring(1);
 }
 
-//Example
-string example = "hello";
-string captializedExample = example.Capitalize();
-Console.WriteLine(captializedExample); // prints "Hello"
+// Usage:
+"quicksnip".Capitalize(); // Returns: "Quicksnip"
 ```

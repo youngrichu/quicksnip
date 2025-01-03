@@ -1,7 +1,7 @@
 ---
 title: Check Prime Number
 description: Check if an integer is a prime number
-tags: cpp, number, prime
+tags: number, prime
 author: MihneaMoso
 ---
 
@@ -16,11 +16,6 @@ bool is_prime(int n) {
     return true;
 }
 
-// Usage
-#include <iostream>
-
-int main() {
-    std::cout << is_prime(29) << std::endl; // Output: 1
-    return 0;
-}
+// Usage:
+is_prime(29); // Returns: true
 ```

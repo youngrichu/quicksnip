@@ -2,7 +2,7 @@
 title: Pick Keys from Object
 description: Creates a new object with only the specified keys.
 author: axorax
-tags: javascript,object,pick,utility
+tags: object,pick
 ---
 
 ```js
@@ -14,5 +14,5 @@ function pickKeys(obj, keys) {
 
 // Usage:
 const obj = { a: 1, b: 2, c: 3 };
-console.log(pickKeys(obj, ['a', 'c'])); // Output: { a: 1, c: 3 }
+pickKeys(obj, ['a', 'c']); // Returns: { a: 1, c: 3 }
 ```

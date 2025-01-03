@@ -2,7 +2,7 @@
 title: Measure Execution Time
 description: Measures the execution time of a code block.
 author: dostonnabotov
-tags: python,time,execution,utility
+tags: time,execution
 ---
 
 ```py
@@ -19,5 +19,5 @@ def measure_time(func, *args):
 def slow_function():
     time.sleep(2)
 
-measure_time(slow_function)
+measure_time(slow_function) # Outputs an execution time of ~2s
 ```

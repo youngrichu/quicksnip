@@ -2,7 +2,7 @@
 title: Get Day of the Year
 description: Calculates the day of the year (1-365 or 1-366 for leap years) for a given date.
 author: axorax
-tags: javascript,date,day-of-year,utility
+tags: date,day-of-year
 ---
 
 ```js
@@ -13,6 +13,5 @@ const getDayOfYear = (date) => {
 };
 
 // Usage:
-const today = new Date('2024-12-31');
-console.log(getDayOfYear(today)); // Output: 366 (in a leap year)
+getDayOfYear(new Date('2024-12-31')) // Returns: 366 (Leap year)
 ```

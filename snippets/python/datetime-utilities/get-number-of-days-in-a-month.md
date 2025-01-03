@@ -2,7 +2,7 @@
 title: Get Number of Days in a Month
 description: Determines the number of days in a specific month and year.
 author: axorax
-tags: python,datetime,calendar,utility
+tags: datetime,calendar
 ---
 
 ```py
@@ -16,6 +16,5 @@ def get_days_in_month(year, month):
         raise ValueError(f"Invalid month or year: {e}")
 
 # Usage:
-days = get_days_in_month(2023, 2)
-print(days)  # Output: 28 (for non-leap year February)
+get_days_in_month(2023, 2) # Returns: 28 (for non-leap year February)
 ```

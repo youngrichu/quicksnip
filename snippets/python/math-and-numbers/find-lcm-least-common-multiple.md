@@ -10,6 +10,6 @@ def lcm(a, b):
     return abs(a * b) // gcd(a, b)
 
 # Usage:
-print(lcm(12, 15))  # Output: 60
-print(lcm(7, 5))    # Output: 35
+lcm(12, 15) # Returns: 60
+lcm(7, 5) # Returns: 35
 ```

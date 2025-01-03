@@ -2,7 +2,7 @@
 title: Responsive Font Sizing
 description: Adjusts font size based on viewport width.
 author: dostonnabotov
-tags: css,font,responsive,typography
+tags: font,responsive,typography
 ---
 
 ```css

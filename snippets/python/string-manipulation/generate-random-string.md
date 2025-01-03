@@ -2,7 +2,7 @@
 title: Generate Random String
 description: Generates a random alphanumeric string.
 author: dostonnabotov
-tags: python,random,string,utility
+tags: random,string
 ---
 
 ```py
@@ -14,5 +14,5 @@ def random_string(length):
     return ''.join(random.choice(letters_and_digits) for _ in range(length))
 
 # Usage:
-print(random_string(10))  # Output: Random 10-character string
+random_string(10) # Results: Random 10-character string
 ```

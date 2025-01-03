@@ -1,8 +1,8 @@
 ---
-title: Get Current Date and Time String
+title: Get Current Date and Time as String
 description: Fetches the current date and time as a formatted string.
 author: e3nviction
-tags: python,datetime,utility
+tags: datetime,current,string
 ---
 
 ```py
@@ -12,5 +12,5 @@ def get_current_datetime_string():
     return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 # Usage:
-print(get_current_datetime_string())  # Output: '2023-01-01 12:00:00'
+get_current_datetime_string() # Returns: '2023-01-01 12:00:00'
 ```

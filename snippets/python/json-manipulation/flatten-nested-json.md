@@ -2,7 +2,7 @@
 title: Flatten Nested JSON
 description: Flattens a nested JSON object into a flat dictionary.
 author: axorax
-tags: python,json,flatten,nested
+tags: json,flatten,nested
 ---
 
 ```py
@@ -17,6 +17,5 @@ def flatten_json(nested_json, prefix=''):
 
 # Usage:
 nested_json = {'name': 'John', 'address': {'city': 'New York', 'zip': '10001'}}
-flattened = flatten_json(nested_json)
-print(flattened)  # Output: {'name': 'John', 'address.city': 'New York', 'address.zip': '10001'}
+flatten_json(nested_json) # Returns: {'name': 'John', 'address.city': 'New York', 'address.zip': '10001'}
 ```
