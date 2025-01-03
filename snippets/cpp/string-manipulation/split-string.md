@@ -2,7 +2,7 @@
 title: Split String
 description: Splits a string by a delimiter
 author: saminjay
-tags: string,split,c++23
+tags: cpp,string,split,utility
 ---
 
 ```cpp

@@ -2,7 +2,7 @@
 Title: Find files
 Description: Find all the files in a directory and subdirectories using a predicate function.
 Author: majvax
-Tags: filesystem,file_search,c++17
+Tags: cpp,filesystem,file_search,c++17
 ---
 
 ```cpp

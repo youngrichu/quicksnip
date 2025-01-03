@@ -2,7 +2,7 @@
 Title: Transform Vector
 Description: Transforms a vector using a function.
 Author: majvax
-Tags: array,transform,c++23
+Tags: cpp,array,transform,utility,,c++23
 ---
 
 ```cpp
@@ -22,5 +22,5 @@ auto transform(const std::vector<T>& vec, F&& transformer) {
 // Usage:
 std::vector<int> vec = {1, 2, 3, 4, 5};
 std::vector<int> transformed = transform(vec, [](int i){ return i * 2; });
-// transformed contains 2, 4, 6, 8, 10
+// transformed containes 2, 4, 6, 8, 10
 ```
