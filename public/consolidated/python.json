@@ -115,19 +115,6 @@
                 "code": "class ExceptionName(BaseException):\n    def __init__(message: str):\n        super().__init__(message)\n\n# Usage\na: int = 1\n\nif a > 0:\n  raise ExceptionName('Error Message')\n"
             },
             {
-                "title": "Handle File Not Found Error",
-                "description": "Attempts to open a file and handles the case where the file does not exist.",
-                "author": "axorax",
-                "tags": [
-                    "python",
-                    "error-handling",
-                    "file",
-                    "utility"
-                ],
-                "contributors": [],
-                "code": "def read_file_safe(filepath):\n    try:\n        with open(filepath, 'r') as file:\n            return file.read()\n    except FileNotFoundError:\n        return \"File not found!\"\n\n# Usage:\nprint(read_file_safe('nonexistent.txt'))  # Output: 'File not found!'\n"
-            },
-            {
                 "title": "Retry Function Execution on Exception",
                 "description": "Retries a function execution a specified number of times if it raises an exception.",
                 "author": "axorax",
