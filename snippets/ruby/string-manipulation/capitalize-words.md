@@ -10,7 +10,7 @@ def capitalize_words(str)
   str.split.map(&:capitalize).join(' ')
 end
 
-# Usage
+# Usage:
 sentence = "ruby is awesome"
 puts capitalize_words(sentence) # Output: "Ruby Is Awesome"
 ```

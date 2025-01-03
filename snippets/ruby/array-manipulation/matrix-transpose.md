@@ -13,7 +13,7 @@ def transpose_matrix(matrix)
     matrix.first.zip(*matrix[1..-1])
 end
 
-# Usage
+# Usage:
 matrix = [
     [1, 2, 3],
     [4, 5, 6],

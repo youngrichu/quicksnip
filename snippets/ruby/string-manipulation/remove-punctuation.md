@@ -10,7 +10,7 @@ def remove_punctuation(str)
     str.gsub(/[[:punct:]]/, '')
 end
 
-# Usage
+# Usage:
 text = "Hello, Ruby! How's it going?"
 puts remove_punctuation(text) # Output: "Hello Ruby Hows it going"
 ```

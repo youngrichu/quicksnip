@@ -26,7 +26,7 @@ def binary_search(array, target)
   return nil
 end
 
-# Usage
+# Usage:
 array = [1, 3, 5, 7, 9]
 target = 5
 result = binary_search(array, target)

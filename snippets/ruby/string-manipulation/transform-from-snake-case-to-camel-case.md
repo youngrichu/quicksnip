@@ -12,7 +12,7 @@ def snake_to_camel(str)
     }.join
 end
 
-# Usage
+# Usage:
 snake_case = "snake_case_to_camel_case"
 puts snake_to_camel(snake_case) # Output: "snakeCaseToCamelCase"
 ```
