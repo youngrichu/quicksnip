@@ -2,7 +2,7 @@
 title: RGB to Hex Color
 description: Converts RGB color values to hexadecimal color code.
 author: jjcantu
-tags: javascript,color,conversion,utility
+tags: color,conversion
 ---
 
 ```js
