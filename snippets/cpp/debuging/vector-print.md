@@ -22,6 +22,7 @@ std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {
     return os; // Return the stream
 }
 
+// Usage:
 std::vector<int> numbers = {1, 2, 3, 4, 5};
 std::cout << numbers << std::endl; // Outputs: [1, 2, 3, 4, 5]
 
