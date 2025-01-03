@@ -2,7 +2,7 @@
 title: Responsive Design
 description: The different responsive breakpoints.
 author: kruimol
-tags: css,responsive
+tags: responsive,media queries
 ---
 
 ```css

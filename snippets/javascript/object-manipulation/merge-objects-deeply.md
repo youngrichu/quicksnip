@@ -2,7 +2,7 @@
 title: Merge Objects Deeply
 description: Deeply merges two or more objects, including nested properties.
 author: axorax
-tags: javascript,object,merge,deep
+tags: object,merge,deep
 ---
 
 ```js
@@ -22,5 +22,5 @@ function deepMerge(...objects) {
 // Usage:
 const obj1 = { a: 1, b: { c: 2 } };
 const obj2 = { b: { d: 3 }, e: 4 };
-console.log(deepMerge(obj1, obj2)); // Output: { a: 1, b: { c: 2, d: 3 }, e: 4 }
+deepMerge(obj1, obj2); // Returns: { a: 1, b: { c: 2, d: 3 }, e: 4 }
 ```

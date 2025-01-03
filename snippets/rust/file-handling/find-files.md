@@ -2,7 +2,7 @@
 title: Find Files
 description: Finds all files of the specified extension within a given directory.
 author: Mathys-Gasnier
-tags: rust,file,search
+tags: file,search
 ---
 
 ```rust
@@ -23,5 +23,5 @@ fn find_files(directory: &str, file_type: &str) -> std::io::Result<Vec<std::path
 }
 
 // Usage:
-let files = find_files("/path/to/your/directory", ".pdf")
+find_files("/path/to/your/directory", ".pdf"); // Returns: if Ok(), a vector of path to `.pdf` files in the directory
 ```

@@ -2,7 +2,7 @@
 title: Solve Quadratic Equation
 description: Solves a quadratic equation ax^2 + bx + c = 0 and returns the roots.
 author: axorax
-tags: python,math,quadratic,equation,solver
+tags: math,quadratic,equation,solver
 ---
 
 ```py
@@ -15,6 +15,6 @@ def solve_quadratic(a, b, c):
     return root1, root2
 
 # Usage:
-print(solve_quadratic(1, -3, 2))  # Output: ((2+0j), (1+0j))
-print(solve_quadratic(1, 2, 5))   # Output: ((-1+2j), (-1-2j))
+solve_quadratic(1, -3, 2) # Returns: ((2+0j), (1+0j))
+solve_quadratic(1, 2, 5) # Returns: ((-1+2j), (-1-2j))
 ```

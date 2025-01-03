@@ -2,7 +2,7 @@
 title: Hover Glow Effect
 description: Adds a glowing effect on hover.
 author: dostonnabotov
-tags: css,hover,glow,effects
+tags: hover,glow,effects
 ---
 
 ```css

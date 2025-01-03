@@ -2,7 +2,7 @@
 title: Format Number with Commas
 description: Formats a number with commas for better readability (e.g., 1000 -> 1,000).
 author: axorax
-tags: javascript,number,format,utility
+tags: number,format
 ---
 
 ```js
@@ -11,7 +11,7 @@ const formatNumberWithCommas = (num) => {
 };
 
 // Usage:
-console.log(formatNumberWithCommas(1000)); // Output: '1,000'
-console.log(formatNumberWithCommas(1234567)); // Output: '1,234,567'
-console.log(formatNumberWithCommas(987654321)); // Output: '987,654,321'
+formatNumberWithCommas(1000); // Returns: '1,000'
+formatNumberWithCommas(1234567); // Returns: '1,234,567'
+formatNumberWithCommas(987654321); // Returns: '987,654,321'
 ```

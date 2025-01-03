@@ -2,7 +2,7 @@
 title: Clearfix
 description: Provides a clearfix utility for floating elements.
 author: dostonnabotov
-tags: scss,clearfix,utility,css
+tags: clearfix,utility,css
 ---
 
 ```scss

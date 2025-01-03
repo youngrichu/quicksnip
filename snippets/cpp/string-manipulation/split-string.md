@@ -2,7 +2,7 @@
 title: Split String
 description: Splits a string by a delimiter
 author: saminjay
-tags: cpp,string,split,utility
+tags: string,split
 ---
 
 ```cpp
@@ -20,4 +20,7 @@ std::vector<std::string> split_string(std::string str, std::string delim) {
     }
     return splits;
 }
+
+// Usage:
+split_string("quick_-snip", "_-"); // Returns: std::vector<std::string> { "quick", "snip" }
 ```

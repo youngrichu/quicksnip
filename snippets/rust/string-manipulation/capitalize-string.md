@@ -2,7 +2,7 @@
 title: Capitalize String
 description: Makes the first letter of a string uppercase.
 author: Mathys-Gasnier
-tags: rust,string,capitalize,utility
+tags: string,capitalize
 ---
 
 ```rust
@@ -15,5 +15,5 @@ fn capitalized(str: &str) -> String {
 }
 
 // Usage:
-assert_eq!(capitalized("lower_case"), "Lower_case")
+capitalized("lower_case"); // Returns: Lower_case
 ```
