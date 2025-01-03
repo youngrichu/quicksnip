@@ -2,7 +2,7 @@
 Title: List Directories
 Description: Lists all the directories in a path.
 Author: majvax
-Tags: cpp,filesystem,directories,c++17
+Tags: filesystem,directories,c++17
 ---
 
 ```cpp

@@ -2,7 +2,7 @@
 title: Reverse String
 description: Reverses the characters in a string.
 author: Vaibhav-kesarwani
-tags: cpp,array,reverse,utility
+tags: array,reverse,c++20
 ---
 
 ```cpp

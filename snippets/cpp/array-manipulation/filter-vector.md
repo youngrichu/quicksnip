@@ -2,7 +2,7 @@
 Title: Filter Vector
 Description: Filters a vector using a predicate function.
 Author: majvax
-Tags: cpp,array,filter,utility,c++23
+Tags: array,filter,c++23
 ---
 
 ```cpp
