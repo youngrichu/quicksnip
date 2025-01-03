@@ -12,7 +12,7 @@
                     "search"
                 ],
                 "contributors": [],
-                "code": "def binary_search(array, target)\n  low = 0\n  high = array.length - 1\n\n  while low <= high\n    mid = (low + high) / 2\n    guess = array[mid]\n\n    if guess == target\n      return mid\n    elsif guess > target\n      high = mid - 1\n    else\n      low = mid + 1\n    end\n  end\n\n  return nil\nend\n\n# Usage\narray = [1, 3, 5, 7, 9]\ntarget = 5\nresult = binary_search(array, target)\nputs result # Output: 2\n"
+                "code": "def binary_search(array, target)\n  low = 0\n  high = array.length - 1\n\n  while low <= high\n    mid = (low + high) / 2\n    guess = array[mid]\n\n    if guess == target\n      return mid\n    elsif guess > target\n      high = mid - 1\n    else\n      low = mid + 1\n    end\n  end\n\n  return nil\nend\n\n# Usage:\narray = [1, 3, 5, 7, 9]\ntarget = 5\nresult = binary_search(array, target)\nputs result # Output: 2\n"
             },
             {
                 "title": "Chunk Array",
@@ -23,7 +23,7 @@
                     "chunk"
                 ],
                 "contributors": [],
-                "code": "def chunk_array(array, size)\n    array.each_slice(size).to_a\nend\n\n# Example usage:\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nchunked_arr = chunk_array(arr, 2)\nputs chunked_arr.inspect # Output: [[1, 2], [3, 4], [5, 6], [7, 8], [9]]\n"
+                "code": "def chunk_array(array, size)\n    array.each_slice(size).to_a\nend\n\n# Usage:\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nchunked_arr = chunk_array(arr, 2)\nputs chunked_arr.inspect # Output: [[1, 2], [3, 4], [5, 6], [7, 8], [9]]\n"
             },
             {
                 "title": "Matrix Transpose",
@@ -35,7 +35,7 @@
                     "transpose"
                 ],
                 "contributors": [],
-                "code": "def transpose_matrix(matrix)\n    return [] if matrix.empty?\n    return [] if matrix.first.empty?\n\n    matrix.first.zip(*matrix[1..-1])\nend\n\n# Usage\nmatrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\nprint transpose_matrix(matrix) # Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n"
+                "code": "def transpose_matrix(matrix)\n    return [] if matrix.empty?\n    return [] if matrix.first.empty?\n\n    matrix.first.zip(*matrix[1..-1])\nend\n\n# Usage:\nmatrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\nprint transpose_matrix(matrix) # Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]\n"
             }
         ]
     },
@@ -53,45 +53,6 @@
                 ],
                 "contributors": [],
                 "code": "puts 'Hello, World!'\n"
-            }
-        ]
-    },
-    {
-        "categoryName": "Data Structures",
-        "snippets": [
-            {
-                "title": "Binary Tree",
-                "description": "Implements a basic binary tree with in-order traversal.",
-                "author": "ACR1209",
-                "tags": [
-                    "data structures",
-                    "binary tree"
-                ],
-                "contributors": [],
-                "code": "class TreeNode\n  attr_accessor :data, :left, :right\n\n  def initialize(data)\n      @data = data\n      @left = nil\n      @right = nil\n  end\nend\n\nclass BinaryTree\n  attr_accessor :root\n\n  def initialize(root_data)\n      @root = TreeNode.new(root_data)\n  end\n\n  def in_order_traversal(node = @root, result = [])\n      return result unless node\n\n      in_order_traversal(node.left, result)\n      result << node.data\n      in_order_traversal(node.right, result)\n  end\nend\n\n# Usage:\ntree = BinaryTree.new(10)\ntree.root.left = TreeNode.new(5)\ntree.root.right = TreeNode.new(15)\ntree.root.left.left = TreeNode.new(3)\n\nprint tree.in_order_traversal # Output: [3, 5, 10, 15]\n"
-            },
-            {
-                "title": "Doubly Linked List",
-                "description": "Implements a doubly linked list with node insertion and traversal.",
-                "author": "ACR1209",
-                "tags": [
-                    "data structures",
-                    "linked list",
-                    "doubly linked list"
-                ],
-                "contributors": [],
-                "code": "class Node\n  attr_accessor :data, :next, :prev\n\n  def initialize(data)\n    @data = data\n    @next = nil\n    @prev = nil\n  end\nend\n\nclass DoublyLinkedList\n  def initialize\n    @head = nil\n    @tail = nil\n  end\n\n  def append(data)\n    new_node = Node.new(data)\n    if @head.nil?\n      @head = new_node\n      @tail = new_node\n    else\n      @tail.next = new_node\n      new_node.prev = @tail\n      @tail = new_node\n    end\n  end\n\n  def prepend(data)\n    new_node = Node.new(data)\n    if @head.nil?\n      @head = new_node\n      @tail = new_node\n    else\n      new_node.next = @head\n      @head.prev = new_node\n      @head = new_node\n    end\n  end\n\n  def display_forward\n    current = @head\n    while current\n      print \"#{current.data} <-> \"\n      current = current.next\n    end\n    puts \"nil\"\n  end\n\n  def display_backward\n    current = @tail\n    while current\n      print \"#{current.data} <-> \"\n      current = current.prev\n    end\n    puts \"nil\"\n  end\nend\n\n# Usage:\ndll = DoublyLinkedList.new\ndll.append(1)\ndll.append(2)\ndll.append(3)\ndll.display_forward # Output: 1 <-> 2 <-> 3 <-> nil\ndll.display_backward # Output: 3 <-> 2 <-> 1 <-> nil\n"
-            },
-            {
-                "title": "Singly Linked List",
-                "description": "Implements a basic singly linked list with node insertion and traversal.",
-                "author": "ACR1209",
-                "tags": [
-                    "data structures",
-                    "linked list"
-                ],
-                "contributors": [],
-                "code": "class Node\n  attr_accessor :data, :next\n\n  def initialize(data)\n      @data = data\n      @next = nil\n  end\nend\n\nclass LinkedList\n  def initialize\n      @head = nil\n  end\n\n  def append(data)\n      new_node = Node.new(data)\n      if @head.nil?\n          @head = new_node\n      else\n          current = @head\n          current = current.next while current.next\n          current.next = new_node\n      end\n  end\n\n  def display\n      current = @head\n      while current\n          print \"#{current.data} -> \"\n          current = current.next\n      end\n      puts \"nil\"\n  end\nend\n\n# Usage:\nlist = LinkedList.new\nlist.append(1)\nlist.append(2)\nlist.append(3)\nlist.display # Output: 1 -> 2 -> 3 -> nil\n"
             }
         ]
     },
@@ -179,7 +140,7 @@
                     "words"
                 ],
                 "contributors": [],
-                "code": "def capitalize_words(str)\n  str.split.map(&:capitalize).join(' ')\nend\n\n# Usage\nsentence = \"ruby is awesome\"\nputs capitalize_words(sentence) # Output: \"Ruby Is Awesome\"\n"
+                "code": "def capitalize_words(str)\n  str.split.map(&:capitalize).join(' ')\nend\n\n# Usage:\nsentence = \"ruby is awesome\"\nputs capitalize_words(sentence) # Output: \"Ruby Is Awesome\"\n"
             },
             {
                 "title": "Count Word Occurrences in String",
@@ -191,7 +152,7 @@
                     "word-count"
                 ],
                 "contributors": [],
-                "code": "def count_word_occurrences(text)\n    words = text.downcase.scan(/\\w+/)\n    occurrences = Hash.new(0)\n    words.each { |word| occurrences[word] += 1 }\n    occurrences\nend\n\n# Usage\ntext = \"ruby is awesome and Ruby is fun\"\nputs count_word_occurrences(text) # Output: {\"ruby\"=>2, \"is\"=>2, \"awesome\"=>1, \"and\"=>1, \"fun\"=>1}\n"
+                "code": "def count_word_occurrences(text)\n    words = text.downcase.scan(/\\w+/)\n    occurrences = Hash.new(0)\n    words.each { |word| occurrences[word] += 1 }\n    occurrences\nend\n\n# Usage:\ntext = \"ruby is awesome and Ruby is fun\"\nputs count_word_occurrences(text) # Output: {\"ruby\"=>2, \"is\"=>2, \"awesome\"=>1, \"and\"=>1, \"fun\"=>1}\n"
             },
             {
                 "title": "Remove Punctuation",
@@ -203,20 +164,21 @@
                     "remove"
                 ],
                 "contributors": [],
-                "code": "def remove_punctuation(str)\n    str.gsub(/[[:punct:]]/, '')\nend\n\n# Usage\ntext = \"Hello, Ruby! How's it going?\"\nputs remove_punctuation(text) # Output: \"Hello Ruby Hows it going\"\n"
+                "code": "def remove_punctuation(str)\n    str.gsub(/[[:punct:]]/, '')\nend\n\n# Usage:\ntext = \"Hello, Ruby! How's it going?\"\nputs remove_punctuation(text) # Output: \"Hello Ruby Hows it going\"\n"
             },
             {
                 "title": "Transform Camel Case to Snake Case",
-                "description": "Converts a Camel Case string to Snake case.",
+                "description": "Converts a Camel or Pascal Case string to Snake case.",
                 "author": "ACR1209",
                 "tags": [
                     "string",
                     "convert",
                     "camel-case",
-                    "snake-case"
+                    "snake-case",
+                    "pascal-case"
                 ],
                 "contributors": [],
-                "code": "def camel_to_snake(str)\n    str.gsub(/([A-Z])/, '_\\1').downcase\nend\n\n# Usage\ncamel_case = \"camelCaseToSnakeCase\"\nputs camel_to_snake(camel_case) # Output: \"camel_case_to_snake_case\"\n"
+                "code": "def camel_to_snake(str)\n    str.gsub(/([A-Z])/, '_\\1').sub(/^_/, '').downcase\nend\n\n# Usage:\ncamel_case = \"camelCaseToSnakeCase\"\npascal_case = \"PascalCaseToSnakeCase\"\nputs camel_to_snake(camel_case) # Output: \"camel_case_to_snake_case\"\nputs camel_to_snake(pascal_case) # Output: \"pascal_case_to_snake_case\"\n"
             },
             {
                 "title": "Transform from Snake Case to Camel Case",
@@ -229,7 +191,20 @@
                     "camel-case"
                 ],
                 "contributors": [],
-                "code": "def snake_to_camel(str)\n    str.split('_').map.with_index { |word, index| \n        index == 0 ? word : word.capitalize \n    }.join\nend\n\n# Usage\nsnake_case = \"snake_case_to_camel_case\"\nputs snake_to_camel(snake_case) # Output: \"snakeCaseToCamelCase\"\n"
+                "code": "def snake_to_camel(str)\n    str.split('_').map.with_index { |word, index| \n        index == 0 ? word : word.capitalize \n    }.join\nend\n\n# Usage:\nsnake_case = \"snake_case_to_camel_case\"\nputs snake_to_camel(snake_case) # Output: \"snakeCaseToCamelCase\"\n"
+            },
+            {
+                "title": "Transform from Snake Case to Pascal Case",
+                "description": "Converts a Snake Case string to Pascal Case.",
+                "author": "ACR1209",
+                "tags": [
+                    "string",
+                    "convert",
+                    "snake-case",
+                    "pascal-case"
+                ],
+                "contributors": [],
+                "code": "def snake_to_camel(str)\n    str.split('_').map.with_index { |word, index| \n        word.capitalize \n    }.join\nend\n\n# Usage:\nsnake_case = \"snake_case_to_pascal_case\"\nputs snake_to_camel(snake_case) # Output: \"SnakeCaseToPascalCase\"\n"
             },
             {
                 "title": "Truncate String",
@@ -240,7 +215,7 @@
                     "truncate"
                 ],
                 "contributors": [],
-                "code": "def truncate_string(max_length, str)\n    return str if str.length <= max_length\n    str[0, max_length - 3] + '...'\nend\n\n# Usage\nlong_string = \"Ruby is a dynamic, open source programming language.\"\nputs truncate_string(20, long_string) # Output: \"Ruby is a dynamic...\"\nputs truncate_string(54, long_string) # Output: \"Ruby is a dynamic, open source programming language.\"\n"
+                "code": "def truncate_string(str, max_length)\n    return str if str.length <= max_length || max_length <= 3\n    str[0, max_length - 3] + '...'\nend\n\n# Usage:\nlong_string = \"Ruby is a dynamic, open source programming language.\"\nputs truncate_string(20, long_string) # Output: \"Ruby is a dynamic...\"\nputs truncate_string(54, long_string) # Output: \"Ruby is a dynamic, open source programming language.\"\n"
             }
         ]
     }
