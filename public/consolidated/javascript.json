@@ -78,6 +78,24 @@
         ]
     },
     {
+        "categoryName": "Color Manipulation",
+        "snippets": [
+            {
+                "title": "RGB to Hex Color",
+                "description": "Converts RGB color values to hexadecimal color code.",
+                "author": "jjcantu",
+                "tags": [
+                    "javascript",
+                    "color",
+                    "conversion",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "function rgbToHex(r, g, b) {\n  const toHex = (n) => {\n    const hex = n.toString(16);\n    return hex.length === 1 ? '0' + hex : hex;\n  };\n  \n  return '#' + toHex(r) + toHex(g) + toHex(b);\n}\n\n// Usage:\nconsole.log(rgbToHex(255, 128, 0)); // Output: \"#ff8000\"\nconsole.log(rgbToHex(0, 255, 0)); // Output: \"#00ff00\"\n"
+            }
+        ]
+    },
+    {
         "categoryName": "Date And Time",
         "snippets": [
             {
@@ -385,6 +403,19 @@
                 "contributors": []
             },
             {
+                "title": "Format File Size",
+                "description": "Converts bytes into human-readable file size format.",
+                "author": "jjcantu",
+                "tags": [
+                    "javascript",
+                    "format",
+                    "size",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "function formatFileSize(bytes) {\n  if (bytes === 0) return '0 Bytes';\n  \n  const k = 1024;\n  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];\n  const i = Math.floor(Math.log(bytes) / Math.log(k));\n  \n  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];\n}\n\n// Usage:\nconsole.log(formatFileSize(1234)); // Output: \"1.21 KB\"\nconsole.log(formatFileSize(1234567)); // Output: \"1.18 MB\"\n"
+            },
+            {
                 "title": "Format Number with Commas",
                 "description": "Formats a number with commas for better readability (e.g., 1000 -> 1,000).",
                 "author": "axorax",
@@ -469,6 +500,19 @@
                     "properties"
                 ],
                 "contributors": []
+            },
+            {
+                "title": "Deep Clone Object",
+                "description": "Creates a deep copy of an object or array without reference.",
+                "author": "jjcantu",
+                "tags": [
+                    "javascript",
+                    "object",
+                    "clone",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "function deepClone(obj) {\n  if (obj === null || typeof obj !== 'object') return obj;\n  \n  const clone = Array.isArray(obj) ? [] : {};\n  \n  for (let key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      clone[key] = deepClone(obj[key]);\n    }\n  }\n  \n  return clone;\n}\n\n// Usage:\nconst original = { a: 1, b: { c: 2 }, d: [1, 2, 3] };\nconst cloned = deepClone(original);\nconsole.log(cloned); // Output: { a: 1, b: { c: 2 }, d: [1, 2, 3] }\n"
             },
             {
                 "title": "Filter Object",
@@ -708,6 +752,18 @@
                     "name"
                 ],
                 "contributors": []
+            },
+            {
+                "title": "Generate UUID",
+                "description": "Generates a UUID (v4) string.",
+                "author": "jjcantu",
+                "tags": [
+                    "javascript",
+                    "uuid",
+                    "utility"
+                ],
+                "contributors": [],
+                "code": "function generateUUID() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    const r = Math.random() * 16 | 0;\n    const v = c === 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n\n// Usage:\nconsole.log(generateUUID()); // Output: \"a1b2c3d4-e5f6-4g7h-8i9j-k0l1m2n3o4p5\"\n"
             },
             {
                 "title": "Mask Sensitive Information",
