@@ -2,7 +2,7 @@
 title: Read File in Chunks
 description: Reads a file in chunks of a specified size.
 author: axorax
-tags: python,file,read,chunks,utility
+tags: file,read,chunks
 ---
 
 ```py
@@ -13,5 +13,5 @@ def read_file_in_chunks(filepath, chunk_size):
 
 # Usage:
 for chunk in read_file_in_chunks('example.txt', 1024):
-    print(chunk)
+    print(chunk) # Outputs: Chucks of 1024 bytes
 ```

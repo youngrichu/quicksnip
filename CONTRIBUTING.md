@@ -18,32 +18,69 @@ If you have a feature request or want to fix a bug, feel free to:
 
 ---
 
+## Snippets Guidelines
+
+### Snippet Tags
+
+Tags must describe the snippet with simple word. \
+For example a snippet that capitalize a word would have `string` and `capitalize` as tags. \
+**! Do not add the language you are using as a tag, nor some generic keyword like `utility` !**
+
+### Snippet Format
+
+**All** snippets should follow the following structure:
+- A `code` segment, containing a function with the actual snippet functionnality
+- An `example` segement, containing one or more examples of use
+
+Example in javascript:
+```js
+function example(x) {
+    return x * 2;
+}
+
+// Usage:
+example(5) // Returns: 10
+```
+If your function doesn't return anything just show how to use it. \
+If the result of your function is too complicated to be expressed in a single comment, your snippet is probably too complex to begin with.
+
+### Snippet boundaries
+
+To **check if your snippet will not get refused** ask yourself those questions:
+- **Does the standard library of my language provide an easy way of doing this ?**
+- **Does that snippet have a real, and practical use case ?**
+- **Could it be split into separate parts to be better understood ?**
+
+If one of question is true, then your snippet will most likely get refused !
+
+---
+
 ## Adding Snippets
 
 ### Adding a New Snippet
 
-To add a new code snippet:
+1. **Ensure your snippet match [guidelines](#snippets-guidelines)**
 
-1. **Navigate to the relevant folder:**
+2. **Navigate to the relevant folder:**
   
     - Go to the `/snippets` folder in the root directory.
     - Locate the folder for the programming language of your snippet, such as `javascript` or `python`.
 
-2. **Choose the correct category:**
+3. **Choose the correct category:**
 
     - Within the language folder, find the relevant category folder for your snippet.
     - If no suitable category exists, refer to [Adding a New Category](#adding-a-new-category).
 
-3. **Create a markdown file:**
+4. **Create a markdown file:**
 
     - Create a new file with a `.md` extension.
     - Name the file appropriately, keeping it descriptive and concise.
 
-4. **Add your snippet:**
+5. **Add your snippet:**
 
     - Use the following format to structure your snippet:
 
-```md
+````md
 ---
 title: Name of the snippet
 description: A short explanation of what the snippet does
@@ -51,42 +88,58 @@ tags: tag1, tag2, tag3
 author: your-github-username
 ---
 
+```lang
 // Your code here
 ```
+````
 
 Here’s an example for JavaScript:
 
-```
+````md
 ---
 title: Format Date
 description: Formats a date in 'YYYY-MM-DD' format.
 author: dostonnabotov
-tags: javascript,date,format,utility
+tags: javascript,date,format
 ---
 
+```js
 const formatDate = (date) => date.toISOString().split('T')[0];
 
 // Usage:
 console.log(formatDate(new Date())); // Output: '2024-12-10'
 ```
+````
 
-5. **Use syntax highlighting:**
+6. **Use syntax highlighting:**
     - Enclose your code with triple backticks (```).
     - Specify the language after the first set of backticks for syntax highlighting.
 
-![snippet code example in markdown file](https://github.com/user-attachments/assets/be650cfe-fd17-49e7-ae82-e1c88e30d4c9)
+7. **Test your snippet:**
+   - Ensure your code runs as expected. \
+        To test that your snippets are formatted correctly use the `snippets:check` script:
+        ```
+        $ npm run snippets:check
+        ```
+        It will return nothing if they are well formatted, otherwise it will tell you what the error is.
 
-6. **Test your snippet:**
-   - Ensure your code runs as expected.
+        ---
+        To preview the snippets, you need to consolidate them, use the `snippets:consolidate` script:
+        ```
+        $ npm run snippets:consolidate
+        ```
+        It will update the snippets in the `/public` folder, making them available to the frontend.
 
-Expected structure:
+Expected file structure:
 
-```txt
-snippets
+```md
+/snippets
   |- language
-    |- category
+    |- category-name
       |- your-snippet-here.md
 ```
+
+> Please do **NOT** add or edit anything in `/public` folder. It will be used for consolidating snippets.
 
 ### Editing a Existing Snippet
 
@@ -96,7 +149,7 @@ If you’d like to refine or improve an existing snippet:
 
     - Include your GitHub username under the `contributors` field in the metadata section.
 
-```md
+````md
 ---
 title: Name of the snippet
 description: A short explanation of what the snippet does
@@ -105,8 +158,10 @@ author: original-author
 contributors: your-github-username
 ---
 
+```
 Updated code here
 ```
+````
 
 2. **Credit all contributors:**
 
@@ -118,9 +173,9 @@ contributors: contributor1, contributor2, your-github-username
 
 3. **Document changes:**
 
-Clearly indicate what you updated and why in your pull request description.
+    - Clearly indicate what you updated and why in your pull request description.
 
-We want to make sure that original author and contributor(s) are credited for their work.
+> We want to make sure that original author and contributor(s) are credited for their work.
 
 
 ### Adding a New Category
@@ -141,10 +196,10 @@ Example structure:
 
 ```md
 /snippets
-  |_ python
-       |_ file-handling
-       |_ list-manipulation
-       |_ ....
+  |- python
+    |- file-handling
+    |- list-manipulation
+    |- ....
 ```
 
 ### Adding a New Language

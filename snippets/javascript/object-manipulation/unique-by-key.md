@@ -2,7 +2,7 @@
 title: Unique By Key
 description: Filters an array of objects to only include unique objects by a specified key.
 author: realvishalrana
-tags: javascript,array,unique,utility
+tags: array,unique
 ---
 
 ```js
@@ -15,5 +15,5 @@ const arr = [
   { id: 2, name: 'Jane' },
   { id: 1, name: 'John' }
 ];
-console.log(uniqueByKey('id', arr)); // Output: [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }]
+uniqueByKey('id', arr); // Returns: [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }]
 ```

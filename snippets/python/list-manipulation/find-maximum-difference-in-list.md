@@ -2,7 +2,7 @@
 title: Find Maximum Difference in List
 description: Finds the maximum difference between any two elements in a list.
 author: axorax
-tags: python,list,difference,utility
+tags: list,difference
 ---
 
 ```py
@@ -13,5 +13,5 @@ def max_difference(lst):
 
 # Usage:
 data = [10, 3, 5, 20, 7]
-print(max_difference(data))  # Output: 17
+max_difference(data) # Returns: 17
 ```

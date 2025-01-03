@@ -8,12 +8,24 @@
         "icon": "/icons/cpp.svg"
     },
     {
+        "lang": "CSHARP",
+        "icon": "/icons/csharp.svg"
+    },
+    {
         "lang": "CSS",
         "icon": "/icons/css.svg"
     },
     {
+        "lang": "HASKELL",
+        "icon": "/icons/haskell.svg"
+    },
+    {
         "lang": "HTML",
         "icon": "/icons/html.svg"
+    },
+    {
+        "lang": "JAVA",
+        "icon": "/icons/java.svg"
     },
     {
         "lang": "JAVASCRIPT",
@@ -30,5 +42,9 @@
     {
         "lang": "SCSS",
         "icon": "/icons/scss.svg"
+    },
+    {
+        "lang": "TYPESCRIPT",
+        "icon": "/icons/typescript.svg"
     }
 ]
