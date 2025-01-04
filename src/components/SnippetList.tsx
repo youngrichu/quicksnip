@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { useState } from "react";
 
 import { useAppContext } from "@contexts/AppContext";
@@ -12,6 +12,8 @@ const SnippetList = () => {
   const { language, snippet, setSnippet } = useAppContext();
   const { fetchedSnippets } = useSnippets();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const shouldReduceMotion = useReducedMotion();
 
   if (!fetchedSnippets)
     return (
@@ -38,14 +40,14 @@ const SnippetList = () => {
             return (
               <motion.li
                 key={currentSnippet.title + idx}
-                initial={{ opacity: 0, y: 20 }}
                 layoutId={currentSnippet.title + (idx + 1).toString()}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: 0.09 + idx * 0.05,
-                    duration: 0.2,
+                    delay: shouldReduceMotion ? 0 : 0.09 + idx * 0.05,
+                    duration: shouldReduceMotion ? 0 : 0.2,
                   },
                 }}
                 exit={{
@@ -53,12 +55,12 @@ const SnippetList = () => {
                   y: -20,
                   transition: {
                     delay: idx * 0.01,
-                    duration: 0.09,
+                    duration: shouldReduceMotion ? 0 : 0.09,
                   },
                 }}
                 transition={{
                   type: "spring",
-                  duration: 0.5,
+                  duration: shouldReduceMotion ? 0 : 0.5,
                 }}
               >
                 <motion.button

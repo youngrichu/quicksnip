@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -23,6 +23,8 @@ const SnippetModal: React.FC<Props> = ({
 }) => {
   const modalRoot = document.getElementById("modal-root");
 
+  const shouldReduceMotion = useReducedMotion();
+
   useEscapeKey(handleCloseModal);
 
   if (!modalRoot) {
@@ -41,14 +43,14 @@ const SnippetModal: React.FC<Props> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: shouldReduceMotion ? 0 : 0.2 }}
     >
       <motion.div
         key="modal-content"
         className="modal | flow"
         data-flow-space="lg"
         layoutId={snippet.title + snippet.idx?.toString()}
-        transition={{ type: "spring", duration: 0.5 }}
+        transition={{ type: "spring", duration: shouldReduceMotion ? 0 : 0.5 }}
       >
         <div className="modal__header">
           <h2 className="section-title">{snippet.title}</h2>
