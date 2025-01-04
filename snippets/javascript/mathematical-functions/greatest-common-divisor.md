@@ -15,7 +15,7 @@ function gcd(a, b) {
     return a;
 }
 
-// Usage
+// Usage:
 gcd(1920, 1080); // Returns:    120
 gcd(1920, 1200); // Returns:    240
 gcd(5,12);       // Returns:      1
