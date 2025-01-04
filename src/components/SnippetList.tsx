@@ -35,7 +35,7 @@ const SnippetList = () => {
   return (
     <>
       <motion.ul role="list" className="snippets">
-        <AnimatePresence mode="popLayout" presenceAffectsLayout>
+        <AnimatePresence mode="popLayout">
           {fetchedSnippets.map((currentSnippet, idx) => {
             return (
               <motion.li
