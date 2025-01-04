@@ -157,7 +157,7 @@
                 "code": "@mixin line-clamp($number) {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: $number;\n  overflow: hidden;\n}\n"
             },
             {
-                "title": "Function to convert px to rem",
+                "title": "PX to REM Helper",
                 "description": "This function will convert px values to rem values.",
                 "author": "gihanrangana",
                 "tags": [
