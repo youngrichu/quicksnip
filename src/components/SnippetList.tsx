@@ -36,11 +36,12 @@ const SnippetList = () => {
     <>
       <motion.ul role="list" className="snippets">
         <AnimatePresence mode="popLayout">
-          {fetchedSnippets.map((currentSnippet, idx) => {
+          {fetchedSnippets.map((snippet, idx) => {
+            const uniqueId = `${snippet.title}-${snippet.description}`;
             return (
               <motion.li
-                key={currentSnippet.title + idx}
-                layoutId={currentSnippet.title + (idx + 1).toString()} // unique id for layout animation
+                key={uniqueId}
+                layoutId={uniqueId}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: 1,
@@ -66,20 +67,14 @@ const SnippetList = () => {
                 <motion.button
                   className="snippet | flow"
                   data-flow-space="sm"
-                  onClick={() =>
-                    handleOpenModal({
-                      ...currentSnippet,
-                      // added idx for the layout animation to work correctly
-                      idx: idx + 1,
-                    })
-                  }
+                  onClick={() => handleOpenModal(snippet)}
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="snippet__preview">
                     <img src={language.icon} alt={language.lang} />
                   </div>
-                  <h3 className="snippet__title">{currentSnippet.title}</h3>
+                  <h3 className="snippet__title">{snippet.title}</h3>
                 </motion.button>
               </motion.li>
             );
