@@ -37,7 +37,7 @@ const SnippetList = () => {
       <motion.ul role="list" className="snippets">
         <AnimatePresence mode="popLayout">
           {fetchedSnippets.map((snippet, idx) => {
-            const uniqueId = `${snippet.title}-${snippet.description}`;
+            const uniqueId = `${language.lang}-${snippet.title}`;
             return (
               <motion.li
                 key={uniqueId}
