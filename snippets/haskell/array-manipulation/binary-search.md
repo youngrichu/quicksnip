@@ -2,7 +2,7 @@
 title: Binary Search
 description: Searches for an element in a sorted array using binary search.
 author: ACR1209
-tags: haskell,array,binary-search,search
+tags: array,binary-search,search
 ---
 
 ```hs
@@ -19,6 +19,7 @@ binarySearch target xs = go 0 (length xs - 1)
         mid = (low + high) `div` 2
         midElem = xs !! mid
 
+-- Usage:
 main :: IO ()
 main = do
     let array = [1, 2, 3, 4, 5]

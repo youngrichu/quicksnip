@@ -11,10 +11,64 @@ You can contribute in two main ways:
 
 ## Improving the code
 
-If you have a feature request or want to fix a bug, feel free to:
+### How to report bugs
 
-- [Open an Issue](https://github.com/dostonnabotov/quicksnip/issues) to let us know what’s up.
-- [Send a Pull Request](https://github.com/dostonnabotov/quicksnip/pulls) with your changes.
+If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/dostonnabotov/quicksnip/issues) detailing the problem before creating a PR. Once confirmed with maintainers, you can then create a PR.
+
+### How to propose new features
+
+If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions) with details for the proposed feature.
+
+Please do not create a PR for a new feature without first discussing it with the maintainers. If you create a PR for a new feature without discussing it first, then your PR will be closed.
+
+---
+
+## Snippets Guidelines
+
+### Snippet Tags
+
+- Tags must describe the snippet with simple word.
+
+Here's an example:
+
+```md
+---
+title: Convert Number to Currency
+description: Converts a number to a currency format with a specific locale.
+author: axorax
+tags: number,currency
+---
+```
+
+**Do not use generic keywords or the language itself as a tag `utility` or `javascript`!**
+
+### Snippet Format
+
+**All** snippets should follow the following structure:
+
+- A `code` segment, containing a function with the actual snippet functionnality
+- An `example` segement, containing one or more examples of use
+
+Example in javascript:
+```js
+function example(x) {
+    return x * 2;
+}
+
+// Usage:
+example(5) // Returns: 10
+```
+
+If your function doesn't return anything just show how to use it. If the result of your function is too complicated to be expressed in a single comment, your snippet is probably too complex to begin with.
+
+### Snippet boundaries
+
+To ensure your snippet isn’t refused, consider these questions:
+- **Does the standard library of my language provide an easy way of doing this ?**
+- **Does that snippet have a real, and practical use case ?**
+- **Could it be split into separate parts to be better understood ?**
+
+If any answer is yes, then your snippet will most likely get rejected.
 
 ---
 
@@ -22,24 +76,24 @@ If you have a feature request or want to fix a bug, feel free to:
 
 ### Adding a New Snippet
 
-To add a new code snippet:
+1. **Ensure your snippet match [guidelines](#snippets-guidelines)**
 
-1. **Navigate to the relevant folder:**
+2. **Navigate to the relevant folder:**
   
     - Go to the `/snippets` folder in the root directory.
     - Locate the folder for the programming language of your snippet, such as `javascript` or `python`.
 
-2. **Choose the correct category:**
+3. **Choose the correct category:**
 
     - Within the language folder, find the relevant category folder for your snippet.
     - If no suitable category exists, refer to [Adding a New Category](#adding-a-new-category).
 
-3. **Create a markdown file:**
+4. **Create a markdown file:**
 
     - Create a new file with a `.md` extension.
     - Name the file appropriately, keeping it descriptive and concise.
 
-4. **Add your snippet:**
+5. **Add your snippet:**
 
     - Use the following format to structure your snippet:
 
@@ -74,11 +128,11 @@ console.log(formatDate(new Date())); // Output: '2024-12-10'
 ```
 ````
 
-5. **Use syntax highlighting:**
+6. **Use syntax highlighting:**
     - Enclose your code with triple backticks (```).
     - Specify the language after the first set of backticks for syntax highlighting.
 
-6. **Test your snippet:**
+7. **Test your snippet:**
    - Ensure your code runs as expected. \
         To test that your snippets are formatted correctly use the `snippets:check` script:
         ```
@@ -193,6 +247,6 @@ If you want to introduce a new programming language, here's how to do it:
 
 Whether you’re fixing a tiny typo, writing a new snippet, or dreaming up big features, every bit counts! 🛠️
 
-If you have any questions or need help, feel free to open an issue or tag me.
+If you have any questions or need help, feel free to open a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions).
 
 Happy coding! 💻✨

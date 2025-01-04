@@ -2,7 +2,7 @@
 title: Random string
 description: Generates a random string of characters of a certain length
 author: kruimol
-tags: javascript,function,random
+tags: function,random
 ---
 
 ```js
@@ -10,5 +10,6 @@ function makeid(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop
   return Array.from({ length }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
 }
 
-console.log(makeid(5, "1234" /* (optional) */));
+makeid(3); // Returns: gDs (Random)
+makeid(5, "1234" /* (optional) */); // Returns: "35453" (Random)
 ```

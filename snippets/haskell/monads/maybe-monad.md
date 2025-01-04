@@ -2,7 +2,7 @@
 title: Maybe Monad
 description: Using the Maybe monad to handle computations that might fail.
 author: ACR1209
-tags: haskell, monads, maybe
+tags: monads, maybe
 ---
 
 ```hs
@@ -10,6 +10,7 @@ safeDiv :: Int -> Int -> Maybe Int
 safeDiv _ 0 = Nothing
 safeDiv x y = Just (x `div` y)
 
+-- Usage:
 main :: IO ()
 main = do
     let result = do

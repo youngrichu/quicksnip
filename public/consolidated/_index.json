@@ -24,12 +24,20 @@
         "icon": "/icons/html.svg"
     },
     {
+        "lang": "JAVA",
+        "icon": "/icons/java.svg"
+    },
+    {
         "lang": "JAVASCRIPT",
         "icon": "/icons/javascript.svg"
     },
     {
         "lang": "PYTHON",
         "icon": "/icons/python.svg"
+    },
+    {
+        "lang": "REGEX",
+        "icon": "/icons/regex.svg"
     },
     {
         "lang": "RUBY",
@@ -42,5 +50,9 @@
     {
         "lang": "SCSS",
         "icon": "/icons/scss.svg"
+    },
+    {
+        "lang": "TYPESCRIPT",
+        "icon": "/icons/typescript.svg"
     }
 ]

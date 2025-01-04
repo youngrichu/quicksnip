@@ -2,7 +2,7 @@
 title: Convert Number to Roman Numerals
 description: Converts a number to Roman numeral representation.
 author: axorax
-tags: javascript,number,roman,utility
+tags: number,roman
 ---
 
 ```js
@@ -22,6 +22,6 @@ const numberToRoman = (num) => {
 };
 
 // Usage:
-console.log(numberToRoman(1994)); // Output: 'MCMXCIV'
-console.log(numberToRoman(58)); // Output: 'LVIII'
+numberToRoman(1994); // Returns: 'MCMXCIV'
+numberToRoman(58); // Returns: 'LVIII'
 ```

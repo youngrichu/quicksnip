@@ -2,7 +2,7 @@
 title: Memoize Function
 description: Caches the result of a function based on its arguments to improve performance.
 author: axorax
-tags: javascript,memoization,optimization,utility
+tags: memoization,optimization
 ---
 
 ```js
@@ -21,6 +21,6 @@ const memoize = (func) => {
 
 // Usage:
 const factorial = memoize((n) => (n <= 1 ? 1 : n * factorial(n - 1)));
-console.log(factorial(5)); // Output: 120
-console.log(factorial(5)); // Output: 120 (retrieved from cache)
+factorial(5); // Returns: 120
+factorial(5); // Returns: 120 (retrieved from cache)
 ```

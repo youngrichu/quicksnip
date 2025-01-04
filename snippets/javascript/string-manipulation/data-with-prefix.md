@@ -2,7 +2,7 @@
 title: Data with Prefix
 description: Adds a prefix and postfix to data, with a fallback value.
 author: realvishalrana
-tags: javascript,data,utility
+tags: data,prefix,postfix,format
 ---
 
 ```js
@@ -11,8 +11,8 @@ const dataWithPrefix = (data, fallback = '-', prefix = '', postfix = '') => {
 };
 
 // Usage:
-console.log(dataWithPrefix('123', '-', '(', ')')); // Output: '(123)'
-console.log(dataWithPrefix('', '-', '(', ')')); // Output: '-'
-console.log(dataWithPrefix('Hello', 'N/A', 'Mr. ', '')); // Output: 'Mr. Hello'
-console.log(dataWithPrefix(null, 'N/A', 'Mr. ', '')); // Output: 'N/A'
+dataWithPrefix('123', '-', '(', ')'); // Returns: '(123)'
+dataWithPrefix('', '-', '(', ')'); // Returns: '-'
+dataWithPrefix('Hello', 'N/A', 'Mr. ', ''); // Returns: 'Mr. Hello'
+dataWithPrefix(null, 'N/A', 'Mr. ', ''); // Returns: 'N/A'
 ```

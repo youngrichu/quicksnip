@@ -2,7 +2,7 @@
 title: Hello, World!
 description: Prints Hello, World! to the terminal.
 author: 0xHouss
-tags: c,printing,hello-world,utility
+tags: printing,hello-world
 ---
 
 ```c
