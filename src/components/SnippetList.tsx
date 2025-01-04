@@ -40,7 +40,7 @@ const SnippetList = () => {
             return (
               <motion.li
                 key={currentSnippet.title + idx}
-                layoutId={currentSnippet.title + (idx + 1).toString()}
+                layoutId={currentSnippet.title + (idx + 1).toString()} // unique id for layout animation
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: 1,
@@ -69,6 +69,7 @@ const SnippetList = () => {
                   onClick={() =>
                     handleOpenModal({
                       ...currentSnippet,
+                      // added idx for the layout animation to work correctly
                       idx: idx + 1,
                     })
                   }

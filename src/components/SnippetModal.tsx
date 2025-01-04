@@ -49,7 +49,7 @@ const SnippetModal: React.FC<Props> = ({
         key="modal-content"
         className="modal | flow"
         data-flow-space="lg"
-        layoutId={snippet.title + snippet.idx?.toString()}
+        layoutId={snippet.title + snippet.idx?.toString()} // unique id for layout animation
         transition={{ type: "spring", duration: shouldReduceMotion ? 0 : 0.5 }}
       >
         <div className="modal__header">

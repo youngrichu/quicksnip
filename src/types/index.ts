@@ -14,7 +14,7 @@ export type SnippetType = {
   code: string;
   tags: string[];
   author: string;
-  idx?: number; // Add optional idx property
+  idx?: number;
 };
 
 export type AppState = {
