@@ -15,5 +15,5 @@ void swap(int* num1,int* num2){
 
 // Usage:
 int a = 3,b = 4;
-swap(&a,&b); // simply use printf after this to print swapped values
+swap(&a,&b); // swaps the values of the a and b variables
 ```
