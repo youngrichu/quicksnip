@@ -2,7 +2,7 @@
 Title: Unintentional Duplication
 Description: Matches duplicated word in a text.
 Author: majvax
-Tags: trim
+Tags: duplication
 ---
 
 
