@@ -1,5 +1,5 @@
 ---
-title: Function to convert px to rem
+title: PX to REM Helper
 description: This function will convert px values to rem values.
 author: gihanrangana
 tags: sass,function,pixel,rem,px-to-rem,css
