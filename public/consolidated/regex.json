@@ -12,8 +12,6 @@
                 ],
                 "contributors": [],
                 "code": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$\n\n\n-> Usage:\n#FFF1 ✗\n#FFF ✓\n#FFF000 ✓\n"
-<<<<<<< Updated upstream
-=======
             },
             {
                 "title": "IPv4",
@@ -45,7 +43,6 @@
                 ],
                 "contributors": [],
                 "code": "^\\s+|\\s+$\n\n\n-> Usage:\n(don't account for the quotation marks, it just to visualize whitespace)\n\"Hello World\" ✗\n\" Hello World\" ✓\n\"Hello World \" ✓\n\" Hello World \" ✓\n"
->>>>>>> Stashed changes
             }
         ]
     },
