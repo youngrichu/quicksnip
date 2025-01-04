@@ -101,6 +101,17 @@
                 ],
                 "contributors": [],
                 "code": "function rgbToHex(r, g, b) {\n  const toHex = (n) => {\n    const hex = n.toString(16);\n    return hex.length === 1 ? '0' + hex : hex;\n  };\n  \n  return '#' + toHex(r) + toHex(g) + toHex(b);\n}\n\n// Usage:\nconsole.log(rgbToHex(255, 128, 0)); // Output: \"#ff8000\"\nconsole.log(rgbToHex(0, 255, 0)); // Output: \"#00ff00\"\n"
+            },
+            {
+                "title": "RGB to HSL Color",
+                "description": "Converts RGB color values to HSL color values.",
+                "author": "pvictordev",
+                "tags": [
+                    "color",
+                    "conversion"
+                ],
+                "contributors": [],
+                "code": "function rgbToHsl(r, g, b) {\n    r /= 255;\n    g /= 255;\n    b /= 255;\n    const max = Math.max(r, g, b),\n      min = Math.min(r, g, b);\n    let h, s, l;\n    l = (max + min) / 2;\n\n    if (max === min) {\n      h = s = 0;\n    } else {\n      const d = max - min;\n      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);\n      switch (max) {\n        case r:\n          h = (g - b) / d + (g < b ? 6 : 0);\n          break;\n        case g:\n          h = (b - r) / d + 2;\n          break;\n        case b:\n          h = (r - g) / d + 4;\n          break;\n      }\n      h /= 6;\n    }\n    return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };\n}\n\n// Usage:\nconsole.log(rgbToHsl(255, 87, 51)); // { h: 14, s: 100, l: 60 }\nconsole.log(rgbToHsl(255, 255, 255)); // { h: 0, s: 0, l: 100 }\n"
             }
         ]
     },
