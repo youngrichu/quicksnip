@@ -29,7 +29,7 @@
                 "description": "Matches duplicated word in a text.",
                 "author": "majvax",
                 "tags": [
-                    "trim"
+                    "duplication"
                 ],
                 "contributors": [],
                 "code": "\\b(\\w+)\\s+\\1\\b\n\n\n-> Usage:\nI need to finish this task ✗\nI need to to finish this task ✓\n"
