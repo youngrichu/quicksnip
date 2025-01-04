@@ -2,7 +2,7 @@
 title: Grid layout
 description: Equal sized items in a responsive grid
 author: xshubhamg
-tags: css,layout,grid
+tags: layout,grid
 ---
 
 ```css

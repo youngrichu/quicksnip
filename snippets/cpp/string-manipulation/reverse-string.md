@@ -2,7 +2,7 @@
 title: Reverse String
 description: Reverses the characters in a string.
 author: Vaibhav-kesarwani
-tags: cpp,array,reverse,utility
+tags: array,reverse
 ---
 
 ```cpp
@@ -14,4 +14,6 @@ std::string reverseString(const std::string& input) {
     std::reverse(reversed.begin(), reversed.end());
     return reversed;
 }
+
+reverseString("quicksnip"); // Returns: "pinskciuq"
 ```

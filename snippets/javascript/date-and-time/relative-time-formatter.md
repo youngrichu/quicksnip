@@ -2,7 +2,7 @@
 title: Relative Time Formatter
 description: Displays how long ago a date occurred or how far in the future a date is.
 author: Yugveer06
-tags: javascript,date,time,relative,future,past,utility
+tags: date,time,relative,future,past
 ---
 
 ```js
@@ -27,10 +27,10 @@ const getRelativeTime = (date) => {
   return `${isFuture ? 'in ' : ''}${seconds} ${seconds === 1 ? 'second' : 'seconds'}${isFuture ? '' : ' ago'}`;
 }
 
-// usage
+// Usage:
 const pastDate = new Date('2021-12-29 13:00:00');
-const futureDate = new Date('2026-12-29 13:00:00');
-console.log(getRelativeTime(pastDate)); // x years ago
-console.log(getRelativeTime(new Date())); // just now
-console.log(getRelativeTime(futureDate)); // in x years
+const futureDate = new Date('2099-12-29 13:00:00');
+getRelativeTime(pastDate); // x years ago
+getRelativeTime(new Date()); // just now
+getRelativeTime(futureDate); // in x years
 ```

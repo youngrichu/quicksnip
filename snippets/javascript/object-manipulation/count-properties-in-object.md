@@ -2,7 +2,7 @@
 title: Count Properties in Object
 description: Counts the number of own properties in an object.
 author: axorax
-tags: javascript,object,count,properties
+tags: object,count,properties
 ---
 
 ```js
@@ -12,5 +12,5 @@ function countProperties(obj) {
 
 // Usage:
 const obj = { a: 1, b: 2, c: 3 };
-console.log(countProperties(obj)); // Output: 3
+countProperties(obj); // Returns: 3
 ```

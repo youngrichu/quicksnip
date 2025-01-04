@@ -2,7 +2,7 @@
 title: CSS Reset
 description: Resets some default browser styles, ensuring consistency across browsers.
 author: AmeerMoustafa
-tags: css,reset,browser,layout
+tags: reset,browser,layout
 ---
 
 ```css

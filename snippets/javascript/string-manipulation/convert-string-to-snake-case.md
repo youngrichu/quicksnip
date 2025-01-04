@@ -12,6 +12,6 @@ function toSnakeCase(str) {
             .toLowerCase();
 }
 
-// Example usage:
-console.log(toSnakeCase('Hello World Test')); // Output: 'hello_world_test'
+// Usage:
+toSnakeCase('Hello World Test'); // Returns: 'hello_world_test'
 ```

@@ -2,7 +2,7 @@
 title: Remove Element
 description: Removes a specified element from the DOM.
 author: axorax
-tags: javascript,dom,remove,utility
+tags: dom,remove
 ---
 
 ```js

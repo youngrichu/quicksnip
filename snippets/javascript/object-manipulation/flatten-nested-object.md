@@ -2,7 +2,7 @@
 title: Flatten Nested Object
 description: Flattens a nested object into a single-level object with dot notation for keys.
 author: axorax
-tags: javascript,object,flatten,utility
+tags: object,flatten
 ---
 
 ```js
@@ -20,5 +20,5 @@ function flattenObject(obj, prefix = '') {
 
 // Usage:
 const nestedObj = { a: { b: { c: 1 }, d: 2 }, e: 3 };
-console.log(flattenObject(nestedObj)); // Output: { 'a.b.c': 1, 'a.d': 2, e: 3 }
+flattenObject(nestedObj); // Returns: { 'a.b.c': 1, 'a.d': 2, e: 3 }
 ```

@@ -2,7 +2,7 @@
 title: Capitalize Words
 description: Capitalizes the first letter of each word in a string.
 author: ACR1209
-tags: haskell,string,capitalize,words
+tags: string,capitalize,words
 ---
 
 ```hs
@@ -14,6 +14,7 @@ capitalizeWords = unwords . map capitalize . words
     capitalize []     = []
     capitalize (x:xs) = toUpper x : xs
 
+-- Usage:
 main :: IO ()
 main = do
     let sentence = "haskell is awesome"
