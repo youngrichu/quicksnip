@@ -45,6 +45,16 @@
         "subLanguages": []
     },
     {
+        "name": "REGEX",
+        "icon": "/icons/regex.svg",
+        "subLanguages": []
+    },
+    {
+        "name": "RUBY",
+        "icon": "/icons/ruby.svg",
+        "subLanguages": []
+    },
+    {
         "name": "RUST",
         "icon": "/icons/rust.svg",
         "subLanguages": []
