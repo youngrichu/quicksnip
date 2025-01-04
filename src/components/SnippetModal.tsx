@@ -47,9 +47,7 @@ const SnippetModal: React.FC<Props> = ({
         key="modal-content"
         className="modal | flow"
         data-flow-space="lg"
-        initial={{ scale: 0.8, opacity: 0, y: 20 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        exit={{ scale: 0.8, opacity: 0, y: 20 }}
+        layoutId={snippet.title + snippet.idx?.toString()}
         transition={{ type: "spring", duration: 0.5 }}
       >
         <div className="modal__header">

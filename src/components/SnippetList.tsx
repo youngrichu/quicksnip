@@ -33,42 +33,54 @@ const SnippetList = () => {
   return (
     <>
       <motion.ul role="list" className="snippets">
-        <AnimatePresence mode="popLayout">
-          {fetchedSnippets.map((snippet, idx) => (
-            <motion.li
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: idx * 0.05,
-                  duration: 0.2,
-                },
-              }}
-              exit={{
-                opacity: 0,
-                y: -20,
-                transition: {
-                  delay: (fetchedSnippets.length - 1 - idx) * 0.01,
-                  duration: 0.09,
-                },
-              }}
-            >
-              <motion.button
-                className="snippet | flow"
-                data-flow-space="sm"
-                onClick={() => handleOpenModal(snippet)}
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
+        <AnimatePresence mode="popLayout" presenceAffectsLayout>
+          {fetchedSnippets.map((currentSnippet, idx) => {
+            return (
+              <motion.li
+                key={currentSnippet.title + idx}
+                initial={{ opacity: 0, y: 20 }}
+                layoutId={currentSnippet.title + (idx + 1).toString()}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 0.09 + idx * 0.05,
+                    duration: 0.2,
+                  },
+                }}
+                exit={{
+                  opacity: 0,
+                  y: -20,
+                  transition: {
+                    delay: idx * 0.01,
+                    duration: 0.09,
+                  },
+                }}
+                transition={{
+                  type: "spring",
+                  duration: 0.5,
+                }}
               >
-                <div className="snippet__preview">
-                  <img src={language.icon} alt={language.lang} />
-                </div>
-                <h3 className="snippet__title">{snippet.title}</h3>
-              </motion.button>
-            </motion.li>
-          ))}
+                <motion.button
+                  className="snippet | flow"
+                  data-flow-space="sm"
+                  onClick={() =>
+                    handleOpenModal({
+                      ...currentSnippet,
+                      idx: idx + 1,
+                    })
+                  }
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="snippet__preview">
+                    <img src={language.icon} alt={language.lang} />
+                  </div>
+                  <h3 className="snippet__title">{currentSnippet.title}</h3>
+                </motion.button>
+              </motion.li>
+            );
+          })}
         </AnimatePresence>
       </motion.ul>
 
