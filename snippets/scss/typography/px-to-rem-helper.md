@@ -2,7 +2,7 @@
 title: PX to REM Helper
 description: This function will convert px values to rem values.
 author: gihanrangana
-tags: sass,function,pixel,rem,px-to-rem,css
+tags: function,pixel,rem,px-to-rem
 ---
 
 ```scss
@@ -10,7 +10,7 @@ tags: sass,function,pixel,rem,px-to-rem,css
   @return ($px / $base) * 1rem;
 }
 
-// Usage
+// Usage:
 div {
   font-size: px-to-rem(12px); // Output: 0.75rem
   padding: px-to-rem(16px);   // Output: 1rem
