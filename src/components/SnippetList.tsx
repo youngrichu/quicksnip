@@ -37,7 +37,7 @@ const SnippetList = () => {
       <motion.ul role="list" className="snippets">
         <AnimatePresence mode="popLayout">
           {fetchedSnippets.map((snippet, idx) => {
-            const uniqueId = `${language.lang}-${snippet.title}`;
+            const uniqueId = `${language.name}-${snippet.title}`;
             return (
               <motion.li
                 key={uniqueId}
@@ -72,7 +72,7 @@ const SnippetList = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="snippet__preview">
-                    <img src={language.icon} alt={language.lang} />
+                    <img src={language.icon} alt={language.name} />
                   </div>
                   <h3 className="snippet__title">{snippet.title}</h3>
                 </motion.button>
@@ -87,7 +87,7 @@ const SnippetList = () => {
           <SnippetModal
             snippet={snippet}
             handleCloseModal={handleCloseModal}
-            language={language.lang}
+            language={language.name}
           />
         )}
       </AnimatePresence>
