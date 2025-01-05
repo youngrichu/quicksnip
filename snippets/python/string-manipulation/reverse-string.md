@@ -6,8 +6,8 @@ tags: string,reverse
 ---
 
 ```py
-def reverse_string(s):
-    return s[::-1]
+def reverse_string(s:str) -> str:
+	return s[::-1]
 
 # Usage:
 reverse_string('hello') # Returns: 'olleh'
