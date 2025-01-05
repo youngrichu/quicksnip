@@ -2,7 +2,7 @@
 title: Date time formatting american
 description: Formats a timestamp to a human-readable date-time string in the format "MM/dd/yyyy hh:mm:ss a"
 author: Mcbencrafter
-tags: java, date, time, date-time, formatting, american
+tags: date, time, date-time, formatting, american
 ---
 
 ```java

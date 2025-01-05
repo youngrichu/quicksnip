@@ -2,7 +2,7 @@
 title: Duration formatting minutes seconds
 description: Converts a given time duration to a human-readable string in the format "mm:ss"
 author: Mcbencrafter
-tags: java, time, formatting, minutes, seconds
+tags: time, formatting, minutes, seconds
 ---
 
 ```java

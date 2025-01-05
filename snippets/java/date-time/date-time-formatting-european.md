@@ -2,7 +2,7 @@
 title: Date time formatting european
 description: Formats a timestamp to a human-readable date-time string in the format "dd.MM.yyyy HH:mm:ss"
 author: Mcbencrafter
-tags: java, date, time, date-time, formatting, european
+tags: date, time, date-time, formatting, european
 ---
 
 ```java
