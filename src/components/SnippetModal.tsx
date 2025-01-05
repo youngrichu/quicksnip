@@ -50,7 +50,10 @@ const SnippetModal: React.FC<Props> = ({
         className="modal | flow"
         data-flow-space="lg"
         layoutId={`${language}-${snippet.title}`}
-        transition={{ type: "spring", duration: shouldReduceMotion ? 0 : 0.5 }}
+        transition={{
+          ease: [0, 0.75, 0.25, 1],
+          duration: shouldReduceMotion ? 0 : 0.3,
+        }}
       >
         <div className="modal__header">
           <h2 className="section-title">{snippet.title}</h2>

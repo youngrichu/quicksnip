@@ -60,8 +60,8 @@ const SnippetList = () => {
                   },
                 }}
                 transition={{
-                  type: "spring",
-                  duration: shouldReduceMotion ? 0 : 0.5,
+                  ease: [0, 0.75, 0.25, 1],
+                  duration: shouldReduceMotion ? 0 : 0.25,
                 }}
               >
                 <motion.button
