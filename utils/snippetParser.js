@@ -27,12 +27,10 @@ function raise(issue, snippet = '') {
     return null;
 }
 
-const crlfRegex = /\r\n/gm;
 const propertyRegex = /^\s+([a-zA-Z]+):\s*(.+)/;
-const headerEndCodeStartRegex = /^\s*---\s*```.*\n/;
+const headerEndCodeStartRegex = /^\s*---\s*```.*\r?\n/;
 const codeRegex = /^(.+)```/s
 function parseSnippet(path, name, text) {
-    if(crlfRegex.exec(text) !== null) return raise('Found CRLF line endings instead of LF line endings', path);
     let cursor = 0;
 
     const fromCursor = () => text.substring(cursor);
@@ -68,7 +66,7 @@ function parseSnippet(path, name, text) {
         author: properties.author,
         tags: properties.tags.split(',').map((tag) => tag.trim()).filter((tag) => tag),
         contributors: 'contributors' in properties ? properties.contributors.split(',').map((contributor) => contributor.trim()).filter((contributor) => contributor) : [],
-        code: code,
+        code: code.replace(/\r\n/g, '\n'),
     }
 }
 
