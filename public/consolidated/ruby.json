@@ -1,6 +1,6 @@
 [
     {
-        "categoryName": "Array Manipulation",
+        "name": "Array Manipulation",
         "snippets": [
             {
                 "title": "Binary Search",
@@ -40,7 +40,7 @@
         ]
     },
     {
-        "categoryName": "Basics",
+        "name": "Basics",
         "snippets": [
             {
                 "title": "Hello, World!",
@@ -57,7 +57,7 @@
         ]
     },
     {
-        "categoryName": "Error Handling",
+        "name": "Error Handling",
         "snippets": [
             {
                 "title": "Custom Error Class",
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "categoryName": "Math And Numbers",
+        "name": "Math And Numbers",
         "snippets": [
             {
                 "title": "Calculate Compound Interest",
@@ -128,7 +128,7 @@
         ]
     },
     {
-        "categoryName": "String Manipulation",
+        "name": "String Manipulation",
         "snippets": [
             {
                 "title": "Capitalize Words",

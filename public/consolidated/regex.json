@@ -1,6 +1,6 @@
 [
     {
-        "categoryName": "Miscellaneous",
+        "name": "Miscellaneous",
         "snippets": [
             {
                 "title": "Hexadecimal Color",
@@ -47,7 +47,7 @@
         ]
     },
     {
-        "categoryName": "Validation pattern",
+        "name": "Validation pattern",
         "snippets": [
             {
                 "title": "Email Address",
