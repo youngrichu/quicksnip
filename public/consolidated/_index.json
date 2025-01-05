@@ -40,6 +40,10 @@
         "icon": "/icons/regex.svg"
     },
     {
+        "lang": "RUBY",
+        "icon": "/icons/ruby.svg"
+    },
+    {
         "lang": "RUST",
         "icon": "/icons/rust.svg"
     },
