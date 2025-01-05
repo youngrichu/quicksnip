@@ -33,6 +33,7 @@
         ]
     },
     {
+        "categoryName": "Debuging",
         "name": "Debugging",
         "snippets": [
             {

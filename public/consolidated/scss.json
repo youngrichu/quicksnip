@@ -157,6 +157,19 @@
                 "code": "@mixin line-clamp($number) {\n  display: -webkit-box;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: $number;\n  overflow: hidden;\n}\n"
             },
             {
+                "title": "PX to REM Helper",
+                "description": "This function will convert px values to rem values.",
+                "author": "gihanrangana",
+                "tags": [
+                    "function",
+                    "pixel",
+                    "rem",
+                    "px-to-rem"
+                ],
+                "contributors": [],
+                "code": "@function px-to-rem($px, $base: 16px) {\n  @return ($px / $base) * 1rem;\n}\n\n// Usage:\ndiv {\n  font-size: px-to-rem(12px); // Output: 0.75rem\n  padding: px-to-rem(16px);   // Output: 1rem\n  margin: px-to-rem(32px) // Output 2rem\n}\n"
+            },
+            {
                 "title": "Text Gradient",
                 "description": "Adds a gradient color effect to text.",
                 "author": "dostonnabotov",
