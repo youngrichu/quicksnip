@@ -1,7 +1,8 @@
 ---
 title: Truncate String
 description: Truncates a string to a specified length and adds a toggleable ellipsis.
-author: minerminermain
+author: axorax
+contributors: MinerMinerMods
 tags: string,truncate
 ---
 
