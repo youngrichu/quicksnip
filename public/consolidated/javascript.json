@@ -89,7 +89,7 @@
                     "conversion"
                 ],
                 "contributors": [],
-                "code": "function hexToRgb(r, g, b) {\n    return (\n      \"#\" +\n      [r, g, b]\n        .map((x) => {\n          const hex = x.toString(16);\n          return hex.length === 1 ? \"0\" + hex : hex;\n        })\n        .join(\"\")\n    );\n},\n\n// Usage:\nconsole.log(hexToRgb(\"#ff5733\")); // { r: 255, g: 87, b: 51 }\nconsole.log(hexToRgb(\"#ffff\")); // { r: 0, g: 255, b: 255 }\n"
+                "code": "function hexToRgb(hex) {\n  let sanitizedHex = hex.startsWith(\"#\") ? hex.slice(1) : hex;\n\n  if (sanitizedHex.length === 3) {\n    sanitizedHex = [...sanitizedHex].map((char) => char + char).join(\"\");\n  }\n\n  const bigint = parseInt(sanitizedHex, 16);\n\n  return {\n    r: (bigint >> 16) & 0xff, \n    g: (bigint >> 8) & 0xff,  \n    b: bigint & 0xff,       \n  };\n}\n\n// Usage:\nconsole.log(hexToRgb(\"#ff5733\")); // { r: 255, g: 87, b: 51 }\nconsole.log(hexToRgb(\"#ffff\")); // { r: 0, g: 255, b: 255 }\n"
             },
             {
                 "title": "HSL to RGB Color",

@@ -6,17 +6,21 @@ tags: color,conversion
 ---
 
 ```js
-function hexToRgb(r, g, b) {
-    return (
-      "#" +
-      [r, g, b]
-        .map((x) => {
-          const hex = x.toString(16);
-          return hex.length === 1 ? "0" + hex : hex;
-        })
-        .join("")
-    );
-},
+function hexToRgb(hex) {
+  let sanitizedHex = hex.startsWith("#") ? hex.slice(1) : hex;
+
+  if (sanitizedHex.length === 3) {
+    sanitizedHex = [...sanitizedHex].map((char) => char + char).join("");
+  }
+
+  const bigint = parseInt(sanitizedHex, 16);
+
+  return {
+    r: (bigint >> 16) & 0xff, 
+    g: (bigint >> 8) & 0xff,  
+    b: bigint & 0xff,       
+  };
+}
 
 // Usage:
 console.log(hexToRgb("#ff5733")); // { r: 255, g: 87, b: 51 }
