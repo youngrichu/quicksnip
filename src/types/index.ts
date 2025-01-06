@@ -1,7 +1,8 @@
 export type LanguageType = {
   name: string;
   icon: string;
-  subIndexes: {
+  mainLanguage?: LanguageType;
+  subLanguages: {
     name: string;
     icon: string;
   }[];

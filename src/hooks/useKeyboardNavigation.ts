@@ -7,11 +7,13 @@ interface UseKeyboardNavigationProps {
   isOpen: boolean;
   onSelect: (item: LanguageType) => void;
   onClose: () => void;
+  openedLanguages: LanguageType[];
 }
 
 const keyboardEventKeys = {
   arrowDown: "ArrowDown",
   arrowUp: "ArrowUp",
+  arrowRight: "ArrowRight",
   enter: "Enter",
   escape: "Escape",
 } as const;
@@ -22,6 +24,7 @@ type KeyboardEventKeys =
 export const useKeyboardNavigation = ({
   items,
   isOpen,
+  openedLanguages,
   onSelect,
   onClose,
 }: UseKeyboardNavigationProps) => {
@@ -42,9 +45,11 @@ export const useKeyboardNavigation = ({
         case "ArrowUp":
           setFocusedIndex((prev) => (prev > 0 ? prev - 1 : items.length - 1));
           break;
+        case "ArrowRight":
+          break;
         case "Enter":
           if (focusedIndex >= 0) {
-            onSelect(items[focusedIndex]);
+            onSelect(items.filter((item) => !item.mainLanguage || openedLanguages.includes(item.mainLanguage))[focusedIndex]);
           }
           break;
         case "Escape":

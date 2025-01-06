@@ -6,7 +6,7 @@ import { AppState, LanguageType, SnippetType } from "@types";
 const defaultLanguage: LanguageType = {
   name: "JAVASCRIPT",
   icon: "/icons/javascript.svg",
-  subIndexes: [],
+  subLanguages: [],
 };
 
 // TODO: add custom loading and error handling

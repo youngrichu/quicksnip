@@ -37,7 +37,12 @@
     {
         "name": "JAVASCRIPT",
         "icon": "/icons/javascript.svg",
-        "subLanguages": []
+        "subLanguages": [
+            {
+                "name": "REACT",
+                "icon": "/icons/javascript--react.svg"
+            }
+        ]
     },
     {
         "name": "PYTHON",
