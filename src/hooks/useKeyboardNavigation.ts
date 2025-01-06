@@ -49,7 +49,13 @@ export const useKeyboardNavigation = ({
           break;
         case "Enter":
           if (focusedIndex >= 0) {
-            onSelect(items.filter((item) => !item.mainLanguage || openedLanguages.includes(item.mainLanguage))[focusedIndex]);
+            onSelect(
+              items.filter(
+                (item) =>
+                  !item.mainLanguage ||
+                  openedLanguages.includes(item.mainLanguage)
+              )[focusedIndex]
+            );
           }
           break;
         case "Escape":

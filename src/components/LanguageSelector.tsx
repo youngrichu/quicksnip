@@ -4,6 +4,7 @@ import { useAppContext } from "@contexts/AppContext";
 import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
 import { useLanguages } from "@hooks/useLanguages";
 import { LanguageType } from "@types";
+
 import SubLanguageSelector from "./SublanguageSelector";
 
 // Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
@@ -11,12 +12,20 @@ import SubLanguageSelector from "./SublanguageSelector";
 const LanguageSelector = () => {
   const { language, setLanguage } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
-  const allLanguages = useMemo(() => 
-    fetchedLanguages.flatMap((lang) =>
-      lang.subLanguages.length > 0
-        ? [lang, ...lang.subLanguages.map((subLang) => ({ ...subLang, mainLanguage: lang, subLanguages: [] }))]
-        : [lang]
-    ), 
+  const allLanguages = useMemo(
+    () =>
+      fetchedLanguages.flatMap((lang) =>
+        lang.subLanguages.length > 0
+          ? [
+              lang,
+              ...lang.subLanguages.map((subLang) => ({
+                ...subLang,
+                mainLanguage: lang,
+                subLanguages: [],
+              })),
+            ]
+          : [lang]
+      ),
     [fetchedLanguages]
   );
 
@@ -32,7 +41,7 @@ const LanguageSelector = () => {
   const { focusedIndex, handleKeyDown, resetFocus, focusFirst } =
     useKeyboardNavigation({
       items: allLanguages,
-      isOpen, 
+      isOpen,
       openedLanguages,
       onSelect: handleSelect,
       onClose: () => setIsOpen(false),
@@ -53,7 +62,9 @@ const LanguageSelector = () => {
     if (open) {
       setOpenedLanguages((prev) => [...prev, openedLang]);
     } else {
-      setOpenedLanguages((prev) => prev.filter((lang) => lang.name !== openedLang.name));
+      setOpenedLanguages((prev) =>
+        prev.filter((lang) => lang.name !== openedLang.name)
+      );
     }
   };
 
@@ -109,9 +120,16 @@ const LanguageSelector = () => {
           onKeyDown={handleKeyDown}
           tabIndex={-1}
         >
-          {fetchedLanguages.map((lang, index) => (
+          {fetchedLanguages.map((lang, index) =>
             lang.subLanguages.length > 0 ? (
-              <SubLanguageSelector key={index} mainLanguage={lang} afterSelect={()=>{ setIsOpen(false)}} onDropdownChange={handleOpenedSublanguage}/>
+              <SubLanguageSelector
+                key={index}
+                mainLanguage={lang}
+                afterSelect={() => {
+                  setIsOpen(false);
+                }}
+                onDropdownChange={handleOpenedSublanguage}
+              />
             ) : (
               <li
                 key={lang.name}
@@ -129,7 +147,7 @@ const LanguageSelector = () => {
                 </label>
               </li>
             )
-          ))}
+          )}
         </ul>
       )}
     </div>

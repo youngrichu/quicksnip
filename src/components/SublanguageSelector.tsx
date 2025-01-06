@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
+
 import { useAppContext } from "@contexts/AppContext";
 import { LanguageType } from "@types";
-import { useEffect, useState } from "react";
 
 type SubLanguageSelectorProps = {
   mainLanguage: LanguageType;
@@ -11,7 +12,7 @@ type SubLanguageSelectorProps = {
 const SubLanguageSelector = ({
   mainLanguage,
   afterSelect,
-  onDropdownChange
+  onDropdownChange,
 }: SubLanguageSelectorProps) => {
   const { language, setLanguage } = useAppContext();
   const [isOpen, setIsOpen] = useState(
@@ -28,7 +29,7 @@ const SubLanguageSelector = ({
 
   useEffect(() => {
     onDropdownChange(isOpen, mainLanguage);
-  }, [isOpen]);
+  }, [mainLanguage, onDropdownChange, isOpen]);
 
   return (
     <>
