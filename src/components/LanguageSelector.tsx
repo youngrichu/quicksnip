@@ -5,7 +5,7 @@ import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
 import { useLanguages } from "@hooks/useLanguages";
 import { LanguageType } from "@types";
 
-import SubLanguageSelector from "./SublanguageSelector";
+import SubLanguageSelector from "./SubLanguageSelector";
 
 // Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
 

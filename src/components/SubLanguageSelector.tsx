@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { useAppContext } from "@contexts/AppContext";
 import { LanguageType } from "@types";
