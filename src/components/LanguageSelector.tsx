@@ -36,6 +36,7 @@ const LanguageSelector = () => {
   const handleSelect = (selected: LanguageType) => {
     setLanguage(selected);
     setIsOpen(false);
+    setOpenedLanguages([]);
   };
 
   const { focusedIndex, handleKeyDown, resetFocus, focusFirst } =
@@ -43,6 +44,7 @@ const LanguageSelector = () => {
       items: allLanguages,
       isOpen,
       openedLanguages,
+      toggleDropdown: (openedLang) => handleToggleSublanguage(openedLang),
       onSelect: handleSelect,
       onClose: () => setIsOpen(false),
     });
@@ -58,8 +60,12 @@ const LanguageSelector = () => {
     }, 0);
   };
 
-  const handleOpenedSublanguage = (open: boolean, openedLang: LanguageType) => {
-    if (open) {
+  const handleToggleSublanguage = (openedLang: LanguageType) => {
+    const isAlreadyOpened = openedLanguages.some(
+      (lang) => lang.name === openedLang.name
+    );
+
+    if (!isAlreadyOpened) {
       setOpenedLanguages((prev) => [...prev, openedLang]);
     } else {
       setOpenedLanguages((prev) =>
@@ -128,7 +134,8 @@ const LanguageSelector = () => {
                 afterSelect={() => {
                   setIsOpen(false);
                 }}
-                onDropdownChange={handleOpenedSublanguage}
+                opened={openedLanguages.includes(lang)}
+                onDropdownToggle={handleToggleSublanguage}
               />
             ) : (
               <li

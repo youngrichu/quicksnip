@@ -6,13 +6,15 @@ import { LanguageType } from "@types";
 type SubLanguageSelectorProps = {
   mainLanguage: LanguageType;
   afterSelect: () => void;
-  onDropdownChange: (open: boolean, openedLang: LanguageType) => void;
+  onDropdownToggle: (openedLang: LanguageType) => void;
+  opened: boolean;
 };
 
 const SubLanguageSelector = ({
   mainLanguage,
   afterSelect,
-  onDropdownChange,
+  onDropdownToggle,
+  opened,
 }: SubLanguageSelectorProps) => {
   const { language, setLanguage } = useAppContext();
   const [isOpen, setIsOpen] = useState(
@@ -24,12 +26,9 @@ const SubLanguageSelector = ({
   const handleSelect = (selected: LanguageType) => {
     setLanguage(selected);
     setIsOpen(false);
+    onDropdownToggle(mainLanguage);
     afterSelect();
   };
-
-  useEffect(() => {
-    onDropdownChange(isOpen, mainLanguage);
-  }, [mainLanguage, onDropdownChange, isOpen]);
 
   return (
     <>
@@ -61,7 +60,7 @@ const SubLanguageSelector = ({
         </label>
       </li>
 
-      {isOpen && (
+      {(opened || isOpen) && (
         <>
           {mainLanguage.subLanguages.map((subLanguage) => (
             <li

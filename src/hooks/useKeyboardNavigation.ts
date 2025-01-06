@@ -7,6 +7,7 @@ interface UseKeyboardNavigationProps {
   isOpen: boolean;
   onSelect: (item: LanguageType) => void;
   onClose: () => void;
+  toggleDropdown: (openedLang: LanguageType) => void;
   openedLanguages: LanguageType[];
 }
 
@@ -27,6 +28,7 @@ export const useKeyboardNavigation = ({
   openedLanguages,
   onSelect,
   onClose,
+  toggleDropdown,
 }: UseKeyboardNavigationProps) => {
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
 
@@ -46,6 +48,17 @@ export const useKeyboardNavigation = ({
           setFocusedIndex((prev) => (prev > 0 ? prev - 1 : items.length - 1));
           break;
         case "ArrowRight":
+          if (focusedIndex >= 0) {
+            const selectedItem = items.filter(
+              (item) =>
+                !item.mainLanguage ||
+                openedLanguages.includes(item.mainLanguage)
+            )[focusedIndex];
+
+            if (selectedItem.subLanguages.length > 0) {
+              toggleDropdown(selectedItem);
+            }
+          }
           break;
         case "Enter":
           if (focusedIndex >= 0) {
