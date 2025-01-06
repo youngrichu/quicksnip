@@ -7,6 +7,10 @@ tags: math,number-theory,algebra
 
 ```js
 function combinations(n, r) {
+    if (n < 0 || r < 0 || n < r) {
+        throw new Error('Invalid input: n and r must be non-negative and n must be greater than or equal to r.');
+    }
+
     function factorial(x) {
         if (x === 0 || x === 1) return 1;
         let result = 1;
@@ -15,10 +19,13 @@ function combinations(n, r) {
         }
         return result;
     }
-    return factorial(n) / (factorial(r) * factorial(n - r));
+
+    const numerator = factorial(n);
+    const denominator = factorial(r) * factorial(n - r);
+    return numerator / denominator;
 }
 
 // Usage:
-combinations(12,24); // Returns:    7.720248753351544e-16
-combinations(1,22);  // Returns:    8.896791392450574e-22
+combinations(24,22); // Returns:    276
+combinations(5,3);   // Returns:     10
 ```
