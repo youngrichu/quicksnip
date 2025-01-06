@@ -47,7 +47,12 @@
     {
         "name": "PYTHON",
         "icon": "/icons/python.svg",
-        "subLanguages": []
+        "subLanguages": [
+            {
+                "name": "FASTAPI",
+                "icon": "/icons/python--fastapi.svg"
+            }
+        ]
     },
     {
         "name": "REGEX",
