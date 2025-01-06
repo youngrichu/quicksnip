@@ -3,6 +3,18 @@
         "name": "Array Manipulation",
         "snippets": [
             {
+                "title": "Compare Arrays",
+                "description": "Compares two arrays to check if they are equal.",
+                "author": "KCSquid",
+                "tags": [
+                    "array",
+                    "compare",
+                    "equal"
+                ],
+                "contributors": [],
+                "code": "const compareArrays = (array1, array2) => {\n  if (array1.length !== array2.length) return false;\n\n  for (let i = 0; i < array1.length; i++) {\n    if (array1[i] !== array2[i]) {\n      return false;\n    }\n  }\n\n  return true;\n}\n\n// Usage:\narray1 = [1, 2, 3, 4, 5];\narray2 = [5, 4, 3, 2, 1];\ncompareArrays(array1, array2); // Returns: false\n"
+            },
+            {
                 "title": "Partition Array",
                 "description": "Splits an array into two arrays based on a callback function.",
                 "author": "Swaraj-Singh-30",
@@ -410,7 +422,7 @@
                     "algebra"
                 ],
                 "contributors": [],
-                "code": "function combinations(n, r) {\n    function factorial(x) {\n        if (x === 0 || x === 1) return 1;\n        let result = 1;\n        for (let i = 2; i <= x; i++) {\n            result *= i;\n        }\n        return result;\n    }\n    return factorial(n) / (factorial(r) * factorial(n - r));\n}\n\n// Usage:\ncombinations(12,24); // Returns:    7.720248753351544e-16\ncombinations(1,22);  // Returns:    8.896791392450574e-22\n"
+                "code": "function combinations(n, r) {\n    if (n < 0 || r < 0 || n < r) {\n        throw new Error('Invalid input: n and r must be non-negative and n must be greater than or equal to r.');\n    }\n\n    function factorial(x) {\n        if (x === 0 || x === 1) return 1;\n        let result = 1;\n        for (let i = 2; i <= x; i++) {\n            result *= i;\n        }\n        return result;\n    }\n\n    const numerator = factorial(n);\n    const denominator = factorial(r) * factorial(n - r);\n    return numerator / denominator;\n}\n\n// Usage:\ncombinations(24,22); // Returns:    276\ncombinations(5,3);   // Returns:     10\n"
             },
             {
                 "title": "Cross Product",
