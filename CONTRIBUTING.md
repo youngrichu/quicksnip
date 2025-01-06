@@ -141,11 +141,11 @@ console.log(formatDate(new Date())); // Output: '2024-12-10'
         It will return nothing if they are well formatted, otherwise it will tell you what the error is.
 
         ---
-        To preview the snippets, you need to consolidate them, use the `snippets:consolidate` script:
+        To preview the snippets, start the vite server using:
         ```
-        $ npm run snippets:consolidate
+        $ npm run dev
         ```
-        It will update the snippets in the `/public` folder, making them available to the frontend.
+        It will use HMR to update the snippets in the `/public` folder, making them available to the frontend.
 
 Expected file structure:
 
