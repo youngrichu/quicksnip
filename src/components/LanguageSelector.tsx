@@ -89,6 +89,12 @@ const LanguageSelector = () => {
   }, [isOpen]);
 
   useEffect(() => {
+    if (language.mainLanguage) {
+      handleToggleSublanguage(language.mainLanguage);
+    }
+  }, [language]);
+
+  useEffect(() => {
     if (isOpen && focusedIndex >= 0) {
       const element = document.querySelector(
         `.selector__item:nth-child(${focusedIndex + 1})`
