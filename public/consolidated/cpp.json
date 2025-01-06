@@ -1,6 +1,6 @@
 [
     {
-        "categoryName": "Basics",
+        "name": "Basics",
         "snippets": [
             {
                 "title": "Hello, World!",
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "categoryName": "Data Structure Conversion",
+        "name": "Data Structure Conversion",
         "snippets": [
             {
                 "title": "Vector to Queue",
@@ -34,6 +34,7 @@
     },
     {
         "categoryName": "Debuging",
+        "name": "Debugging",
         "snippets": [
             {
                 "title": "Vector Print",
@@ -50,7 +51,7 @@
         ]
     },
     {
-        "categoryName": "Math And Numbers",
+        "name": "Math And Numbers",
         "snippets": [
             {
                 "title": "Check Prime Number",
@@ -66,7 +67,7 @@
         ]
     },
     {
-        "categoryName": "String Manipulation",
+        "name": "String Manipulation",
         "snippets": [
             {
                 "title": "Reverse String",
