@@ -1,6 +1,6 @@
 [
     {
-        "categoryName": "Array Manipulation",
+        "name": "Array Manipulation",
         "snippets": [
             {
                 "title": "Partition Array",
@@ -62,7 +62,7 @@
         ]
     },
     {
-        "categoryName": "Basics",
+        "name": "Basics",
         "snippets": [
             {
                 "title": "Hello, World!",
@@ -78,8 +78,30 @@
         ]
     },
     {
-        "categoryName": "Color Manipulation",
+        "name": "Color Manipulation",
         "snippets": [
+            {
+                "title": "Hex to RGB Color",
+                "description": "Converts hexadecimal color code to RGB color values.",
+                "author": "pvictordev",
+                "tags": [
+                    "color",
+                    "conversion"
+                ],
+                "contributors": [],
+                "code": "function hexToRgb(hex) {\n  let sanitizedHex = hex.startsWith(\"#\") ? hex.slice(1) : hex;\n\n  if (sanitizedHex.length === 3) {\n    sanitizedHex = [...sanitizedHex].map((char) => char + char).join(\"\");\n  }\n\n  const bigint = parseInt(sanitizedHex, 16);\n\n  return {\n    r: (bigint >> 16) & 0xff, \n    g: (bigint >> 8) & 0xff,  \n    b: bigint & 0xff,       \n  };\n}\n\n// Usage:\nconsole.log(hexToRgb(\"#ff5733\")); // { r: 255, g: 87, b: 51 }\nconsole.log(hexToRgb(\"#ffff\")); // { r: 0, g: 255, b: 255 }\n"
+            },
+            {
+                "title": "HSL to RGB Color",
+                "description": "Converts HSL color values to RGB color values.",
+                "author": "pvictordev",
+                "tags": [
+                    "color",
+                    "conversion"
+                ],
+                "contributors": [],
+                "code": "function hslToRgb(h, s, l) {\n  s /= 100;\n  l /= 100;\n  const c = (1 - Math.abs(2 * l - 1)) * s;\n  const x = c * (1 - Math.abs((h / 60) % 2 - 1));\n  const m = l - c / 2;\n\n  const [r, g, b] = \n    h < 60  ? [c, x, 0] :\n    h < 120 ? [x, c, 0] :\n    h < 180 ? [0, c, x] :\n    h < 240 ? [0, x, c] :\n    h < 300 ? [x, 0, c] :\n              [c, 0, x];\n\n  return {\n    r: Math.round((r + m) * 255),\n    g: Math.round((g + m) * 255),\n    b: Math.round((b + m) * 255),\n  };\n}\n\n// Usage:\nconsole.log(hslToRgb(14, 100, 60)); // { r: 255, g: 87, b: 51 }\nconsole.log(hslToRgb(0, 0, 100)); // { r: 255, g: 255, b: 255 }\n"
+            },
             {
                 "title": "RGB to Hex Color",
                 "description": "Converts RGB color values to hexadecimal color code.",
@@ -90,11 +112,22 @@
                 ],
                 "contributors": [],
                 "code": "function rgbToHex(r, g, b) {\n  const toHex = (n) => {\n    const hex = n.toString(16);\n    return hex.length === 1 ? '0' + hex : hex;\n  };\n  \n  return '#' + toHex(r) + toHex(g) + toHex(b);\n}\n\n// Usage:\nconsole.log(rgbToHex(255, 128, 0)); // Output: \"#ff8000\"\nconsole.log(rgbToHex(0, 255, 0)); // Output: \"#00ff00\"\n"
+            },
+            {
+                "title": "RGB to HSL Color",
+                "description": "Converts RGB color values to HSL color values.",
+                "author": "pvictordev",
+                "tags": [
+                    "color",
+                    "conversion"
+                ],
+                "contributors": [],
+                "code": "function rgbToHsl(r, g, b) {\n  [r, g, b] = [r, g, b].map((v) => v / 255);\n\n  const max = Math.max(r, g, b);\n  const min = Math.min(r, g, b);\n  const delta = max - min;\n\n  const l = (max + min) / 2;\n\n  if (delta === 0) return { h: 0, s: 0, l: Math.round(l * 100) };\n\n  const s = l > 0.5 ? delta / (2 - max - min) : delta / (max + min);\n\n  const h = \n    max === r ? ((g - b) / delta + (g < b ? 6 : 0)) :\n    max === g ? (b - r) / delta + 2 :\n                (r - g) / delta + 4;\n\n  return {\n    h: Math.round(h * 60), \n    s: Math.round(s * 100),\n    l: Math.round(l * 100), \n  };\n}\n\n// Usage:\nconsole.log(rgbToHsl(255, 87, 51)); // { h: 14, s: 100, l: 60 }\nconsole.log(rgbToHsl(255, 255, 255)); // { h: 0, s: 0, l: 100 }\n"
             }
         ]
     },
     {
-        "categoryName": "Date And Time",
+        "name": "Date And Time",
         "snippets": [
             {
                 "title": "Check Leap Year",
@@ -191,7 +224,7 @@
         ]
     },
     {
-        "categoryName": "Dom Manipulation",
+        "name": "Dom Manipulation",
         "snippets": [
             {
                 "title": "Change Element Style",
@@ -218,7 +251,7 @@
         ]
     },
     {
-        "categoryName": "Function Utilities",
+        "name": "Function Utilities",
         "snippets": [
             {
                 "title": "Compose Functions",
@@ -327,7 +360,7 @@
         ]
     },
     {
-        "categoryName": "Local Storage",
+        "name": "Local Storage",
         "snippets": [
             {
                 "title": "Add Item to localStorage",
@@ -365,7 +398,116 @@
         ]
     },
     {
-        "categoryName": "Number Formatting",
+        "name": "Mathematical Functions",
+        "snippets": [
+            {
+                "title": "Combinations",
+                "description": "Calculates the number of combinations (denoted as C(n,r) or \"n choose r\"), which determines how many ways you can select r items from n items without considering the order.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "number-theory",
+                    "algebra"
+                ],
+                "contributors": [],
+                "code": "function combinations(n, r) {\n    function factorial(x) {\n        if (x === 0 || x === 1) return 1;\n        let result = 1;\n        for (let i = 2; i <= x; i++) {\n            result *= i;\n        }\n        return result;\n    }\n    return factorial(n) / (factorial(r) * factorial(n - r));\n}\n\n// Usage:\ncombinations(12,24); // Returns:    7.720248753351544e-16\ncombinations(1,22);  // Returns:    8.896791392450574e-22\n"
+            },
+            {
+                "title": "Cross Product",
+                "description": "Computes the cross product of two 3D vectors, which results in a vector perpendicular to both.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "vector-algebra"
+                ],
+                "contributors": [],
+                "code": "function crossProduct(a, b) {\n    if (a.length !== 3 || b.length !== 3) {\n        throw new Error('Vectors must be 3-dimensional');\n    }\n\n    return [\n        a[1] * b[2] - a[2] * b[1],\n        a[2] * b[0] - a[0] * b[2],\n        a[0] * b[1] - a[1] * b[0]\n    ];\n}\n\n// Usage:\ncrossProduct([1, 2, 3], [4, 5, 6]); // Returns: [-3, 6, -3] \n"
+            },
+            {
+                "title": "Dot Product",
+                "description": "Computes the dot product of two vectors, which is the sum of the products of corresponding elements.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "vector-algebra"
+                ],
+                "contributors": [],
+                "code": "function dotProduct(a, b) {\n    if (a.length !== b.length) {\n        throw new Error('Vectors must be of the same length');\n    }\n\n    return a.reduce((sum, value, index) => sum + value * b[index], 0);\n}\n\n// Usage:\ndotProduct([1, 2, 3], [4, 5, 6]); // Returns: 32\n"
+            },
+            {
+                "title": "Error function",
+                "description": "Computes the error function (erf(x)) for a given input x, which is a mathematical function used frequently in probability, statistics, and partial differential equations.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math"
+                ],
+                "contributors": [],
+                "code": "function erf(x) {\n    const sign = Math.sign(x);\n    const absX = Math.abs(x);\n    const t = 1 / (1 + 0.3275911 * absX);\n    const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429;\n    const poly = t * (a1 + t * (a2 + t * (a3 + t * (a4 + t * a5))));\n    return sign * (1 - poly * Math.exp(-absX * absX));\n}\n\n// Usage:\nerf(-1); // Returns:    -0.8427006897475899\nerf(1);  // Returns:     0.8427006897475899\n"
+            },
+            {
+                "title": "Greatest Common Divisor",
+                "description": "Calculates the largest positive integer that divides each of the integers without leaving a remainder. Useful for calculating aspect ratios.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "division",
+                    "number-theory",
+                    "algebra"
+                ],
+                "contributors": [],
+                "code": "function gcd(a, b) {\n    while (b !== 0) {\n        let temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\n// Usage:\ngcd(1920, 1080); // Returns:    120\ngcd(1920, 1200); // Returns:    240\ngcd(5,12);       // Returns:      1\n"
+            },
+            {
+                "title": "Least common multiple",
+                "description": "Computes the least common multiple (LCM) of two numbers 𝑎 and b. The LCM is the smallest positive integer that is divisible by both a and b.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "number-theory",
+                    "algebra"
+                ],
+                "contributors": [],
+                "code": "function lcm(a, b) {\n    function gcd(x, y) {\n        while (y !== 0) {\n            const temp = y;\n            y = x % y;\n            x = temp;\n        }\n        return Math.abs(x);\n    }\n    return Math.abs(a * b) / gcd(a, b);\n}\n\n// Usage:\nlcm(12,16); // Returns:    48\nlcm(8,20);  // Returns:    40\nlcm(16,17); // Returns:   272\n"
+            },
+            {
+                "title": "Matrix Multiplication",
+                "description": "Multiplies two matrices, where the number of columns in the first matrix equals the number of rows in the second.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "matrix-algebra"
+                ],
+                "contributors": [],
+                "code": "function matrixMultiply(A, B) {\n    const rowsA = A.length;\n    const colsA = A[0].length;\n    const rowsB = B.length;\n    const colsB = B[0].length;\n\n    if (colsA !== rowsB) {\n        throw new Error('Number of columns of A must equal the number of rows of B');\n    }\n\n    let result = Array.from({ length: rowsA }, () => Array(colsB).fill(0));\n\n    for (let i = 0; i < rowsA; i++) {\n        for (let j = 0; j < colsB; j++) {\n            for (let k = 0; k < colsA; k++) {\n                result[i][j] += A[i][k] * B[k][j];\n            }\n        }\n    }\n\n    return result;\n}\n\n// Usage:\nmatrixMultiply([[1, 2], [3, 4]], [[5, 6], [7, 8]]); // Returns: [[19, 22], [43, 50]]\n"
+            },
+            {
+                "title": "Modular Inverse",
+                "description": "Computes the modular multiplicative inverse of a number a under modulo m, which is the integer x such that (a*x) mod m=1.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "number-theory",
+                    "algebra"
+                ],
+                "contributors": [],
+                "code": "function modInverse(a, m) {\n    function extendedGCD(a, b) {\n        if (b === 0) {\n            return { gcd: a, x: 1, y: 0 };\n        }\n        const { gcd, x: x1, y: y1 } = extendedGCD(b, a % b);\n        const x = y1;\n        const y = x1 - Math.floor(a / b) * y1;\n        return { gcd, x, y };\n    }\n\n    const { gcd, x } = extendedGCD(a, m);\n\n    if (gcd !== 1) {\n        return null;\n    }\n\n    return (x % m + m) % m;\n}\n\n// Usage:\nmodInverse(3, 26);  // Returns: 9\nmodInverse(10, 17); // Returns: 12\nmodInverse(6, 9);   // Returns: null\n"
+            },
+            {
+                "title": "Prime Number",
+                "description": "Checks if a number is a prime number or not.",
+                "author": "JanluOfficial",
+                "tags": [
+                    "math",
+                    "number-theory",
+                    "algebra"
+                ],
+                "contributors": [],
+                "code": "function isPrime(num) {\n    if (num <= 1) return false; // 0 and 1 are not prime numbers\n    if (num <= 3) return true;  // 2 and 3 are prime numbers\n    if (num % 2 === 0 || num % 3 === 0) return false; // Exclude multiples of 2 and 3\n\n    // Check divisors from 5 to √num, skipping multiples of 2 and 3\n    for (let i = 5; i * i <= num; i += 6) {\n        if (num % i === 0 || num % (i + 2) === 0) return false;\n    }\n    return true;\n}\n\n// Usage:\nisPrime(69); // Returns:  false\nisPrime(17); // Returns:  true\n"
+            }
+        ]
+    },
+    {
+        "name": "Number Formatting",
         "snippets": [
             {
                 "title": "Convert Number to Currency",
@@ -447,7 +589,7 @@
         ]
     },
     {
-        "categoryName": "Object Manipulation",
+        "name": "Object Manipulation",
         "snippets": [
             {
                 "title": "Check if Object is Empty",
@@ -612,7 +754,7 @@
         ]
     },
     {
-        "categoryName": "String Manipulation",
+        "name": "String Manipulation",
         "snippets": [
             {
                 "title": "Capitalize String",
