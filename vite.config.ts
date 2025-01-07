@@ -9,7 +9,7 @@ function consolidateSnippets(projectRoot: string) {
     cwd: projectRoot,
   });
 
-  if (cmd.status !== 1) return;
+  if (cmd.status === 0) return;
 
   console.log(`Consolidating snippets failed:\n${cmd.output.toString()}`);
 }
