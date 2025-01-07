@@ -12,7 +12,7 @@
                     "equal"
                 ],
                 "contributors": [],
-                "code": "const compareArrays = (array1, array2) => {\n  if (array1.length !== array2.length) return false;\n\n  for (let i = 0; i < array1.length; i++) {\n    if (array1[i] !== array2[i]) {\n      return false;\n    }\n  }\n\n  return true;\n}\n\n// Usage:\narray1 = [1, 2, 3, 4, 5];\narray2 = [5, 4, 3, 2, 1];\ncompareArrays(array1, array2); // Returns: false\n"
+                "code": "const compareArrays = (array1, array2) => {\n  if (!Array.isArray(array1) || !Array.isArray(array2)) return false;\n  if (array1.length !== array2.length) return false;\n\n  const traverse = (arr1, arr2) => {\n    for (let i = 0; i < arr1.length; i++) {\n      if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {\n        if (!traverse(arr1[i], arr2[i])) return false;\n      } else if (arr1[i] !== arr2[i]) {\n        return false;\n      }\n    }\n\n    return true;\n  }\n\n  return traverse(array1, array2);\n}\n\n// Usage:\nconst number = 123;\nconst array1 = [1, 2, 3, 4, 5];\nconst array2 = [1, 2, 3, 4, 5];\nconst array3 = [[1, 2], [3, 4]];\nconst array4 = [[1, 2], [3, 4]];\n\ncompareArrays(array1, array2); // Returns: true\ncompareArrays(array1, number); // Returns: false\ncompareArrays(array1, array4); // Returns: false\ncompareArrays(array3, array4); // Returns: true\n"
             },
             {
                 "title": "Partition Array",
