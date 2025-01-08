@@ -65,7 +65,7 @@ If your function doesn't return anything just show how to use it. If the result 
 
 To ensure your snippet isn’t refused, consider these questions:
 - **Does the standard library of my language provide an easy way of doing this ?**
-- **Does that snippet have a real, and practical use case ?**
+- **Does that snippet not have a real, and practical use case ?**
 - **Could it be split into separate parts to be better understood ?**
 
 If any answer is yes, then your snippet will most likely get rejected.
