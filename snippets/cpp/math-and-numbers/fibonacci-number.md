@@ -1,5 +1,5 @@
 ---
-title: Fibonacci Sequence
+title: Fibonacci Number
 description: Calculates the nth Fibonacci number using recursion.
 tags: math, fibonacci, recursion
 author: ashukr07

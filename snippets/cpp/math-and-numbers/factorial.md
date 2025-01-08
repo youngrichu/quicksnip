@@ -1,5 +1,5 @@
 ---
-title: Factorial of a Number
+title: Factorial
 description: Calculates the factorial of a given non-negative integer.
 tags: math, factorial
 author: ashukr07

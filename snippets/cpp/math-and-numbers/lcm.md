@@ -1,5 +1,5 @@
 ---
-title: Calculate LCM
+title: LCM
 description: Computes the least common multiple (LCM) of two integers.
 tags: math, lcm
 author: ashukr07

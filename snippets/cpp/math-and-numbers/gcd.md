@@ -1,5 +1,5 @@
 ---
-title: Calculate GCD
+title: GCD
 description: Computes the greatest common divisor (GCD) of two integers.
 tags: math, gcd
 author: ashukr07

@@ -1,5 +1,5 @@
 ---
-title: Check if a Number is Power of Two
+title: Check Power of Two
 description: Checks if a given number is a power of two using bitwise operations.
 tags: bit-manipulation, power-of-two
 author: ashukr07
