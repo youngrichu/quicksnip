@@ -7,11 +7,11 @@ tags: math,factorial,recursive-function
 
 ```py
 def factorial(n):
-    if type(n) != int or n < 0: raise ValueError("Invalid value of input: '" + str(n) + "'") # Raises an error for invalid input
-    if n == 0 or n == 1: return 1 # Returns 1 if n is 0 or 1
+    if n < 0: return "Exception: Cannot calculate factorial for negative numbers" # Handling negative number
+    elif n == 0 or n == 1: return 1 # Returns 1 if n is 0 or 1
     else: return n * factorial(n-1) # Recall the factorial function
 ```
 
 # Usage:
 print(factorial(4)) # Returns 24
-print(factorial(-3)) # Returns type error for invalid inputs
+print(factorial(-3)) # Returns Exception
