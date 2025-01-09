@@ -5,10 +5,11 @@ author: JasimAlrawie
 tags: math,number-theory,algebra
 ---
 
-```js
-function remap(value, start1, end1, start2, end2) {
-    return (v-start1) * (stop2 - start2)/(stop1 - start1) + start2
-}
+```py
+
+def remap(value, start1, end1, start2, end2):
+    return (value - start1) * (end2 - start2) / (end1 - start1) + start2
+```
 
 // Usage:
 remap(value, 0, 1, 0, 255)    // remaps the value from (0,1) to (0,255)
