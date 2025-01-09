@@ -1,8 +1,9 @@
 import { LanguageType } from "@types";
 
 export const defaultLanguage: LanguageType = {
-  lang: "JAVASCRIPT",
+  name: "JAVASCRIPT",
   icon: "/icons/javascript.svg",
+  subIndexes: [],
 };
 
 // export const defaultCategory = "All Snippets"; // TODO: remove

@@ -1,48 +1,18 @@
-import { useMemo } from "react";
-
 import { useAppContext } from "@contexts/AppContext";
-import { SnippetType } from "@types";
+import { CategoryType } from "@types";
 import { slugify } from "@utils/slugify";
 
 import { useFetch } from "./useFetch";
 
-type CategoryData = {
-  categoryName: string;
-  snippets: SnippetType[];
-};
-
 export const useSnippets = () => {
-  const { language, category, searchText } = useAppContext();
-  // console.log({ language, category });
-  const { data, loading, error } = useFetch<CategoryData[]>(
-    `/consolidated/${slugify(language.lang)}.json`
+  const { language, category } = useAppContext();
+  const { data, loading, error } = useFetch<CategoryType[]>(
+    `/consolidated/${slugify(language.name)}.json`
   );
 
-  const fetchedSnippets = useMemo(() => {
-    if (!data) {
-      return [];
-    }
-
-    // if (category === defaultCategory) {
-    //   if (searchText) {
-    //     return data
-    //       .flatMap((item) => item.snippets)
-    //       .filter((item) =>
-    //         item.title.toLowerCase().includes(searchText.toLowerCase())
-    //       );
-    //   }
-    //   return data.flatMap((item) => item.snippets);
-    // }
-
-    if (searchText) {
-      return data
-        .find((item) => item.categoryName === category)
-        ?.snippets.filter((item) =>
-          item.title.toLowerCase().includes(searchText.toLowerCase())
-        );
-    }
-    return data.find((item) => item.categoryName === category)?.snippets;
-  }, [category, data, searchText]);
+  const fetchedSnippets = data
+    ? data.find((item) => item.name === category)?.snippets
+    : [];
 
   return { fetchedSnippets, loading, error };
 };

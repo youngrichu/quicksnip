@@ -45,7 +45,7 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
     }
 
     const language = fetchedLanguages.find(
-      (lang) => slugify(lang.lang) === languageName
+      (lang) => slugify(lang.name) === languageName
     );
     if (!language) {
       setLanguage(defaultLanguage);
@@ -61,17 +61,14 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
 
     let category: CategoryType | undefined;
     try {
-      const res = await fetch(`/consolidated/${slugify(language.lang)}.json`);
+      const res = await fetch(`/consolidated/${slugify(language.name)}.json`);
       const data: CategoryType[] = await res.json();
-      category = data.find(
-        (item: { categoryName: string }) =>
-          slugify(item.categoryName) === categoryName
-      );
+      category = data.find((item) => item.name === categoryName);
       if (!category) {
-        setCategory(data[0].categoryName);
+        setCategory(data[0].name);
         return;
       }
-      setCategory(category.categoryName);
+      setCategory(category.name);
     } catch (_error) {
       // no-op
     }
@@ -89,7 +86,6 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
     return <div>Loading...</div>;
   }
 
-  console.log({ language });
   return (
     <AppContext.Provider
       value={{
