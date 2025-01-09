@@ -2,14 +2,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
-import { defaultCategory } from "@utils/consts";
 
 import { SearchIcon } from "./Icons";
 
 const SearchInput = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { searchText, setSearchText, setCategory } = useAppContext();
+  const { searchText, setSearchText } = useAppContext();
 
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -28,10 +27,10 @@ const SearchInput = () => {
 
   const clearSearch = useCallback(() => {
     setInputVal("");
-    setCategory(defaultCategory);
+    // setCategory(defaultCategory);
     setSearchText("");
     setSearchParams({});
-  }, [setCategory, setSearchParams, setSearchText]);
+  }, [setSearchParams, setSearchText]);
 
   const handleEscapePress = useCallback(
     (e: KeyboardEvent) => {
@@ -62,7 +61,7 @@ const SearchInput = () => {
 
       const formattedVal = inputVal.trim().toLowerCase();
 
-      setCategory(defaultCategory);
+      // setCategory(defaultCategory);
       setSearchText(formattedVal);
       if (!formattedVal) {
         setSearchParams({});
@@ -70,7 +69,7 @@ const SearchInput = () => {
         setSearchParams({ search: formattedVal });
       }
     },
-    [inputVal, setCategory, setSearchParams, setSearchText]
+    [inputVal, setSearchParams, setSearchText]
   );
 
   useEffect(() => {

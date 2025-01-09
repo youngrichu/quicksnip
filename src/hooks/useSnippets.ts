@@ -2,8 +2,7 @@ import { useMemo } from "react";
 
 import { useAppContext } from "@contexts/AppContext";
 import { SnippetType } from "@types";
-import { defaultCategory } from "@utils/consts";
-import { slugify } from "@utils/helpers/slugify";
+import { slugify } from "@utils/slugify";
 
 import { useFetch } from "./useFetch";
 
@@ -14,6 +13,7 @@ type CategoryData = {
 
 export const useSnippets = () => {
   const { language, category, searchText } = useAppContext();
+  // console.log({ language, category });
   const { data, loading, error } = useFetch<CategoryData[]>(
     `/consolidated/${slugify(language.lang)}.json`
   );
@@ -23,16 +23,16 @@ export const useSnippets = () => {
       return [];
     }
 
-    if (category === defaultCategory) {
-      if (searchText) {
-        return data
-          .flatMap((item) => item.snippets)
-          .filter((item) =>
-            item.title.toLowerCase().includes(searchText.toLowerCase())
-          );
-      }
-      return data.flatMap((item) => item.snippets);
-    }
+    // if (category === defaultCategory) {
+    //   if (searchText) {
+    //     return data
+    //       .flatMap((item) => item.snippets)
+    //       .filter((item) =>
+    //         item.title.toLowerCase().includes(searchText.toLowerCase())
+    //       );
+    //   }
+    //   return data.flatMap((item) => item.snippets);
+    // }
 
     if (searchText) {
       return data

@@ -5,4 +5,4 @@ export const defaultLanguage: LanguageType = {
   icon: "/icons/javascript.svg",
 };
 
-export const defaultCategory = "All Snippets";
+// export const defaultCategory = "All Snippets"; // TODO: remove

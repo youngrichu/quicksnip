@@ -2,7 +2,6 @@ import { FC } from "react";
 
 import { useAppContext } from "@contexts/AppContext";
 import { useCategories } from "@hooks/useCategories";
-import { defaultCategory } from "@utils/consts";
 
 interface CategoryListItemProps {
   name: string;
@@ -11,13 +10,17 @@ interface CategoryListItemProps {
 const CategoryListItem: FC<CategoryListItemProps> = ({ name }) => {
   const { category, setCategory } = useAppContext();
 
+  const handleSelect = () => {
+    setCategory(name);
+  };
+
   return (
     <li className="category">
       <button
         className={`category__btn ${
           name === category ? "category__btn--active" : ""
         }`}
-        onClick={() => setCategory(name)}
+        onClick={handleSelect}
       >
         {name}
       </button>
@@ -34,7 +37,6 @@ const CategoryList = () => {
 
   return (
     <ul role="list" className="categories">
-      <CategoryListItem name={defaultCategory} />
       {fetchedCategories.map((name, idx) => (
         <CategoryListItem key={idx} name={name} />
       ))}

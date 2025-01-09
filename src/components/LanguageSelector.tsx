@@ -1,13 +1,17 @@
 import { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
 import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
 import { useLanguages } from "@hooks/useLanguages";
 import { LanguageType } from "@types";
+import { slugify } from "@utils/slugify";
 
 // Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
 
 const LanguageSelector = () => {
+  const navigate = useNavigate();
+
   const { language, setLanguage } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
 
@@ -16,6 +20,7 @@ const LanguageSelector = () => {
 
   const handleSelect = (selected: LanguageType) => {
     setLanguage(selected);
+    navigate(`/${slugify(selected.lang)}`);
     setIsOpen(false);
   };
 

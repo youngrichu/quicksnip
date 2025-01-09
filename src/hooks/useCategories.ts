@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 import { useAppContext } from "@contexts/AppContext";
 import { SnippetType } from "@types";
-import { slugify } from "@utils/helpers/slugify";
+import { slugify } from "@utils/slugify";
 
 import { useFetch } from "./useFetch";
 
@@ -13,6 +13,7 @@ type CategoryData = {
 
 export const useCategories = () => {
   const { language } = useAppContext();
+  console.log(language);
   const { data, loading, error } = useFetch<CategoryData[]>(
     `/consolidated/${slugify(language.lang)}.json`
   );
