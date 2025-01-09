@@ -1,41 +1,49 @@
 import { existsSync, readdirSync, readFileSync } from "fs";
 import { join } from "path";
 
-import { CategoryType, RawSnippetType, SnippetType } from "../src/types";
+import { RawSnippetType, SnippetType } from "../src/types";
 import { isCorrectType } from "../src/utils/objectUtils";
 import { raise } from "../src/utils/raise";
 import { reverseSlugify, slugify } from "../src/utils/slugify";
 
-const crlfRegex = /\r\n/gm;
+interface ParseLanguageResponse {
+  name: string;
+  icon: string;
+  categories: Array<{
+    name: string;
+    snippets: Array<SnippetType>;
+  }>;
+  subLanguages: ParseLanguageResponse[];
+}
+
+interface ParseCategoryResponse {
+  name: string;
+  snippets: Array<SnippetType>;
+}
+
 const propertyRegex = /^\s+([a-zA-Z]+):\s*(.+)/;
-const headerEndCodeStartRegex = /^\s*---\s*```.*\n/;
+const headerEndCodeStartRegex = /^\s*---\s*```.*\r?\n/;
 const codeRegex = /^(.+)```/s;
 
-let errored = false;
+let errored: boolean = false;
 
 function parseSnippet(
-  snippetPath: string,
+  path: string,
   name: string,
   text: string
 ): SnippetType | null {
-  if (crlfRegex.exec(text) !== null) {
-    return raise(
-      "Found CRLF line endings instead of LF line endings",
-      snippetPath
-    );
-  }
-  let cursor = 0;
+  let cursor: number = 0;
 
   const fromCursor = () => text.substring(cursor);
-
   if (!fromCursor().trim().startsWith("---")) {
-    return raise("Missing header start delimiter '---'", snippetPath);
+    return raise("Missing header start delimiter '---'", path);
   }
+
   cursor += 3;
 
   const properties = {};
 
-  let match;
+  let match: string[] | null;
   while ((match = propertyRegex.exec(fromCursor())) !== null) {
     cursor += match[0].length;
     properties[match[1].toLowerCase()] = match[2];
@@ -49,26 +57,28 @@ function parseSnippet(
       "tags",
     ])
   ) {
-    return raise("Invalid properties", snippetPath);
+    return raise("Invalid properties", path);
   }
 
   if (slugify(properties.title) !== name) {
     return raise(
       `slugifyed 'title' property doesn't match snippet file name`,
-      snippetPath
+      path
     );
   }
 
   match = headerEndCodeStartRegex.exec(fromCursor());
   if (match === null) {
-    return raise("Missing header end '---' or code start '```'", snippetPath);
+    return raise("Missing header end '---' or code start '```'", path);
   }
+
   cursor += match[0].length;
 
   match = codeRegex.exec(fromCursor());
   if (match === null) {
-    return raise("Missing code block end '```'", snippetPath);
+    return raise("Missing code block end '```'", path);
   }
+
   const code: string = match[1];
 
   return {
@@ -83,56 +93,100 @@ function parseSnippet(
       .split(",")
       .map((contributor) => contributor.trim())
       .filter((contributor) => contributor),
-    code,
+    code: code.replace(/\r\n/g, "\n"),
   };
 }
 
-const snippetPath = "snippets/";
-export function parseAllSnippets() {
-  const snippets = {};
+function parseCategory(path: string, name: string): ParseCategoryResponse {
+  const snippets: SnippetType[] = [];
 
-  for (const language of readdirSync(snippetPath)) {
-    const languagePath = join(snippetPath, language);
-    const languageIconPath = join(languagePath, "icon.svg");
+  for (const snippet of readdirSync(path)) {
+    const snippetPath = join(path, snippet);
+    const snippetContent = readFileSync(snippetPath).toString();
+    const snippetFileName = snippet.slice(0, -3);
 
-    if (!existsSync(languageIconPath)) {
+    const snippetData = parseSnippet(
+      snippetPath,
+      snippetFileName,
+      snippetContent
+    );
+    if (!snippetData) {
       errored = true;
-      raise(`icon for '${language}' is missing`);
       continue;
     }
-
-    const categories: CategoryType[] = [];
-
-    for (const category of readdirSync(languagePath)) {
-      if (category === "icon.svg") continue;
-
-      const categoryPath = join(languagePath, category);
-      const categorySnippets: SnippetType[] = [];
-
-      for (const snippet of readdirSync(categoryPath)) {
-        const snippetPath = join(categoryPath, snippet);
-        const snippetContent = readFileSync(snippetPath).toString();
-        const snippetFileName = snippet.slice(0, -3);
-        const snippetData = parseSnippet(
-          snippetPath,
-          snippetFileName,
-          snippetContent
-        );
-        if (snippetData === null) {
-          errored = true;
-          continue;
-        }
-        categorySnippets.push(snippetData);
-      }
-
-      categories.push({
-        categoryName: reverseSlugify(category),
-        snippets: categorySnippets,
-      });
-    }
-
-    snippets[language] = categories;
+    snippets.push(snippetData);
   }
 
-  return [errored, snippets];
+  return {
+    name: reverseSlugify(name),
+    snippets,
+  };
+}
+
+function parseLanguage(
+  path: string,
+  name: string,
+  subLanguageOf: string | null = null
+): ParseLanguageResponse | null {
+  const iconPath = join(path, "icon.svg");
+
+  if (!existsSync(iconPath)) {
+    return raise(
+      `icon for '${subLanguageOf ? `${subLanguageOf}/` : ""}${name}' is missing`
+    );
+  }
+
+  const subLanguages: Array<ParseLanguageResponse> = [];
+  const categories: Array<ParseCategoryResponse> = [];
+
+  for (const category of readdirSync(path)) {
+    if (category === "icon.svg") continue;
+    const categoryPath = join(path, category);
+
+    if (category.startsWith("[") && category.endsWith("]")) {
+      if (subLanguageOf !== null) {
+        return raise("Cannot have more than two level of language nesting");
+      }
+
+      const parsedLanguage = parseLanguage(
+        categoryPath,
+        category.slice(1, -1),
+        name
+      );
+      if (!parsedLanguage) {
+        errored = true;
+        continue;
+      }
+      subLanguages.push(parsedLanguage);
+    } else {
+      categories.push(parseCategory(categoryPath, category));
+    }
+  }
+
+  return {
+    name: reverseSlugify(name),
+    icon: iconPath,
+    categories,
+    subLanguages,
+  };
+}
+
+export function parseAllSnippets() {
+  const snippetPath = "snippets/";
+
+  const languages: ParseLanguageResponse[] = [];
+  for (const language of readdirSync(snippetPath)) {
+    const languagePath = join(snippetPath, language);
+    const parsedLanguage = parseLanguage(languagePath, language);
+    if (!parsedLanguage) {
+      errored = true;
+      continue;
+    }
+    languages.push(parsedLanguage);
+  }
+
+  return {
+    errored,
+    languages,
+  };
 }

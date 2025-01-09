@@ -1,36 +1,56 @@
-import { copyFileSync, writeFileSync } from "fs";
+import { copyFileSync, mkdirSync, writeFileSync } from "fs";
 import { join } from "path";
 import { exit } from "process";
 
-import { parseAllSnippets } from "./snippetParser.ts";
-import { LanguageType } from "../src/types";
-import { reverseSlugify } from "../src/utils/slugify";
+import { parseAllSnippets } from "./snippetParser.js";
+import { LanguageType } from "../src/types/index.js";
+import { slugify } from "../src/utils/slugify.js";
 
 const dataPath = "public/consolidated/";
 const indexPath = join(dataPath, "_index.json");
 const iconPath = "public/icons/";
-const snippetsPath = "snippets/";
 
-const [errored, snippets] = parseAllSnippets();
+const { errored, languages } = parseAllSnippets();
 
 if (errored) {
   exit(1);
 }
 
-const languages: LanguageType[] = [];
-for (const [language, categories] of Object.entries(snippets)) {
-  const languageIconPath = join(snippetsPath, language, "icon.svg");
+mkdirSync(dataPath, { recursive: true });
+mkdirSync(iconPath, { recursive: true });
 
-  copyFileSync(languageIconPath, join(iconPath, `${language}.svg`));
+const index: LanguageType[] = [];
+for (const language of languages) {
+  copyFileSync(language.icon, join(iconPath, `${slugify(language.name)}.svg`));
 
-  languages.push({
-    lang: reverseSlugify(language).toUpperCase(),
-    icon: `/icons/${language}.svg`,
+  const subIndexes: LanguageType["subIndexes"] = [];
+
+  for (const subLanguage of language.subLanguages) {
+    const joinedName = `${slugify(language.name)}--${slugify(subLanguage.name)}`;
+    const iconName = `${joinedName}.svg`;
+    const subLanguageFilePath = join(dataPath, `${joinedName}.json`);
+
+    copyFileSync(subLanguage.icon, join(iconPath, iconName));
+    subIndexes.push({
+      name: subLanguage.name.toUpperCase(),
+      icon: `/icons/${iconName}`,
+    });
+
+    writeFileSync(
+      subLanguageFilePath,
+      JSON.stringify(subLanguage.categories, null, 4)
+    );
+  }
+
+  index.push({
+    name: language.name.toUpperCase(),
+    icon: `/icons/${slugify(language.name)}.svg`,
+    subIndexes,
   });
 
-  const languageFilePath = join(dataPath, `${language}.json`);
+  const languageFilePath = join(dataPath, `${slugify(language.name)}.json`);
 
-  writeFileSync(languageFilePath, JSON.stringify(categories, null, 4));
+  writeFileSync(languageFilePath, JSON.stringify(language.categories, null, 4));
 }
 
-writeFileSync(indexPath, JSON.stringify(languages, null, 4));
+writeFileSync(indexPath, JSON.stringify(index, null, 4));
