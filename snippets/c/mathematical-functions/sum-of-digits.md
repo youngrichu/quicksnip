@@ -5,7 +5,8 @@ tags: math, digits
 author: ashukr07
 ---
 
-```cpp
+```c
+// Function to calculate the sum of the digits of an integer
 int sum_of_digits(int n) {
     int sum = 0;
     while (n != 0) {
