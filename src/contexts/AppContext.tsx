@@ -3,19 +3,8 @@ import { useParams } from "react-router-dom";
 
 import { useLanguages } from "@hooks/useLanguages";
 import { AppState, LanguageType, SnippetType } from "@types";
-import { configureProfile } from "@utils/configureProfile";
-
-// TODO: add custom loading and error handling
-const defaultState: AppState = {
-  language: null as unknown as AppState["language"],
-  setLanguage: () => {},
-  category: null as unknown as AppState["category"],
-  setCategory: () => {},
-  snippet: null,
-  setSnippet: () => {},
-  searchText: "",
-  setSearchText: () => {},
-};
+import { configureUserSelection } from "@utils/configureUserSelection";
+import { defaultState } from "@utils/consts";
 
 const AppContext = createContext<AppState>(defaultState);
 
@@ -32,7 +21,7 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
   const [searchText, setSearchText] = useState<string>("");
 
   const configure = async () => {
-    const { language, category } = await configureProfile({
+    const { language, category } = await configureUserSelection({
       languageName,
       categoryName,
     });
@@ -52,16 +41,18 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
 
   return (
     <AppContext.Provider
-      value={{
-        language,
-        setLanguage: setLanguage as AppState["setLanguage"],
-        category,
-        setCategory: setCategory as AppState["setCategory"],
-        snippet,
-        setSnippet,
-        searchText,
-        setSearchText,
-      }}
+      value={
+        {
+          language,
+          setLanguage,
+          category,
+          setCategory,
+          snippet,
+          setSnippet,
+          searchText,
+          setSearchText,
+        } as AppState
+      }
     >
       {children}
     </AppContext.Provider>

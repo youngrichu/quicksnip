@@ -3,7 +3,7 @@ import { CategoryType, LanguageType } from "@types";
 import { defaultCategory, defaultLanguage } from "./consts";
 import { slugify } from "./slugify";
 
-export async function configureProfile({
+export async function configureUserSelection({
   languageName,
   categoryName,
 }: {

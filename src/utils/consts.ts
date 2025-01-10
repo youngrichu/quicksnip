@@ -1,4 +1,4 @@
-import { CategoryType, LanguageType } from "@types";
+import { AppState, CategoryType, LanguageType } from "@types";
 
 export const defaultLanguage: LanguageType = {
   name: "JAVASCRIPT",
@@ -9,4 +9,16 @@ export const defaultLanguage: LanguageType = {
 export const defaultCategory: CategoryType = {
   name: "",
   snippets: [],
+};
+
+// TODO: add custom loading and error handling
+export const defaultState: AppState = {
+  language: defaultLanguage,
+  setLanguage: () => {},
+  category: defaultCategory.name,
+  setCategory: () => {},
+  snippet: null,
+  setSnippet: () => {},
+  searchText: "",
+  setSearchText: () => {},
 };

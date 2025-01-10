@@ -9,24 +9,30 @@ import { useAppContext } from "@contexts/AppContext";
 import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
 import { useLanguages } from "@hooks/useLanguages";
 import { LanguageType } from "@types";
-import { configureProfile } from "@utils/configureProfile";
+import { configureUserSelection } from "@utils/configureUserSelection";
 import { slugify } from "@utils/slugify";
 
 const LanguageSelector = () => {
   const navigate = useNavigate();
 
-  const { language, setLanguage, setCategory } = useAppContext();
+  const { language, setLanguage, setCategory, setSearchText } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
+  /**
+   * When setting a new language we need to ensure that a category
+   * has been set given this new language.
+   * Ensure that the search text is cleared.
+   */
   const handleSelect = async (selected: LanguageType) => {
     const { language: newLanguage, category: newCategory } =
-      await configureProfile({
+      await configureUserSelection({
         languageName: selected.name,
       });
 
+    setSearchText("");
     setLanguage(newLanguage);
     setCategory(newCategory);
     navigate(`/${slugify(newLanguage.name)}/${slugify(newCategory)}`);

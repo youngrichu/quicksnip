@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
 import { useCategories } from "@hooks/useCategories";
@@ -11,12 +11,16 @@ interface CategoryListItemProps {
 
 const CategoryListItem: FC<CategoryListItemProps> = ({ name }) => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
   const { language, category, setCategory } = useAppContext();
 
   const handleSelect = () => {
     setCategory(name);
-    navigate(`/${slugify(language.name)}/${slugify(name)}`);
+    navigate({
+      pathname: `/${slugify(language.name)}/${slugify(name)}`,
+      search: searchParams.toString(),
+    });
   };
 
   return (

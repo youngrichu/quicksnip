@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
@@ -13,8 +13,6 @@ const SearchInput = () => {
 
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const [inputVal, setInputVal] = useState<string>("");
-
   const handleSearchFieldClick = () => {
     inputRef.current?.focus();
   };
@@ -27,7 +25,6 @@ const SearchInput = () => {
   };
 
   const clearSearch = useCallback(() => {
-    setInputVal("");
     setSearchText("");
     searchParams.delete(QueryParams.SEARCH);
     setSearchParams(searchParams);
@@ -38,6 +35,7 @@ const SearchInput = () => {
       if (e.key !== "Escape") {
         return;
       }
+
       // check if the input is focused
       if (document.activeElement !== inputRef.current) {
         return;
@@ -55,12 +53,13 @@ const SearchInput = () => {
       if (e.key !== "Enter") {
         return;
       }
+
       // check if the input is focused
       if (document.activeElement !== inputRef.current) {
         return;
       }
 
-      const formattedVal = inputVal.trim().toLowerCase();
+      const formattedVal = searchText.trim().toLowerCase() || "";
 
       setSearchText(formattedVal);
       if (!formattedVal) {
@@ -71,7 +70,7 @@ const SearchInput = () => {
         setSearchParams(searchParams);
       }
     },
-    [inputVal, searchParams, setSearchParams, setSearchText]
+    [searchParams, searchText, setSearchParams, setSearchText]
   );
 
   useEffect(() => {
@@ -87,11 +86,14 @@ const SearchInput = () => {
   }, [handleEscapePress, handleReturnPress]);
 
   /**
-   * Set the input value and search text to the search query from the URL
+   * Set the search text to the search query from the URL
    */
   useEffect(() => {
-    const searchQuery = searchParams.get(QueryParams.SEARCH) || "";
-    setInputVal(searchQuery);
+    const searchQuery = searchParams.get(QueryParams.SEARCH);
+    if (!searchQuery) {
+      return;
+    }
+
     setSearchText(searchQuery);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -101,26 +103,20 @@ const SearchInput = () => {
       <SearchIcon />
       <input
         ref={inputRef}
+        value={searchText}
         type="search"
         id="search"
         autoComplete="off"
-        value={inputVal}
         onChange={(e) => {
           const newValue = e.target.value;
           if (!newValue) {
             clearSearch();
             return;
           }
-          setInputVal(newValue);
-        }}
-        onBlur={() => {
-          // ensure the input value is always in sync with the search text
-          if (inputVal !== searchText) {
-            setInputVal(searchText);
-          }
+          setSearchText(newValue);
         }}
       />
-      {!inputVal && !searchText && (
+      {!searchText && (
         <label htmlFor="search">
           Type <kbd>/</kbd> to search
         </label>
