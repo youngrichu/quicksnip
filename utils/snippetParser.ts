@@ -9,16 +9,16 @@ import { reverseSlugify, slugify } from "../src/utils/slugify";
 interface ParseLanguageResponse {
   name: string;
   icon: string;
-  categories: Array<{
+  categories: {
     name: string;
-    snippets: Array<SnippetType>;
-  }>;
+    snippets: SnippetType[];
+  }[];
   subLanguages: ParseLanguageResponse[];
 }
 
 interface ParseCategoryResponse {
   name: string;
-  snippets: Array<SnippetType>;
+  snippets: SnippetType[];
 }
 
 const propertyRegex = /^\s+([a-zA-Z]+):\s*(.+)/;
@@ -136,8 +136,8 @@ function parseLanguage(
     );
   }
 
-  const subLanguages: Array<ParseLanguageResponse> = [];
-  const categories: Array<ParseCategoryResponse> = [];
+  const subLanguages: ParseLanguageResponse[] = [];
+  const categories: ParseCategoryResponse[] = [];
 
   for (const category of readdirSync(path)) {
     if (category === "icon.svg") continue;
