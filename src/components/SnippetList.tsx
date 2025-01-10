@@ -1,14 +1,17 @@
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
 import { useSnippets } from "@hooks/useSnippets";
 import { SnippetType } from "@types";
+import { slugify } from "@utils/slugify";
 
 import { LeftAngleArrowIcon } from "./Icons";
 import SnippetModal from "./SnippetModal";
 
 const SnippetList = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const shouldReduceMotion = useReducedMotion();
 
   const { language, snippet, setSnippet } = useAppContext();
@@ -16,23 +19,37 @@ const SnippetList = () => {
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  if (!fetchedSnippets) {
-    return (
-      <div>
-        <LeftAngleArrowIcon />
-      </div>
-    );
-  }
-
-  const handleOpenModal = (activeSnippet: SnippetType) => {
+  const handleOpenModal = (selected: SnippetType) => () => {
     setIsModalOpen(true);
-    setSnippet(activeSnippet);
+    setSnippet(selected);
+    searchParams.set("snippet", slugify(selected.title));
+    setSearchParams(searchParams);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSnippet(null);
+    searchParams.delete("snippet");
+    setSearchParams(searchParams);
   };
+
+  /**
+   * open the relevant modal if the snippet is in the search params
+   */
+  useEffect(() => {
+    const snippetSlug = searchParams.get("snippet");
+    if (!snippetSlug) {
+      return;
+    }
+
+    const selectedSnippet = (fetchedSnippets ?? []).find(
+      (item) => slugify(item.title) === snippetSlug
+    );
+    if (selectedSnippet) {
+      handleOpenModal(selectedSnippet)();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fetchedSnippets, searchParams]);
 
   if (!fetchedSnippets) {
     return (
@@ -77,7 +94,7 @@ const SnippetList = () => {
                 <motion.button
                   className="snippet | flow"
                   data-flow-space="sm"
-                  onClick={() => handleOpenModal(snippet)}
+                  onClick={handleOpenModal(snippet)}
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                 >

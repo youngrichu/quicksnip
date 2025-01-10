@@ -1,3 +1,7 @@
+/**
+ * Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
+ */
+
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -5,22 +9,27 @@ import { useAppContext } from "@contexts/AppContext";
 import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
 import { useLanguages } from "@hooks/useLanguages";
 import { LanguageType } from "@types";
+import { configureProfile } from "@utils/configureProfile";
 import { slugify } from "@utils/slugify";
-
-// Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
 
 const LanguageSelector = () => {
   const navigate = useNavigate();
 
-  const { language, setLanguage } = useAppContext();
+  const { language, setLanguage, setCategory } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSelect = (selected: LanguageType) => {
-    setLanguage(selected);
-    navigate(`/${slugify(selected.name)}`);
+  const handleSelect = async (selected: LanguageType) => {
+    const { language: newLanguage, category: newCategory } =
+      await configureProfile({
+        languageName: selected.name,
+      });
+
+    setLanguage(newLanguage);
+    setCategory(newCategory);
+    navigate(`/${slugify(newLanguage.name)}/${slugify(newCategory)}`);
     setIsOpen(false);
   };
 
@@ -66,8 +75,13 @@ const LanguageSelector = () => {
     }
   }, [isOpen, focusedIndex]);
 
-  if (loading) return <p>Loading languages...</p>;
-  if (error) return <p>Error fetching languages: {error}</p>;
+  if (loading) {
+    return <p>Loading languages...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching languages: {error}</p>;
+  }
 
   return (
     <div

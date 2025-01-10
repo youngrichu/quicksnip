@@ -27,10 +27,10 @@ const SearchInput = () => {
 
   const clearSearch = useCallback(() => {
     setInputVal("");
-    // setCategory(defaultCategory);
     setSearchText("");
-    setSearchParams({});
-  }, [setSearchParams, setSearchText]);
+    searchParams.delete("search");
+    setSearchParams(searchParams);
+  }, [searchParams, setSearchParams, setSearchText]);
 
   const handleEscapePress = useCallback(
     (e: KeyboardEvent) => {
@@ -61,15 +61,16 @@ const SearchInput = () => {
 
       const formattedVal = inputVal.trim().toLowerCase();
 
-      // setCategory(defaultCategory);
       setSearchText(formattedVal);
       if (!formattedVal) {
-        setSearchParams({});
+        searchParams.delete("search");
+        setSearchParams(searchParams);
       } else {
-        setSearchParams({ search: formattedVal });
+        searchParams.set("search", formattedVal);
+        setSearchParams(searchParams);
       }
     },
-    [inputVal, setSearchParams, setSearchText]
+    [inputVal, searchParams, setSearchParams, setSearchText]
   );
 
   useEffect(() => {

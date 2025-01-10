@@ -1,4 +1,4 @@
-import { LanguageType } from "@types";
+import { CategoryType, LanguageType } from "@types";
 
 export const defaultLanguage: LanguageType = {
   name: "JAVASCRIPT",
@@ -6,4 +6,7 @@ export const defaultLanguage: LanguageType = {
   subIndexes: [],
 };
 
-// export const defaultCategory = "All Snippets"; // TODO: remove
+export const defaultCategory: CategoryType = {
+  name: "",
+  snippets: [],
+};

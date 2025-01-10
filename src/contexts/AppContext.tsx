@@ -1,17 +1,9 @@
-import {
-  createContext,
-  FC,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, FC, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { useLanguages } from "@hooks/useLanguages";
-import { AppState, CategoryType, LanguageType, SnippetType } from "@types";
-import { defaultLanguage } from "@utils/consts";
-import { slugify } from "@utils/slugify";
+import { AppState, LanguageType, SnippetType } from "@types";
+import { configureProfile } from "@utils/configureProfile";
 
 // TODO: add custom loading and error handling
 const defaultState: AppState = {
@@ -39,50 +31,22 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
   const [snippet, setSnippet] = useState<SnippetType | null>(null);
   const [searchText, setSearchText] = useState<string>("");
 
-  const assignLanguage = useCallback(() => {
-    if (fetchedLanguages.length === 0) {
-      return;
-    }
+  const configure = async () => {
+    const { language, category } = await configureProfile({
+      languageName,
+      categoryName,
+    });
 
-    const language = fetchedLanguages.find(
-      (lang) => slugify(lang.name) === languageName
-    );
-    if (!language) {
-      setLanguage(defaultLanguage);
-      return;
-    }
     setLanguage(language);
-  }, [fetchedLanguages, languageName]);
-
-  const assignCategory = useCallback(async () => {
-    if (!language) {
-      return;
-    }
-
-    let category: CategoryType | undefined;
-    try {
-      const res = await fetch(`/consolidated/${slugify(language.name)}.json`);
-      const data: CategoryType[] = await res.json();
-      category = data.find((item) => item.name === categoryName);
-      if (!category) {
-        setCategory(data[0].name);
-        return;
-      }
-      setCategory(category.name);
-    } catch (_error) {
-      // no-op
-    }
-  }, [language, categoryName]);
+    setCategory(category);
+  };
 
   useEffect(() => {
-    assignLanguage();
-  }, [assignLanguage, languageName]);
+    configure();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fetchedLanguages]);
 
-  useEffect(() => {
-    assignCategory();
-  }, [assignCategory, categoryName]);
-
-  if (!language || !category) {
+  if (language === null || category === null) {
     return <div>Loading...</div>;
   }
 
