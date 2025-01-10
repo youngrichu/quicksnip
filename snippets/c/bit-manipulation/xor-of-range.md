@@ -5,7 +5,7 @@ tags: bit-manipulation, xor
 author: ashukr07
 ---
 
-```cpp
+```c
 int xor_upto_n(int n) {
     if (n % 4 == 0) return n;
     if (n % 4 == 1) return 1;
