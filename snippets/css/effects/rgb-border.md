@@ -1,8 +1,8 @@
 ---
-title: rgb-border
+title: RGB Border Color Animation
 description: changes border of an Element to rgb onhover (Can be changed)'
 author: Brianali-codes
-tags: css,effects
+tags: animation,effects,borders
 ---
 
 ```css
