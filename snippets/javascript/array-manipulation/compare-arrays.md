@@ -1,6 +1,6 @@
 ---
 title: Compare Arrays
-description: Compares two arrays to check if they are equal.
+description: Deeply compares two arrays to check if they are equal to each other (supports nested arrays and objects).
 author: KCSquid
 tags: array,object,compare,equal
 ---
