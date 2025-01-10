@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
+import { QueryParams } from "@utils/enums";
 
 import { SearchIcon } from "./Icons";
 
@@ -28,7 +29,7 @@ const SearchInput = () => {
   const clearSearch = useCallback(() => {
     setInputVal("");
     setSearchText("");
-    searchParams.delete("search");
+    searchParams.delete(QueryParams.SEARCH);
     setSearchParams(searchParams);
   }, [searchParams, setSearchParams, setSearchText]);
 
@@ -63,10 +64,10 @@ const SearchInput = () => {
 
       setSearchText(formattedVal);
       if (!formattedVal) {
-        searchParams.delete("search");
+        searchParams.delete(QueryParams.SEARCH);
         setSearchParams(searchParams);
       } else {
-        searchParams.set("search", formattedVal);
+        searchParams.set(QueryParams.SEARCH, formattedVal);
         setSearchParams(searchParams);
       }
     },
@@ -89,9 +90,9 @@ const SearchInput = () => {
    * Set the input value and search text to the search query from the URL
    */
   useEffect(() => {
-    const search = searchParams.get("search") || "";
-    setInputVal(search);
-    setSearchText(search);
+    const searchQuery = searchParams.get(QueryParams.SEARCH) || "";
+    setInputVal(searchQuery);
+    setSearchText(searchQuery);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

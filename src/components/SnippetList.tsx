@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { useAppContext } from "@contexts/AppContext";
 import { useSnippets } from "@hooks/useSnippets";
 import { SnippetType } from "@types";
+import { QueryParams } from "@utils/enums";
 import { slugify } from "@utils/slugify";
 
 import { LeftAngleArrowIcon } from "./Icons";
@@ -22,14 +23,14 @@ const SnippetList = () => {
   const handleOpenModal = (selected: SnippetType) => () => {
     setIsModalOpen(true);
     setSnippet(selected);
-    searchParams.set("snippet", slugify(selected.title));
+    searchParams.set(QueryParams.SNIPPET, slugify(selected.title));
     setSearchParams(searchParams);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSnippet(null);
-    searchParams.delete("snippet");
+    searchParams.delete(QueryParams.SNIPPET);
     setSearchParams(searchParams);
   };
 
@@ -37,7 +38,7 @@ const SnippetList = () => {
    * open the relevant modal if the snippet is in the search params
    */
   useEffect(() => {
-    const snippetSlug = searchParams.get("snippet");
+    const snippetSlug = searchParams.get(QueryParams.SNIPPET);
     if (!snippetSlug) {
       return;
     }
