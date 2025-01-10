@@ -1,5 +1,5 @@
 ---
-title: Remove n Occurrences
+title: Remove n Occurences
 description: Removes duplicates from an vector of ints
 author: AnkushRoy-code
 tags: vector,remove
