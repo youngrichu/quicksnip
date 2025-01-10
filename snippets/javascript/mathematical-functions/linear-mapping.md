@@ -1,5 +1,5 @@
 ---
-title: Linear Remapping
+title: Linear Mapping
 description: remaps a value from one range to another
 author: JasimAlrawie
 tags: math,number-theory,algebra
@@ -7,7 +7,7 @@ tags: math,number-theory,algebra
 
 ```js
 function linearMapping(value, minIn, maxIn, minOut, maxOut) {
-    return (v-minIn) * (maxOut - minOut)/(maxIn - minIn) + minOut
+    return (value - minIn) * (maxOut - minOut)/(maxIn - minIn) + minOut
 }
 
 // Usage:
