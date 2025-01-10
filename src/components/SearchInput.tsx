@@ -17,6 +17,33 @@ const SearchInput = () => {
     inputRef.current?.focus();
   };
 
+  const clearSearch = useCallback(() => {
+    setSearchText("");
+    searchParams.delete(QueryParams.SEARCH);
+    setSearchParams(searchParams);
+  }, [searchParams, setSearchParams, setSearchText]);
+
+  const performSearch = useCallback(() => {
+    // Check if the input element is focused.
+    if (document.activeElement !== inputRef.current) {
+      return;
+    }
+
+    const formattedVal = searchText.toLowerCase();
+
+    setSearchText(formattedVal);
+    if (!formattedVal) {
+      searchParams.delete(QueryParams.SEARCH);
+      setSearchParams(searchParams);
+    } else {
+      searchParams.set(QueryParams.SEARCH, formattedVal);
+      setSearchParams(searchParams);
+    }
+  }, [searchParams, searchText, setSearchParams, setSearchText]);
+
+  /**
+   * Focus the search input when the user presses the `/` key.
+   */
   const handleSearchKeyPress = (e: KeyboardEvent) => {
     if (e.key === "/") {
       e.preventDefault();
@@ -24,19 +51,16 @@ const SearchInput = () => {
     }
   };
 
-  const clearSearch = useCallback(() => {
-    setSearchText("");
-    searchParams.delete(QueryParams.SEARCH);
-    setSearchParams(searchParams);
-  }, [searchParams, setSearchParams, setSearchText]);
-
-  const handleEscapePress = useCallback(
+  /**
+   * Clear search text and blur the input when the `Escape` key is pressed.
+   */
+  const handleEscapeKeyPress = useCallback(
     (e: KeyboardEvent) => {
       if (e.key !== "Escape") {
         return;
       }
 
-      // check if the input is focused
+      // Check if the input element is focused.
       if (document.activeElement !== inputRef.current) {
         return;
       }
@@ -48,45 +72,25 @@ const SearchInput = () => {
     [clearSearch]
   );
 
-  const handleReturnPress = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key !== "Enter") {
-        return;
-      }
-
-      // check if the input is focused
-      if (document.activeElement !== inputRef.current) {
-        return;
-      }
-
-      const formattedVal = searchText.trim().toLowerCase() || "";
-
-      setSearchText(formattedVal);
-      if (!formattedVal) {
-        searchParams.delete(QueryParams.SEARCH);
-        setSearchParams(searchParams);
-      } else {
-        searchParams.set(QueryParams.SEARCH, formattedVal);
-        setSearchParams(searchParams);
-      }
-    },
-    [searchParams, searchText, setSearchParams, setSearchText]
-  );
-
   useEffect(() => {
     document.addEventListener("keyup", handleSearchKeyPress);
-    document.addEventListener("keyup", handleEscapePress);
-    document.addEventListener("keyup", handleReturnPress);
+    document.addEventListener("keyup", handleEscapeKeyPress);
 
     return () => {
       document.removeEventListener("keyup", handleSearchKeyPress);
-      document.removeEventListener("keyup", handleEscapePress);
-      document.removeEventListener("keyup", handleReturnPress);
+      document.removeEventListener("keyup", handleEscapeKeyPress);
     };
-  }, [handleEscapePress, handleReturnPress]);
+  }, [handleEscapeKeyPress]);
 
   /**
-   * Set the search text to the search query from the URL
+   * Update the search query in the URL when the search text changes.
+   */
+  useEffect(() => {
+    performSearch();
+  }, [searchText, performSearch]);
+
+  /**
+   * Set the search text to the search query from the URL on mount.
    */
   useEffect(() => {
     const searchQuery = searchParams.get(QueryParams.SEARCH);
