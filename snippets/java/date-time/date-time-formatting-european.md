@@ -1,5 +1,5 @@
 ---
-title: Date time formatting european
+title: Date Time Formatting European
 description: Formats a timestamp to a human-readable date-time string in the format "dd.MM.yyyy HH:mm:ss"
 author: Mcbencrafter
 tags: date,time,date-time,formatting,european

@@ -1,5 +1,5 @@
 ---
-title: Duration formatting minutes seconds
+title: Duration Formatting Minutes Seconds
 description: Converts a given time duration to a human-readable string in the format "mm:ss"
 author: Mcbencrafter
 tags: time,formatting,minutes,seconds
