@@ -6,6 +6,8 @@ tags: math,number,factorial
 ---
 
 ```java
+import java.math.BigInteger;
+
 public static BigInteger factorial(int number) {
     BigInteger result = BigInteger.ONE;
 
