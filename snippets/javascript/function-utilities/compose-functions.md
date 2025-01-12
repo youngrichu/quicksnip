@@ -2,7 +2,7 @@
 title: Compose Functions
 description: Composes multiple functions into a single function, where the output of one function becomes the input of the next.
 author: axorax
-tags: javascript,function,compose,utility
+tags: function,compose
 ---
 
 ```js
@@ -14,5 +14,5 @@ const compose = (...funcs) => (initialValue) => {
 const add2 = (x) => x + 2;
 const multiply3 = (x) => x * 3;
 const composed = compose(multiply3, add2);
-console.log(composed(5)); // Output: 21 ((5 + 2) * 3)
+composed(5); // Returns: 17 ((5 * 3) + 2)
 ```

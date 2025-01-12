@@ -2,7 +2,7 @@
 title: Check if Date is a Weekend
 description: Checks whether a given date falls on a weekend.
 author: axorax
-tags: python,datetime,weekend,utility
+tags: datetime,weekend
 ---
 
 ```py
@@ -16,6 +16,5 @@ def is_weekend(date):
 
 # Usage:
 date = datetime(2023, 1, 1)
-weekend = is_weekend(date)
-print(weekend)  # Output: True (Sunday)
+is_weekend(date) # Returns: True (Sunday)
 ```

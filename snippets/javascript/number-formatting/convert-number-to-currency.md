@@ -2,7 +2,7 @@
 title: Convert Number to Currency
 description: Converts a number to a currency format with a specific locale.
 author: axorax
-tags: javascript,number,currency,utility
+tags: number,currency
 ---
 
 ```js
@@ -14,6 +14,6 @@ const convertToCurrency = (num, locale = 'en-US', currency = 'USD') => {
 };
 
 // Usage:
-console.log(convertToCurrency(1234567.89)); // Output: '$1,234,567.89'
-console.log(convertToCurrency(987654.32, 'de-DE', 'EUR')); // Output: '987.654,32 €'
+convertToCurrency(1234567.89); // Returns: '$1,234,567.89'
+convertToCurrency(987654.32, 'de-DE', 'EUR'); // Returns: '987.654,32 €'
 ```

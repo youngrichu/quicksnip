@@ -2,13 +2,13 @@
 title: Reverse String
 description: Reverses the characters in a string.
 author: dostonnabotov
-tags: python,string,reverse,utility
+tags: string,reverse
 ---
 
 ```py
-def reverse_string(s):
+def reverse_string(s:str) -> str:
     return s[::-1]
 
 # Usage:
-print(reverse_string('hello'))  # Output: 'olleh'
+reverse_string('hello') # Returns: 'olleh'
 ```

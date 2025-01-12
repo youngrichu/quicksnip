@@ -2,7 +2,7 @@
 title: Find Files
 description: Finds all files of the specified type within a given directory.
 author: Jackeastern
-tags: python,os,filesystem,file_search
+tags: os,filesystem,file_search
 ---
 
 ```py
@@ -22,6 +22,5 @@ def find_files(directory, file_type):
   return found_files
 
 # Example Usage:
-pdf_files = find_files('/path/to/your/directory', '.pdf')
-print(pdf_files)
+find_files('/path/to/your/directory', '.pdf') # Returns all .pdf in directory
 ```

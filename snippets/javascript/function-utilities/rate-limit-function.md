@@ -2,7 +2,7 @@
 title: Rate Limit Function
 description: Limits how often a function can be executed within a given time window.
 author: axorax
-tags: javascript,function,rate-limiting,utility
+tags: function,rate-limiting
 ---
 
 ```js
@@ -24,5 +24,5 @@ const rateLimit = (func, limit, timeWindow) => {
 // Usage:
 const fetchData = () => console.log('Fetching data...');
 const rateLimitedFetch = rateLimit(fetchData, 2, 1000);
-setInterval(() => rateLimitedFetch(), 200); // Only calls fetchData twice every second
+setInterval(() => rateLimitedFetch(), 200); // Limits fetchData calls to twice a seconds
 ```

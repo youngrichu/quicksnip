@@ -2,7 +2,7 @@
 title: Once Function
 description: Ensures a function is only called once.
 author: axorax
-tags: javascript,function,once,utility
+tags: function,once
 ---
 
 ```js

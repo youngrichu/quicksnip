@@ -2,7 +2,7 @@
 title: Generate UUID
 description: Generates a UUID (v4) string.
 author: jjcantu
-tags: javascript,uuid,utility
+tags: uuid, generate, string
 ---
 
 ```js

@@ -2,7 +2,7 @@
 title: Deep Clone Object
 description: Creates a deep copy of an object or array without reference.
 author: jjcantu
-tags: javascript,object,clone,utility
+tags: object,clone
 ---
 
 ```js
@@ -23,5 +23,5 @@ function deepClone(obj) {
 // Usage:
 const original = { a: 1, b: { c: 2 }, d: [1, 2, 3] };
 const cloned = deepClone(original);
-console.log(cloned); // Output: { a: 1, b: { c: 2 }, d: [1, 2, 3] }
+console.log(cloned); // Output: 'original' but cloned
 ``` 

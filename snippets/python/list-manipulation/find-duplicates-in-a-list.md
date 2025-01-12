@@ -2,7 +2,7 @@
 title: Find Duplicates in a List
 description: Identifies duplicate elements in a list.
 author: axorax
-tags: python,list,duplicates,utility
+tags: list,duplicates
 ---
 
 ```py
@@ -18,5 +18,5 @@ def find_duplicates(lst):
 
 # Usage:
 data = [1, 2, 3, 2, 4, 5, 1]
-print(find_duplicates(data))  # Output: [1, 2]
+find_duplicates(data) # Returns: [1, 2]
 ```

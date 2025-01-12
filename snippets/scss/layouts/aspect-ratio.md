@@ -2,7 +2,7 @@
 title: Aspect Ratio
 description: Ensures that elements maintain a specific aspect ratio.
 author: dostonnabotov
-tags: scss,aspect-ratio,layout,css
+tags: aspect-ratio,layout,css
 ---
 
 ```scss

@@ -10,6 +10,6 @@ function removeVowels(str) {
   return str.replace(/[aeiouAEIOU]/g, '');
 }
 
-// Example usage:
-console.log(removeVowels('Hello World')); // Output: 'Hll Wrld'
+// Usage:
+removeVowels('Hello World'); // Returns: 'Hll Wrld'
 ```

@@ -2,7 +2,7 @@
 title: Truncate Text
 description: Truncates the text to a maximum length and appends '...' if the text exceeds the maximum length.
 author: realvishalrana
-tags: javascript,string,truncate,utility,text
+tags: string,truncate,text
 ---
 
 ```js
@@ -12,6 +12,6 @@ const truncateText = (text = '', maxLength = 50) => {
 
 // Usage:
 const title = "Hello, World! This is a Test.";
-console.log(truncateText(title)); // Output: 'Hello, World! This is a Test.'
-console.log(truncateText(title, 10)); // Output: 'Hello, Wor...'
+truncateText(title); // Returns: 'Hello, World! This is a Test.'
+truncateText(title, 10); // Returns: 'Hello, Wor...'
 ```

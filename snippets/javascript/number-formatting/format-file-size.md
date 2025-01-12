@@ -2,7 +2,7 @@
 title: Format File Size
 description: Converts bytes into human-readable file size format.
 author: jjcantu
-tags: javascript,format,size,utility
+tags: format,size
 ---
 
 ```js
