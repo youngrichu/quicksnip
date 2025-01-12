@@ -1,6 +1,6 @@
 ---
 title: Bit Counting
-description: Counts the bits in an integer
+description: Counts the set bits in the binary representation of an integer
 author: Mcbencrafter
 tags: math,number,bits,bit-counting
 ---
