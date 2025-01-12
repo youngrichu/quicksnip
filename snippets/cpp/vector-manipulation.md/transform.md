@@ -1,5 +1,5 @@
 ---
-Title: Transform Vector
+Title: Transform
 Description: Transforms a vector using a function.
 Author: majvax
 Tags: array,transform,c++23

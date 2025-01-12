@@ -1,5 +1,5 @@
 ---
-Title: Filter Vector
+Title: Filter
 Description: Filters a vector using a predicate function.
 Author: majvax
 Tags: array,filter,c++23
