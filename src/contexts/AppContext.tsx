@@ -1,16 +1,18 @@
 import { createContext, FC, useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useLanguages } from "@hooks/useLanguages";
 import { AppState, LanguageType, SnippetType } from "@types";
 import { configureUserSelection } from "@utils/configureUserSelection";
-import { defaultState } from "@utils/consts";
+import { defaultLanguage, defaultState } from "@utils/consts";
+import { slugify } from "@utils/slugify";
 
 const AppContext = createContext<AppState>(defaultState);
 
 export const AppProvider: FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const navigate = useNavigate();
   const { languageName, categoryName } = useParams();
 
   const { fetchedLanguages } = useLanguages();
@@ -34,6 +36,16 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
     configure();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchedLanguages]);
+
+  /**
+   * Set the default language if the language is not found in the URL.
+   */
+  useEffect(() => {
+    if (languageName === undefined) {
+      navigate(`/${slugify(defaultLanguage.name)}`, { replace: true });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (language === null || category === null) {
     return <div>Loading...</div>;
