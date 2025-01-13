@@ -24,13 +24,16 @@ export const useSnippets = () => {
     if (searchParams.has(QueryParams.SEARCH)) {
       return data
         .find((item) => item.name === category)
-        ?.snippets.filter((item) =>
-          item.title
-            .toLowerCase()
-            .includes(
-              (searchParams.get(QueryParams.SEARCH) || "").toLowerCase()
-            )
-        );
+        ?.snippets.filter((item) => {
+          const searchTerm = (
+            searchParams.get(QueryParams.SEARCH) || ""
+          ).toLowerCase();
+          return (
+            item.title.toLowerCase().includes(searchTerm) ||
+            item.description.toLowerCase().includes(searchTerm) ||
+            item.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
+          );
+        });
     }
     return data.find((item) => item.name === category)?.snippets;
   }, [category, data, searchParams]);
