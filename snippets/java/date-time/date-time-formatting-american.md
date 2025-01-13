@@ -1,5 +1,5 @@
 ---
-title: Date time formatting american
+title: Date Time Formatting American
 description: Formats a timestamp to a human-readable date-time string in the format "MM/dd/yyyy hh:mm:ss a"
 author: Mcbencrafter
 tags: date,time,date-time,formatting,american
