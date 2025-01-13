@@ -35,7 +35,7 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     configure();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fetchedLanguages]);
+  }, [fetchedLanguages, languageName, categoryName]);
 
   /**
    * Set the default language if the language is not found in the URL.

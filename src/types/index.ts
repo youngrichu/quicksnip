@@ -1,15 +1,10 @@
-export type LanguageType = {
-  name: string;
-  icon: string;
-  subIndexes: {
-    name: string;
-    icon: string;
-  }[];
-};
-
-export type CategoryType = {
-  name: string;
-  snippets: SnippetType[];
+export type RawSnippetType = {
+  title: string;
+  description: string;
+  author: string;
+  code: string;
+  tags: string;
+  contributors?: string;
 };
 
 export type SnippetType = {
@@ -21,13 +16,31 @@ export type SnippetType = {
   contributors: string[];
 };
 
-export type RawSnippetType = {
-  title: string;
-  description: string;
-  author: string;
-  code: string;
-  tags: string;
-  contributors?: string;
+export type CategoryType = {
+  name: string;
+  snippets: SnippetType[];
+};
+
+export type LanguageType = {
+  name: string;
+  icon: string;
+  subIndexes: {
+    name: string;
+    icon: string;
+  }[];
+};
+
+export type AllSnippetsType = {
+  languageName: LanguageType["name"];
+  languageIcon: LanguageType["icon"];
+  categories: CategoryType[];
+};
+
+export type SearchItemType = {
+  languageName: LanguageType["name"];
+  languageIcon: LanguageType["icon"];
+  categoryName: CategoryType["name"];
+  snippets: SnippetType[];
 };
 
 export type AppState = {

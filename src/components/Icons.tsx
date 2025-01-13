@@ -5,6 +5,8 @@ const ACCENT_ICON_COLOR = "var(--clr-accent)";
 
 interface IconProps {
   fillColor?: string;
+  width?: string;
+  height?: string;
 }
 
 export const LogoIcon: FC<IconProps> = ({ fillColor = ACCENT_ICON_COLOR }) => (
@@ -123,10 +125,12 @@ export const ExpandIcon: FC<IconProps> = ({
 
 export const CloseIcon: FC<IconProps> = ({
   fillColor = DEFAULT_ICON_COLOR,
+  width = "31",
+  height = "30",
 }) => (
   <svg
-    width="31"
-    height="30"
+    width={width}
+    height={height}
     viewBox="0 0 31 30"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

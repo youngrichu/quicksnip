@@ -13,10 +13,9 @@ const CategoryListItem: FC<CategoryListItemProps> = ({ name }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const { language, category, setCategory } = useAppContext();
+  const { language, category } = useAppContext();
 
   const handleSelect = () => {
-    setCategory(name);
     navigate({
       pathname: `/${slugify(language.name)}/${slugify(name)}`,
       search: searchParams.toString(),
