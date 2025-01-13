@@ -73,12 +73,12 @@ const SearchInput = () => {
   );
 
   useEffect(() => {
-    document.addEventListener("keyup", handleSearchKeyPress);
-    document.addEventListener("keyup", handleEscapeKeyPress);
+    window.addEventListener("keydown", handleSearchKeyPress);
+    window.addEventListener("keyup", handleEscapeKeyPress);
 
     return () => {
-      document.removeEventListener("keyup", handleSearchKeyPress);
-      document.removeEventListener("keyup", handleEscapeKeyPress);
+      window.removeEventListener("keydown", handleSearchKeyPress);
+      window.removeEventListener("keyup", handleEscapeKeyPress);
     };
   }, [handleEscapeKeyPress]);
 
