@@ -34,13 +34,6 @@ const SnippetList = () => {
     setSearchParams(searchParams);
   };
 
-  const handleSearchKeyPress = (e: KeyboardEvent) => {
-    if (e.key === "/") {
-      e.preventDefault();
-      setIsModalOpen(false);
-    }
-  };
-
   /**
    * open the relevant modal if the snippet is in the search params
    */
@@ -58,14 +51,6 @@ const SnippetList = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchedSnippets, searchParams]);
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleSearchKeyPress);
-
-    return () => {
-      window.removeEventListener("keydown", handleSearchKeyPress);
-    };
-  }, []);
 
   if (!fetchedSnippets) {
     return (

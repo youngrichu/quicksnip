@@ -21,25 +21,21 @@ export const useSnippets = () => {
       return [];
     }
 
-    if (
-      !searchParams.has(QueryParams.SEARCH) ||
-      !searchParams.get(QueryParams.SEARCH)
-    ) {
-      return data.find((item) => item.name === category)?.snippets;
+    if (searchParams.has(QueryParams.SEARCH)) {
+      return data
+        .find((item) => item.name === category)
+        ?.snippets.filter((item) => {
+          const searchTerm = (
+            searchParams.get(QueryParams.SEARCH) || ""
+          ).toLowerCase();
+          return (
+            item.title.toLowerCase().includes(searchTerm) ||
+            item.description.toLowerCase().includes(searchTerm) ||
+            item.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
+          );
+        });
     }
-
-    return data
-      .find((item) => item.name === category)
-      ?.snippets.filter((item) => {
-        const searchTerm = (
-          searchParams.get(QueryParams.SEARCH) || ""
-        ).toLowerCase();
-        return (
-          item.title.toLowerCase().includes(searchTerm) ||
-          item.description.toLowerCase().includes(searchTerm) ||
-          item.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
-        );
-      });
+    return data.find((item) => item.name === category)?.snippets;
   }, [category, data, searchParams]);
 
   return { fetchedSnippets, loading, error };

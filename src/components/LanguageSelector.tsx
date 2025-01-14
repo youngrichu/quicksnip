@@ -15,7 +15,7 @@ import { slugify } from "@utils/slugify";
 const LanguageSelector = () => {
   const navigate = useNavigate();
 
-  const { language, setSearchText } = useAppContext();
+  const { language, setLanguage, setCategory, setSearchText } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
 
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -33,6 +33,8 @@ const LanguageSelector = () => {
       });
 
     setSearchText("");
+    setLanguage(newLanguage);
+    setCategory(newCategory);
     navigate(`/${slugify(newLanguage.name)}/${slugify(newCategory)}`);
     setIsOpen(false);
   };

@@ -10,9 +10,7 @@ function consolidateSnippets(projectRoot: string) {
     cwd: projectRoot,
   });
 
-  if (cmd.status === 0) {
-    return;
-  }
+  if (cmd.status === 0) return;
 
   console.log(`Consolidating snippets failed:\n${cmd.output.toString()}`);
 }
@@ -29,9 +27,8 @@ export default defineConfig({
       },
       handleHotUpdate({ file, server }) {
         const relativePath = file.slice(server.config.root.length);
-        if (!relativePath.startsWith("/snippets/")) {
-          return;
-        }
+        if (!relativePath.startsWith("/snippets/")) return;
+
         consolidateSnippets(server.config.root);
       },
     },
