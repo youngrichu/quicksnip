@@ -6,16 +6,13 @@ export const defaultLanguage: LanguageType = {
   subIndexes: [],
 };
 
-export const defaultCategory: CategoryType = {
-  name: "",
-  snippets: [],
-};
+export const defaultCategoryName: CategoryType["name"] = "All Snippets";
 
 // TODO: add custom loading and error handling
 export const defaultState: AppState = {
   language: defaultLanguage,
   setLanguage: () => {},
-  category: defaultCategory.name,
+  category: defaultCategoryName,
   setCategory: () => {},
   snippet: null,
   setSnippet: () => {},

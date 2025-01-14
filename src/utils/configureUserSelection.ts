@@ -1,6 +1,6 @@
 import { CategoryType, LanguageType } from "@types";
 
-import { defaultCategory, defaultLanguage } from "./consts";
+import { defaultCategoryName, defaultLanguage } from "./consts";
 import { slugify } from "./slugify";
 
 export async function configureUserSelection({
@@ -34,14 +34,19 @@ export async function configureUserSelection({
     category = fetchedCategories.find(
       (item) => slugify(item.name) === slugifiedCategoryName
     );
-    if (category === undefined && fetchedCategories.length > 0) {
-      category = fetchedCategories[0];
-    }
+
     if (category === undefined) {
-      category = defaultCategory;
+      category = {
+        name: defaultCategoryName,
+        snippets: fetchedCategories.flatMap((item) => item.snippets),
+      };
     }
   } catch (_error) {
-    category = defaultCategory;
+    // This state should not be reached in the normal flow.
+    category = {
+      name: defaultCategoryName,
+      snippets: [],
+    };
   }
 
   return { language, category: category.name };

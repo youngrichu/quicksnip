@@ -64,7 +64,7 @@ const SnippetList = () => {
     <>
       <motion.ul role="list" className="snippets">
         <AnimatePresence mode="popLayout">
-          {fetchedSnippets.map((snippet, idx) => {
+          {fetchedSnippets.map((snippet, _idx) => {
             const uniqueId = `${language.name}-${snippet.title}`;
             return (
               <motion.li
@@ -75,7 +75,7 @@ const SnippetList = () => {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    delay: shouldReduceMotion ? 0 : 0.09 + idx * 0.05,
+                    // delay: shouldReduceMotion ? 0 : 0.09 + idx * 0.05,
                     duration: shouldReduceMotion ? 0 : 0.2,
                   },
                 }}
@@ -83,7 +83,7 @@ const SnippetList = () => {
                   opacity: 0,
                   y: -20,
                   transition: {
-                    delay: idx * 0.01,
+                    // delay: idx * 0.01,
                     duration: shouldReduceMotion ? 0 : 0.09,
                   },
                 }}

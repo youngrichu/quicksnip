@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
 import { useCategories } from "@hooks/useCategories";
+import { defaultCategoryName } from "@utils/consts";
 import { slugify } from "@utils/slugify";
 
 interface CategoryListItemProps {
@@ -13,10 +14,9 @@ const CategoryListItem: FC<CategoryListItemProps> = ({ name }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const { language, category, setCategory } = useAppContext();
+  const { language, category } = useAppContext();
 
   const handleSelect = () => {
-    setCategory(name);
     navigate({
       pathname: `/${slugify(language.name)}/${slugify(name)}`,
       search: searchParams.toString(),
@@ -50,6 +50,7 @@ const CategoryList = () => {
 
   return (
     <ul role="list" className="categories">
+      <CategoryListItem name={defaultCategoryName} />
       {fetchedCategories.map((name, idx) => (
         <CategoryListItem key={idx} name={name} />
       ))}

@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 
 import { CategoryType, LanguageType } from "../src/types";
 import { configureUserSelection } from "../src/utils/configureUserSelection";
-import { defaultCategory, defaultLanguage } from "../src/utils/consts";
+import { defaultCategoryName, defaultLanguage } from "../src/utils/consts";
 import { slugify } from "../src/utils/slugify";
 
 vi.mock("../src/utils/slugify");
@@ -36,7 +36,7 @@ describe("configureUserSelection", () => {
 
     expect(result).toEqual({
       language: defaultLanguage,
-      category: defaultCategory.name,
+      category: defaultCategoryName,
     });
 
     expect(fetch).toHaveBeenCalledWith("/consolidated/_index.json");
@@ -80,7 +80,7 @@ describe("configureUserSelection", () => {
 
     expect(result).toEqual({
       language: mockLanguages[0],
-      category: mockCategories[0].name,
+      category: defaultCategoryName,
     });
 
     expect(slugify).toHaveBeenCalledWith("JavaScript");
@@ -163,7 +163,7 @@ describe("configureUserSelection", () => {
 
     expect(result).toEqual({
       language: mockLanguages[0],
-      category: defaultCategory.name,
+      category: defaultCategoryName,
     });
 
     expect(slugify).toHaveBeenCalledWith("JavaScript");
