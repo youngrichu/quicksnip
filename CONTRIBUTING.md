@@ -208,7 +208,6 @@ If your snippet doesn’t fit into any existing category, you can create a new o
 
     - Follow the [Adding a New Snippet](#adding-a-new-snippet) instructions.
 
-
 Example structure:
 
 ```md
