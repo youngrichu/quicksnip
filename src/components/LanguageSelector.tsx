@@ -92,7 +92,8 @@ const LanguageSelector = () => {
     if (language.mainLanguage) {
       handleToggleSublanguage(language.mainLanguage);
     }
-  }, [language, handleToggleSublanguage]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language]);
 
   useEffect(() => {
     if (isOpen && focusedIndex >= 0) {
