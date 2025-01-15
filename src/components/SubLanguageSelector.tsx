@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { useAppContext } from "@contexts/AppContext";
 import { LanguageType } from "@types";
 
@@ -17,15 +15,9 @@ const SubLanguageSelector = ({
   opened,
 }: SubLanguageSelectorProps) => {
   const { language, setLanguage } = useAppContext();
-  const [isOpen, setIsOpen] = useState(
-    mainLanguage.subLanguages.some(
-      (subLanguage) => language.name === subLanguage.name
-    )
-  );
 
   const handleSelect = (selected: LanguageType) => {
     setLanguage(selected);
-    setIsOpen(false);
     onDropdownToggle(mainLanguage);
     afterSelect();
   };
@@ -48,11 +40,11 @@ const SubLanguageSelector = ({
           <button
             className="sublanguage__button"
             tabIndex={-1}
-            aria-expanded={isOpen}
+            aria-expanded={opened}
             aria-haspopup="listbox"
             onClick={(e) => {
               e.stopPropagation();
-              setIsOpen(!isOpen);
+              onDropdownToggle(mainLanguage);
             }}
           >
             <span className="sublanguage__arrow" />
@@ -60,7 +52,7 @@ const SubLanguageSelector = ({
         </label>
       </li>
 
-      {(opened || isOpen) && (
+      {opened && (
         <>
           {mainLanguage.subLanguages.map((subLanguage) => (
             <li
@@ -77,7 +69,6 @@ const SubLanguageSelector = ({
                   mainLanguage: mainLanguage,
                   subLanguages: [],
                 });
-                setIsOpen(false);
               }}
             >
               <label>

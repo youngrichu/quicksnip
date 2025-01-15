@@ -92,7 +92,7 @@ const LanguageSelector = () => {
     if (language.mainLanguage) {
       handleToggleSublanguage(language.mainLanguage);
     }
-  }, [language]);
+  }, [language, handleToggleSublanguage]);
 
   useEffect(() => {
     if (isOpen && focusedIndex >= 0) {
