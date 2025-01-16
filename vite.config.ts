@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { spawnSync } from "child_process";
 
 import react from "@vitejs/plugin-react-swc";
@@ -5,7 +6,7 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 function consolidateSnippets(projectRoot: string) {
-  const cmd = spawnSync("node", ["utils/consolidateSnippets.js"], {
+  const cmd = spawnSync("tsx", ["utils/consolidateSnippets.ts"], {
     cwd: projectRoot,
   });
 
@@ -32,6 +33,12 @@ export default defineConfig({
       },
     },
   ],
+  test: {
+    setupFiles: ["/tests/setup.ts"],
+    coverage: {
+      provider: "v8",
+    },
+  },
   build: {
     rollupOptions: {
       output: {
