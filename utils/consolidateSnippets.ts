@@ -23,9 +23,7 @@ const index: LanguageType[] = [];
 for (const language of languages) {
   copyFileSync(language.icon, join(iconPath, `${slugify(language.name)}.svg`));
 
-
   const subLanguages: LanguageType["subLanguages"] = [];
-
 
   for (const subLanguage of language.subLanguages) {
     const joinedName = `${slugify(language.name)}--${slugify(subLanguage.name)}`;
