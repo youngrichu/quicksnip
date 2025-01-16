@@ -1,3 +1,4 @@
 quicksnip
 slugifyed
 sublanguage
+fastapi
