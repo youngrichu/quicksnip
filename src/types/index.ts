@@ -19,6 +19,7 @@ export type SnippetType = {
   code: string;
   tags: string[];
   author: string;
+  extension: string;
 };
 
 export type AppState = {

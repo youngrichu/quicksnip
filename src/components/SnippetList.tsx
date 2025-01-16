@@ -8,11 +8,6 @@ import { SnippetType } from "@types";
 import { LeftAngleArrowIcon } from "./Icons";
 import SnippetModal from "./SnippetModal";
 
-const extensions: { [key: string]: string } = {
-  REACT: "tsx",
-  FASTAPI: "py",
-};
-
 const SnippetList = () => {
   const { language, snippet, setSnippet } = useAppContext();
   const { fetchedSnippets } = useSnippets();
@@ -92,7 +87,7 @@ const SnippetList = () => {
           <SnippetModal
             snippet={snippet}
             handleCloseModal={handleCloseModal}
-            language={extensions[language.name] || language.name}
+            language={snippet.extension}
           />
         )}
       </AnimatePresence>

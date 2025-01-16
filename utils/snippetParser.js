@@ -55,6 +55,7 @@ function parseSnippet(path, name, text) {
     match = headerEndCodeStartRegex.exec(fromCursor());
     if(match === null) return raise('Missing header end \'---\' or code start \'```\'', path);
     cursor += match[0].length;
+    const extension = match[0].replace(/[\r\n`-]/g, '');
 
     match = codeRegex.exec(fromCursor());
     if(match === null) return raise('Missing code block end \'```\'', path);
@@ -67,6 +68,7 @@ function parseSnippet(path, name, text) {
         tags: properties.tags.split(',').map((tag) => tag.trim()).filter((tag) => tag),
         contributors: 'contributors' in properties ? properties.contributors.split(',').map((contributor) => contributor.trim()).filter((contributor) => contributor) : [],
         code: code.replace(/\r\n/g, '\n'),
+        extension
     }
 }
 
