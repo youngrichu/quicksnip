@@ -430,6 +430,9 @@ abbr {
   transform: rotate(0deg);
 }
 
+.selector__item.selected .sublanguage__arrow {
+  border-top-color: var(--clr-text-tertiary);
+}
 
 .selector__item label {
   width: 100%;
