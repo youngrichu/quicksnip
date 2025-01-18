@@ -73,6 +73,7 @@ function parseSnippet(
   }
 
   cursor += match[0].length;
+  const extension = match[0].replace(/[\r\n`-]/g, "");
 
   match = codeRegex.exec(fromCursor());
   if (match === null) {
@@ -94,6 +95,7 @@ function parseSnippet(
       .map((contributor) => contributor.trim())
       .filter((contributor) => contributor),
     code: code.replace(/\r\n/g, "\n"),
+    extension,
   };
 }
 
