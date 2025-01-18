@@ -3,7 +3,7 @@ import { AppState, CategoryType, LanguageType } from "@types";
 export const defaultLanguage: LanguageType = {
   name: "JAVASCRIPT",
   icon: "/icons/javascript.svg",
-  subIndexes: [],
+  subLanguages: [],
 };
 
 export const defaultCategoryName: CategoryType["name"] = "All Snippets";

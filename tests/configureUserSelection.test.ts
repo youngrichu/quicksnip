@@ -47,12 +47,12 @@ describe("configureUserSelection", () => {
       {
         name: "JavaScript",
         icon: "js-icon",
-        subIndexes: [],
+        subLanguages: [],
       },
       {
         name: "Python",
         icon: "python-icon",
-        subIndexes: [],
+        subLanguages: [],
       },
     ];
     const mockCategories: CategoryType[] = [
@@ -93,12 +93,12 @@ describe("configureUserSelection", () => {
       {
         name: "JavaScript",
         icon: "js-icon",
-        subIndexes: [],
+        subLanguages: [],
       },
       {
         name: "Python",
         icon: "python-icon",
-        subIndexes: [],
+        subLanguages: [],
       },
     ];
     const mockCategories: CategoryType[] = [
@@ -140,12 +140,12 @@ describe("configureUserSelection", () => {
       {
         name: "JavaScript",
         icon: "js-icon",
-        subIndexes: [],
+        subLanguages: [],
       },
       {
         name: "Python",
         icon: "python-icon",
-        subIndexes: [],
+        subLanguages: [],
       },
     ];
 

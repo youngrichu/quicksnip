@@ -23,7 +23,7 @@ const index: LanguageType[] = [];
 for (const language of languages) {
   copyFileSync(language.icon, join(iconPath, `${slugify(language.name)}.svg`));
 
-  const subIndexes: LanguageType["subIndexes"] = [];
+  const subLanguages: LanguageType["subLanguages"] = [];
 
   for (const subLanguage of language.subLanguages) {
     const joinedName = `${slugify(language.name)}--${slugify(subLanguage.name)}`;
@@ -31,7 +31,7 @@ for (const language of languages) {
     const subLanguageFilePath = join(dataPath, `${joinedName}.json`);
 
     copyFileSync(subLanguage.icon, join(iconPath, iconName));
-    subIndexes.push({
+    subLanguages.push({
       name: subLanguage.name.toUpperCase(),
       icon: `/icons/${iconName}`,
     });
@@ -45,7 +45,7 @@ for (const language of languages) {
   index.push({
     name: language.name.toUpperCase(),
     icon: `/icons/${slugify(language.name)}.svg`,
-    subIndexes,
+    subLanguages,
   });
 
   const languageFilePath = join(dataPath, `${slugify(language.name)}.json`);

@@ -1,7 +1,8 @@
 export type LanguageType = {
   name: string;
   icon: string;
-  subIndexes: {
+  mainLanguage?: LanguageType;
+  subLanguages: {
     name: string;
     icon: string;
   }[];
@@ -19,6 +20,7 @@ export type SnippetType = {
   code: string;
   tags: string[];
   contributors: string[];
+  extension: string;
 };
 
 export type RawSnippetType = {
@@ -28,6 +30,7 @@ export type RawSnippetType = {
   code: string;
   tags: string;
   contributors?: string;
+  extension: string;
 };
 
 export type AppState = {

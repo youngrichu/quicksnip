@@ -14,7 +14,7 @@ export const useSnippets = () => {
 
   const { language, category } = useAppContext();
   const { data, loading, error } = useFetch<CategoryType[]>(
-    `/consolidated/${slugify(language.name)}.json`
+    `/consolidated/${language.mainLanguage ? `${slugify(language.mainLanguage.name)}--${slugify(language.name)}` : slugify(language.name)}.json`
   );
 
   const fetchedSnippets = useMemo(() => {
