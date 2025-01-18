@@ -403,6 +403,37 @@ abbr {
   border-radius: var(--br-md);
 }
 
+.sublanguage__item {
+  margin-left: 1.5rem;
+}
+
+.sublanguage__button{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  border: 0;
+  background-color: transparent;
+}
+
+.sublanguage__arrow {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--clr-text-primary); /* [1] */
+  transform: rotate(-90deg);
+  transition: transform 100ms ease;
+  cursor: pointer;
+}
+
+[aria-expanded="true"] .sublanguage__arrow {
+  transform: rotate(0deg);
+}
+
+.selector__item.selected .sublanguage__arrow {
+  border-top-color: var(--clr-text-tertiary);
+}
+
 .selector__item label {
   width: 100%;
   padding: 0.25em 0.75em;
