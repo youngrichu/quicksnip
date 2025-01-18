@@ -6,10 +6,10 @@ tags: string,tab,space,conversion
 ---
 
 ```java
-public static String convertTabToSpace(String text, int spacesPerTab) {
-    return text.replaceAll("\t", " ".repeat(spacesPerTab));
+public static String convertSpacesToTab(String text, int spacesPerTab) {
+    return text.replaceAll(" ".repeat(spacesPerTab), "\t");
 }
 
 // Usage:
-System.out.println(convertTabToSpace("hello\tworld", 2)); // "hello  world"
+System.out.println(convertSpacesToTab("hello    world", 4)); // Output: hello\tworld
 ```
