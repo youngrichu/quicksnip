@@ -1,5 +1,5 @@
 ---
-Title: Reverse Words In String
+Title: Reverse Word Order
 Description: Reverses the order of words in a sentence while preserving the content of each word
 Author: Mcbencrafter
 Tags: string,reverse,words,transformation,sentence
