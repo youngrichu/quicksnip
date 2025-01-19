@@ -9,7 +9,7 @@ import { useFetch } from "./useFetch";
 export const useCategories = () => {
   const { language } = useAppContext();
   const { data, loading, error } = useFetch<CategoryType[]>(
-    `/consolidated/${slugify(language.name)}.json`
+    `/consolidated/${language.mainLanguage ? `${slugify(language.mainLanguage.name)}--${slugify(language.name)}` : slugify(language.name)}.json`
   );
 
   const fetchedCategories = useMemo(() => {

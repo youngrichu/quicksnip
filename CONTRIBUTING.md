@@ -194,7 +194,6 @@ contributors: contributor1, contributor2, your-github-username
 
 > We want to make sure that original author and contributor(s) are credited for their work.
 
-
 ### Adding a New Category
 
 If your snippet doesn’t fit into any existing category, you can create a new one! Just make sure it’s unique and doesn’t overlap with others (e.g., don’t create separate categories for “Date” and “Time” when “Date and Time” works).
@@ -207,7 +206,6 @@ If your snippet doesn’t fit into any existing category, you can create a new o
 2. **Add snippets:**
 
     - Follow the [Adding a New Snippet](#adding-a-new-snippet) instructions.
-
 
 Example structure:
 

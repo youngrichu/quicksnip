@@ -68,7 +68,7 @@ const SnippetModal: React.FC<Props> = ({
             {snippet.description}
           </p>
           <p>
-            Contributed by{" "}
+            Created by{" "}
             <a
               href={`https://github.com/${snippet.author}`}
               target="_blank"
@@ -78,6 +78,30 @@ const SnippetModal: React.FC<Props> = ({
               @{snippet.author}
             </a>
           </p>
+          {(snippet.contributors ?? []).length > 0 && (
+            <div className="contributors">
+              <span>Contributors: </span>
+              {snippet.contributors
+                ?.slice(0, 3)
+                .map((contributor, index, slicedArray) => (
+                  <>
+                    <a
+                      key={contributor}
+                      href={`https://github.com/${contributor}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="styled-link"
+                    >
+                      @{contributor}
+                    </a>
+                    {index < slicedArray.length - 1 && ", "}
+                  </>
+                ))}
+              {(snippet.contributors?.length ?? 0) > 3 && (
+                <span> & {snippet.contributors!.length - 3} more</span>
+              )}
+            </div>
+          )}
           <ul role="list" className="modal__tags">
             {snippet.tags.map((tag) => (
               <li key={tag} className="modal__tag">
