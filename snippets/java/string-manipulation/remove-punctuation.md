@@ -7,7 +7,7 @@ tags: string,punctuation,clean,normalization
 
 ```java
 public static String removePunctuation(String text) {
-    return text.replaceAll("[,!.]", "");
+    return text.replaceAll("[,!.?;:]", "");
 }
 
 // Usage:
