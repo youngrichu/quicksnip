@@ -12,105 +12,40 @@ An open-source project that categorizes handy code snippets across various progr
 
 ![Website preview](/public/preview.png)
 
-## How to contribute
+## How to Contribute
 
 Want to help make QuickSnip even better? You can contribute by:
 
 - **Improving the Code**: Fix bugs, suggest new features, or optimize the project.
 - **Adding New Snippets**: Share your favorite snippets to grow the database.
 
-Be sure to check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file for detailed guidelines.
+Check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file for detailed contribution guidelines.
 
-### Improving the code
+## General Rules
 
-- **Reporting bugs**
+To keep everything smooth and consistent, please:
 
-    - If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/dostonnabotov/quicksnip/issues) detailing the problem before creating a PR. 
-    - Once confirmed with maintainers, you can then create a PR.
+- [x] Follow the project’s style and contribution rules.
+- [x] Be kind and respectful to others.
+- [x] If you’re unsure, ask questions.
 
-- **Proposing new features**
+Following these rules helps us build an awesome community. 🚀
 
-    - If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions) with details for the proposed feature.
-    - Please do **not** create a PR for a new feature without first discussing it with the maintainers. If you create a PR for a new feature without discussing it first, then your PR will be closed.
+## Third-Party
 
-### Adding a Snippet
+We love to see the creativity of our community! If you build something using QuickSnip, let us know. Here are some featured examples:
 
-The snippets database is located in the `/snippets` folder.
+- ⚡️ [**Raycast Extension**](https://www.raycast.com/anders_morille/quicksnip): An extension to browse and use QuickSnip snippets directly from Raycast. (Thanks to the creator: [@lille-morille](https://github.com/lille-morille))
 
-1. Find the relevant language folder.
+If you’d like to create your own extension or tool:
 
-2. Locate the appropriate category folder for your snippet.
+- [x] Please ensure it adheres to our project’s licensing and attribution requirements.
+- [x] Please link to the [original QuickSnip repository](https://github.com/dostonnabotov/quicksnip) in your extension/tool to attribute the source.
+- [x] Share your work with us — we’d be thrilled to feature it!
 
-3. Create a markdown file and add your snippet using the following format:
+## Project Vision
 
-````md
----
-title: Name of the snippet
-description: A short explanation of what the snippet does
-tags: tag1, tag2, tag3
-author: your-github-username
----
-
-```lang
-// Your code here
-```
-````
-
-Here's an example for JavaScript:
-
-````md
----
-title: Format Date
-description: Formats a date in 'YYYY-MM-DD' format.
-author: dostonnabotov
-tags: date,format
----
-
-```js
-const formatDate = (date) => date.toISOString().split('T')[0];
-
-// Usage:
-console.log(formatDate(new Date())); // Output: '2024-12-10'
-```
-````
-
-Expected file structure:
-
-```md
-/snippets
-  |- language
-    |- category-name
-      |- your-snippet-here.md
-```
-
-> Please do **NOT** add or edit anything in `/public` folder. It will be used for consolidating snippets.
-
-To test that your snippets are formatted correctly use the `snippets:check` script:
-```
-$ npm run snippets:check
-```
-It will return nothing if they are well formatted, otherwise it will tell you what the error is.
-
----
-To preview the snippets, you need to consolidate them, use the `snippets:consolidate` script:
-```
-$ npm run snippets:consolidate
-```
-It will update the snippets in the `/public` folder, making them available to the frontend.
-
-For more details about adding new categories or programming languages, check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file.
-
-## Guidelines for Contributions
-
-To keep things smooth and consistent, please:
-
-- [x] Follow the style and contribution guidelines of this project.
-- [x] Include all mandatory fields in the snippet.
-- [x] Test your snippet to ensure it works as expected.
-
-Following these guidelines helps us (and everyone else) review and merge your contributions faster.
-
-**If you fail to meet the guidelines, your PR will most likely get rejected.** 
+For a detailed look into our goals, future direction, and aspirations, see the [VISION.md](/VISION.md) file.
 
 ## License
 
