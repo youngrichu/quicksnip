@@ -11,7 +11,7 @@ from tkinter import Tk, Label
 class App(Tk):
     def __init__(self):
         Tk.__init__(self)
-        self.geometry("100x100")
+        self.geometry("200x200")
 
         self.lbl = Label(self, text='Hello, World!')
         self.lbl.pack(expand=1)
