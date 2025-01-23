@@ -1,17 +1,30 @@
 import { CategoryType, LanguageType } from "@types";
 
-import { defaultCategoryName, defaultLanguage } from "./consts";
+import {
+  defaultCategoryName,
+  defaultLanguage,
+  defaultSlugifiedSubLanguageName,
+} from "./consts";
 import { slugify } from "./slugify";
 
 export async function configureUserSelection({
   languageName,
+  subLanguageName,
   categoryName,
 }: {
   languageName: string | undefined;
+  subLanguageName?: string | undefined;
   categoryName?: string | undefined;
-}): Promise<{ language: LanguageType; category: CategoryType["name"] }> {
+}): Promise<{
+  language: LanguageType;
+  subLanguage: LanguageType["name"];
+  category: CategoryType["name"];
+}> {
   const slugifiedLanguageName = languageName
     ? slugify(languageName)
+    : undefined;
+  const slugifiedSubLanguageName = subLanguageName
+    ? slugify(subLanguageName)
     : undefined;
   const slugifiedCategoryName = categoryName
     ? slugify(categoryName)
@@ -25,6 +38,14 @@ export async function configureUserSelection({
     fetchedLanguages.find(
       (lang) => slugify(lang.name) === slugifiedLanguageName
     ) ?? defaultLanguage;
+
+  const subLanguage = language.subLanguages.find(
+    (sl) => slugify(sl.name) === slugifiedSubLanguageName
+  );
+  const matchedSubLanguage =
+    subLanguage === undefined
+      ? defaultSlugifiedSubLanguageName
+      : slugify(subLanguage.name);
 
   let category: CategoryType | undefined;
   try {
@@ -49,5 +70,9 @@ export async function configureUserSelection({
     };
   }
 
-  return { language, category: category.name };
+  return {
+    language,
+    subLanguage: matchedSubLanguage,
+    category: category.name,
+  };
 }

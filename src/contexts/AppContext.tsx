@@ -13,29 +13,34 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const navigate = useNavigate();
-  const { languageName, categoryName } = useParams();
+  const { languageName, subLanguageName, categoryName } = useParams();
 
   const { fetchedLanguages } = useLanguages();
 
   const [language, setLanguage] = useState<LanguageType | null>(null);
+  const [subLanguage, setSubLanguage] = useState<LanguageType["name"] | null>(
+    null
+  );
   const [category, setCategory] = useState<string | null>(null);
   const [snippet, setSnippet] = useState<SnippetType | null>(null);
   const [searchText, setSearchText] = useState<string>("");
 
   const configure = async () => {
-    const { language, category } = await configureUserSelection({
+    const { language, subLanguage, category } = await configureUserSelection({
       languageName,
+      subLanguageName,
       categoryName,
     });
 
     setLanguage(language);
+    setSubLanguage(subLanguage);
     setCategory(category);
   };
 
   useEffect(() => {
     configure();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fetchedLanguages, languageName, categoryName]);
+  }, [fetchedLanguages, languageName, subLanguageName, categoryName]);
 
   /**
    * Set the default language if the language is not found in the URL.
@@ -56,9 +61,8 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
       value={
         {
           language,
-          setLanguage,
+          subLanguage,
           category,
-          setCategory,
           snippet,
           setSnippet,
           searchText,

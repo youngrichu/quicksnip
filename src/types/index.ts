@@ -1,7 +1,6 @@
 export type LanguageType = {
   name: string;
   icon: string;
-  mainLanguage?: LanguageType;
   subLanguages: {
     name: string;
     icon: string;
@@ -35,9 +34,8 @@ export type RawSnippetType = {
 
 export type AppState = {
   language: LanguageType;
-  setLanguage: React.Dispatch<React.SetStateAction<LanguageType>>;
+  subLanguage: LanguageType["name"];
   category: string;
-  setCategory: React.Dispatch<React.SetStateAction<string>>;
   snippet: SnippetType | null;
   setSnippet: React.Dispatch<React.SetStateAction<SnippetType | null>>;
   searchText: string;

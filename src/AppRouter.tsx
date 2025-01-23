@@ -9,7 +9,10 @@ const AppRouter = () => {
       <Route element={<App />}>
         <Route path="/" element={<SnippetList />} />
         <Route path="/:languageName" element={<SnippetList />} />
-        <Route path="/:languageName/:categoryName" element={<SnippetList />} />
+        <Route
+          path="/:languageName/:subLanguageName/:categoryName"
+          element={<SnippetList />}
+        />
       </Route>
     </Routes>
   );

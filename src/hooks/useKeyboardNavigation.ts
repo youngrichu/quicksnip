@@ -1,14 +1,11 @@
 import { useState } from "react";
 
-import { LanguageType } from "@types";
-
 interface UseKeyboardNavigationProps {
-  items: LanguageType[];
+  items: { languageName: string; subLanguageName?: string }[];
   isOpen: boolean;
-  onSelect: (item: LanguageType) => void;
+  toggleDropdown: (languageName: string) => void;
+  onSelect: (languageName: string, subLanguageName?: string) => void;
   onClose: () => void;
-  toggleDropdown: (openedLang: LanguageType) => void;
-  openedLanguages: LanguageType[];
 }
 
 const keyboardEventKeys = {
@@ -25,15 +22,16 @@ type KeyboardEventKeys =
 export const useKeyboardNavigation = ({
   items,
   isOpen,
-  openedLanguages,
+  toggleDropdown,
   onSelect,
   onClose,
-  toggleDropdown,
 }: UseKeyboardNavigationProps) => {
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      return;
+    }
 
     const key = event.key as KeyboardEventKeys;
 
@@ -49,26 +47,14 @@ export const useKeyboardNavigation = ({
           break;
         case "ArrowRight":
           if (focusedIndex >= 0) {
-            const selectedItem = items.filter(
-              (item) =>
-                !item.mainLanguage ||
-                openedLanguages.includes(item.mainLanguage)
-            )[focusedIndex];
-
-            if (selectedItem.subLanguages.length > 0) {
-              toggleDropdown(selectedItem);
-            }
+            const selectedItem = items[focusedIndex];
+            toggleDropdown(selectedItem.languageName);
           }
           break;
         case "Enter":
           if (focusedIndex >= 0) {
-            onSelect(
-              items.filter(
-                (item) =>
-                  !item.mainLanguage ||
-                  openedLanguages.includes(item.mainLanguage)
-              )[focusedIndex]
-            );
+            const selectedItem = items[focusedIndex];
+            onSelect(selectedItem.languageName, selectedItem.subLanguageName);
           }
           break;
         case "Escape":

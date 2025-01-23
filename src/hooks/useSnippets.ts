@@ -5,6 +5,7 @@ import { useAppContext } from "@contexts/AppContext";
 import { CategoryType } from "@types";
 import { defaultCategoryName } from "@utils/consts";
 import { QueryParams } from "@utils/enums";
+import { getLanguageFileName } from "@utils/languageUtils";
 import { slugify } from "@utils/slugify";
 
 import { useFetch } from "./useFetch";
@@ -12,9 +13,15 @@ import { useFetch } from "./useFetch";
 export const useSnippets = () => {
   const [searchParams] = useSearchParams();
 
-  const { language, category } = useAppContext();
+  const { language, subLanguage, category } = useAppContext();
+
+  const fileName = useMemo(
+    () => getLanguageFileName(language.name, subLanguage),
+    [language.name, subLanguage]
+  );
+
   const { data, loading, error } = useFetch<CategoryType[]>(
-    `/consolidated/${language.mainLanguage ? `${slugify(language.mainLanguage.name)}--${slugify(language.name)}` : slugify(language.name)}.json`
+    `/consolidated/${fileName}`
   );
 
   const fetchedSnippets = useMemo(() => {
