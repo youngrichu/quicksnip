@@ -241,6 +241,25 @@ If you want to introduce a new programming language, here's how to do it:
 
 ---
 
+## Testing Snippets
+
+To test that your snippets are formatted correctly use the following script:
+
+```
+$ npm run snippets:check
+```
+
+It will return nothing if they are well formatted, otherwise it will tell you what the error is.
+
+---
+To preview the snippets, you need to consolidate them, use the following script:
+
+```
+$ npm run snippets:consolidate
+```
+
+It will update the snippets in the `/public` folder, making them available to the frontend.
+
 ## Final Notes
 
 Whether you’re fixing a tiny typo, writing a new snippet, or dreaming up big features, every bit counts! 🛠️
