@@ -40,7 +40,7 @@ describe(getLanguageDisplayLogo.name, () => {
 describe(getLanguageFileName.name, () => {
   it("should return a concatenation of the language and subLanguage if subLanguage is not the default", () => {
     const result = getLanguageFileName("JAVASCRIPT", "React");
-    expect(result).toBe("javascript--react.json");
+    expect(result).toBe("/consolidated/javascript--react.json");
   });
 
   it("should return the language name only if subLanguage is the default", () => {
@@ -48,6 +48,6 @@ describe(getLanguageFileName.name, () => {
       "JAVASCRIPT",
       defaultSlugifiedSubLanguageName
     );
-    expect(result).toBe("javascript.json");
+    expect(result).toBe("/consolidated/javascript.json");
   });
 });

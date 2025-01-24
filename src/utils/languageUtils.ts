@@ -26,6 +26,6 @@ export function getLanguageFileName(
   subLanguage: LanguageType["subLanguages"][number]["name"]
 ) {
   return slugify(subLanguage) !== defaultSlugifiedSubLanguageName
-    ? `${slugify(language)}--${slugify(subLanguage)}.json`
-    : `${slugify(language)}.json`;
+    ? `/consolidated/${slugify(language)}--${slugify(subLanguage)}.json`
+    : `/consolidated/${slugify(language)}.json`;
 }

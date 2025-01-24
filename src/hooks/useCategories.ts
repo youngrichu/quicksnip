@@ -14,9 +14,7 @@ export const useCategories = () => {
     [language.name, subLanguage]
   );
 
-  const { data, loading, error } = useFetch<CategoryType[]>(
-    `/consolidated/${fileName}`
-  );
+  const { data, loading, error } = useFetch<CategoryType[]>(fileName);
 
   const fetchedCategories = useMemo(() => {
     return data ? data.map((item) => item.name) : [];

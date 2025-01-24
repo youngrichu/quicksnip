@@ -20,9 +20,7 @@ export const useSnippets = () => {
     [language.name, subLanguage]
   );
 
-  const { data, loading, error } = useFetch<CategoryType[]>(
-    `/consolidated/${fileName}`
-  );
+  const { data, loading, error } = useFetch<CategoryType[]>(fileName);
 
   const fetchedSnippets = useMemo(() => {
     if (!data) {
