@@ -1,51 +1,127 @@
+/**
+ * Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
+ */
+
 import { useRef, useEffect, useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useAppContext } from "@contexts/AppContext";
 import { useKeyboardNavigation } from "@hooks/useKeyboardNavigation";
 import { useLanguages } from "@hooks/useLanguages";
 import { LanguageType } from "@types";
+import { configureUserSelection } from "@utils/configureUserSelection";
+import {
+  getLanguageDisplayLogo,
+  getLanguageDisplayName,
+} from "@utils/languageUtils";
+import { slugify } from "@utils/slugify";
 
 import SubLanguageSelector from "./SubLanguageSelector";
 
-// Inspired by https://blog.logrocket.com/creating-custom-select-dropdown-css/
-
 const LanguageSelector = () => {
-  const { language, setLanguage } = useAppContext();
+  const navigate = useNavigate();
+
+  const { language, subLanguage, setSearchText } = useAppContext();
   const { fetchedLanguages, loading, error } = useLanguages();
-  const allLanguages = useMemo(
-    () =>
-      fetchedLanguages.flatMap((lang) =>
-        lang.subLanguages.length > 0
-          ? [
-              lang,
-              ...lang.subLanguages.map((subLang) => ({
-                ...subLang,
-                mainLanguage: lang,
-                subLanguages: [],
-              })),
-            ]
-          : [lang]
-      ),
-    [fetchedLanguages]
-  );
 
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [openedLanguages, setOpenedLanguages] = useState<LanguageType[]>([]);
 
-  const handleSelect = (selected: LanguageType) => {
-    setLanguage(selected);
+  const keyboardItems = useMemo(() => {
+    return fetchedLanguages.flatMap((lang) =>
+      openedLanguages.map((ol) => ol.name).includes(lang.name)
+        ? [
+            { languageName: lang.name },
+            ...lang.subLanguages.map((sl) => ({
+              languageName: lang.name,
+              subLanguageName: sl.name,
+            })),
+          ]
+        : [{ languageName: lang.name }]
+    );
+  }, [fetchedLanguages, openedLanguages]);
+
+  const displayName = useMemo(
+    () => getLanguageDisplayName(language.name, subLanguage),
+    [language.name, subLanguage]
+  );
+
+  const displayLogo = useMemo(
+    () => getLanguageDisplayLogo(language.name, subLanguage),
+    [language.name, subLanguage]
+  );
+
+  const handleToggleSubLanguage = (name: LanguageType["name"]) => {
+    const isAlreadyOpened = openedLanguages.some((lang) => lang.name === name);
+    const openedLang = fetchedLanguages.find((lang) => lang.name === name);
+    if (openedLang === undefined || openedLang.subLanguages.length === 0) {
+      return;
+    }
+
+    if (!isAlreadyOpened) {
+      setOpenedLanguages((prev) => [...prev, openedLang]);
+    } else {
+      setOpenedLanguages((prev) =>
+        prev.filter((lang) => lang.name !== openedLang.name)
+      );
+    }
+  };
+
+  /**
+   * When setting a new language we need to ensure that a category
+   * has been set given this new language.
+   * Ensure that the search text is cleared.
+   */
+  const handleSelect = async (selected: LanguageType) => {
+    const {
+      language: newLanguage,
+      subLanguage: newSubLanguage,
+      category: newCategory,
+    } = await configureUserSelection({
+      languageName: selected.name,
+    });
+
+    setSearchText("");
+    navigate(
+      `/${slugify(newLanguage.name)}/${slugify(newSubLanguage)}/${slugify(newCategory)}`
+    );
     setIsOpen(false);
     setOpenedLanguages([]);
   };
 
+  const afterSelect = () => {
+    setIsOpen(false);
+  };
+
+  const handleSubLanguageSelect = async (
+    selectedLanguageName: LanguageType["name"],
+    selectedSubLanguageName:
+      | LanguageType["subLanguages"][number]["name"]
+      | undefined
+  ) => {
+    const {
+      language: newLanguage,
+      subLanguage: newSubLanguage,
+      category: newCategory,
+    } = await configureUserSelection({
+      languageName: selectedLanguageName,
+      subLanguageName: selectedSubLanguageName,
+    });
+
+    setSearchText("");
+    navigate(
+      `/${slugify(newLanguage.name)}/${slugify(newSubLanguage)}/${slugify(newCategory)}`
+    );
+    afterSelect();
+  };
+
   const { focusedIndex, handleKeyDown, resetFocus, focusFirst } =
     useKeyboardNavigation({
-      items: allLanguages,
+      items: keyboardItems,
       isOpen,
-      openedLanguages,
-      toggleDropdown: (openedLang) => handleToggleSublanguage(openedLang),
-      onSelect: handleSelect,
+      toggleDropdown: (l) => handleToggleSubLanguage(l),
+      onSelect: (l, sl) => handleSubLanguageSelect(l, sl),
       onClose: () => setIsOpen(false),
     });
 
@@ -58,20 +134,6 @@ const LanguageSelector = () => {
         setIsOpen(false);
       }
     }, 0);
-  };
-
-  const handleToggleSublanguage = (openedLang: LanguageType) => {
-    const isAlreadyOpened = openedLanguages.some(
-      (lang) => lang.name === openedLang.name
-    );
-
-    if (!isAlreadyOpened) {
-      setOpenedLanguages((prev) => [...prev, openedLang]);
-    } else {
-      setOpenedLanguages((prev) =>
-        prev.filter((lang) => lang.name !== openedLang.name)
-      );
-    }
   };
 
   const toggleDropdown = () => {
@@ -89,13 +151,6 @@ const LanguageSelector = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    if (language.mainLanguage) {
-      handleToggleSublanguage(language.mainLanguage);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [language]);
-
-  useEffect(() => {
     if (isOpen && focusedIndex >= 0) {
       const element = document.querySelector(
         `.selector__item:nth-child(${focusedIndex + 1})`
@@ -104,8 +159,13 @@ const LanguageSelector = () => {
     }
   }, [isOpen, focusedIndex]);
 
-  if (loading) return <p>Loading languages...</p>;
-  if (error) return <p>Error fetching languages: {error}</p>;
+  if (loading) {
+    return <p>Loading languages...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching languages: {error}</p>;
+  }
 
   return (
     <div
@@ -121,8 +181,8 @@ const LanguageSelector = () => {
         onClick={toggleDropdown}
       >
         <div className="selector__value">
-          <img src={language.icon} alt="" />
-          <span>{language.name || "Select a language"}</span>
+          <img src={displayLogo} alt="" />
+          <span>{displayName}</span>
         </div>
         <span className="selector__arrow" />
       </button>
@@ -136,13 +196,12 @@ const LanguageSelector = () => {
           {fetchedLanguages.map((lang, index) =>
             lang.subLanguages.length > 0 ? (
               <SubLanguageSelector
-                key={index}
-                mainLanguage={lang}
-                afterSelect={() => {
-                  setIsOpen(false);
-                }}
+                key={lang.name}
                 opened={openedLanguages.includes(lang)}
-                onDropdownToggle={handleToggleSublanguage}
+                parentLanguage={lang}
+                onDropdownToggle={handleToggleSubLanguage}
+                handleParentSelect={handleSelect}
+                afterSelect={afterSelect}
               />
             ) : (
               <li
