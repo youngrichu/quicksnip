@@ -599,6 +599,25 @@ abbr {
     auto-fill,
     minmax(min(17.5rem, 100%), 1fr)
   ); /* [1] */
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 1rem;
+  align-content: start;
+}
+
+.snippets::-webkit-scrollbar {
+  width: 8px;
+}
+
+.snippets::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.snippets::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .snippet {
