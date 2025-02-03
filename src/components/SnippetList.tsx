@@ -18,9 +18,9 @@ const SnippetList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { fetchedSnippets, loading } = useSnippets();
   const { language, subLanguage, snippet, setSnippet } = useAppContext();
- 
+
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-       
+
   const shouldReduceMotion = useReducedMotion();
 
   const handleOpenModal = (selected: SnippetType) => () => {
@@ -54,7 +54,7 @@ const SnippetList = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchedSnippets, searchParams]);
-  
+
   if (loading) return null;
 
   return (
