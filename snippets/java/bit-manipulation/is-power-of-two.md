@@ -12,5 +12,5 @@ public static boolean isPowerOfTwo(int number) {
 
 // Usage:
 int number = 16;
-System.out.println(isPowerOfTwo(5)); // true (2^4)
+System.out.println(isPowerOfTwo(number)); // true (2^4)
 ```
