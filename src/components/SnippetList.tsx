@@ -12,17 +12,16 @@ import {
 } from "@utils/languageUtils";
 import { slugify } from "@utils/slugify";
 
-import { LeftAngleArrowIcon } from "./Icons";
 import SnippetModal from "./SnippetModal";
 
 const SnippetList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const shouldReduceMotion = useReducedMotion();
-
+  const { fetchedSnippets, loading } = useSnippets();
   const { language, subLanguage, snippet, setSnippet } = useAppContext();
-  const { fetchedSnippets } = useSnippets();
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const shouldReduceMotion = useReducedMotion();
 
   const handleOpenModal = (selected: SnippetType) => () => {
     setIsModalOpen(true);
@@ -56,18 +55,29 @@ const SnippetList = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchedSnippets, searchParams]);
 
-  if (!fetchedSnippets) {
-    return (
-      <div>
-        <LeftAngleArrowIcon />
-      </div>
-    );
-  }
+  if (loading) return null;
 
   return (
     <>
-      <motion.ul role="list" className="snippets">
+      <motion.ul
+        role="list"
+        className={`snippets ${fetchedSnippets && fetchedSnippets.length === 0 ? "data-empty" : ""}`}
+      >
         <AnimatePresence mode="popLayout">
+          {fetchedSnippets && fetchedSnippets.length === 0 && (
+            <div className="category-no-snippets-found">
+              <p>No snippets found for this category. Why not add one? 🚀</p>
+              <a
+                href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="styled-link"
+              >
+                Add your own snippet
+              </a>
+            </div>
+          )}
+
           {fetchedSnippets.map((snippet, idx) => {
             const uniqueId = `${language.name}-${snippet.title}-${idx}`;
             return (
