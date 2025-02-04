@@ -26,6 +26,8 @@
   --clr-neutral-900: hsl(0, 0%, 5%);
   --clr-accent-dark: hsl(181, 100%, 36%);
   --clr-accent-light: hsl(181, 100%, 22%);
+  --scrollbar-thumb-light: hsl(0, 0%, 73%);
+  --scrollbar-thumb-dark: hsl(0, 0%, 33%);
 
   /* Main colors - For theming */
   --clr-accent: var(--clr-accent-dark);
@@ -79,6 +81,9 @@
   --br-sm: 0.25rem;
   --br-md: 0.5rem;
   --br-lg: 0.75rem;
+
+  /* webkit scrollbar */
+  --scrollbar-thumb: var(--scrollbar-thumb-dark);
 }
 
 /*------------------------------------*\
@@ -105,6 +110,8 @@
 
   --clr-gradient-secondary-1: var(--clr-neutral-100);
   --clr-gradient-secondary-2: var(--clr-neutral-200);
+
+  --scrollbar-thumb: var(--scrollbar-thumb-light);
 }
 
 /*------------------------------------*\
@@ -604,10 +611,11 @@ abbr {
     minmax(min(17.5rem, 100%), 1fr)
   ); /* [1] */
   height: 100%;
-  max-height: 100vh;
+  min-height: 25vh;
+  max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;  
   align-content: start;
 }
 
@@ -616,12 +624,12 @@ abbr {
 }
 
 .snippets::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
 .snippets::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scrollbar-thumb);
 }
 
 .snippet {
