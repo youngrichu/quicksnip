@@ -400,7 +400,7 @@ abbr {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid var(--clr-text-primary); /* [1] */
-  transition: transform 100ms ease;
+  transition: transform 300ms ease;
 }
 
 .selector--open .selector__arrow {
@@ -413,7 +413,7 @@ abbr {
 
   position: absolute;
   width: 100%;
-  max-height: 20rem;
+  height: 20rem;
   overflow-y: auto;
 
   background-color: var(--clr-bg-secondary);
@@ -426,10 +426,15 @@ abbr {
 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  transition: all 300ms ease;
 }
 
-.selector__dropdown:focus-within {
-  border-color: var(--clr-accent);
+.selector__dropdown.hidden {
+  border: none;
+  padding: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .selector__item {
@@ -439,10 +444,19 @@ abbr {
   gap: 1rem;
   align-items: center;
   border-radius: var(--br-md);
+  transition: all 300ms ease;
 }
 
 .sublanguage__item {
+  height: 3rem;
   margin-left: 1.5rem;
+  transition: all 300ms ease;
+}
+
+.sublanguage__item.hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .sublanguage__button{
@@ -462,6 +476,11 @@ abbr {
   transform: rotate(-90deg);
   transition: transform 100ms ease;
   cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.sublanguage__arrow:hover {
+  border-top-color: var(--clr-accent);
 }
 
 [aria-expanded="true"] .sublanguage__arrow {
@@ -470,6 +489,10 @@ abbr {
 
 .selector__item.selected .sublanguage__arrow {
   border-top-color: var(--clr-text-tertiary);
+}
+
+.selector__item.selected .sublanguage__arrow:hover {
+  border-top-color: var(--clr-text-primary);
 }
 
 .selector__item label {

@@ -186,43 +186,41 @@ const LanguageSelector = () => {
         </div>
         <span className="selector__arrow" />
       </button>
-      {isOpen && (
-        <ul
-          className="selector__dropdown"
-          role="listbox"
-          onKeyDown={handleKeyDown}
-          tabIndex={-1}
-        >
-          {fetchedLanguages.map((lang, index) =>
-            lang.subLanguages.length > 0 ? (
-              <SubLanguageSelector
-                key={lang.name}
-                opened={openedLanguages.includes(lang)}
-                parentLanguage={lang}
-                onDropdownToggle={handleToggleSubLanguage}
-                handleParentSelect={handleSelect}
-                afterSelect={afterSelect}
-              />
-            ) : (
-              <li
-                key={lang.name}
-                role="option"
-                tabIndex={-1}
-                onClick={() => handleSelect(lang)}
-                className={`selector__item ${
-                  language.name === lang.name ? "selected" : ""
-                } ${focusedIndex === index ? "focused" : ""}`}
-                aria-selected={language.name === lang.name}
-              >
-                <label>
-                  <img src={lang.icon} alt="" />
-                  <span>{lang.name}</span>
-                </label>
-              </li>
-            )
-          )}
-        </ul>
-      )}
+      <ul
+        className={`selector__dropdown ${isOpen ? "" : " hidden"}`}
+        role="listbox"
+        onKeyDown={handleKeyDown}
+        tabIndex={-1}
+      >
+        {fetchedLanguages.map((lang, index) =>
+          lang.subLanguages.length > 0 ? (
+            <SubLanguageSelector
+              key={lang.name}
+              opened={openedLanguages.includes(lang)}
+              parentLanguage={lang}
+              onDropdownToggle={handleToggleSubLanguage}
+              handleParentSelect={handleSelect}
+              afterSelect={afterSelect}
+            />
+          ) : (
+            <li
+              key={lang.name}
+              role="option"
+              tabIndex={-1}
+              onClick={() => handleSelect(lang)}
+              className={`selector__item ${
+                language.name === lang.name ? "selected" : ""
+              } ${focusedIndex === index ? "focused" : ""}`}
+              aria-selected={language.name === lang.name}
+            >
+              <label>
+                <img src={lang.icon} alt="" />
+                <span>{lang.name}</span>
+              </label>
+            </li>
+          )
+        )}
+      </ul>
     </div>
   );
 };
