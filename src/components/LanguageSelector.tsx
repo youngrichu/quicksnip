@@ -152,10 +152,10 @@ const LanguageSelector = () => {
 
   useEffect(() => {
     if (isOpen && focusedIndex >= 0) {
-      const element = document.querySelector(
-        `.selector__item:nth-child(${focusedIndex + 1})`
-      ) as HTMLElement;
-      element?.focus();
+      const elements = Array.from(document.querySelectorAll('.selector__item')) as HTMLElement[];
+      const focusableElements = elements.filter(el => el.getAttribute('tabIndex') !== '-1');
+      const element = focusableElements[focusedIndex];
+      element?.focus();   
     }
   }, [isOpen, focusedIndex]);
 
@@ -190,7 +190,7 @@ const LanguageSelector = () => {
         className={`selector__dropdown ${isOpen ? "" : " hidden"}`}
         role="listbox"
         onKeyDown={handleKeyDown}
-        tabIndex={-1}
+        tabIndex={0}
       >
         {fetchedLanguages.map((lang, index) =>
           lang.subLanguages.length > 0 ? (
@@ -206,7 +206,7 @@ const LanguageSelector = () => {
             <li
               key={lang.name}
               role="option"
-              tabIndex={-1}
+              tabIndex={0}
               onClick={() => handleSelect(lang)}
               className={`selector__item ${
                 language.name === lang.name ? "selected" : ""

@@ -47,7 +47,7 @@ const SubLanguageSelector = ({
     <>
       <li
         role="option"
-        tabIndex={-1}
+        tabIndex={0}
         className={`selector__item ${
           subLanguage === defaultSlugifiedSubLanguageName &&
           language.name === parentLanguage.name
@@ -82,7 +82,8 @@ const SubLanguageSelector = ({
         <li
           key={sl.name}
           role="option"
-          tabIndex={-1}
+          tabIndex={opened ? 0 : -1}
+          aria-disabled={!opened}
           className={`selector__item sublanguage__item ${opened ? "" : "hidden"} ${
             slugify(subLanguage) === slugify(sl.name) ? "selected" : ""
           }`}
