@@ -6,13 +6,20 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 function consolidateSnippets(projectRoot: string) {
-  const cmd = spawnSync("tsx", ["utils/consolidateSnippets.ts"], {
+  const cmd = spawnSync("npx", ["tsx", "utils/consolidateSnippets.ts"], {
     cwd: projectRoot,
+    shell: true,
+    stdio: "pipe",
   });
 
   if (cmd.status === 0) return;
 
-  console.log(`Consolidating snippets failed:\n${cmd.output.toString()}`);
+  const errorMessage = cmd.stderr?.toString().trim() || "No error message";
+  const outputMessage = cmd.stdout?.toString().trim() || "No additional output";
+
+  console.log(`❌ Consolidating snippets failed!`);
+  console.log(`Error: ${errorMessage}`);
+  console.log(`Output: ${outputMessage}`);
 }
 
 // https://vitejs.dev/config/
