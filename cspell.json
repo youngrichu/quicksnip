@@ -8,10 +8,5 @@
     }
   ],
   "dictionaries": ["workspace"],
-  "ignorePaths": [
-    "node_modules",
-    "dist",
-    "coverage",
-    "public"
-  ]
+  "ignorePaths": ["node_modules", "dist", "coverage", "public"]
 }

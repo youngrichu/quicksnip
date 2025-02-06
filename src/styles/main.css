@@ -325,7 +325,8 @@ abbr {
   margin-left: 2.25em;
 }
 
-.search-field:hover, .search-field:hover * {
+.search-field:hover,
+.search-field:hover * {
   cursor: pointer;
 }
 
@@ -445,7 +446,7 @@ abbr {
   margin-left: 1.5rem;
 }
 
-.sublanguage__button{
+.sublanguage__button {
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -615,7 +616,7 @@ abbr {
   max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0.5rem 1rem 1rem 1rem;  
+  padding: 0.5rem 1rem 1rem 1rem;
   align-content: start;
 }
 

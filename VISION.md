@@ -21,7 +21,7 @@ QuickSnip is an open-source tool designed for developers who want to organize, s
 We do **NOT** aim to be:
 
 - a component library
-- a documentation 
+- a documentation
 
 ## QuickSnip Roadmap
 
