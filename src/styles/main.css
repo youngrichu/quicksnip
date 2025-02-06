@@ -413,7 +413,7 @@ abbr {
 
   position: absolute;
   width: 100%;
-  height: 20rem;
+  height: 50vh;
   overflow-y: auto;
 
   background-color: var(--clr-bg-secondary);
@@ -435,6 +435,19 @@ abbr {
   height: 0;
   opacity: 0;
   overflow: hidden;
+}
+
+.selector__dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.selector__dropdown::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.selector__dropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb);
 }
 
 .selector__item {
