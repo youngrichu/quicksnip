@@ -152,10 +152,14 @@ const LanguageSelector = () => {
 
   useEffect(() => {
     if (isOpen && focusedIndex >= 0) {
-      const elements = Array.from(document.querySelectorAll('.selector__item')) as HTMLElement[];
-      const focusableElements = elements.filter(el => el.getAttribute('tabIndex') !== '-1');
+      const elements = Array.from(
+        document.querySelectorAll(".selector__item")
+      ) as HTMLElement[];
+      const focusableElements = elements.filter(
+        (el) => el.getAttribute("tabIndex") !== "-1"
+      );
       const element = focusableElements[focusedIndex];
-      element?.focus();   
+      element?.focus();
     }
   }, [isOpen, focusedIndex]);
 
