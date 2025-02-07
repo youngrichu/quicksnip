@@ -4,7 +4,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useLanguages } from "@hooks/useLanguages";
 import { AppState, LanguageType, SnippetType } from "@types";
 import { configureUserSelection } from "@utils/configureUserSelection";
-import { defaultLanguage, defaultState } from "@utils/consts";
+import {
+  defaultCategoryName,
+  defaultLanguage,
+  defaultSlugifiedSubLanguageName,
+  defaultState,
+} from "@utils/consts";
 import { slugify } from "@utils/slugify";
 
 const AppContext = createContext<AppState>(defaultState);
@@ -46,8 +51,16 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
    * Set the default language if the language is not found in the URL.
    */
   useEffect(() => {
-    if (languageName === undefined) {
-      navigate(`/${slugify(defaultLanguage.name)}`, { replace: true });
+    const resolvedLanguage = languageName || defaultLanguage.name;
+    const resolvedSubLanguage =
+      subLanguageName || defaultSlugifiedSubLanguageName;
+    const resolvedCategory = categoryName || defaultCategoryName;
+
+    if (!languageName || !subLanguageName || !categoryName) {
+      navigate(
+        `/${slugify(resolvedLanguage)}/${slugify(resolvedSubLanguage)}/${slugify(resolvedCategory)}`,
+        { replace: true }
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
