@@ -10,6 +10,10 @@ const AppRouter = () => {
         <Route path="/" element={<SnippetList />} />
         <Route path="/:languageName" element={<SnippetList />} />
         <Route
+          path="/:languageName/:subLanguageName"
+          element={<SnippetList />}
+        />
+        <Route
           path="/:languageName/:subLanguageName/:categoryName"
           element={<SnippetList />}
         />
