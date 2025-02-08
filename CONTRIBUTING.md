@@ -161,8 +161,8 @@ Expected file structure:
 ```md
 /snippets
 |- language
-|- category-name
-|- your-snippet-here.md
+   |- category-name
+      |- your-snippet-here.md
 ```
 
 > Please do **NOT** add or edit anything in `/public` folder. It will be used for consolidating snippets.
@@ -221,9 +221,9 @@ Example structure:
 ```md
 /snippets
 |- python
-|- file-handling
-|- list-manipulation
-|- ....
+   |- file-handling
+   |- list-manipulation
+   |- ....
 ```
 
 ### Adding a New Language
