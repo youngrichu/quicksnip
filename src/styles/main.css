@@ -297,6 +297,7 @@ abbr {
 .button--icon {
   min-height: unset;
   display: inline-flex;
+  gap: 0.35em;
   align-items: center;
   justify-content: center;
   background-color: transparent;
@@ -490,11 +491,6 @@ abbr {
   transform: rotate(-90deg);
   transition: transform 100ms ease;
   cursor: pointer;
-  transition: all 200ms ease;
-}
-
-.sublanguage__arrow:hover {
-  border-top-color: var(--clr-accent);
 }
 
 [aria-expanded="true"] .sublanguage__arrow {
@@ -503,10 +499,6 @@ abbr {
 
 .selector__item.selected .sublanguage__arrow {
   border-top-color: var(--clr-text-tertiary);
-}
-
-.selector__item.selected .sublanguage__arrow:hover {
-  border-top-color: var(--clr-text-primary);
 }
 
 .selector__item label {
@@ -763,22 +755,26 @@ body:has(.modal-overlay) {
   border: 1px solid var(--clr-border-primary);
   border-radius: var(--br-md);
   width: 100%;
-  overflow-x: auto;
+  overflow: hidden;
   position: relative;
 }
 
-.modal__copy {
-  position: absolute;
-  top: 0.5em;
-  right: 1.2em;
-  z-index: 10;
-  isolation: isolate;
-  background-color: var(--clr-bg-secondary);
-  border: 1px solid var(--clr-border-primary);
+.code-preview__header {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em 1em;
 }
 
-.modal__copy:hover {
-  background-color: var(--clr-bg-primary);
+.code-preview__body {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.code-preview__buttons {
+  display: flex;
+  gap: 0.5em;
 }
 
 .modal__tags {

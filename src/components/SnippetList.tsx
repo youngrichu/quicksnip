@@ -130,7 +130,7 @@ const SnippetList = () => {
           <SnippetModal
             snippet={snippet}
             handleCloseModal={handleCloseModal}
-            language={snippet.extension}
+            extension={snippet.extension}
           />
         )}
       </AnimatePresence>

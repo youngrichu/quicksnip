@@ -22,7 +22,8 @@ const CopyToClipboard = ({ text, ...props }: Props) => {
 
   return (
     <Button isIcon={true} onClick={copyText} {...props}>
-      {isCopied ? "Copied!" : <CopyIcon />}
+      <CopyIcon />
+      <span>{isCopied ? "Copied!" : "Copy"}</span>
     </Button>
   );
 };

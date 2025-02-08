@@ -2,9 +2,9 @@ import { motion, useReducedMotion } from "motion/react";
 import React from "react";
 import ReactDOM from "react-dom";
 
+import { useAppContext } from "@contexts/AppContext";
 import { useEscapeKey } from "@hooks/useEscapeKey";
 import { SnippetType } from "@types";
-import { slugify } from "@utils/slugify";
 
 import Button from "./Button";
 import CodePreview from "./CodePreview";
@@ -12,17 +12,18 @@ import { CloseIcon } from "./Icons";
 
 type Props = {
   snippet: SnippetType;
-  language: string;
+  extension: string;
   handleCloseModal: () => void;
 };
 
 const SnippetModal: React.FC<Props> = ({
   snippet,
-  language,
+  extension,
   handleCloseModal,
 }) => {
   const modalRoot = document.getElementById("modal-root");
 
+  const { language, subLanguage } = useAppContext();
   const shouldReduceMotion = useReducedMotion();
 
   useEscapeKey(handleCloseModal);
@@ -49,7 +50,7 @@ const SnippetModal: React.FC<Props> = ({
         key="modal-content"
         className="modal | flow"
         data-flow-space="lg"
-        layoutId={`${language}-${snippet.title}`}
+        layoutId={`${extension}-${snippet.title}`}
         transition={{
           ease: [0, 0.75, 0.25, 1],
           duration: shouldReduceMotion ? 0 : 0.3,
@@ -62,7 +63,14 @@ const SnippetModal: React.FC<Props> = ({
           </Button>
         </div>
         <div className="modal__body | flow">
-          <CodePreview language={slugify(language)} code={snippet.code} />
+          {/* TODO: update the language name and remove all-sub-languages */}
+          <CodePreview
+            languageName={
+              subLanguage === "all-sub-languages" ? language.name : subLanguage
+            }
+            extension={extension}
+            code={snippet.code}
+          />
           <p>
             <b>Description: </b>
             {snippet.description}
