@@ -28,15 +28,16 @@ We do **NOT** aim to be:
 ### v1.0 (Launching Soon)
 
 - [x] A new snippets storage system for better maintainability and scalability
-- [ ] Search functionality
-- [ ] A support for frameworks and libraries
-- [ ] An ability to share snippets with others
-- [ ] A basic SEO (Search Engine Optimization)
+- [x] Search functionality
+- [x] A support for frameworks and libraries
+- [x] An ability to share snippets with others
+- [x] A basic SEO (Search Engine Optimization)
 
 ### v2.0 (Planned Vision)
 
 - [ ] An ability to have private snippets with personal account
 - [ ] Improved search functionality with filters
+- [ ] A documentation page
 - [ ] An improved SEO (Search Engine Optimization)
 
 ### Potential Future Ideas
