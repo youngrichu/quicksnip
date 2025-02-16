@@ -18,6 +18,7 @@ const throttle = (func, limit) => {
 };
 
 // Usage:
+// Ensures the function can only be called once every 1000 milliseconds
 const logScroll = throttle(() => console.log("Scroll event triggered"), 1000);
 
 // Attach to scroll event
