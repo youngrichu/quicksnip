@@ -1,7 +1,7 @@
 ---
 title: Remove Duplicates
 description: Removes duplicate elements from a list while maintaining order.
-author: dostonnabotov
+author: technoph1le
 tags: list,duplicates,filter
 ---
 

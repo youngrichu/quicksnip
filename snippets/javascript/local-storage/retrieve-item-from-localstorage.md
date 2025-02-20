@@ -1,7 +1,7 @@
 ---
 title: Retrieve Item from localStorage
 description: Retrieves a value from localStorage by key and parses it.
-author: dostonnabotov
+author: technoph1le
 tags: localStorage,storage
 ---
 

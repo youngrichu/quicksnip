@@ -1,7 +1,7 @@
 ---
 title: Repeat Function Invocation
 description: Invokes a function a specified number of times.
-author: dostonnabotov
+author: technoph1le
 tags: function,repeat
 ---
 

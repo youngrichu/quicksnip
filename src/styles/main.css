@@ -567,6 +567,34 @@ abbr {
   gap: 1.5rem;
 }
 
+.github-stars-btn {
+  position: relative;
+}
+
+.github-stars__arrow {
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  scale: 0.7;
+  pointer-events: none;
+}
+
+.github-stars__count {
+  position: absolute;
+  top: 185%;
+  left: -25%;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi);
+  pointer-events: none;
+}
+
+@media (width < 60em) {
+  .github-stars__arrow,
+  .github-stars__count {
+    display: none;
+  }
+}
+
 /*------------------------------------*\
   #MAIN
 \*------------------------------------*/
@@ -596,12 +624,20 @@ abbr {
   background-color: var(--clr-bg-secondary);
   border: 1px solid var(--clr-border-primary);
   padding: 1.25rem;
-  padding-bottom: 2rem;
   border-radius: var(--br-lg);
 }
 
-.category {
-  border-bottom: 1px solid var(--clr-border-primary);
+.category:where(:not(:first-child)) {
+  border-top: 1px solid var(--clr-border-primary);
+}
+
+/**
+ * 1. Remove the border lines above and below
+ *    the selected category
+ **/
+.category:has(.category__btn--active),
+.category:has(.category__btn--active) + .category {
+  border-top-color: transparent; /* [1] */
 }
 
 .category__btn {
@@ -648,7 +684,7 @@ abbr {
   max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0.5rem 1rem 1rem 1rem;
+  padding-right: 0.5rem;
   align-content: start;
 }
 

@@ -53,4 +53,4 @@ This roadmap outlines our current vision for QuickSnip and may evolve based on u
 
 QuickSnip aims to become the preferred platform for developers to store, retrieve, and collaborate on code snippets.
 
-Explore our [GitHub Releases](https://github.com/dostonnabotov/quicksnip/releases) for updates and join us on this journey.
+Explore our [GitHub Releases](https://github.com/technoph1le/quicksnip/releases) for updates and join us on this journey.

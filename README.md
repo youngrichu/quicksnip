@@ -40,7 +40,7 @@ We love to see the creativity of our community! If you build something using Qui
 If you’d like to create your own extension or tool:
 
 - [x] Please ensure it adheres to our project’s licensing and attribution requirements.
-- [x] Please link to the [original QuickSnip repository](https://github.com/dostonnabotov/quicksnip) in your extension/tool to attribute the source.
+- [x] Please link to the [original QuickSnip repository](https://github.com/technoph1le/quicksnip) in your extension/tool to attribute the source.
 - [x] Share your work with us — we’d be thrilled to feature it!
 
 ## Project Vision

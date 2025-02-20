@@ -1,7 +1,7 @@
 ---
 title: Font Import Helper
 description: Simplifies importing custom fonts in Sass.
-author: dostonnabotov
+author: technoph1le
 tags: mixin,fonts,css
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Remove Duplicates
 description: Removes duplicate values from an array.
-author: dostonnabotov
+author: technoph1le
 tags: array,deduplicate
 ---
 

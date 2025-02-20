@@ -1,7 +1,7 @@
 ---
 title: Equal-Width Columns
 description: Creates columns with equal widths using flexbox.
-author: dostonnabotov
+author: technoph1le
 tags: flexbox,columns,layout
 ---
 

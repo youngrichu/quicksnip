@@ -1,7 +1,7 @@
 ---
 title: Letter Spacing
 description: Adds space between letters for better readability.
-author: dostonnabotov
+author: technoph1le
 tags: typography,spacing
 ---
 

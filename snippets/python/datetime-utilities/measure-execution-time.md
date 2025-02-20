@@ -1,7 +1,7 @@
 ---
 title: Measure Execution Time
 description: Measures the execution time of a code block.
-author: dostonnabotov
+author: technoph1le
 tags: time,execution
 ---
 

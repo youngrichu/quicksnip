@@ -1,7 +1,7 @@
 ---
 title: Sticky Footer
 description: Ensures the footer always stays at the bottom of the page.
-author: dostonnabotov
+author: technoph1le
 tags: layout,footer,sticky
 ---
 
