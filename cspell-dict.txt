@@ -3,3 +3,6 @@ slugified
 slugifyed
 sublanguage
 fastapi
+Technophile
+technophile
+technophileyt

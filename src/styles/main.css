@@ -684,7 +684,7 @@ abbr {
   max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
   align-content: start;
 }
 
