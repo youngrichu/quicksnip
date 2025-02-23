@@ -51,17 +51,22 @@ export const AppProvider: FC<{ children: React.ReactNode }> = ({
    * Set the default language if the language is not found in the URL.
    */
   useEffect(() => {
-    const resolvedLanguage = languageName || defaultLanguage.name;
-    const resolvedSubLanguage =
-      subLanguageName || defaultSlugifiedSubLanguageName;
-    const resolvedCategory = categoryName || defaultCategoryName;
+    const defaultURLPath = `/${slugify(defaultLanguage.name)}/${slugify(defaultSlugifiedSubLanguageName)}/${slugify(defaultCategoryName)}`;
 
     if (!languageName || !subLanguageName || !categoryName) {
-      navigate(
-        `/${slugify(resolvedLanguage)}/${slugify(resolvedSubLanguage)}/${slugify(resolvedCategory)}`,
-        { replace: true }
-      );
+      navigate(defaultURLPath, { replace: true });
     }
+
+    // Validate if language exists in fetchedLanguages
+    const validLanguage = fetchedLanguages.find(
+      (lang) => slugify(lang.name) === languageName
+    );
+
+    if (!validLanguage) {
+      navigate(defaultURLPath, { replace: true }); // Redirect to NotFound.tsx
+      return;
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
