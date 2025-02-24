@@ -1,6 +1,6 @@
 # QuickSnip
 
-An open-source project that categorizes handy code snippets across various programming languages. Built with love and powered by an awesome community. 🚀
+QuickSnip is an open-source tool designed for developers who want to organize, search, and share code snippets across various programming languages. It provides a centralized platform for managing handy snippets. Built with love and powered by an awesome community. 🚀
 
 <div>
 <a href="https://youtu.be/BhRi7fJzPgk?si=z1sVXU7uRS0bkSEt" target="_blank">

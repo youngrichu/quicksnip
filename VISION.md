@@ -2,7 +2,7 @@
 
 ## What is QuickSnip?
 
-QuickSnip is an open-source tool designed for developers who want to organize, search, and share code snippets. It aims to streamline the coding process by providing a centralized platform for snippet management.
+QuickSnip is an open-source tool designed for developers who want to organize, search, and share code snippets across various programming languages. It provides a centralized platform for managing handy snippets. Built with love and powered by an awesome community.
 
 ## Core Principles
 
