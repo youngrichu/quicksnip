@@ -1,5 +1,5 @@
 ---
-title: Allow Lower Case
+title: Allow Lowercase
 description: A validation function to allow only lowercase alphabetic characters.
 author: Legopitstop
 tags: validation,lowercase
