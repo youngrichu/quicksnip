@@ -2,7 +2,7 @@
 title: Check Prime Number
 description: Checks if a number is a prime number.
 author: ACR1209
-contributors: dostonnabotov
+contributors: technoph1le
 tags: math,prime,check
 ---
 

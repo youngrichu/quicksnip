@@ -3,7 +3,7 @@ import { FC } from "react";
 const DEFAULT_ICON_COLOR = "var(--clr-icon-primary)";
 const ACCENT_ICON_COLOR = "var(--clr-accent)";
 
-interface IconProps {
+interface IconProps extends React.SVGProps<SVGSVGElement> {
   fillColor?: string;
 }
 
@@ -173,31 +173,28 @@ export const ShareIcon: FC<IconProps> = ({ fillColor = ACCENT_ICON_COLOR }) => (
 );
 
 export const LeftAngleArrowIcon: FC<IconProps> = ({
-  fillColor = ACCENT_ICON_COLOR,
+  fillColor = DEFAULT_ICON_COLOR,
+  ...props
 }) => (
   <svg
-    width="72"
-    height="72"
-    viewBox="0 0 72 72"
+    width="76"
+    height="71"
+    viewBox="0 0 76 71"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
-    <g clipPath="url(#clip0_97_152)">
-      <path
-        d="M24.2401 71.28C24.2401 69.0985 22.085 65.841 19.9036 63.1068C17.0988 59.5788 13.7472 56.5006 9.90463 54.1516C7.02343 52.3905 3.53071 50.7 0.720069 50.7M0.720069 50.7C3.53071 50.7 7.02637 49.0095 9.90463 47.2484C13.7472 44.8964 17.0988 41.8183 19.9036 38.2961C22.085 35.559 24.2401 32.2956 24.2401 30.12M0.720069 50.7L34.5301 50.7C54.0134 50.7 69.8101 34.9034 69.8101 15.42L69.8101 0.719996"
-        stroke={fillColor}
-        strokeWidth="5.88"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_97_152">
-        <rect
-          width="70.56"
-          height="70.56"
-          fill="white"
-          transform="translate(71.28 71.28) rotate(-180)"
-        />
-      </clipPath>
-    </defs>
+    <path
+      d="M73.361 2.64117C72.8587 14.6952 65.2254 29.6432 57.1589 38.4966C45.9765 50.77 24.6768 56.9443 8.64868 58.7252"
+      stroke={fillColor}
+      strokeWidth="5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M17.277 49.234C14.7244 49.234 2.70471 56.0618 2.70471 58.3417C2.70471 64.1794 14.4152 63.672 15.5513 68.2163"
+      stroke={fillColor}
+      strokeWidth="5"
+      strokeLinecap="round"
+    />
   </svg>
 );

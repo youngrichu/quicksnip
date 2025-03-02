@@ -13,11 +13,11 @@ You can contribute in two main ways:
 
 ### How to report bugs
 
-If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/dostonnabotov/quicksnip/issues) detailing the problem before creating a PR. Once confirmed with maintainers, you can then create a PR.
+If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/technoph1le/quicksnip/issues) detailing the problem before creating a PR. Once confirmed with maintainers, you can then create a PR.
 
 ### How to propose new features
 
-If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions) with details for the proposed feature.
+If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/technoph1le/quicksnip/discussions) with details for the proposed feature.
 
 Please do not create a PR for a new feature without first discussing it with the maintainers. If you create a PR for a new feature without discussing it first, then your PR will be closed.
 
@@ -118,7 +118,7 @@ Here’s an example for JavaScript:
 ---
 title: Format Date
 description: Formats a date in 'YYYY-MM-DD' format.
-author: dostonnabotov
+author: technoph1le
 tags: date,format
 ---
 
@@ -274,6 +274,6 @@ It will update the snippets in the `/public` folder, making them available to th
 
 Whether you’re fixing a tiny typo, writing a new snippet, or dreaming up big features, every bit counts! 🛠️
 
-If you have any questions or need help, feel free to open a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions).
+If you have any questions or need help, feel free to open a new [GitHub discussion](https://github.com/technoph1le/quicksnip/discussions).
 
 Happy coding! 💻✨

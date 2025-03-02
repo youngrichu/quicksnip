@@ -1,7 +1,7 @@
 ---
 title: Flatten Nested List
 description: Flattens a multi-dimensional list into a single list.
-author: dostonnabotov
+author: technoph1le
 tags: list,flatten
 ---
 

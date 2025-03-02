@@ -68,7 +68,7 @@ const SnippetList = () => {
             <div className="category-no-snippets-found">
               <p>No snippets found for this category. Why not add one? 🚀</p>
               <a
-                href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
+                href="https://github.com/technoph1le/quicksnip/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"

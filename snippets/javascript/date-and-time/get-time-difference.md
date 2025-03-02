@@ -1,7 +1,7 @@
 ---
 title: Get Time Difference
 description: Calculates the time difference in days between two dates.
-author: dostonnabotov
+author: technoph1le
 tags: date,time-difference
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Debounce Function
 description: Delays a function execution until after a specified time.
-author: dostonnabotov
+author: technoph1le
 tags: debounce,performance
 ---
 

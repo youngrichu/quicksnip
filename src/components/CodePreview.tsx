@@ -51,7 +51,7 @@ const CodePreview = ({ extension = "markdown", languageName, code }: Props) => {
           language={extension}
           style={theme === "dark" ? oneDark : oneLight}
           wrapLines={true}
-          customStyle={{ margin: "0", maxHeight: "32rem" }}
+          customStyle={{ margin: "0", maxHeight: "22rem" }}
         >
           {code}
         </SyntaxHighlighter>

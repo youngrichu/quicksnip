@@ -1,7 +1,7 @@
 ---
 title: Generate Random String
 description: Generates a random alphanumeric string.
-author: dostonnabotov
+author: technoph1le
 tags: random,string
 ---
 

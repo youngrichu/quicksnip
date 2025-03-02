@@ -1,7 +1,7 @@
 ---
 title: Format Date
 description: Formats a date in 'YYYY-MM-DD' format.
-author: dostonnabotov
+author: technoph1le
 tags: date,format
 ---
 

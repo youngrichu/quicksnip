@@ -15,7 +15,7 @@ const Footer = () => {
           <p>
             Built with love and powered by an{" "}
             <a
-              href="https://github.com/dostonnabotov/quicksnip"
+              href="https://github.com/technoph1le/quicksnip"
               target="_blank"
               rel="noopener noreferrer"
               className="styled-link"
@@ -29,7 +29,7 @@ const Footer = () => {
           <ul className="flow" data-flow-space="sm">
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
+                href="https://github.com/technoph1le/quicksnip/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
@@ -39,7 +39,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip"
+                href="https://github.com/technoph1le/quicksnip"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
@@ -53,7 +53,7 @@ const Footer = () => {
           <ul className="flow" data-flow-space="sm">
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip"
+                href="https://github.com/technoph1le/quicksnip"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"

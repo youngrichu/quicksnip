@@ -1,7 +1,7 @@
 ---
 title: Border Radius Helper
 description: Applies a customizable border-radius.
-author: dostonnabotov
+author: technoph1le
 tags: border,radius,css
 ---
 

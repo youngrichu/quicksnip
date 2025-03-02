@@ -1,7 +1,7 @@
 ---
 title: Blur Background
 description: Applies a blur effect to the background of an element.
-author: dostonnabotov
+author: technoph1le
 tags: blur,background,effects
 ---
 
