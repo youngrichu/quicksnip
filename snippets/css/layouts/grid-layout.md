@@ -8,7 +8,7 @@ tags: layout,grid
 
 ```css
 .grid-container {
-  display: grid
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 /* Explanation:
 - `auto-fit`: Automatically fits as many columns as possible within the container.
