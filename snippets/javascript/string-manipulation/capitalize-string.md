@@ -1,13 +1,15 @@
 ---
 title: Capitalize String
 description: Capitalizes the first letter of a string.
-author: dostonnabotov
-tags: javascript,string,capitalize,utility
+author: technoph1le
+tags: string,capitalize
 ---
 
 ```js
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 // Usage:
-console.log(capitalize('hello')); // Output: 'Hello'
+capitalize('hello'); // Returns: 'Hello'
 ```

@@ -1,8 +1,8 @@
 ---
 title: Button Hover Effect
 description: Creates a hover effect with a color transition.
-author: dostonnabotov
-tags: css,button,hover,transition
+author: technoph1le
+tags: button,hover,transition
 ---
 
 ```css

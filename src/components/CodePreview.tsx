@@ -5,14 +5,18 @@ import {
   oneLight,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+import { slugify } from "@utils/slugify";
+
 import CopyToClipboard from "./CopyToClipboard";
+import CopyURLButton from "./CopyURLButton";
 
 type Props = {
-  language: string;
+  extension: string;
+  languageName: string;
   code: string;
 };
 
-const CodePreview = ({ language = "markdown", code }: Props) => {
+const CodePreview = ({ extension = "markdown", languageName, code }: Props) => {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
@@ -35,15 +39,23 @@ const CodePreview = ({ language = "markdown", code }: Props) => {
 
   return (
     <div className="code-preview">
-      <CopyToClipboard text={code} className="modal__copy" />
-      <SyntaxHighlighter
-        language={language}
-        style={theme === "dark" ? oneDark : oneLight}
-        wrapLines={true}
-        customStyle={{ margin: "0", maxHeight: "20rem" }}
-      >
-        {code}
-      </SyntaxHighlighter>
+      <div className="code-preview__header">
+        <p>{slugify(languageName)}</p>
+        <div className="code-preview__buttons">
+          <CopyToClipboard text={code} />
+          <CopyURLButton />
+        </div>
+      </div>
+      <div className="code-preview__body">
+        <SyntaxHighlighter
+          language={extension}
+          style={theme === "dark" ? oneDark : oneLight}
+          wrapLines={true}
+          customStyle={{ margin: "0", maxHeight: "22rem" }}
+        >
+          {code}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 };

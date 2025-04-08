@@ -1,8 +1,8 @@
 ---
-title: Truncate Strings
+title: Truncate String
 description: Truncates a string to a specified length, optionally adding an ellipsis.
 author: ACR1209
-tags: haskell,string,truncate,utility
+tags: string,truncate,utility
 ---
 
 ```hs
@@ -11,6 +11,7 @@ truncateString maxLength str
     | length str <= maxLength = str
     | otherwise = take (maxLength - 3) str ++ "..."
 
+-- Usage:
 main :: IO ()
 main = do
     let longString = "Haskell is a powerful functional programming language."

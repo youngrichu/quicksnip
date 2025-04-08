@@ -2,7 +2,7 @@
 title: Generate Date Range List
 description: Generates a list of dates between two given dates.
 author: axorax
-tags: python,datetime,range,utility
+tags: datetime,range
 ---
 
 ```py
@@ -26,5 +26,5 @@ end = datetime(2023, 1, 5)
 dates = generate_date_range(start, end)
 for d in dates:
     print(d.strftime('%Y-%m-%d'))
-# Output: '2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'
+# Outputs: '2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'
 ```

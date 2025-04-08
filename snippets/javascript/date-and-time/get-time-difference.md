@@ -1,8 +1,8 @@
 ---
 title: Get Time Difference
 description: Calculates the time difference in days between two dates.
-author: dostonnabotov
-tags: javascript,date,time-difference,utility
+author: technoph1le
+tags: date,time-difference
 ---
 
 ```js
@@ -14,5 +14,5 @@ const getTimeDifference = (date1, date2) => {
 // Usage:
 const date1 = new Date('2024-01-01');
 const date2 = new Date('2024-12-31');
-console.log(getTimeDifference(date1, date2)); // Output: 365
+getTimeDifference(date1, date2); // Returns: 365
 ```

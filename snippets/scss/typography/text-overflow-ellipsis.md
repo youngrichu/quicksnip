@@ -1,8 +1,8 @@
 ---
 title: Text Overflow Ellipsis
 description: Ensures long text is truncated with an ellipsis.
-author: dostonnabotov
-tags: sass,mixin,text,css
+author: technoph1le
+tags: mixin,text,css
 ---
 
 ```scss

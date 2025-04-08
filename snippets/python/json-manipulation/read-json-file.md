@@ -2,7 +2,7 @@
 title: Read JSON File
 description: Reads a JSON file and parses its content.
 author: e3nviction
-tags: python,json,file,read
+tags: json,file,read
 ---
 
 ```py
@@ -13,6 +13,5 @@ def read_json(filepath):
         return json.load(file)
 
 # Usage:
-data = read_json('data.json')
-print(data)
+read_json('data.json') # Returns: Content of file as dict
 ```

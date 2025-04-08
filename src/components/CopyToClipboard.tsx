@@ -17,12 +17,13 @@ const CopyToClipboard = ({ text, ...props }: Props) => {
         setIsCopied(true);
         setTimeout(() => setIsCopied(false), 2000);
       })
-      .catch((err) => alert("Error occured: " + err));
+      .catch((err) => alert("Error occurred: " + err));
   };
 
   return (
     <Button isIcon={true} onClick={copyText} {...props}>
-      {isCopied ? "Copied!" : <CopyIcon />}
+      <CopyIcon />
+      <span>{isCopied ? "Copied!" : "Copy"}</span>
     </Button>
   );
 };

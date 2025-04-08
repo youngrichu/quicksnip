@@ -1,8 +1,8 @@
 ---
 title: Clearfix
 description: Provides a clearfix utility for floating elements.
-author: dostonnabotov
-tags: scss,clearfix,utility,css
+author: technoph1le
+tags: clearfix,utility,css
 ---
 
 ```scss

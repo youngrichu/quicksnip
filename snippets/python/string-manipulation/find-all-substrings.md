@@ -2,7 +2,7 @@
 title: Find All Substrings
 description: Finds all substrings of a given string.
 author: axorax
-tags: python,string,substring,find,utility
+tags: string,substring,find
 ---
 
 ```py
@@ -14,5 +14,5 @@ def find_substrings(s):
     return substrings
 
 # Usage:
-print(find_substrings('abc'))  # Output: ['a', 'ab', 'abc', 'b', 'bc', 'c']
+find_substrings('abc') # Returns: ['a', 'ab', 'abc', 'b', 'bc', 'c']
 ```

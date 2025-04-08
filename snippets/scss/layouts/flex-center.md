@@ -1,8 +1,8 @@
 ---
 title: Flex Center
 description: A mixin to center content using flexbox.
-author: dostonnabotov
-tags: scss,flex,center,css
+author: technoph1le
+tags: flex,center,css
 ---
 
 ```scss

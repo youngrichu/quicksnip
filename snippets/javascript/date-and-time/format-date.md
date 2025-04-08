@@ -1,13 +1,13 @@
 ---
 title: Format Date
 description: Formats a date in 'YYYY-MM-DD' format.
-author: dostonnabotov
-tags: javascript,date,format,utility
+author: technoph1le
+tags: date,format
 ---
 
 ```js
 const formatDate = (date) => date.toISOString().split('T')[0];
 
 // Usage:
-console.log(formatDate(new Date())); // Output: '2024-12-10'
+formatDate(new Date(2024, 11, 10)); // Returns: '2024-12-10'
 ```

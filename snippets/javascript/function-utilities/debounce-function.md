@@ -1,8 +1,8 @@
 ---
 title: Debounce Function
 description: Delays a function execution until after a specified time.
-author: dostonnabotov
-tags: javascript,utility,debounce,performance
+author: technoph1le
+tags: debounce,performance
 ---
 
 ```js
@@ -16,5 +16,8 @@ const debounce = (func, delay) => {
 };
 
 // Usage:
-window.addEventListener('resize', debounce(() => console.log('Resized!'), 500));
+window.addEventListener(
+  'resize',
+  debounce(() => console.log('Resized!'), 500), // Will only output after resizing has stopped for 500ms
+);
 ```

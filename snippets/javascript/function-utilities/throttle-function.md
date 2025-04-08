@@ -1,31 +1,26 @@
 ---
 title: Throttle Function
-description: Limits a function execution to once every specified time interval.
-author: dostonnabotov
-tags: javascript,utility,throttle,performance
+description: Ensures a function is only called at most once in a specified time interval. Useful for optimizing events like scrolling or resizing.
+author: WizardOfDigits
+tags: throttle,performance,optimization
 ---
 
 ```js
 const throttle = (func, limit) => {
-  let lastFunc;
-  let lastRan;
+  let inThrottle;
   return (...args) => {
-    const context = this;
-    if (!lastRan) {
-      func.apply(context, args);
-      lastRan = Date.now();
-    } else {
-      clearTimeout(lastFunc);
-      lastFunc = setTimeout(() => {
-        if (Date.now() - lastRan >= limit) {
-          func.apply(context, args);
-          lastRan = Date.now();
-        }
-      }, limit - (Date.now() - lastRan));
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 };
 
 // Usage:
-document.addEventListener('scroll', throttle(() => console.log('Scrolled!'), 1000));
+// Ensures the function can only be called once every 1000 milliseconds
+const logScroll = throttle(() => console.log("Scroll event triggered"), 1000);
+
+// Attach to scroll event
+window.addEventListener("scroll", logScroll);
 ```

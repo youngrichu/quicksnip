@@ -1,24 +1,23 @@
 import { useMemo } from "react";
 
 import { useAppContext } from "@contexts/AppContext";
-import { SnippetType } from "@types";
-import { slugify } from "@utils/slugify";
+import { CategoryType } from "@types";
+import { getLanguageFileName } from "@utils/languageUtils";
 
 import { useFetch } from "./useFetch";
 
-type CategoryData = {
-  categoryName: string;
-  snippets: SnippetType[];
-};
-
 export const useCategories = () => {
-  const { language } = useAppContext();
-  const { data, loading, error } = useFetch<CategoryData[]>(
-    `/consolidated/${slugify(language.lang)}.json`
+  const { language, subLanguage } = useAppContext();
+
+  const fileName = useMemo(
+    () => getLanguageFileName(language.name, subLanguage),
+    [language.name, subLanguage]
   );
 
+  const { data, loading, error } = useFetch<CategoryType[]>(fileName);
+
   const fetchedCategories = useMemo(() => {
-    return data ? data.map((item) => item.categoryName) : [];
+    return data ? data.map((item) => item.name) : [];
   }, [data]);
 
   return { fetchedCategories, loading, error };

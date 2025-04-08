@@ -1,8 +1,8 @@
 ---
 title: Slide In From Left
 description: Animates content sliding in from the left.
-author: dostonnabotov
-tags: scss,animation,slide,css
+author: technoph1le
+tags: animation,slide,css
 ---
 
 ```scss

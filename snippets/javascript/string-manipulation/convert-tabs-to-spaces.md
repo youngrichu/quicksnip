@@ -10,6 +10,6 @@ function tabsToSpaces(str, spacesPerTab = 4) {
   return str.replace(/\t/g, ' '.repeat(spacesPerTab));
 }
 
-// Example usage:
-console.log(tabsToSpaces('Hello\tWorld', 2)); // Output: 'Hello  World'
+// Usage:
+tabsToSpaces('Hello\tWorld', 2); // Returns: 'Hello  World'
 ```

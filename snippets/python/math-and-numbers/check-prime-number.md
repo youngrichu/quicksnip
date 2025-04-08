@@ -1,8 +1,8 @@
 ---
 title: Check Prime Number
 description: Checks if a number is a prime number.
-author: dostonnabotov
-tags: python,math,prime,check
+author: technoph1le
+tags: math,prime,check
 ---
 
 ```py
@@ -15,5 +15,5 @@ def is_prime(n):
     return True
 
 # Usage:
-print(is_prime(17))  # Output: True
+is_prime(17) # Returns: True
 ```

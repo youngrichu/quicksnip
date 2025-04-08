@@ -1,10 +1,13 @@
-import { GitHubIcon } from "@components/Icons";
+import { GitHubIcon, LeftAngleArrowIcon } from "@components/Icons";
 import LinkButton from "@components/LinkButton";
 import Logo from "@components/Logo";
 import SearchInput from "@components/SearchInput";
 import ThemeToggle from "@components/ThemeToggle";
+import useGitHubStars from "@hooks/useGitHubStars";
 
 const Header = () => {
+  const { starsAmount, loading, error } = useGitHubStars();
+
   return (
     <header className="header">
       <Logo />
@@ -12,12 +15,21 @@ const Header = () => {
         <SearchInput />
         <ThemeToggle />
         <LinkButton
-          href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
+          className="github-stars-btn"
+          href="https://github.com/technoph1le/quicksnip/blob/main/CONTRIBUTING.md"
           target="_blank"
           rel="noopener noreferrer"
         >
           <GitHubIcon />
           <span>Add your snippet</span>
+          <LeftAngleArrowIcon className="github-stars__arrow" />
+          <span className="github-stars__count">
+            {loading
+              ? "Loading..."
+              : error
+                ? "N/A"
+                : `⭐ ${starsAmount}+ stars`}
+          </span>
         </LinkButton>
       </nav>
     </header>

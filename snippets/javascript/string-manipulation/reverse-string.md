@@ -1,13 +1,13 @@
 ---
 title: Reverse String
 description: Reverses the characters in a string.
-author: dostonnabotov
-tags: javascript,string,reverse,utility
+author: technoph1le
+tags: string,reverse
 ---
 
 ```js
 const reverseString = (str) => str.split('').reverse().join('');
 
 // Usage:
-console.log(reverseString('hello')); // Output: 'olleh'
+reverseString('hello'); // Returns: 'olleh'
 ```

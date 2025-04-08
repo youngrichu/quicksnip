@@ -2,7 +2,7 @@
 title: Remove Punctuation
 description: Removes punctuation from a string.
 author: SteliosGee
-tags: python,string,punctuation,remove,utility
+tags: string,punctuation,remove
 ---
 
 ```py
@@ -12,5 +12,5 @@ def remove_punctuation(s):
     return s.translate(str.maketrans('', '', string.punctuation))
 
 # Usage:
-print(remove_punctuation('Hello, World!'))  # Output: 'Hello World'
+remove_punctuation('Hello, World!') # Returns: 'Hello World'
 ```

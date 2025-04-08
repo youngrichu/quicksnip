@@ -2,7 +2,7 @@
 title: Update JSON File
 description: Updates an existing JSON file with new data or modifies the existing values.
 author: axorax
-tags: python,json,update,file
+tags: json,update,file
 ---
 
 ```py
@@ -22,5 +22,5 @@ def update_json(filepath, new_data):
 
 # Usage:
 new_data = {'age': 31}
-update_json('data.json', new_data)
+update_json('data.json', new_data) # Updates `age` in `data.json` without modifying other keys
 ```

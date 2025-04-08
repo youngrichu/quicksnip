@@ -1,8 +1,8 @@
 ---
 title: Add Item to localStorage
 description: Stores a value in localStorage under the given key.
-author: dostonnabotov
-tags: javascript,localStorage,storage,utility
+author: technoph1le
+tags: localStorage,storage
 ---
 
 ```js

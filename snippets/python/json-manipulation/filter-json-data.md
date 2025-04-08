@@ -2,7 +2,7 @@
 title: Filter JSON Data
 description: Filters a JSON object based on a condition and returns the filtered data.
 author: axorax
-tags: python,json,filter,data
+tags: json,filter,data
 ---
 
 ```py
@@ -19,6 +19,5 @@ def filter_json_data(filepath, condition):
 
 # Usage:
 condition = lambda x: x['age'] > 25
-filtered = filter_json_data('data.json', condition)
-print(filtered)
+filter_json_data('data.json', condition) # Returns: `data.json` filtered with `condition`
 ```

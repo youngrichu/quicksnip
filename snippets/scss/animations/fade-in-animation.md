@@ -1,8 +1,8 @@
 ---
 title: Fade In Animation
 description: Animates the fade-in effect.
-author: dostonnabotov
-tags: scss,animation,fade,css
+author: technoph1le
+tags: animation,fade,css
 ---
 
 ```scss
